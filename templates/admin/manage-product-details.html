@@ -1,0 +1,262 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Product Details | Vapier Admin</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/img/web-logo.png">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Rajdhani:wght@600;700&family=Audiowide&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Custom Admin CSS -->
+    <link rel="stylesheet" href="css/admin-style.css">
+    <style>
+        .detail-row {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 10px;
+            transition: all 0.3s ease;
+        }
+        .detail-row:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: var(--accent-red);
+        }
+        .spec-label {
+            color: var(--text-muted);
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+            display: block;
+        }
+        .variant-img-preview {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+            background: #1a1a1a;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="admin-wrapper">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <img src="../assets/img/web-logo.png" alt="Vapier Logo">
+            </div>
+            
+            <ul class="sidebar-menu">
+                <li class="menu-label">Main</li>
+                <li class="menu-item">
+                    <a href="index.html" class="menu-link">
+                        <i class="fas fa-th-large"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="orders.html" class="menu-link">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Orders</span>
+                    </a>
+                </li>
+
+                <li class="menu-label">Inventory Management</li>
+                <li class="menu-item">
+                    <a href="manage-eliquids.html" class="menu-link">
+                        <i class="fas fa-tint"></i>
+                        <span>E-Liquids</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="manage-deals.html" class="menu-link">
+                        <i class="fas fa-tags"></i>
+                        <span>Deals</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="manage-oxva.html" class="menu-link active">
+                        <i class="fas fa-bolt"></i>
+                        <span>OXVA</span>
+                    </a>
+                </li>
+                <!-- ... other menu items ... -->
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Bar -->
+            <div class="top-bar">
+                <div class="page-title d-flex align-items-center">
+                    <button class="mobile-toggle-btn d-lg-none me-3">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div>
+                        <div class="d-flex align-items-center gap-3">
+                            <a href="edit-product.html" class="btn btn-sm btn-link text-white-50 p-0"><i class="fas fa-arrow-left"></i></a>
+                            <h1 class="mb-0">Step 2: Advanced Details</h1>
+                        </div>
+                        <p class="text-white-50 small mb-0 mt-1" id="productTarget">Editing: OXVA ONEO</p>
+                    </div>
+                </div>
+                <div class="user-profile">
+                    <button class="btn-admin btn-primary-admin me-3" id="saveAllData">
+                        <i class="fas fa-check-circle"></i> Save All Data
+                    </button>
+                    <div class="user-avatar">AD</div>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Technical Specifications -->
+                <div class="col-lg-7">
+                    <div class="table-container mb-4">
+                        <div class="table-header">
+                            <h5 class="mb-0">Technical Specifications</h5>
+                            <button class="btn-admin btn-sm" style="background: rgba(255,255,255,0.1); color: white;"><i class="fas fa-plus"></i> Add Row</button>
+                        </div>
+                        <div class="p-4" id="specContainer">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="detail-row">
+                                        <span class="spec-label">Battery Capacity</span>
+                                        <input type="text" class="form-control admin-input" value="1600mAh (Built-in)">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="detail-row">
+                                        <span class="spec-label">Wattage Range</span>
+                                        <input type="text" class="form-control admin-input" value="5W - 40W">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="detail-row">
+                                        <span class="spec-label">Chassis Material</span>
+                                        <input type="text" class="form-control admin-input" value="Aluminum Alloy + PCTG">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="detail-row">
+                                        <span class="spec-label">Pod Capacity</span>
+                                        <input type="text" class="form-control admin-input" value="3.5mL (Refillable)">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="detail-row">
+                                        <span class="spec-label">Dimensions</span>
+                                        <input type="text" class="form-control admin-input" value="102mm x 32.5mm x 23mm">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="detail-row">
+                                        <span class="spec-label">Charging</span>
+                                        <input type="text" class="form-control admin-input" value="Type-C Port (Fast Charging)">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="table-container">
+                        <div class="table-header">
+                            <h5 class="mb-0">Key Features List</h5>
+                        </div>
+                        <div class="p-4">
+                            <div id="featureList">
+                                <div class="input-group mb-2">
+                                    <span class="input-group-text bg-dark border-secondary text-success"><i class="fas fa-check"></i></span>
+                                    <input type="text" class="form-control admin-input border-start-0" value="All-Day Battery: 1600mAh ensures long usage.">
+                                    <button class="btn btn-outline-danger border-secondary"><i class="fas fa-times"></i></button>
+                                </div>
+                                <div class="input-group mb-2">
+                                    <span class="input-group-text bg-dark border-secondary text-success"><i class="fas fa-check"></i></span>
+                                    <input type="text" class="form-control admin-input border-start-0" value="Juice Viewing Window: Monitor levels easily.">
+                                    <button class="btn btn-outline-danger border-secondary"><i class="fas fa-times"></i></button>
+                                </div>
+                                <div class="input-group mb-2">
+                                    <span class="input-group-text bg-dark border-secondary text-success"><i class="fas fa-check"></i></span>
+                                    <input type="text" class="form-control admin-input border-start-0" value="Ergonomic Build: High-quality aluminum design.">
+                                    <button class="btn btn-outline-danger border-secondary"><i class="fas fa-times"></i></button>
+                                </div>
+                            </div>
+                            <button class="btn-admin btn-sm mt-3" style="background: rgba(255,255,255,0.05); color: white;"><i class="fas fa-plus"></i> Add Feature</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Color Variants -->
+                <div class="col-lg-5">
+                    <div class="table-container h-100">
+                        <div class="table-header">
+                            <h5 class="mb-0">Color Variants & Media</h5>
+                            <button class="btn-admin btn-sm btn-primary-admin"><i class="fas fa-plus"></i> Add Color</button>
+                        </div>
+                        <div class="p-4">
+                            <div id="variantList">
+                                <!-- Variant 1 -->
+                                <div class="detail-row">
+                                    <div class="d-flex gap-3 align-items-center mb-2">
+                                        <img src="../assets/img/devices/OXVA/OXVA-ONEO/astral-black1.png" class="variant-img-preview">
+                                        <div class="flex-grow-1">
+                                            <input type="text" class="form-control admin-input mb-1" value="Astral Black">
+                                            <input type="text" class="form-control admin-input" value="../../assets/img/devices/OXVA/OXVA-ONEO/astral-black1.png" style="font-size: 11px; opacity: 0.7;">
+                                        </div>
+                                        <button class="btn btn-sm text-danger"><i class="fas fa-trash"></i></button>
+                                    </div>
+                                </div>
+                                <!-- Variant 2 -->
+                                <div class="detail-row">
+                                    <div class="d-flex gap-3 align-items-center mb-2">
+                                        <img src="../assets/img/devices/OXVA/OXVA-ONEO/cool-silver1.png" class="variant-img-preview">
+                                        <div class="flex-grow-1">
+                                            <input type="text" class="form-control admin-input mb-1" value="Cool Silver">
+                                            <input type="text" class="form-control admin-input" value="../../assets/img/devices/OXVA/OXVA-ONEO/cool-silver1.png" style="font-size: 11px; opacity: 0.7;">
+                                        </div>
+                                        <button class="btn btn-sm text-danger"><i class="fas fa-trash"></i></button>
+                                    </div>
+                                </div>
+                                <!-- Variant 3 -->
+                                <div class="detail-row">
+                                    <div class="d-flex gap-3 align-items-center mb-2">
+                                        <img src="../assets/img/devices/OXVA/OXVA-ONEO/haze-blue1.png" class="variant-img-preview">
+                                        <div class="flex-grow-1">
+                                            <input type="text" class="form-control admin-input mb-1" value="Haze Blue">
+                                            <input type="text" class="form-control admin-input" value="../../assets/img/devices/OXVA/OXVA-ONEO/haze-blue1.png" style="font-size: 11px; opacity: 0.7;">
+                                        </div>
+                                        <button class="btn btn-sm text-danger"><i class="fas fa-trash"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const pName = urlParams.get('name');
+            if (pName) {
+                document.getElementById('productTarget').innerText = 'Editing Advanced Details: ' + decodeURIComponent(pName);
+            }
+        });
+
+        document.getElementById('saveAllData').addEventListener('click', function() {
+            alert('Advanced product data saved successfully!');
+            window.location.href = 'manage-oxva.html';
+        });
+    </script>
+</body>
+</html>
+

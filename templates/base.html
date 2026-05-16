@@ -1,0 +1,214 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="icon" href="{% static 'assets/img/web-logo.png' %}">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Rajdhani:wght@600;700&family=Audiowide&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    
+    <title>{% block title %}VAPE CLUSTER{% endblock %}</title>
+</head>
+<body>
+    <script>
+        // Check for age verification immediately to prevent flicker
+        if (localStorage.getItem('ageVerified') === 'true') {
+            document.write('<style>.age-overlay { display: none !important; }</style>');
+        }
+    </script>
+
+    <!-- Age Verification Modal (shared) -->
+    <div id="ageVerifyOverlay" class="age-overlay">
+        <div class="age-modal">
+            <h2 class="age-title">Are you over 18 years of age?</h2>
+            <p class="age-text">The content of this website cannot be shown unless you verify your age. Please verify that you are over 18 to see this page.</p>
+            <div class="age-buttons">
+                <button id="ageYes" class="age-btn age-btn-yes">I'M OVER 18</button>
+                <button id="ageNo" class="age-btn age-btn-no">EXIT</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- navbar section -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'core:home' %}"><img src="{% static 'assets/img/web-logo.png' %}" alt=""></a>
+            <div class="mobile-nav-actions d-lg-none ms-auto">
+                <a href="javascript:void(0)" class="nav-icon-link search-trigger" title="Search"><i class="fas fa-search"></i></a>
+                <a href="javascript:void(0)" class="nav-icon-link" id="cartIconMobile" title="Shopping Bag"><i class="fas fa-shopping-bag"></i><span class="badge-count">0</span></a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link {% if request.path == '/' %}active{% endif %}" href="{% url 'core:home' %}">Home</a></li>
+                    <li class="nav-item dropdown-custom">
+                        <a class="nav-link dropdown-toggle-custom" href="#">Collections <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+                        <div class="dropdown-menu-custom">
+                            <div class="dropdown-category" data-target="vapes-sub">
+                                <span class="dropdown-category-title">Vapes <i class="fas fa-chevron-right sub-arrow"></i></span>
+                                <ul class="sub-menu" id="vapes-sub">
+                                    <li><a href="{% url 'core:vape_brand' brand_slug='voopoo' %}">VOOPOO</a></li>
+                                    <li><a href="{% url 'core:vape_brand' brand_slug='vaporesso' %}">VAPORESSO</a></li>
+                                    <li><a href="{% url 'core:vape_brand' brand_slug='uwell' %}">UWELL</a></li>
+                                    <li><a href="{% url 'core:vape_brand' brand_slug='oxva' %}">OXVA</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown-category" data-target="disposable-sub">
+                                <span class="dropdown-category-title">Disposable Vape <i class="fas fa-chevron-right sub-arrow"></i></span>
+                                <ul class="sub-menu" id="disposable-sub">
+                                    <li class="text-center text-white py-2">COMING SOON</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'core:eliquid_list' %}">E-Liquids</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'core:coils' %}">Coils</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'core:about' %}">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'core:contact' %}">Contact</a></li>
+                </ul>
+                <div class="d-flex gap-4 align-items-center justify-content-center mt-3 mt-lg-0">
+                    <a href="javascript:void(0)" class="nav-icon-link search-trigger" id="searchIcon" title="Search"><i class="fas fa-search"></i></a>
+                    <a href="javascript:void(0)" class="nav-icon-link cart-trigger" id="cartIcon" title="Shopping Bag"><i class="fa-solid fa-cart-shopping"></i><span class="badge-count">0</span></a>
+                    {% if user.is_authenticated %}
+                        <a href="{% url 'core:admin_dashboard' %}" class="nav-icon-link" id="userIcon" title="Account"><i class="fas fa-user"></i></a>
+                    {% else %}
+                        <a href="{% url 'core:auth' %}" class="nav-icon-link" id="userIcon" title="Login"><i class="fas fa-user"></i></a>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="navbar-search-overlay" id="navbarSearch">
+                <div class="search-input-wrapper">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="Search for products, brands..." autocomplete="off">
+                    <button type="button" id="closeSearch" title="Close Search"><i class="fas fa-times"></i></button>
+                </div>
+                <div class="search-dropdown" id="searchDropdown">
+                    <div class="search-popular-queries" id="popularQueries">
+                        <h3>Trending Searches</h3>
+                        <div class="popular-tags">
+                            <a href="#" class="popular-tag">Argus G3</a>
+                            <a href="#" class="popular-tag">XROS 4</a>
+                            <a href="#" class="popular-tag">Tokyo E-Juice</a>
+                            <a href="#" class="popular-tag">OXVA Oneo</a>
+                        </div>
+                    </div>
+                    <div class="search-results-grid" id="searchResults"></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Cart Sidebar Overlay -->
+    <div class="cart-sidebar-overlay" id="cartOverlay"></div>
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button type="button" id="closeCartBtn"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-body" id="cartItemsContainer">
+            <div class="empty-cart-msg">
+                <i class="fas fa-shopping-cart"></i>
+                <p>Your cart is currently empty.</p>
+                <a href="#" class="btn-shop-cart" id="continueShoppingBtn">Return to Shop</a>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Subtotal:</span>
+                <span id="cartSubtotal">RS 0.00</span>
+            </div>
+            <p class="tax-note">Taxes and shipping calculated at checkout</p>
+            <a href="{% url 'core:checkout' %}" class="checkout-btn">Check Out</a>
+        </div>
+    </div>
+
+    {% block content %}
+    {% endblock %}
+
+    <!-- footer section -->
+    <footer class="footer-section pt-5">
+        <div class="container footer-top">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
+                    <div class="footer-logo-box">
+                        <a class="footer-navbar-brand" href="{% url 'core:home' %}"><img src="{% static 'assets/img/web-logo.png' %}" alt=""></a>
+                    </div>
+                    <p class="footer-about-text">
+                        Discover the ultimate vaping experience with VAPE CLUSTER. We provide premium devices, 
+                        expertly crafted e-liquids, and high-performance coils for enthusiasts and beginners alike.
+                    </p>
+                    <div class="footer-social-icons">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6 mb-5 mb-lg-0">
+                    <h4 class="footer-heading">Shop Info</h4>
+                    <ul class="footer-links">
+                        <li><a href="{% url 'core:home' %}">Home</a></li>
+                        <li><a href="{% url 'core:about' %}">About Our Story</a></li>
+                        <li><a href="{% url 'core:contact' %}">Contact Support</a></li>
+                        <li><a href="{% url 'core:privacy_policy' %}">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6 mb-5 mb-lg-0">
+                    <h4 class="footer-heading">Collections</h4>
+                    <ul class="footer-links">
+                        <li><a href="{% url 'core:eliquid_list' %}">E-Liquids</a></li>
+                        <li><a href="{% url 'core:coils' %}">Premium Coils</a></li>
+                        <li><a href="{% url 'core:vape_brand' brand_slug='oxva' %}">OXVA Series</a></li>
+                        <li><a href="{% url 'core:vape_brand' brand_slug='vaporesso' %}">Vaporesso</a></li>
+                        <li><a href="{% url 'core:vape_brand' brand_slug='uwell' %}">Uwell Kits</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="newsletter-form-container">
+                        <h4 class="newsletter-title">Stay Updated</h4>
+                        <p class="newsletter-desc">Subscribe to get notified about new arrivals and exclusive discounts.</p>
+                        <form action="{% url 'core:newsletter_subscribe' %}" method="POST" class="newsletter-input-wrap">
+                            {% csrf_token %}
+                            <input type="email" name="email" placeholder="Your email address" required>
+                            <button type="submit">Subscribe</button>
+                        </form>
+                        <div class="mt-4">
+                            <h6 class="text-white-50 small text-uppercase mb-2">Customer Care</h6>
+                            <ul class="footer-contact-info">
+                                <li><i class="fa-solid fa-phone"></i> +92 3200489485</li>
+                                <li><i class="fa-solid fa-envelope"></i> vapecluster872@gmail.com</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom mt-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12 text-center">
+                        <p class="copyright-text">© 2026 VAPE CLUSTER | ALL RIGHTS RESERVED.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/js/script.js' %}"></script>
+    
+    {% block extra_js %}
+    {% endblock %}
+</body>
+</html>

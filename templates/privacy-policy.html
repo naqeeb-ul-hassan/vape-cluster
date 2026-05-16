@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="icon" type="icon" href="./assets/img/web-logo.png">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Rajdhani:wght@600;700&family=Audiowide&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    
+    <link rel="icon" type="icon" href="./assets/img/web-logo.png">
+    <title>Privacy Policy - VAPE CLUSTER Egic Store</title>
+
+</head>
+
+<body>
+
+
+
+    <!-- navbar section -->
+                        <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="./index.html"><img src="./assets/img/web-logo.png" alt=""></a>
+            <div class="mobile-nav-actions d-lg-none ms-auto">
+                <a href="javascript:void(0)" class="nav-icon-link search-trigger" title="Search"><i class="fas fa-search"></i></a>
+                <a href="javascript:void(0)" class="nav-icon-link cart-trigger" title="Shopping Bag"><i class="fa-solid fa-cart-shopping"></i><span class="badge-count">0</span></a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+                    <li class="nav-item dropdown-custom">
+                        <a class="nav-link dropdown-toggle-custom" href="#">Collections <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+                        <div class="dropdown-menu-custom">
+                              <div class="dropdown-category" data-target="vapes-sub">
+                                <span class="dropdown-category-title">Vapes <i class="fas fa-chevron-right sub-arrow"></i></span>
+                                <ul class="sub-menu" id="vapes-sub">
+                                    <li><a href="./voopoo.html" >VOOPOO</a></li>
+                                    <li><a href="./vaporesso.html" >VAPORESSO</a></li>
+                                    <li><a href="./UWELL.html" >UWELL</a></li>
+                                    <li><a href="./OXVA.html" >OXVA</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown-category" data-target="disposable-sub">
+                                <span class="dropdown-category-title">Disposable Vape <i class="fas fa-chevron-right sub-arrow"></i></span>
+                                <ul class="sub-menu" id="disposable-sub">
+                                    <li class="text-center text-white py-2">COMING SOON</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="./E-Liquids.html" >E-Liquids</a></li>
+                     <li class="nav-item"><a class="nav-link" href="./coils.html" >Coils</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./about.html" >About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./contact.html" >Contact</a></li>
+                </ul>
+                  <div class="d-flex gap-4 align-items-center justify-content-center mt-3 mt-lg-0">
+                    <a href="javascript:void(0)" class="nav-icon-link search-trigger" id="searchIcon" title="Search" ><i class="fas fa-search"></i></a>
+                    <a href="javascript:void(0)" class="nav-icon-link cart-trigger" id="cartIcon" title="Shopping Bag" ><i class="fa-solid fa-cart-shopping"></i><span class="badge-count">0</span></a>
+                    <a href="./login-signup.html" class="nav-icon-link" id="userIcon" title="Login" target="_blank"><i class="fas fa-user"></i></a>
+                </div>
+            </div>
+            <div class="navbar-search-overlay" id="navbarSearch">
+                <div class="search-input-wrapper">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="Search for products, brands..." autocomplete="off">
+                    <button type="button" id="closeSearch" title="Close Search"><i class="fas fa-times"></i></button>
+                </div>
+                <div class="search-dropdown" id="searchDropdown">
+                    <div class="search-popular-queries" id="popularQueries">
+                        <h3>Trending Searches</h3>
+                        <div class="popular-tags">
+                            <a href="#" class="popular-tag">Argus G3</a>
+                            <a href="#" class="popular-tag">XROS 4</a>
+                            <a href="#" class="popular-tag">Tokyo E-Juice</a>
+                            <a href="#" class="popular-tag">OXVA Oneo</a>
+                        </div>
+                    </div>
+                    <div class="search-results-grid" id="searchResults"></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+     <!-- Cart Sidebar Overlay -->
+    <div class="cart-sidebar-overlay" id="cartOverlay"></div>
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button type="button" id="closeCartBtn"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-body" id="cartItemsContainer">
+            <div class="empty-cart-msg">
+                <i class="fas fa-shopping-cart"></i>
+                <p>Your cart is currently empty.</p>
+                <a href="#" class="btn-shop-cart" id="continueShoppingBtn">Return to Shop</a>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Subtotal:</span>
+                <span id="cartSubtotal">RS 0.00</span>
+            </div>
+            <p class="tax-note">Taxes and shipping calculated at checkout</p>
+            <a href="./checkout.html" class="checkout-btn">Check Out</a>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1 class="page-hero-title">PRIVACY POLICY</h1>
+                    <p class="page-hero-subtitle">How we handle your information at VAPE CLUSTER</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Privacy Policy Content -->
+    <section class="section-padding animate-on-scroll">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="privacy-content">
+                        <div class="privacy-section">
+                            <h2 class="privacy-section-title">1. Introduction</h2>
+                            <p class="privacy-text">Welcome to <strong>VAPE CLUSTER Egic Store</strong>. We respect your privacy and are committed to protecting your personal data. This privacy policy will inform you as to how we look after your personal data when you visit our website and tell you about your privacy rights and how the law protects you.</p>
+                        </div>
+
+                        <div class="privacy-section">
+                            <h2 class="privacy-section-title">2. Information We Collect</h2>
+                            <p class="privacy-text">We may collect, use, store and transfer different kinds of personal data about you which we have grouped together as follows:</p>
+                            <ul class="privacy-list">
+                                <li><strong>Identity Data:</strong> includes first name, last name, and age (to verify you are over 18).</li>
+                                <li><strong>Contact Data:</strong> includes billing address, delivery address, email address, and telephone numbers.</li>
+                                <li><strong>Transaction Data:</strong> includes details about payments to and from you and other details of products you have purchased from us.</li>
+                                <li><strong>Technical Data:</strong> includes internet protocol (IP) address, browser type and version, time zone setting and location.</li>
+                                <li><strong>Usage Data:</strong> includes information about how you use our website, products, and services.</li>
+                            </ul>
+                        </div>
+
+                        <div class="privacy-section">
+                            <h2 class="privacy-section-title">3. How We Use Your Information</h2>
+                            <p class="privacy-text">We will only use your personal data when the law allows us to. Most commonly, we will use your personal data in the following circumstances:</p>
+                            <ul class="privacy-list">
+                                <li>To register you as a new customer and process your orders.</li>
+                                <li>To deliver your products and manage payments, fees, and charges.</li>
+                                <li>To manage our relationship with you, including notifying you about changes to our terms or privacy policy.</li>
+                                <li>To use data analytics to improve our website, products/services, marketing, and customer experiences.</li>
+                                <li>To make suggestions and recommendations to you about goods or services that may be of interest to you.</li>
+                            </ul>
+                        </div>
+
+                        <div class="privacy-section">
+                            <h2 class="privacy-section-title">4. Cookies and Tracking</h2>
+                            <p class="privacy-text">Our website uses cookies to distinguish you from other users of our website. This helps us to provide you with a good experience when you browse our website and also allows us to improve our site.</p>
+                            <p class="privacy-text">You can set your browser to refuse all or some browser cookies, or to alert you when websites set or access cookies. If you disable or refuse cookies, please note that some parts of this website may become inaccessible or not function properly.</p>
+                        </div>
+
+                        <div class="privacy-section">
+                            <h2 class="privacy-section-title">5. Data Security</h2>
+                            <p class="privacy-text">We have put in place appropriate security measures to prevent your personal data from being accidentally lost, used or accessed in an unauthorized way, altered or disclosed. In addition, we limit access to your personal data to those employees, agents, contractors, and other third parties who have a business need to know.</p>
+                        </div>
+
+                        <div class="privacy-section">
+                            <h2 class="privacy-section-title">6. Your Rights</h2>
+                            <p class="privacy-text">Under certain circumstances, you have rights under data protection laws in relation to your personal data, including the right to:</p>
+                            <ul class="privacy-list">
+                                <li>Request access to your personal data.</li>
+                                <li>Request correction of your personal data.</li>
+                                <li>Request erasure of your personal data.</li>
+                                <li>Object to processing of your personal data.</li>
+                                <li>Request restriction of processing your personal data.</li>
+                                <li>Request transfer of your personal data.</li>
+                                <li>Right to withdraw consent.</li>
+                            </ul>
+                        </div>
+
+                        <div class="privacy-section">
+                            <h2 class="privacy-section-title">7. Contact Us</h2>
+                            <p class="privacy-text">If you have any questions about this privacy policy or our privacy practices, please contact us in the following ways:</p>
+                            <ul class="privacy-list">
+                                <li>Email address: vapecluster872@gmail.com</li>
+                                <li>Postal address: Lahore, Johr town, Punjab, Pakistan 53900 Vape Cluster</li>
+                                <li>Telephone number: +92 3200489485</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- footer -->
+    <footer class="footer-section pt-5">
+        <div class="container footer-top">
+            <div class="row">
+                <!-- Column 1: Brand & About -->
+                <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
+                    <div class="footer-logo-box"><a class="footer-navbar-brand" href="./index.html"><img src="./assets/img/web-logo.png" alt=""></a></div>
+                    <p class="footer-about-text">
+                        Discover the ultimate vaping experience with VAPE CLUSTER. We provide premium devices, 
+                        expertly crafted e-liquids, and high-performance coils for enthusiasts and beginners alike.
+                    </p>
+                                        <div class="footer-social-icons">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="col-lg-2 col-md-6 mb-5 mb-lg-0">
+                    <h4 class="footer-heading">Shop Info</h4>
+                    <ul class="footer-links">
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./about.html">About Our Story</a></li>
+                        <li><a href="./contact.html">Contact Support</a></li>
+                        <li><a href="./privacy-policy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Collections -->
+                <div class="col-lg-2 col-md-6 mb-5 mb-lg-0">
+                    <h4 class="footer-heading">Collections</h4>
+                    <ul class="footer-links">
+                        <li><a href="./E-Liquids.html">E-Liquids</a></li>
+                        <li><a href="./coils.html">Premium Coils</a></li>
+                        <li><a href="./OXVA.html">OXVA Series</a></li>
+                        <li><a href="./vaporesso.html">Vaporesso</a></li>
+                        <li><a href="./UWELL.html">Uwell Kits</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Newsletter -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="newsletter-form-container">
+                        <h4 class="newsletter-title">Stay Updated</h4>
+                        <p class="newsletter-desc">Subscribe to get notified about new arrivals and exclusive discounts.</p>
+                        <form action="#" class="newsletter-input-wrap">
+                            <input type="email" placeholder="Your email address" required>
+                            <button type="submit">Subscribe</button>
+                        </form>
+                        <div class="mt-4">
+                            <h6 class="text-white-50 small text-uppercase mb-2">Customer Care</h6>
+                            <ul class="footer-contact-info">
+                                <li><i class="fa-solid fa-phone"></i> +92 3200489485</li>
+                                <li><i class="fa-solid fa-envelope"></i> vapecluster872@gmail.com</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+                <div class="footer-bottom mt-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12 text-center">
+                        <p class="copyright-text">� 2026 VAPE CLUSTER | ALL RIGHTS RESERVED.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+
+    <script>
+        // Simple Scroll Animation
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.1
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+            
+            document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+        });
+    </script>
+
+    <!-- Search Overlay -->
+    <div class='search-overlay' id='searchOverlay'>
+        <div class='search-close' id='searchClose'>
+            <i class='fas fa-times'></i>
+        </div>
+        <div class='search-container'>
+            <h2>Search VAPE CLUSTER</h2>
+            <div class='search-input-group'>
+                <input type='text' id='searchInput' placeholder='Search for pod vapes, e-liquids, disposables...' autocomplete='off'>
+                <i class='fas fa-search'></i>
+            </div>
+            <div class='search-results-area'>
+                <div class='search-results-grid' id='searchResults'>
+                    <!-- Results will be injected here -->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

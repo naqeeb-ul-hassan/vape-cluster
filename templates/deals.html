@@ -1,0 +1,427 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Rajdhani:wght@600;700&family=Audiowide&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    
+    <link rel="icon" type="icon" href="./assets/img/web-logo.png">
+    <title>DEALS - VAPE CLUSTER</title>
+</head>
+<body>
+
+
+
+<!-- navbar section -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand" href="./index.html"><img src="./assets/img/web-logo.png" alt=""></a>
+        <div class="mobile-nav-actions d-lg-none ms-auto">
+            <a href="javascript:void(0)" class="nav-icon-link search-trigger" title="Search"><i class="fas fa-search"></i></a>
+            <a href="javascript:void(0)" class="nav-icon-link" id="cartIconMobile" title="Shopping Bag" ><i class="fas fa-shopping-bag"></i><span class="badge-count">0</span></a>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+                <li class="nav-item dropdown-custom">
+                    <a class="nav-link dropdown-toggle-custom" href="#">Collections <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+                    <div class="dropdown-menu-custom">
+                          <div class="dropdown-category" data-target="vapes-sub">
+                            <span class="dropdown-category-title">Vapes <i class="fas fa-chevron-right sub-arrow"></i></span>
+                            <ul class="sub-menu" id="vapes-sub">
+                                <li><a href="./voopoo.html" >VOOPOO</a></li>
+                                <li><a href="./vaporesso.html" >VAPORESSO</a></li>
+                                <li><a href="./UWELL.html" >UWELL</a></li>
+                                <li><a href="./OXVA.html" >OXVA</a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown-category" data-target="disposable-sub">
+                            <span class="dropdown-category-title">Disposable Vape <i class="fas fa-chevron-right sub-arrow"></i></span>
+                            <ul class="sub-menu" id="disposable-sub">
+                                <li class="text-center text-white py-2">COMING SOON</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="./E-Liquids.html" >E-Liquids</a></li>
+                <li class="nav-item"><a class="nav-link" href="./coils.html" >Coils</a></li>
+                <li class="nav-item"><a class="nav-link active" href="./deals.html" >Deals</a></li>
+                <li class="nav-item"><a class="nav-link" href="./about.html" >About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="./contact.html" >Contact</a></li>
+            </ul>
+              <div class="d-flex gap-4 align-items-center justify-content-center mt-3 mt-lg-0">
+                <a href="javascript:void(0)" class="nav-icon-link search-trigger" id="searchIcon" title="Search" ><i class="fas fa-search"></i></a>
+                <a href="javascript:void(0)" class="nav-icon-link cart-trigger" id="cartIcon" title="Shopping Bag" ><i class="fa-solid fa-cart-shopping"></i><span class="badge-count">0</span></a>
+                <a href="./login-signup.html" class="nav-icon-link" id="userIcon" title="Login" target="_blank"><i class="fas fa-user"></i></a>
+            </div>
+        </div>
+        <div class="navbar-search-overlay" id="navbarSearch">
+            <div class="search-input-wrapper">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="Search for products, brands..." autocomplete="off">
+                <button type="button" id="closeSearch" title="Close Search"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="search-dropdown" id="searchDropdown">
+                <div class="search-popular-queries" id="popularQueries">
+                    <h3>Trending Searches</h3>
+                    <div class="popular-tags">
+                        <a href="#" class="popular-tag">Argus G3</a>
+                        <a href="#" class="popular-tag">XROS 4</a>
+                        <a href="#" class="popular-tag">Tokyo E-Juice</a>
+                        <a href="#" class="popular-tag">OXVA Oneo</a>
+                    </div>
+                </div>
+                <div class="search-results-grid" id="searchResults"></div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Cart Sidebar Overlay -->
+<div class="cart-sidebar-overlay" id="cartOverlay"></div>
+<div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+        <h3>Your Cart</h3>
+        <button type="button" id="closeCartBtn"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="cart-body" id="cartItemsContainer">
+        <div class="empty-cart-msg">
+            <i class="fas fa-shopping-cart"></i>
+            <p>Your cart is currently empty.</p>
+            <a href="#" class="btn-shop-cart" id="continueShoppingBtn">Return to Shop</a>
+        </div>
+    </div>
+    <div class="cart-footer">
+        <div class="cart-total">
+            <span>Subtotal:</span>
+            <span id="cartSubtotal">RS 0.00</span>
+        </div>
+        <p class="tax-note">Taxes and shipping calculated at checkout</p>
+        <a href="./checkout.html" class="checkout-btn">Check Out</a>
+    </div>
+</div>
+
+<!-- Deals Hero -->
+<section class="deals-hero">
+    <div class="container">
+        <h1 class="page-hero-subtitle" >Exclusive Deals</h1>
+        <p class="page-hero-title">Grab your favorite vapes and e-liquids at unbeatable prices. Limited time offer!</p>
+    </div>
+</section>
+
+<!-- Deals Product Grid -->
+<div class="container py-5">
+    <div class="product-grid mt-5">
+        <!-- Deal 1 -->
+        <div class="product-item" data-name="PRO MOD KIT">
+            <div class="product-img-box">
+                <span class="deal-badge">SAVE 20%</span>
+               
+                  <a href="./deals-products/pro-mod-kit-data.html">
+                                <img src="./assets/img/deals/vape-mod.png" alt="Pro Mod Kit">
+                            </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand">PREMIUM SERIES</span>
+                <h3 class="title"><a href="./deals-products/pro-mod-kit-data.html" class="text-decoration-none text-dark">PRO MOD KIT</a></h3>
+                <div class="rating">????? <span class="review-count">(15 reviews)</span></div>
+                <div class="price"><span class="old">Rs.12,000.00</span> RS 9,600.00</div>
+            </div>
+        </div>
+
+        <!-- Deal 2 -->
+        <div class="product-item" data-name="SLIM POD SYSTEM">
+            <div class="product-img-box">
+                <span class="deal-badge">SAVE 15%</span>
+               
+              <a href="./deals-products/slim-pod-system-data.html">
+                                <img src="./assets/img/deals/pod-system.png" alt="Slim Pod System">
+                            </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                   <span class="brand">ELITE SERIES</span>
+                <h3 class="title"><a href="./deals-products/slim-pod-system-data.html" class="text-decoration-none text-dark">SLIM POD SYSTEM</a></h3>
+                <div class="rating">????? <span class="review-count">(8 reviews)</span></div>
+                <div class="price"><span class="old">Rs.5,500.00</span> RS 4,675.00</div>
+            </div>
+        </div>
+
+        <!-- Deal 3 -->
+        <div class="product-item" data-name="COLORFUL DISPOSABLES">
+            <div class="product-img-box">
+                <span class="deal-badge">SAVE 25%</span>
+               
+              <a href="./deals-products/colorful-disposables-data.html">
+                                <img src="./assets/img/deals/disposable.png" alt="Colorful Disposables">
+                            </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                   <span class="brand">VIBRANT VAPES</span>
+                <h3 class="title"><a href="./deals-products/colorful-disposables-data.html" class="text-decoration-none text-dark">COLORFUL DISPOSABLES</a></h3>
+                <div class="rating">????? <span class="review-count">(12 reviews)</span></div>
+                <div class="price"><span class="old">Rs.2,500.00</span> RS 1,875.00</div>
+            </div>
+        </div>
+
+        <!-- Deal 4 -->
+        <div class="product-item" data-name="TROPICAL FRUIT JUICE">
+            <div class="product-img-box">
+                <span class="deal-badge">SAVE 30%</span>
+                
+                <a href="./deals-products/tropical-fruit-juice-data.html">
+                    <img src="./assets/img/deals/eliquid-fruit.png" alt="Tropical Fruit Juice">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand">FRESH JUICE CO</span>
+                <h3 class="title"><a href="./deals-products/tropical-fruit-juice-data.html" class="text-decoration-none text-dark">TROPICAL FRUIT JUICE</a></h3>
+                <div class="rating">????? <span class="review-count">(20 reviews)</span></div>
+                <div class="price"><span class="old">Rs.4,500.00</span> RS 3,150.00</div>
+            </div>
+        </div>
+
+        <!-- Deal 5 -->
+        <div class="product-item" data-name="LUXURY DESSERT BLEND">
+            <div class="product-img-box">
+                <span class="deal-badge">SAVE 20%</span>
+         
+               <a href="./deals-products/luxury-dessert-blend-data.html">
+                                <img src="./assets/img/deals/eliquid-dessert.png" alt="Luxury Dessert Blend">
+                            </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+               <span class="brand">PREMIUM E-LIQUID</span>
+                <h3 class="title"><a href="./deals-products/luxury-dessert-blend-data.html" class="text-decoration-none text-dark">LUXURY DESSERT BLEND</a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.6,000.00</span> RS 4,800.00</div>
+            </div>
+        </div>
+
+        <!-- Deal 6 -->
+        <div class="product-item" data-name="ULTRA MESH COILS">
+            <div class="product-img-box">
+                <span class="deal-badge">SAVE 40%</span>
+                
+                <a href="./deals-products/ultra-mesh-coils-data.html">
+                    <img src="./assets/img/deals/coils.png" alt="Ultra Mesh Coils">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand">TECH COILS</span>
+                <h3 class="title"><a href="./deals-products/ultra-mesh-coils-data.html" class="text-decoration-none text-dark">ULTRA MESH COILS</a></h3>
+                <div class="rating">????? <span class="review-count">(30 reviews)</span></div>
+                <div class="price"><span class="old">Rs.3,500.00</span> RS 2,100.00</div>
+            </div>
+        </div>
+
+
+        <!-- Deal 7: Vape + Coil -->
+        <div class="product-item" data-name="ULTIMATE POWER PACK">
+            <div class="product-img-box">
+                <span class="deal-badge">SAVE 25%</span>
+              
+                <a href="./deals-products/ultimate-power-pack-data.html">
+                    <img src="./assets/img/deals/coils.png" alt="Ultimate Power Pack">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand">PRO BUNDLE</span>
+                <h3 class="title"><a href="./deals-products/ultimate-power-pack-data.html" class="text-decoration-none text-dark">ULTIMATE POWER PACK</a></h3>
+                <div class="rating">????? <span class="review-count">(10 reviews)</span></div>
+                <div class="price"><span class="old">Rs.15,000.00</span> RS 11,250.00</div>
+            </div>
+        </div>
+
+        <!-- Deal 8: E-liquid + Vape -->
+        <div class="product-item" data-name="STARTER CLOUD BUNDLE">
+            <div class="product-img-box">
+                <span class="deal-badge">SAVE 20%</span>
+              
+                <a href="./deals-products/starter-cloud-bundle-data.html">
+                    <img src="./assets/img/deals/eliquid-fruit.png" alt="Starter Cloud Bundle">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand">STARTER PACK</span>
+                <h3 class="title"><a href="./deals-products/starter-cloud-bundle-data.html" class="text-decoration-none text-dark">STARTER CLOUD BUNDLE</a></h3>
+                <div class="rating">????? <span class="review-count">(15 reviews)</span></div>
+                <div class="price"><span class="old">Rs.10,500.00</span> RS 8,400.00</div>
+            </div>
+        </div>
+
+        <!-- Deal 9: E-liquid + Coil -->
+        <div class="product-item" data-name="REFILL AND REFRESH PACK">
+            <div class="product-img-box">
+                <span class="deal-badge">SAVE 30%</span>
+                
+                <a href="#">
+                    <img src="./assets/img/deals/eliquid-dessert.png" alt="Refill & Refresh Pack">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand">REFRESH BUNDLE</span>
+                <h3 class="title"><a href="#" class="text-decoration-none text-dark">REFILL & REFRESH PACK</a></h3>
+                <div class="rating">????? <span class="review-count">(8 reviews)</span></div>
+                <div class="price"><span class="old">Rs.6,000.00</span> RS 4,200.00</div>
+            </div>
+        </div>
+
+        <!-- Deal 10: Vape + E-liquid -->
+        <div class="product-item" data-name="PREMIUM FLAVOR DUO">
+            <div class="product-img-box">
+                <span class="deal-badge">SAVE 15%</span>
+            
+                <a href="./deals-products/premium-flavor-duo-data.html">
+                    <img src="./assets/img/deals/pod-system.png" alt="Premium Flavor Duo">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand">ELITE DUO</span>
+                <h3 class="title"><a href="./deals-products/premium-flavor-duo-data.html" class="text-decoration-none text-dark">PREMIUM FLAVOR DUO</a></h3>
+                <div class="rating">????? <span class="review-count">(12 reviews)</span></div>
+                <div class="price"><span class="old">Rs.12,000.00</span> RS 10,200.00</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- footer section -->
+<footer class="footer-section pt-5">
+    <div class="container footer-top">
+        <div class="row">
+            <!-- Column 1: Brand & About -->
+            <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
+                <div class="footer-logo-box">
+                    <a class="footer-navbar-brand" href="./index.html"><img src="./assets/img/web-logo.png" alt=""></a></div>
+                <p class="footer-about-text">
+                    Discover the ultimate vaping experience with VAPE CLUSTER. We provide premium devices, 
+                    expertly crafted e-liquids, and high-performance coils for enthusiasts and beginners alike.
+                </p>
+                                    <div class="footer-social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div class="col-lg-2 col-md-6 mb-5 mb-lg-0">
+                <h4 class="footer-heading">Shop Info</h4>
+                <ul class="footer-links">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./about.html">About Our Story</a></li>
+                    <li><a href="./contact.html">Contact Support</a></li>
+                    <li><a href="./privacy-policy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Collections -->
+            <div class="col-lg-2 col-md-6 mb-5 mb-lg-0">
+                <h4 class="footer-heading">Collections</h4>
+                <ul class="footer-links">
+                    <li><a href="./E-Liquids.html">E-Liquids</a></li>
+                    <li><a href="./coils.html">Premium Coils</a></li>
+                    <li><a href="./OXVA.html">OXVA Series</a></li>
+                    <li><a href="./vaporesso.html">Vaporesso</a></li>
+                    <li><a href="./UWELL.html">Uwell Kits</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Newsletter -->
+            <div class="col-lg-4 col-md-6">
+                <div class="newsletter-form-container">
+                    <h4 class="newsletter-title">Stay Updated</h4>
+                    <p class="newsletter-desc">Subscribe to get notified about new arrivals and exclusive discounts.</p>
+                    <form action="#" class="newsletter-input-wrap">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                    <div class="mt-4">
+                        <h6 class="text-white-50 small text-uppercase mb-2">Customer Care</h6>
+                        <ul class="footer-contact-info">
+                            <li><i class="fa-solid fa-phone"></i> +92 3200489485</li>
+                            <li><i class="fa-solid fa-envelope"></i> vapecluster872@gmail.com</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+            <div class="footer-bottom mt-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12 text-center">
+                    <p class="copyright-text">Â© 2026 VAPE CLUSTER | ALL RIGHTS RESERVED.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="./assets/js/bootstrap.bundle.min.js"></script>
+<script src="./assets/js/script.js"></script>
+
+</body>
+</html>
+

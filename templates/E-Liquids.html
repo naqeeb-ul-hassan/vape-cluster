@@ -1,0 +1,2033 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="icon" type="icon" href="./assets/img/web-logo.png">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Rajdhani:wght@600;700&family=Audiowide&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    
+
+    
+    <link rel="icon" type="icon" href="./assets/img/web-logo.png">
+
+    <title>E-Liquids - VAPE CLUSTER</title>
+</head>
+<body>
+ 
+
+
+<!-- navbar section -->
+                          <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="./index.html"><img src="./assets/img/web-logo.png" alt=""></a>
+            <div class="mobile-nav-actions d-lg-none ms-auto">
+                <a href="javascript:void(0)" class="nav-icon-link search-trigger" title="Search"><i class="fas fa-search"></i></a>
+                <a href="javascript:void(0)" class="nav-icon-link cart-trigger" title="Shopping Bag"><i class="fa-solid fa-cart-shopping"></i><span class="badge-count">0</span></a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+                    <li class="nav-item dropdown-custom">
+                        <a class="nav-link dropdown-toggle-custom" href="#">Collections <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+                        <div class="dropdown-menu-custom">
+                              <div class="dropdown-category" data-target="vapes-sub">
+                                <span class="dropdown-category-title">Vapes <i class="fas fa-chevron-right sub-arrow"></i></span>
+                                <ul class="sub-menu" id="vapes-sub">
+                                    <li><a href="./voopoo.html" >VOOPOO</a></li>
+                                    <li><a href="./vaporesso.html" >VAPORESSO</a></li>
+                                    <li><a href="./UWELL.html" >UWELL</a></li>
+                                    <li><a href="./OXVA.html" >OXVA</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown-category" data-target="disposable-sub">
+                                <span class="dropdown-category-title">Disposable Vape <i class="fas fa-chevron-right sub-arrow"></i></span>
+                                <ul class="sub-menu" id="disposable-sub">
+                                    <li class="text-center text-white py-2">COMING SOON</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link active" href="./E-Liquids.html" >E-Liquids</a></li>
+                     <li class="nav-item"><a class="nav-link" href="./coils.html" >Coils</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./about.html" >About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./contact.html" >Contact</a></li>
+                </ul>
+                  <div class="d-flex gap-4 align-items-center justify-content-center mt-3 mt-lg-0">
+                    <a href="javascript:void(0)" class="nav-icon-link search-trigger" id="searchIcon" title="Search" ><i class="fas fa-search"></i></a>
+                    <a href="javascript:void(0)" class="nav-icon-link cart-trigger" id="cartIcon" title="Shopping Bag" ><i class="fa-solid fa-cart-shopping"></i><span class="badge-count">0</span></a>
+                    <a href="./login-signup.html" class="nav-icon-link" id="userIcon" title="Login" target="_blank"><i class="fas fa-user"></i></a>
+                </div>
+            </div>
+            <div class="navbar-search-overlay" id="navbarSearch">
+                <div class="search-input-wrapper">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="Search for products, brands..." autocomplete="off">
+                    <button type="button" id="closeSearch" title="Close Search"><i class="fas fa-times"></i></button>
+                </div>
+                <div class="search-dropdown" id="searchDropdown">
+                    <div class="search-popular-queries" id="popularQueries">
+                        <h3>Trending Searches</h3>
+                        <div class="popular-tags">
+                            <a href="#" class="popular-tag">Argus G3</a>
+                            <a href="#" class="popular-tag">XROS 4</a>
+                            <a href="#" class="popular-tag">Tokyo E-Juice</a>
+                            <a href="#" class="popular-tag">OXVA Oneo</a>
+                        </div>
+                    </div>
+                    <div class="search-results-grid" id="searchResults"></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+     <!-- Cart Sidebar Overlay -->
+    <div class="cart-sidebar-overlay" id="cartOverlay"></div>
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button type="button" id="closeCartBtn"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-body" id="cartItemsContainer">
+            <div class="empty-cart-msg">
+                <i class="fas fa-shopping-cart"></i>
+                <p>Your cart is currently empty.</p>
+                <a href="#" class="btn-shop-cart" id="continueShoppingBtn">Return to Shop</a>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Subtotal:</span>
+                <span id="cartSubtotal">RS 0.00</span>
+            </div>
+            <p class="tax-note">Taxes and shipping calculated at checkout</p>
+            <a href="./checkout.html" class="checkout-btn">Check Out</a>
+        </div>
+    </div>
+   
+
+    <!-- Page Header -->
+      <section class="page-hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1 class="page-hero-title">E-LIQUIDS COLLECTIONS</h1>
+                    <p class="page-hero-subtitle">Premium E-Liquids</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+        <!-- tabbing section / PRODUCT TABS & GRID -->
+     <!-- latest products -->
+    <div class="product-section-wrapper ">
+    <div class="tabs-nav mt-5">
+        <button class="tab-link active" onclick="switchTab(event, 'Drip-Down')">DROP-DOWN</button>
+        <button class="tab-link" onclick="switchTab(event, 'Ox-passion')">Ox-passion</button>
+        <button class="tab-link" onclick="switchTab(event, 'Tokyo')">Tokyo</button>
+        <button class="tab-link" onclick="switchTab(event, 'Udoo')">Udoo</button>
+        <button class="tab-link" onclick="switchTab(event, 'Vgod')">Vgod</button>
+        <button class="tab-link" onclick="switchTab(event, 'Yezzi')">Yezzi</button>
+    </div>
+<!-- Drip-Down products -->
+    <div id="Drip-Down" class="product-grid tab-content active mt-5">
+        <div class="product-item" data-brand="DRIP-DOWN" data-image="./assets/img/acceerece/E-liquids/Drip-Down/Cola-Ice-1.webp" data-link="./E-liquids-products/Drip-Down-Cola-Ice-1-data..html" data-category="e-liquids" data-name="Cola Ice 1" data-price="3499.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                  <a href="./E-liquids-products/Drip-Down-Cola-Ice-1-data..html">
+                                <img src="./assets/img/acceerece/E-liquids/Drip-Down/Cola-Ice-1.webp" alt="Cola Ice 1">
+                            </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Drip-Down-Cola-Ice-1-data..html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by" >BY</span> DRIP-DOWN</span>
+                <h3 class="title"><a href="./E-liquids-products/Drip-Down-Cola-Ice-1-data..html" class="text-decoration-none text-dark">Cola Ice</a></h3>
+                <div class="rating">????? <span class="review-count">(3.5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.5,000.00</span> RS 3,499.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-category="e-liquids" data-brand="DRIP-DOWN" data-link="./E-liquids-products/Drip-Down-Apple-Ice-data.html" data-image="./assets/img/acceerece/E-liquids/Drip-Down/Drip-Down-Apple-Ice.webp" data-name="Apple Ice" data-price="3499.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                  <a href="./E-liquids-products/Drip-Down-Apple-Ice-data.html">
+                                <img src="./assets/img/acceerece/E-liquids/Drip-Down/Drip-Down-Apple-Ice.webp" alt="Apple Ice">
+                            </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Drip-Down-Apple-Ice-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by" >BY</span> DRIP-DOWN</span>
+                <h3 class="title"><a href="./E-liquids-products/Drip-Down-Apple-Ice-data.html" class="text-decoration-none text-dark">Apple Ice</a></h3>
+                <div class="rating">????? <span class="review-count">(3.5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.5,000.00</span> RS 3,499.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-category="e-liquids" data-brand="DRIP-DOWN" data-link="./E-liquids-products/Drip-Down-Apple-Peach-Ice-Saltnic-25mg-data.html" data-image="./assets/img/acceerece/E-liquids/Drip-Down/Drip-Down-Apple-Peach-Ice-Saltnic-25mg.webp" data-name="Apple Peach Ice Saltnic 25Mg" data-price="3499.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                  <a href="./E-liquids-products/Drip-Down-Apple-Peach-Ice-Saltnic-25mg-data.html">
+                                <img src="./assets/img/acceerece/E-liquids/Drip-Down/Drip-Down-Apple-Peach-Ice-Saltnic-25mg.webp" alt="Apple Peach Ice Saltnic 25Mg">
+                            </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Drip-Down-Apple-Peach-Ice-Saltnic-25mg-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by" >BY</span> DRIP-DOWN</span>
+                <h3 class="title"><a href="./E-liquids-products/Drip-Down-Apple-Peach-Ice-Saltnic-25mg-data.html" class="text-decoration-none text-dark">Apple Peach Ice Saltnic 25Mg</a></h3>
+                <div class="rating">????? <span class="review-count">(3.5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.5,000.00</span> RS 3,499.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-brand="DRIP-DOWN" data-image="./assets/img/acceerece/E-liquids/Drip-Down/Drip-Down-E-Juice-Passion-Lychee-Ice-100ml-6mg.webp" data-link="./E-liquids-products/Drip-Down-E-Juice-Passion-Lychee-Ice-100ml-6mg-data.html" data-category="e-liquids" data-name="E Juice Passion Lychee Ice 100Ml 6Mg" data-price="3499.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                  <a href="./E-liquids-products/Drip-Down-E-Juice-Passion-Lychee-Ice-100ml-6mg-data.html">
+                                <img src="./assets/img/acceerece/E-liquids/Drip-Down/Drip-Down-E-Juice-Passion-Lychee-Ice-100ml-6mg.webp" alt="E Juice Passion Lychee Ice 100Ml 6Mg">
+                            </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Drip-Down-E-Juice-Passion-Lychee-Ice-100ml-6mg-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by" >BY</span> DRIP-DOWN</span>
+                <h3 class="title"><a href="./E-liquids-products/Drip-Down-E-Juice-Passion-Lychee-Ice-100ml-6mg-data.html" class="text-decoration-none text-dark">E Juice Passion Lychee Ice 100Ml 6Mg</a></h3>
+                <div class="rating">????? <span class="review-count">(3.5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.5,000.00</span> RS 3,499.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-category="e-liquids" data-brand="DRIP-DOWN" data-link="./E-liquids-products/Drip-Down-Edition-Apple-Peach-Ice-100ml-3mg-data.html" data-image="./assets/img/acceerece/E-liquids/Drip-Down/Drip-Down-Edition-Apple-Peach-Ice-100ml-3mg.webp" data-name="Edition Apple Peach Ice 100Ml 3Mg" data-price="3499.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                  <a href="./E-liquids-products/Drip-Down-Edition-Apple-Peach-Ice-100ml-3mg-data.html">
+                                <img src="./assets/img/acceerece/E-liquids/Drip-Down/Drip-Down-Edition-Apple-Peach-Ice-100ml-3mg.webp" alt="Edition Apple Peach Ice 100Ml 3Mg">
+                            </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Drip-Down-Edition-Apple-Peach-Ice-100ml-3mg-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by" >BY</span> DRIP-DOWN</span>
+                <h3 class="title"><a href="./E-liquids-products/Drip-Down-Edition-Apple-Peach-Ice-100ml-3mg-data.html" class="text-decoration-none text-dark">Edition Apple Peach Ice 100Ml 3Mg</a></h3>
+                <div class="rating">????? <span class="review-count">(3.5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.5,000.00</span> RS 3,499.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-category="e-liquids" data-brand="DRIP-DOWN" data-link="./E-liquids-products/Drip-Down-Edition-Grape-Apple-Ice-100ml-3mg-data.html" data-image="./assets/img/acceerece/E-liquids/Drip-Down/Drip-Down-Edition-Grape-Apple-Ice-100ml-3mg.webp" data-name="Edition Grape Apple Ice 100Ml 3Mg" data-price="3499.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                  <a href="./E-liquids-products/Drip-Down-Edition-Grape-Apple-Ice-100ml-3mg-data.html">
+                                <img src="./assets/img/acceerece/E-liquids/Drip-Down/Drip-Down-Edition-Grape-Apple-Ice-100ml-3mg.webp" alt="Edition Grape Apple Ice 100Ml 3Mg">
+                            </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Drip-Down-Edition-Grape-Apple-Ice-100ml-3mg-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by" >BY</span> DRIP-DOWN</span>
+                <h3 class="title"><a href="./E-liquids-products/Drip-Down-Edition-Grape-Apple-Ice-100ml-3mg-data.html" class="text-decoration-none text-dark">Edition Grape Apple Ice 100Ml 3Mg</a></h3>
+                <div class="rating">????? <span class="review-count">(3.5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.5,000.00</span> RS 3,499.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-brand="DRIP-DOWN" data-image="./assets/img/acceerece/E-liquids/Drip-Down/Drip-Down-Edition-Kiwi-Dragon-Fruit-Ice-100ml-0mg.webp" data-link="./E-liquids-products/Drip-Down-Edition-Kiwi-Dragon-Fruit-Ice-100ml-0mg-data.html" data-category="e-liquids" data-name="Edition Kiwi Dragon Fruit Ice 100Ml 0Mg" data-price="3499.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                  <a href="./E-liquids-products/Drip-Down-Edition-Kiwi-Dragon-Fruit-Ice-100ml-0mg-data.html">
+                                <img src="./assets/img/acceerece/E-liquids/Drip-Down/Drip-Down-Edition-Kiwi-Dragon-Fruit-Ice-100ml-0mg.webp" alt="Edition Kiwi Dragon Fruit Ice 100Ml 0Mg">
+                            </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Drip-Down-Edition-Kiwi-Dragon-Fruit-Ice-100ml-0mg-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by" >BY</span> DRIP-DOWN</span>
+                <h3 class="title"><a href="./E-liquids-products/Drip-Down-Edition-Kiwi-Dragon-Fruit-Ice-100ml-0mg-data.html" class="text-decoration-none text-dark">Edition Kiwi Dragon Fruit Ice 100Ml 0Mg</a></h3>
+                <div class="rating">????? <span class="review-count">(3.5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.5,000.00</span> RS 3,499.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-category="e-liquids" data-brand="DRIP-DOWN" data-link="./E-liquids-products/Drip-Down-Edition-Lychee-Blueberry-Ice-100ml-3mg-data.html" data-image="./assets/img/acceerece/E-liquids/Drip-Down/Drip-Down-Edition-Lychee-Blueberry-Ice-100ml-3mg.webp" data-name="Edition Lychee Blueberry Ice 100Ml 3Mg" data-price="3499.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                  <a href="./E-liquids-products/Drip-Down-Edition-Lychee-Blueberry-Ice-100ml-3mg-data.html">
+                                <img src="./assets/img/acceerece/E-liquids/Drip-Down/Drip-Down-Edition-Lychee-Blueberry-Ice-100ml-3mg.webp" alt="Edition Lychee Blueberry Ice 100Ml 3Mg">
+                            </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Drip-Down-Edition-Lychee-Blueberry-Ice-100ml-3mg-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by" >BY</span> DRIP-DOWN</span>
+                <h3 class="title"><a href="./E-liquids-products/Drip-Down-Edition-Lychee-Blueberry-Ice-100ml-3mg-data.html" class="text-decoration-none text-dark">Edition Lychee Blueberry Ice 100Ml 3Mg</a></h3>
+                <div class="rating">????? <span class="review-count">(3.5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.5,000.00</span> RS 3,499.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-category="e-liquids" data-brand="DRIP-DOWN" data-link="./E-liquids-products/Drip-Down-Edition-Mango-Guava-Ice-100ml-0mg-data.html" data-image="./assets/img/acceerece/E-liquids/Drip-Down/Drip-Down-Edition-Mango-Guava-Ice-100ml-0mg.webp" data-name="Edition Mango Guava Ice 100Ml 0Mg" data-price="3499.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                  <a href="./E-liquids-products/Drip-Down-Edition-Mango-Guava-Ice-100ml-0mg-data.html">
+                                <img src="./assets/img/acceerece/E-liquids/Drip-Down/Drip-Down-Edition-Mango-Guava-Ice-100ml-0mg.webp" alt="Edition Mango Guava Ice 100Ml 0Mg">
+                            </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Drip-Down-Edition-Mango-Guava-Ice-100ml-0mg-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by" >BY</span> DRIP-DOWN</span>
+                <h3 class="title"><a href="./E-liquids-products/Drip-Down-Edition-Mango-Guava-Ice-100ml-0mg-data.html" class="text-decoration-none text-dark">Edition Mango Guava Ice 100Ml 0Mg</a></h3>
+                <div class="rating">????? <span class="review-count">(3.5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.5,000.00</span> RS 3,499.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-brand="DRIP-DOWN" data-image="./assets/img/acceerece/E-liquids/Drip-Down/Drip-Down-Edition-Mango-Peach-Ice-100ml-3mg.webp" data-link="./E-liquids-products/Drip-Down-Edition-Mango-Peach-Ice-100ml-3mg-data.html" data-category="e-liquids" data-name="Edition Mango Peach Ice 100Ml 3Mg" data-price="3499.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                  <a href="./E-liquids-products/Drip-Down-Edition-Mango-Peach-Ice-100ml-3mg-data.html">
+                                <img src="./assets/img/acceerece/E-liquids/Drip-Down/Drip-Down-Edition-Mango-Peach-Ice-100ml-3mg.webp" alt="Edition Mango Peach Ice 100Ml 3Mg">
+                            </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Drip-Down-Edition-Mango-Peach-Ice-100ml-3mg-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by" >BY</span> DRIP-DOWN</span>
+                <h3 class="title"><a href="./E-liquids-products/Drip-Down-Edition-Mango-Peach-Ice-100ml-3mg-data.html" class="text-decoration-none text-dark">Edition Mango Peach Ice 100Ml 3Mg</a></h3>
+                <div class="rating">????? <span class="review-count">(3.5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.5,000.00</span> RS 3,499.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-category="e-liquids" data-brand="DRIP-DOWN" data-link="./E-liquids-products/Drip-Down-Edition-Strawmelon-kiwi-Ice-100ml-3mg-data.html" data-image="./assets/img/acceerece/E-liquids/Drip-Down/Drip-Down-Edition-Strawmelon-kiwi-Ice-100ml-3mg.webp" data-name="Edition Strawmelon Kiwi Ice 100Ml 3Mg" data-price="3499.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                  <a href="./E-liquids-products/Drip-Down-Edition-Strawmelon-kiwi-Ice-100ml-3mg-data.html">
+                                <img src="./assets/img/acceerece/E-liquids/Drip-Down/Drip-Down-Edition-Strawmelon-kiwi-Ice-100ml-3mg.webp" alt="Edition Strawmelon Kiwi Ice 100Ml 3Mg">
+                            </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Drip-Down-Edition-Strawmelon-kiwi-Ice-100ml-3mg-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by" >BY</span> DRIP-DOWN</span>
+                <h3 class="title"><a href="./E-liquids-products/Drip-Down-Edition-Strawmelon-kiwi-Ice-100ml-3mg-data.html" class="text-decoration-none text-dark">Edition Strawmelon Kiwi Ice 100Ml 3Mg</a></h3>
+                <div class="rating">????? <span class="review-count">(3.5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.5,000.00</span> RS 3,499.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-category="e-liquids" data-brand="DRIP-DOWN" data-link="./E-liquids-products/Drip-Down-Edition-Watermelon-Grape-Ice-100ml-3mg-data.html" data-image="./assets/img/acceerece/E-liquids/Drip-Down/Drip-Down-Edition-Watermelon-Grape-Ice-100ml-3mg.webp" data-name="Edition Watermelon Grape Ice 100Ml 3Mg" data-price="3499.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                  <a href="./E-liquids-products/Drip-Down-Edition-Watermelon-Grape-Ice-100ml-3mg-data.html">
+                                <img src="./assets/img/acceerece/E-liquids/Drip-Down/Drip-Down-Edition-Watermelon-Grape-Ice-100ml-3mg.webp" alt="Edition Watermelon Grape Ice 100Ml 3Mg">
+                            </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Drip-Down-Edition-Watermelon-Grape-Ice-100ml-3mg-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by" >BY</span> DRIP-DOWN</span>
+                <h3 class="title"><a href="./E-liquids-products/Drip-Down-Edition-Watermelon-Grape-Ice-100ml-3mg-data.html" class="text-decoration-none text-dark">Edition Watermelon Grape Ice 100Ml 3Mg</a></h3>
+                <div class="rating">????? <span class="review-count">(3.5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.5,000.00</span> RS 3,499.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-brand="DRIP-DOWN" data-image="./assets/img/acceerece/E-liquids/Drip-Down/drip-down-frosty-berry-ice-.webp" data-link="./E-liquids-products/drip-down-frosty-berry-ice--data.html" data-category="e-liquids" data-name="Drip Down Frosty Berry Ice" data-price="3499.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                  <a href="./E-liquids-products/drip-down-frosty-berry-ice--data.html">
+                                <img src="./assets/img/acceerece/E-liquids/Drip-Down/drip-down-frosty-berry-ice-.webp" alt="Drip Down Frosty Berry Ice ">
+                            </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/drip-down-frosty-berry-ice--data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by" >BY</span> DRIP-DOWN</span>
+                <h3 class="title"><a href="./E-liquids-products/drip-down-frosty-berry-ice--data.html" class="text-decoration-none text-dark">Drip Down Frosty Berry Ice </a></h3>
+                <div class="rating">????? <span class="review-count">(3.5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.5,000.00</span> RS 3,499.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-category="e-liquids" data-brand="DRIP-DOWN" data-link="./E-liquids-products/Drip-Down-Grape-Ice-data.html" data-image="./assets/img/acceerece/E-liquids/Drip-Down/Drip-Down-Grape-Ice.webp" data-name="Grape Ice" data-price="3499.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                  <a href="./E-liquids-products/Drip-Down-Grape-Ice-data.html">
+                                <img src="./assets/img/acceerece/E-liquids/Drip-Down/Drip-Down-Grape-Ice.webp" alt="Grape Ice">
+                            </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Drip-Down-Grape-Ice-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by" >BY</span> DRIP-DOWN</span>
+                <h3 class="title"><a href="./E-liquids-products/Drip-Down-Grape-Ice-data.html" class="text-decoration-none text-dark">Grape Ice</a></h3>
+                <div class="rating">????? <span class="review-count">(3.5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.5,000.00</span> RS 3,499.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-category="e-liquids" data-brand="DRIP-DOWN" data-link="./E-liquids-products/Drip-Down-Guava-Ice-100ml-data.html" data-image="./assets/img/acceerece/E-liquids/Drip-Down/Drip-Down-Guava-Ice-100ml.webp" data-name="Guava Ice 100Ml" data-price="3499.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                  <a href="./E-liquids-products/Drip-Down-Guava-Ice-100ml-data.html">
+                                <img src="./assets/img/acceerece/E-liquids/Drip-Down/Drip-Down-Guava-Ice-100ml.webp" alt="Guava Ice 100Ml">
+                            </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Drip-Down-Guava-Ice-100ml-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by" >BY</span> DRIP-DOWN</span>
+                <h3 class="title"><a href="./E-liquids-products/Drip-Down-Guava-Ice-100ml-data.html" class="text-decoration-none text-dark">Guava Ice 100Ml</a></h3>
+                <div class="rating">????? <span class="review-count">(3.5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.5,000.00</span> RS 3,499.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-brand="DRIP-DOWN" data-image="./assets/img/acceerece/E-liquids/Drip-Down/Drip-Down-Lychee-Ice-E-Liquids-100ml.webp" data-link="./E-liquids-products/Drip-Down-Lychee-Ice-E-Liquids-100ml-data.html" data-category="e-liquids" data-name="Lychee Ice E Liquids 100Ml" data-price="3499.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                  <a href="./E-liquids-products/Drip-Down-Lychee-Ice-E-Liquids-100ml-data.html">
+                                <img src="./assets/img/acceerece/E-liquids/Drip-Down/Drip-Down-Lychee-Ice-E-Liquids-100ml.webp" alt="Lychee Ice E Liquids 100Ml">
+                            </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Drip-Down-Lychee-Ice-E-Liquids-100ml-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by" >BY</span> DRIP-DOWN</span>
+                <h3 class="title"><a href="./E-liquids-products/Drip-Down-Lychee-Ice-E-Liquids-100ml-data.html" class="text-decoration-none text-dark">Lychee Ice E Liquids 100Ml</a></h3>
+                <div class="rating">????? <span class="review-count">(3.5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.5,000.00</span> RS 3,499.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-category="e-liquids" data-brand="DRIP-DOWN" data-link="./E-liquids-products/Drip-Down-Mango-Ice-E-Liquids-100ml-data.html" data-image="./assets/img/acceerece/E-liquids/Drip-Down/Drip-Down-Mango-Ice-E-Liquids-100ml.webp" data-name="Mango Ice E Liquids 100Ml" data-price="3499.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                  <a href="./E-liquids-products/Drip-Down-Mango-Ice-E-Liquids-100ml-data.html">
+                                <img src="./assets/img/acceerece/E-liquids/Drip-Down/Drip-Down-Mango-Ice-E-Liquids-100ml.webp" alt="Mango Ice E Liquids 100Ml">
+                            </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Drip-Down-Mango-Ice-E-Liquids-100ml-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by" >BY</span> DRIP-DOWN</span>
+                <h3 class="title"><a href="./E-liquids-products/Drip-Down-Mango-Ice-E-Liquids-100ml-data.html" class="text-decoration-none text-dark">Mango Ice E Liquids 100Ml</a></h3>
+                <div class="rating">????? <span class="review-count">(3.5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.5,000.00</span> RS 3,499.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-category="e-liquids" data-brand="DRIP-DOWN" data-link="./E-liquids-products/Drip-Down-Passion-Fruit-Ice-E-Liquids-100ml-data.html" data-image="./assets/img/acceerece/E-liquids/Drip-Down/Drip-Down-Passion-Fruit-Ice-E-Liquids-100ml.webp" data-name="Passion Fruit Ice E Liquids 100Ml" data-price="3499.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                  <a href="./E-liquids-products/Drip-Down-Passion-Fruit-Ice-E-Liquids-100ml-data.html">
+                                <img src="./assets/img/acceerece/E-liquids/Drip-Down/Drip-Down-Passion-Fruit-Ice-E-Liquids-100ml.webp" alt="Passion Fruit Ice E Liquids 100Ml">
+                            </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Drip-Down-Passion-Fruit-Ice-E-Liquids-100ml-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by" >BY</span> DRIP-DOWN</span>
+                <h3 class="title"><a href="./E-liquids-products/Drip-Down-Passion-Fruit-Ice-E-Liquids-100ml-data.html" class="text-decoration-none text-dark">Passion Fruit Ice E Liquids 100Ml</a></h3>
+                <div class="rating">????? <span class="review-count">(3.5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.5,000.00</span> RS 3,499.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-brand="DRIP-DOWN" data-image="./assets/img/acceerece/E-liquids/Drip-Down/Drip-Down-Passion-Fruit-Ice-E-Liquids-60ml.webp" data-link="./E-liquids-products/Drip-Down-Passion-Fruit-Ice-E-Liquids-60ml-data.html" data-category="e-liquids" data-name="Passion Fruit Ice E Liquids 60Ml" data-price="3499.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                  <a href="./E-liquids-products/Drip-Down-Passion-Fruit-Ice-E-Liquids-60ml-data.html">
+                                <img src="./assets/img/acceerece/E-liquids/Drip-Down/Drip-Down-Passion-Fruit-Ice-E-Liquids-60ml.webp" alt="Passion Fruit Ice E Liquids 60Ml">
+                            </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Drip-Down-Passion-Fruit-Ice-E-Liquids-60ml-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by" >BY</span> DRIP-DOWN</span>
+                <h3 class="title"><a href="./E-liquids-products/Drip-Down-Passion-Fruit-Ice-E-Liquids-60ml-data.html" class="text-decoration-none text-dark">Passion Fruit Ice E Liquids 60Ml</a></h3>
+                <div class="rating">????? <span class="review-count">(3.5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.5,000.00</span> RS 3,499.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-category="e-liquids" data-brand="DRIP-DOWN" data-link="./E-liquids-products/Drip-Down-Peach-Ice-E-Liquids-100ml-data.html" data-image="./assets/img/acceerece/E-liquids/Drip-Down/Drip-Down-Peach-Ice-E-Liquids-100ml.webp" data-name="Peach Ice E Liquids 100Ml" data-price="3499.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                  <a href="./E-liquids-products/Drip-Down-Peach-Ice-E-Liquids-100ml-data.html">
+                                <img src="./assets/img/acceerece/E-liquids/Drip-Down/Drip-Down-Peach-Ice-E-Liquids-100ml.webp" alt="Peach Ice E Liquids 100Ml">
+                            </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Drip-Down-Peach-Ice-E-Liquids-100ml-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by" >BY</span> DRIP-DOWN</span>
+                <h3 class="title"><a href="./E-liquids-products/Drip-Down-Peach-Ice-E-Liquids-100ml-data.html" class="text-decoration-none text-dark">Peach Ice E Liquids 100Ml</a></h3>
+                <div class="rating">????? <span class="review-count">(3.5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.5,000.00</span> RS 3,499.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-category="e-liquids" data-brand="DRIP-DOWN" data-link="./E-liquids-products/Drip-Down-Watermelon-Ice-E-Liquids-100ml-data.html" data-image="./assets/img/acceerece/E-liquids/Drip-Down/Drip-Down-Watermelon-Ice-E-Liquids-100ml.webp" data-name="Watermelon Ice E Liquids 100Ml" data-price="3499.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                  <a href="./E-liquids-products/Drip-Down-Watermelon-Ice-E-Liquids-100ml-data.html">
+                                <img src="./assets/img/acceerece/E-liquids/Drip-Down/Drip-Down-Watermelon-Ice-E-Liquids-100ml.webp" alt="Watermelon Ice E Liquids 100Ml">
+                            </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Drip-Down-Watermelon-Ice-E-Liquids-100ml-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by" >BY</span> DRIP-DOWN</span>
+                <h3 class="title"><a href="./E-liquids-products/Drip-Down-Watermelon-Ice-E-Liquids-100ml-data.html" class="text-decoration-none text-dark">Watermelon Ice E Liquids 100Ml</a></h3>
+                <div class="rating">????? <span class="review-count">(3.5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.5,000.00</span> RS 3,499.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-brand="DRIP-DOWN" data-image="./assets/img/acceerece/E-liquids/Drip-Down/Drip-Down-Watermelon-Ice-E-Liquids-60ml.webp" data-link="./E-liquids-products/Drip-Down-Watermelon-Ice-E-Liquids-60ml-data.html" data-category="e-liquids" data-name="Watermelon Ice E Liquids 60Ml" data-price="3499.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                  <a href="./E-liquids-products/Drip-Down-Watermelon-Ice-E-Liquids-60ml-data.html">
+                                <img src="./assets/img/acceerece/E-liquids/Drip-Down/Drip-Down-Watermelon-Ice-E-Liquids-60ml.webp" alt="Watermelon Ice E Liquids 60Ml">
+                            </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Drip-Down-Watermelon-Ice-E-Liquids-60ml-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by" >BY</span> DRIP-DOWN</span>
+                <h3 class="title"><a href="./E-liquids-products/Drip-Down-Watermelon-Ice-E-Liquids-60ml-data.html" class="text-decoration-none text-dark">Watermelon Ice E Liquids 60Ml</a></h3>
+                <div class="rating">????? <span class="review-count">(3.5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.5,000.00</span> RS 3,499.00</div>
+            </div>
+        </div>
+
+    </div>
+<!-- Ox-passion products -->
+    <div id="Ox-passion" class="product-grid tab-content mt-5">
+
+        <div class="product-item" data-category="e-liquids" data-brand="OX-PASSION" data-link="./E-liquids-products/Ox-Passion-Berries-Mojito-data.html" data-image="./assets/img/acceerece/E-liquids/Ox-passion/Berries-Mojito_a5cd31aa-da99-4ad2-9144-deb9b8a1f705.avif" data-name="Berries Mojito" data-price="3200.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="./E-liquids-products/Ox-Passion-Berries-Mojito-data.html">
+                    <img src="./assets/img/acceerece/E-liquids/Ox-passion/Berries-Mojito_a5cd31aa-da99-4ad2-9144-deb9b8a1f705.avif" alt="Berries Mojito">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Ox-Passion-Berries-Mojito-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> OX-PASSION</span>
+                <h3 class="title"><a href="./E-liquids-products/Ox-Passion-Berries-Mojito-data.html" class="text-decoration-none text-dark">Berries Mojito</a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.4,500.00</span> RS 3,200.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-category="e-liquids" data-brand="OX-PASSION" data-link="./E-liquids-products/Ox-Passion-Blackberry-Candy-data.html" data-image="./assets/img/acceerece/E-liquids/Ox-passion/Blackberry-Candy_e026bc8d-dddc-4851-8cfa-a6444c578057.avif" data-name="Blackberry Candy" data-price="3200.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="./E-liquids-products/Ox-Passion-Blackberry-Candy-data.html">
+                    <img src="./assets/img/acceerece/E-liquids/Ox-passion/Blackberry-Candy_e026bc8d-dddc-4851-8cfa-a6444c578057.avif" alt="Blackberry Candy">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Ox-Passion-Blackberry-Candy-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> OX-PASSION</span>
+                <h3 class="title"><a href="./E-liquids-products/Ox-Passion-Blackberry-Candy-data.html" class="text-decoration-none text-dark">Blackberry Candy</a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.4,500.00</span> RS 3,200.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-brand="OX-PASSION" data-image="./assets/img/acceerece/E-liquids/Ox-passion/Blue-Mango_f0924d8c-21e1-4373-8571-25b61f060d65.avif" data-link="./E-liquids-products/Ox-Passion-Blue-Mango-data.html" data-category="e-liquids" data-name="Blue Mango" data-price="3200.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="./E-liquids-products/Ox-Passion-Blue-Mango-data.html">
+                    <img src="./assets/img/acceerece/E-liquids/Ox-passion/Blue-Mango_f0924d8c-21e1-4373-8571-25b61f060d65.avif" alt="Blue Mango">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Ox-Passion-Blue-Mango-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> OX-PASSION</span>
+                <h3 class="title"><a href="./E-liquids-products/Ox-Passion-Blue-Mango-data.html" class="text-decoration-none text-dark">Blue Mango</a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.4,500.00</span> RS 3,200.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-category="e-liquids" data-brand="OX-PASSION" data-link="./E-liquids-products/Ox-Passion-Blueberry-Raspberry-data.html" data-image="./assets/img/acceerece/E-liquids/Ox-passion/Blueberry-Raspberry.avif" data-name="Blueberry Raspberry" data-price="3200.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="./E-liquids-products/Ox-Passion-Blueberry-Raspberry-data.html">
+                    <img src="./assets/img/acceerece/E-liquids/Ox-passion/Blueberry-Raspberry.avif" alt="Blueberry Raspberry">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Ox-Passion-Blueberry-Raspberry-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> OX-PASSION</span>
+                <h3 class="title"><a href="./E-liquids-products/Ox-Passion-Blueberry-Raspberry-data.html" class="text-decoration-none text-dark">Blueberry Raspberry</a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.4,500.00</span> RS 3,200.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-category="e-liquids" data-brand="OX-PASSION" data-link="./E-liquids-products/Ox-Passion-Cherry-Burst-data.html" data-image="./assets/img/acceerece/E-liquids/Ox-passion/Cherry-Burst.avif" data-name="Cherry Burst" data-price="3200.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="./E-liquids-products/Ox-Passion-Cherry-Burst-data.html">
+                    <img src="./assets/img/acceerece/E-liquids/Ox-passion/Cherry-Burst.avif" alt="Cherry Burst">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Ox-Passion-Cherry-Burst-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> OX-PASSION</span>
+                <h3 class="title"><a href="./E-liquids-products/Ox-Passion-Cherry-Burst-data.html" class="text-decoration-none text-dark">Cherry Burst</a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.4,500.00</span> RS 3,200.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-brand="OX-PASSION" data-image="./assets/img/acceerece/E-liquids/Ox-passion/Cinnamon-BBG.avif" data-link="./E-liquids-products/Ox-Passion-Cinnamon-BBG-data.html" data-category="e-liquids" data-name="Cinnamon Bbg" data-price="3200.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="./E-liquids-products/Ox-Passion-Cinnamon-BBG-data.html">
+                    <img src="./assets/img/acceerece/E-liquids/Ox-passion/Cinnamon-BBG.avif" alt="Cinnamon Bbg">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Ox-Passion-Cinnamon-BBG-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> OX-PASSION</span>
+                <h3 class="title"><a href="./E-liquids-products/Ox-Passion-Cinnamon-BBG-data.html" class="text-decoration-none text-dark">Cinnamon Bbg</a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.4,500.00</span> RS 3,200.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-category="e-liquids" data-brand="OX-PASSION" data-link="./E-liquids-products/Ox-Passion-Creamy-Mint-data.html" data-image="./assets/img/acceerece/E-liquids/Ox-passion/Creamy-Mint.avif" data-name="Creamy Mint" data-price="3200.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="./E-liquids-products/Ox-Passion-Creamy-Mint-data.html">
+                    <img src="./assets/img/acceerece/E-liquids/Ox-passion/Creamy-Mint.avif" alt="Creamy Mint">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Ox-Passion-Creamy-Mint-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> OX-PASSION</span>
+                <h3 class="title"><a href="./E-liquids-products/Ox-Passion-Creamy-Mint-data.html" class="text-decoration-none text-dark">Creamy Mint</a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.4,500.00</span> RS 3,200.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-category="e-liquids" data-brand="OX-PASSION" data-link="./E-liquids-products/Ox-Passion-Grapeach-data.html" data-image="./assets/img/acceerece/E-liquids/Ox-passion/Grapeach_a41ae1f7-4e7c-4e68-ba98-721a08136dfd.avif" data-name="Grapeach" data-price="3200.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="./E-liquids-products/Ox-Passion-Grapeach-data.html">
+                    <img src="./assets/img/acceerece/E-liquids/Ox-passion/Grapeach_a41ae1f7-4e7c-4e68-ba98-721a08136dfd.avif" alt="Grapeach">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Ox-Passion-Grapeach-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> OX-PASSION</span>
+                <h3 class="title"><a href="./E-liquids-products/Ox-Passion-Grapeach-data.html" class="text-decoration-none text-dark">Grapeach</a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.4,500.00</span> RS 3,200.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-brand="OX-PASSION" data-image="./assets/img/acceerece/E-liquids/Ox-passion/Honeydew.avif" data-link="./E-liquids-products/Ox-Passion-Honeydew-data.html" data-category="e-liquids" data-name="Honeydew" data-price="3200.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="./E-liquids-products/Ox-Passion-Honeydew-data.html">
+                    <img src="./assets/img/acceerece/E-liquids/Ox-passion/Honeydew.avif" alt="Honeydew">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Ox-Passion-Honeydew-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> OX-PASSION</span>
+                <h3 class="title"><a href="./E-liquids-products/Ox-Passion-Honeydew-data.html" class="text-decoration-none text-dark">Honeydew</a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.4,500.00</span> RS 3,200.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-category="e-liquids" data-brand="OX-PASSION" data-link="./E-liquids-products/Ox-Passion-Juicy-Peach-data.html" data-image="./assets/img/acceerece/E-liquids/Ox-passion/Juicy-Peach.avif" data-name="Juicy Peach" data-price="3200.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="./E-liquids-products/Ox-Passion-Juicy-Peach-data.html">
+                    <img src="./assets/img/acceerece/E-liquids/Ox-passion/Juicy-Peach.avif" alt="Juicy Peach">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Ox-Passion-Juicy-Peach-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> OX-PASSION</span>
+                <h3 class="title"><a href="./E-liquids-products/Ox-Passion-Juicy-Peach-data.html" class="text-decoration-none text-dark">Juicy Peach</a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.4,500.00</span> RS 3,200.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-category="e-liquids" data-brand="OX-PASSION" data-link="./E-liquids-products/Ox-Passion-Luxury-data.html" data-image="./assets/img/acceerece/E-liquids/Ox-passion/Luxury_1ce61049-720c-4981-a501-2ad5066eeb55.avif" data-name="Luxury" data-price="3200.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="./E-liquids-products/Ox-Passion-Luxury-data.html">
+                    <img src="./assets/img/acceerece/E-liquids/Ox-passion/Luxury_1ce61049-720c-4981-a501-2ad5066eeb55.avif" alt="Luxury">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Ox-Passion-Luxury-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> OX-PASSION</span>
+                <h3 class="title"><a href="./E-liquids-products/Ox-Passion-Luxury-data.html" class="text-decoration-none text-dark">Luxury</a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.4,500.00</span> RS 3,200.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-brand="OX-PASSION" data-image="./assets/img/acceerece/E-liquids/Ox-passion/Melon-Banana_4adf2a5f-ebc5-487b-b8bf-781cf728114d.avif" data-link="./E-liquids-products/Ox-Passion-Melon-Banana-data.html" data-category="e-liquids" data-name="Melon Banana" data-price="3200.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="./E-liquids-products/Ox-Passion-Melon-Banana-data.html">
+                    <img src="./assets/img/acceerece/E-liquids/Ox-passion/Melon-Banana_4adf2a5f-ebc5-487b-b8bf-781cf728114d.avif" alt="Melon Banana">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Ox-Passion-Melon-Banana-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> OX-PASSION</span>
+                <h3 class="title"><a href="./E-liquids-products/Ox-Passion-Melon-Banana-data.html" class="text-decoration-none text-dark">Melon Banana</a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.4,500.00</span> RS 3,200.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-category="e-liquids" data-brand="OX-PASSION" data-link="./E-liquids-products/Ox-Passion-Pink-Guava-data.html" data-image="./assets/img/acceerece/E-liquids/Ox-passion/Pink-Guava_3e09c9e0-b97c-4874-a0b1-a5b3dbb0869e.avif" data-name="Pink Guava" data-price="3200.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="./E-liquids-products/Ox-Passion-Pink-Guava-data.html">
+                    <img src="./assets/img/acceerece/E-liquids/Ox-passion/Pink-Guava_3e09c9e0-b97c-4874-a0b1-a5b3dbb0869e.avif" alt="Pink Guava">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Ox-Passion-Pink-Guava-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> OX-PASSION</span>
+                <h3 class="title"><a href="./E-liquids-products/Ox-Passion-Pink-Guava-data.html" class="text-decoration-none text-dark">Pink Guava</a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.4,500.00</span> RS 3,200.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-category="e-liquids" data-brand="OX-PASSION" data-link="./E-liquids-products/Ox-Passion-Pom-Black-data.html" data-image="./assets/img/acceerece/E-liquids/Ox-passion/Pom-Black_ae102859-ac23-4073-b470-34bf51591319.avif" data-name="Pom Black" data-price="3200.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="./E-liquids-products/Ox-Passion-Pom-Black-data.html">
+                    <img src="./assets/img/acceerece/E-liquids/Ox-passion/Pom-Black_ae102859-ac23-4073-b470-34bf51591319.avif" alt="Pom Black">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Ox-Passion-Pom-Black-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> OX-PASSION</span>
+                <h3 class="title"><a href="./E-liquids-products/Ox-Passion-Pom-Black-data.html" class="text-decoration-none text-dark">Pom Black</a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.4,500.00</span> RS 3,200.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-brand="OX-PASSION" data-image="./assets/img/acceerece/E-liquids/Ox-passion/Sparkling-Cider.avif" data-link="./E-liquids-products/Ox-Passion-Sparkling-Cider-data.html" data-category="e-liquids" data-name="Sparkling Cider" data-price="3200.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="./E-liquids-products/Ox-Passion-Sparkling-Cider-data.html">
+                    <img src="./assets/img/acceerece/E-liquids/Ox-passion/Sparkling-Cider.avif" alt="Sparkling Cider">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Ox-Passion-Sparkling-Cider-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> OX-PASSION</span>
+                <h3 class="title"><a href="./E-liquids-products/Ox-Passion-Sparkling-Cider-data.html" class="text-decoration-none text-dark">Sparkling Cider</a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.4,500.00</span> RS 3,200.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-category="e-liquids" data-brand="OX-PASSION" data-link="./E-liquids-products/Ox-Passion-Strawberry-Ice-data.html" data-image="./assets/img/acceerece/E-liquids/Ox-passion/Strawberry-Ice_7702a6f6-645e-4df7-97e6-361c3691f5cc.avif" data-name="Strawberry Ice" data-price="3200.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="./E-liquids-products/Ox-Passion-Strawberry-Ice-data.html">
+                    <img src="./assets/img/acceerece/E-liquids/Ox-passion/Strawberry-Ice_7702a6f6-645e-4df7-97e6-361c3691f5cc.avif" alt="Strawberry Ice">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Ox-Passion-Strawberry-Ice-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> OX-PASSION</span>
+                <h3 class="title"><a href="./E-liquids-products/Ox-Passion-Strawberry-Ice-data.html" class="text-decoration-none text-dark">Strawberry Ice</a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.4,500.00</span> RS 3,200.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-category="e-liquids" data-brand="OX-PASSION" data-link="./E-liquids-products/Ox-Passion-Strawberry-Orange-data.html" data-image="./assets/img/acceerece/E-liquids/Ox-passion/Strawberry-Orange.avif" data-name="Strawberry Orange" data-price="3200.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="./E-liquids-products/Ox-Passion-Strawberry-Orange-data.html">
+                    <img src="./assets/img/acceerece/E-liquids/Ox-passion/Strawberry-Orange.avif" alt="Strawberry Orange">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Ox-Passion-Strawberry-Orange-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> OX-PASSION</span>
+                <h3 class="title"><a href="./E-liquids-products/Ox-Passion-Strawberry-Orange-data.html" class="text-decoration-none text-dark">Strawberry Orange</a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.4,500.00</span> RS 3,200.00</div>
+            </div>
+        </div>
+
+    </div>
+<!-- Tokyo products -->
+    <div id="Tokyo" class="product-grid tab-content mt-5">
+
+        <div class="product-item" data-brand="TOKYO" data-image="./assets/img/acceerece/E-liquids/Tokyo/Passion-fruit-kiwi-.webp" data-link="./E-liquids-products/Tokyo-Passion-fruit-kiwi--data.html" data-category="e-liquids" data-name="Passion Fruit Kiwi" data-price="2800.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="./E-liquids-products/Tokyo-Passion-fruit-kiwi--data.html">
+                    <img src="./assets/img/acceerece/E-liquids/Tokyo/Passion-fruit-kiwi-.webp" alt="Passion Fruit Kiwi ">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Tokyo-Passion-fruit-kiwi--data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> TOKYO</span>
+                <h3 class="title"><a href="./E-liquids-products/Tokyo-Passion-fruit-kiwi--data.html" class="text-decoration-none text-dark">Passion Fruit Kiwi </a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.3,500.00</span> RS 2,800.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-category="e-liquids" data-brand="TOKYO" data-link="./E-liquids-products/Tokyo-Tokyo-Super-Cool-Yakult-Salt-data.html" data-image="./assets/img/acceerece/E-liquids/Tokyo/Tokyo-Super-Cool-Yakult-Salt.webp" data-name="Tokyo Super Cool Yakult Salt" data-price="2800.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="./E-liquids-products/Tokyo-Tokyo-Super-Cool-Yakult-Salt-data.html">
+                    <img src="./assets/img/acceerece/E-liquids/Tokyo/Tokyo-Super-Cool-Yakult-Salt.webp" alt="Tokyo Super Cool Yakult Salt">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Tokyo-Tokyo-Super-Cool-Yakult-Salt-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> TOKYO</span>
+                <h3 class="title"><a href="./E-liquids-products/Tokyo-Tokyo-Super-Cool-Yakult-Salt-data.html" class="text-decoration-none text-dark">Tokyo Super Cool Yakult Salt</a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.3,500.00</span> RS 2,800.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-category="e-liquids" data-brand="TOKYO" data-link="./E-liquids-products/Tokyo-Tokyo_Super_Cool_Dragonfruit_Kiwi-data.html" data-image="./assets/img/acceerece/E-liquids/Tokyo/Tokyo_Super_Cool_Dragonfruit_Kiwi.webp" data-name="Tokyo Super Cool Dragonfruit Kiwi" data-price="2800.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="./E-liquids-products/Tokyo-Tokyo_Super_Cool_Dragonfruit_Kiwi-data.html">
+                    <img src="./assets/img/acceerece/E-liquids/Tokyo/Tokyo_Super_Cool_Dragonfruit_Kiwi.webp" alt="Tokyo Super Cool Dragonfruit Kiwi">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Tokyo-Tokyo_Super_Cool_Dragonfruit_Kiwi-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> TOKYO</span>
+                <h3 class="title"><a href="./E-liquids-products/Tokyo-Tokyo_Super_Cool_Dragonfruit_Kiwi-data.html" class="text-decoration-none text-dark">Tokyo Super Cool Dragonfruit Kiwi</a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.3,500.00</span> RS 2,800.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-brand="TOKYO" data-image="./assets/img/acceerece/E-liquids/Tokyo/blue-pineapple.webp" data-link="./E-liquids-products/Tokyo-blue-pineapple-data.html" data-category="e-liquids" data-name="Blue Pineapple" data-price="2800.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="./E-liquids-products/Tokyo-blue-pineapple-data.html">
+                    <img src="./assets/img/acceerece/E-liquids/Tokyo/blue-pineapple.webp" alt="Blue Pineapple">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Tokyo-blue-pineapple-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> TOKYO</span>
+                <h3 class="title"><a href="./E-liquids-products/Tokyo-blue-pineapple-data.html" class="text-decoration-none text-dark">Blue Pineapple</a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.3,500.00</span> RS 2,800.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-category="e-liquids" data-brand="TOKYO" data-link="./E-liquids-products/Tokyo-cherry-ice-data.html" data-image="./assets/img/acceerece/E-liquids/Tokyo/cherry-ice.webp" data-name="Cherry Ice" data-price="2800.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="./E-liquids-products/Tokyo-cherry-ice-data.html">
+                    <img src="./assets/img/acceerece/E-liquids/Tokyo/cherry-ice.webp" alt="Cherry Ice">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Tokyo-cherry-ice-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> TOKYO</span>
+                <h3 class="title"><a href="./E-liquids-products/Tokyo-cherry-ice-data.html" class="text-decoration-none text-dark">Cherry Ice</a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.3,500.00</span> RS 2,800.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-category="e-liquids" data-brand="TOKYO" data-link="./E-liquids-products/Tokyo-mango-lassi-data.html" data-image="./assets/img/acceerece/E-liquids/Tokyo/mango-lassi.webp" data-name="Mango Lassi" data-price="2800.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="./E-liquids-products/Tokyo-mango-lassi-data.html">
+                    <img src="./assets/img/acceerece/E-liquids/Tokyo/mango-lassi.webp" alt="Mango Lassi">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Tokyo-mango-lassi-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> TOKYO</span>
+                <h3 class="title"><a href="./E-liquids-products/Tokyo-mango-lassi-data.html" class="text-decoration-none text-dark">Mango Lassi</a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.3,500.00</span> RS 2,800.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-brand="TOKYO" data-image="./assets/img/acceerece/E-liquids/Tokyo/mango_lychee.webp" data-link="./E-liquids-products/Tokyo-mango_lychee-data.html" data-category="e-liquids" data-name="Mango Lychee" data-price="2800.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="./E-liquids-products/Tokyo-mango_lychee-data.html">
+                    <img src="./assets/img/acceerece/E-liquids/Tokyo/mango_lychee.webp" alt="Mango Lychee">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Tokyo-mango_lychee-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> TOKYO</span>
+                <h3 class="title"><a href="./E-liquids-products/Tokyo-mango_lychee-data.html" class="text-decoration-none text-dark">Mango Lychee</a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.3,500.00</span> RS 2,800.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-category="e-liquids" data-brand="TOKYO" data-link="./E-liquids-products/Tokyo-pineapple-guava-data.html" data-image="./assets/img/acceerece/E-liquids/Tokyo/pineapple-guava.webp" data-name="Pineapple Guava" data-price="2800.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="./E-liquids-products/Tokyo-pineapple-guava-data.html">
+                    <img src="./assets/img/acceerece/E-liquids/Tokyo/pineapple-guava.webp" alt="Pineapple Guava">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Tokyo-pineapple-guava-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> TOKYO</span>
+                <h3 class="title"><a href="./E-liquids-products/Tokyo-pineapple-guava-data.html" class="text-decoration-none text-dark">Pineapple Guava</a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.3,500.00</span> RS 2,800.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-category="e-liquids" data-brand="TOKYO" data-link="./E-liquids-products/Tokyo-tokyo-e-juice-saltnic-super-cool-breezy-pineapple-data.html" data-image="./assets/img/acceerece/E-liquids/Tokyo/tokyo-e-juice-saltnic-super-cool-breezy-pineapple.webp" data-name="Tokyo E Juice Saltnic Super Cool Breezy Pineapple" data-price="2800.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="./E-liquids-products/Tokyo-tokyo-e-juice-saltnic-super-cool-breezy-pineapple-data.html">
+                    <img src="./assets/img/acceerece/E-liquids/Tokyo/tokyo-e-juice-saltnic-super-cool-breezy-pineapple.webp" alt="Tokyo E Juice Saltnic Super Cool Breezy Pineapple">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Tokyo-tokyo-e-juice-saltnic-super-cool-breezy-pineapple-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> TOKYO</span>
+                <h3 class="title"><a href="./E-liquids-products/Tokyo-tokyo-e-juice-saltnic-super-cool-breezy-pineapple-data.html" class="text-decoration-none text-dark">Tokyo E Juice Saltnic Super Cool Breezy Pineapple</a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.3,500.00</span> RS 2,800.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-brand="TOKYO" data-image="./assets/img/acceerece/E-liquids/Tokyo/tokyo-e-juice-saltnic-super-cool-four-berries.webp" data-link="./E-liquids-products/Tokyo-tokyo-e-juice-saltnic-super-cool-four-berries-data.html" data-category="e-liquids" data-name="Tokyo E Juice Saltnic Super Cool Four Berries" data-price="2800.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="./E-liquids-products/Tokyo-tokyo-e-juice-saltnic-super-cool-four-berries-data.html">
+                    <img src="./assets/img/acceerece/E-liquids/Tokyo/tokyo-e-juice-saltnic-super-cool-four-berries.webp" alt="Tokyo E Juice Saltnic Super Cool Four Berries">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Tokyo-tokyo-e-juice-saltnic-super-cool-four-berries-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> TOKYO</span>
+                <h3 class="title"><a href="./E-liquids-products/Tokyo-tokyo-e-juice-saltnic-super-cool-four-berries-data.html" class="text-decoration-none text-dark">Tokyo E Juice Saltnic Super Cool Four Berries</a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.3,500.00</span> RS 2,800.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-category="e-liquids" data-brand="TOKYO" data-link="./E-liquids-products/Tokyo-tokyo-e-juice-saltnic-super-cool-peach-orange-lemongrass--data.html" data-image="./assets/img/acceerece/E-liquids/Tokyo/tokyo-e-juice-saltnic-super-cool-peach-orange-lemongrass-.webp" data-name="Tokyo E Juice Saltnic Super Cool Peach Orange Lemongrass" data-price="2800.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="./E-liquids-products/Tokyo-tokyo-e-juice-saltnic-super-cool-peach-orange-lemongrass--data.html">
+                    <img src="./assets/img/acceerece/E-liquids/Tokyo/tokyo-e-juice-saltnic-super-cool-peach-orange-lemongrass-.webp" alt="Tokyo E Juice Saltnic Super Cool Peach Orange Lemongrass ">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Tokyo-tokyo-e-juice-saltnic-super-cool-peach-orange-lemongrass--data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> TOKYO</span>
+                <h3 class="title"><a href="./E-liquids-products/Tokyo-tokyo-e-juice-saltnic-super-cool-peach-orange-lemongrass--data.html" class="text-decoration-none text-dark">Tokyo E Juice Saltnic Super Cool Peach Orange Lemongrass </a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.3,500.00</span> RS 2,800.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-category="e-liquids" data-brand="TOKYO" data-link="./E-liquids-products/Tokyo-tokyo-e-juice-saltnic-super-cool-pineapple-jam-data.html" data-image="./assets/img/acceerece/E-liquids/Tokyo/tokyo-e-juice-saltnic-super-cool-pineapple-jam.webp" data-name="Tokyo E Juice Saltnic Super Cool Pineapple Jam" data-price="2800.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="./E-liquids-products/Tokyo-tokyo-e-juice-saltnic-super-cool-pineapple-jam-data.html">
+                    <img src="./assets/img/acceerece/E-liquids/Tokyo/tokyo-e-juice-saltnic-super-cool-pineapple-jam.webp" alt="Tokyo E Juice Saltnic Super Cool Pineapple Jam">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Tokyo-tokyo-e-juice-saltnic-super-cool-pineapple-jam-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> TOKYO</span>
+                <h3 class="title"><a href="./E-liquids-products/Tokyo-tokyo-e-juice-saltnic-super-cool-pineapple-jam-data.html" class="text-decoration-none text-dark">Tokyo E Juice Saltnic Super Cool Pineapple Jam</a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.3,500.00</span> RS 2,800.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-brand="TOKYO" data-image="./assets/img/acceerece/E-liquids/Tokyo/tokyo-e-juice-saltnic-super-cool-pineapple-peach.webp" data-link="./E-liquids-products/Tokyo-tokyo-e-juice-saltnic-super-cool-pineapple-peach-data.html" data-category="e-liquids" data-name="Tokyo E Juice Saltnic Super Cool Pineapple Peach" data-price="2800.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="./E-liquids-products/Tokyo-tokyo-e-juice-saltnic-super-cool-pineapple-peach-data.html">
+                    <img src="./assets/img/acceerece/E-liquids/Tokyo/tokyo-e-juice-saltnic-super-cool-pineapple-peach.webp" alt="Tokyo E Juice Saltnic Super Cool Pineapple Peach">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Tokyo-tokyo-e-juice-saltnic-super-cool-pineapple-peach-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> TOKYO</span>
+                <h3 class="title"><a href="./E-liquids-products/Tokyo-tokyo-e-juice-saltnic-super-cool-pineapple-peach-data.html" class="text-decoration-none text-dark">Tokyo E Juice Saltnic Super Cool Pineapple Peach</a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.3,500.00</span> RS 2,800.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-category="e-liquids" data-brand="TOKYO" data-link="./E-liquids-products/Tokyo-tokyo-e-juice-saltnic-super-cool-watermelon-bubble-gum-data.html" data-image="./assets/img/acceerece/E-liquids/Tokyo/tokyo-e-juice-saltnic-super-cool-watermelon-bubble-gum.webp" data-name="Tokyo E Juice Saltnic Super Cool Watermelon Bubble Gum" data-price="2800.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="./E-liquids-products/Tokyo-tokyo-e-juice-saltnic-super-cool-watermelon-bubble-gum-data.html">
+                    <img src="./assets/img/acceerece/E-liquids/Tokyo/tokyo-e-juice-saltnic-super-cool-watermelon-bubble-gum.webp" alt="Tokyo E Juice Saltnic Super Cool Watermelon Bubble Gum">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Tokyo-tokyo-e-juice-saltnic-super-cool-watermelon-bubble-gum-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> TOKYO</span>
+                <h3 class="title"><a href="./E-liquids-products/Tokyo-tokyo-e-juice-saltnic-super-cool-watermelon-bubble-gum-data.html" class="text-decoration-none text-dark">Tokyo E Juice Saltnic Super Cool Watermelon Bubble Gum</a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.3,500.00</span> RS 2,800.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-category="e-liquids" data-brand="TOKYO" data-link="./E-liquids-products/Tokyo-tokyo-saltnic-super-cool-dragon-fruit-data.html" data-image="./assets/img/acceerece/E-liquids/Tokyo/tokyo-saltnic-super-cool-dragon-fruit.webp" data-name="Tokyo Saltnic Super Cool Dragon Fruit" data-price="2800.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="./E-liquids-products/Tokyo-tokyo-saltnic-super-cool-dragon-fruit-data.html">
+                    <img src="./assets/img/acceerece/E-liquids/Tokyo/tokyo-saltnic-super-cool-dragon-fruit.webp" alt="Tokyo Saltnic Super Cool Dragon Fruit">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Tokyo-tokyo-saltnic-super-cool-dragon-fruit-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> TOKYO</span>
+                <h3 class="title"><a href="./E-liquids-products/Tokyo-tokyo-saltnic-super-cool-dragon-fruit-data.html" class="text-decoration-none text-dark">Tokyo Saltnic Super Cool Dragon Fruit</a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.3,500.00</span> RS 2,800.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-brand="TOKYO" data-image="./assets/img/acceerece/E-liquids/Tokyo/tripple-mango.webp" data-link="./E-liquids-products/Tokyo-tripple-mango-data.html" data-category="e-liquids" data-name="Tripple Mango" data-price="2800.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="./E-liquids-products/Tokyo-tripple-mango-data.html">
+                    <img src="./assets/img/acceerece/E-liquids/Tokyo/tripple-mango.webp" alt="Tripple Mango">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Tokyo-tripple-mango-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> TOKYO</span>
+                <h3 class="title"><a href="./E-liquids-products/Tokyo-tripple-mango-data.html" class="text-decoration-none text-dark">Tripple Mango</a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.3,500.00</span> RS 2,800.00</div>
+            </div>
+        </div>
+
+    </div>
+<!-- Udoo products -->
+    <div id="Udoo" class="product-grid tab-content mt-5">
+
+        <div class="product-item" data-category="e-liquids" data-brand="UDOO" data-link="./E-liquids-products/Udoo-pinapple-peach-data.html" data-image="./assets/img/acceerece/E-liquids/Udoo/pinapple-peach.jpg" data-name="Pinapple Peach" data-price="2500.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="./E-liquids-products/Udoo-pinapple-peach-data.html">
+                    <img src="./assets/img/acceerece/E-liquids/Udoo/pinapple-peach.jpg" alt="Pinapple Peach">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Udoo-pinapple-peach-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> UDOO</span>
+                <h3 class="title"><a href="./E-liquids-products/Udoo-pinapple-peach-data.html" class="text-decoration-none text-dark">Pinapple Peach</a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.3,200.00</span> RS 2,500.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-category="e-liquids" data-brand="UDOO" data-link="./E-liquids-products/Udoo-pineapple-grape-data.html" data-image="./assets/img/acceerece/E-liquids/Udoo/pineapple-grape.jpg" data-name="Pineapple Grape" data-price="2500.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="./E-liquids-products/Udoo-pineapple-grape-data.html">
+                    <img src="./assets/img/acceerece/E-liquids/Udoo/pineapple-grape.jpg" alt="Pineapple Grape">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Udoo-pineapple-grape-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> UDOO</span>
+                <h3 class="title"><a href="./E-liquids-products/Udoo-pineapple-grape-data.html" class="text-decoration-none text-dark">Pineapple Grape</a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.3,200.00</span> RS 2,500.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-brand="UDOO" data-image="./assets/img/acceerece/E-liquids/Udoo/pineapple-ice.jpg" data-link="./E-liquids-products/Udoo-pineapple-ice-data.html" data-category="e-liquids" data-name="Pineapple Ice" data-price="2500.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="./E-liquids-products/Udoo-pineapple-ice-data.html">
+                    <img src="./assets/img/acceerece/E-liquids/Udoo/pineapple-ice.jpg" alt="Pineapple Ice">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Udoo-pineapple-ice-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> UDOO</span>
+                <h3 class="title"><a href="./E-liquids-products/Udoo-pineapple-ice-data.html" class="text-decoration-none text-dark">Pineapple Ice</a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.3,200.00</span> RS 2,500.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-category="e-liquids" data-brand="UDOO" data-link="./E-liquids-products/Udoo-pineapple-lychee-data.html" data-image="./assets/img/acceerece/E-liquids/Udoo/pineapple-lychee.jpg" data-name="Pineapple Lychee" data-price="2500.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="./E-liquids-products/Udoo-pineapple-lychee-data.html">
+                    <img src="./assets/img/acceerece/E-liquids/Udoo/pineapple-lychee.jpg" alt="Pineapple Lychee">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Udoo-pineapple-lychee-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> UDOO</span>
+                <h3 class="title"><a href="./E-liquids-products/Udoo-pineapple-lychee-data.html" class="text-decoration-none text-dark">Pineapple Lychee</a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.3,200.00</span> RS 2,500.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-category="e-liquids" data-brand="UDOO" data-link="./E-liquids-products/Udoo-pineapple-passion-fruit-data.html" data-image="./assets/img/acceerece/E-liquids/Udoo/pineapple-passion-fruit.jpg" data-name="Pineapple Passion Fruit" data-price="2500.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="./E-liquids-products/Udoo-pineapple-passion-fruit-data.html">
+                    <img src="./assets/img/acceerece/E-liquids/Udoo/pineapple-passion-fruit.jpg" alt="Pineapple Passion Fruit">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Udoo-pineapple-passion-fruit-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> UDOO</span>
+                <h3 class="title"><a href="./E-liquids-products/Udoo-pineapple-passion-fruit-data.html" class="text-decoration-none text-dark">Pineapple Passion Fruit</a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.3,200.00</span> RS 2,500.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-brand="UDOO" data-image="./assets/img/acceerece/E-liquids/Udoo/pineapple-peach-mango.jpg" data-link="./E-liquids-products/Udoo-pineapple-peach-mango-data.html" data-category="e-liquids" data-name="Pineapple Peach Mango" data-price="2500.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="./E-liquids-products/Udoo-pineapple-peach-mango-data.html">
+                    <img src="./assets/img/acceerece/E-liquids/Udoo/pineapple-peach-mango.jpg" alt="Pineapple Peach Mango">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Udoo-pineapple-peach-mango-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> UDOO</span>
+                <h3 class="title"><a href="./E-liquids-products/Udoo-pineapple-peach-mango-data.html" class="text-decoration-none text-dark">Pineapple Peach Mango</a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.3,200.00</span> RS 2,500.00</div>
+            </div>
+        </div>
+
+    </div>
+<!-- Vgod products -->
+    <div id="Vgod" class="product-grid tab-content mt-5">
+
+        <div class="product-item" data-category="e-liquids" data-brand="VGOD" data-link="./E-liquids-products/Vgod-VGOD-Freebase-e-Liquid-Dry-Tobacco-3mg-60mL-data.html" data-image="./assets/img/acceerece/E-liquids/Vgod/VGOD-Freebase-e-Liquid-Dry-Tobacco-3mg-60mL.webp" data-name="Vgod Freebase E Liquid Dry Tobacco 3Mg 60Ml" data-price="3500.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="./E-liquids-products/Vgod-VGOD-Freebase-e-Liquid-Dry-Tobacco-3mg-60mL-data.html">
+                    <img src="./assets/img/acceerece/E-liquids/Vgod/VGOD-Freebase-e-Liquid-Dry-Tobacco-3mg-60mL.webp" alt="Vgod Freebase E Liquid Dry Tobacco 3Mg 60Ml">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Vgod-VGOD-Freebase-e-Liquid-Dry-Tobacco-3mg-60mL-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> VGOD</span>
+                <h3 class="title"><a href="./E-liquids-products/Vgod-VGOD-Freebase-e-Liquid-Dry-Tobacco-3mg-60mL-data.html" class="text-decoration-none text-dark">Vgod Freebase E Liquid Dry Tobacco 3Mg 60Ml</a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.4,500.00</span> RS 3,500.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-category="e-liquids" data-brand="VGOD" data-link="./E-liquids-products/Vgod-VGOD-Freebase-e-liquid-AppleBomb-3mg-60mL-data.html" data-image="./assets/img/acceerece/E-liquids/Vgod/VGOD-Freebase-e-liquid-AppleBomb-3mg-60mL.webp" data-name="Vgod Freebase E Liquid Applebomb 3Mg 60Ml" data-price="3500.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="./E-liquids-products/Vgod-VGOD-Freebase-e-liquid-AppleBomb-3mg-60mL-data.html">
+                    <img src="./assets/img/acceerece/E-liquids/Vgod/VGOD-Freebase-e-liquid-AppleBomb-3mg-60mL.webp" alt="Vgod Freebase E Liquid Applebomb 3Mg 60Ml">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Vgod-VGOD-Freebase-e-liquid-AppleBomb-3mg-60mL-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> VGOD</span>
+                <h3 class="title"><a href="./E-liquids-products/Vgod-VGOD-Freebase-e-liquid-AppleBomb-3mg-60mL-data.html" class="text-decoration-none text-dark">Vgod Freebase E Liquid Applebomb 3Mg 60Ml</a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.4,500.00</span> RS 3,500.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-brand="VGOD" data-image="./assets/img/acceerece/E-liquids/Vgod/VGOD-Freebase-e-liquid-BerryBomb-3mg-60mL.webp" data-link="./E-liquids-products/Vgod-VGOD-Freebase-e-liquid-BerryBomb-3mg-60mL-data.html" data-category="e-liquids" data-name="Vgod Freebase E Liquid Berrybomb 3Mg 60Ml" data-price="3500.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="./E-liquids-products/Vgod-VGOD-Freebase-e-liquid-BerryBomb-3mg-60mL-data.html">
+                    <img src="./assets/img/acceerece/E-liquids/Vgod/VGOD-Freebase-e-liquid-BerryBomb-3mg-60mL.webp" alt="Vgod Freebase E Liquid Berrybomb 3Mg 60Ml">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Vgod-VGOD-Freebase-e-liquid-BerryBomb-3mg-60mL-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> VGOD</span>
+                <h3 class="title"><a href="./E-liquids-products/Vgod-VGOD-Freebase-e-liquid-BerryBomb-3mg-60mL-data.html" class="text-decoration-none text-dark">Vgod Freebase E Liquid Berrybomb 3Mg 60Ml</a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.4,500.00</span> RS 3,500.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-category="e-liquids" data-brand="VGOD" data-link="./E-liquids-products/Vgod-VGOD-Freebase-e-liquid-Cubano-3mg-60mL-data.html" data-image="./assets/img/acceerece/E-liquids/Vgod/VGOD-Freebase-e-liquid-Cubano-3mg-60mL.webp" data-name="Vgod Freebase E Liquid Cubano 3Mg 60Ml" data-price="3500.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="./E-liquids-products/Vgod-VGOD-Freebase-e-liquid-Cubano-3mg-60mL-data.html">
+                    <img src="./assets/img/acceerece/E-liquids/Vgod/VGOD-Freebase-e-liquid-Cubano-3mg-60mL.webp" alt="Vgod Freebase E Liquid Cubano 3Mg 60Ml">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Vgod-VGOD-Freebase-e-liquid-Cubano-3mg-60mL-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> VGOD</span>
+                <h3 class="title"><a href="./E-liquids-products/Vgod-VGOD-Freebase-e-liquid-Cubano-3mg-60mL-data.html" class="text-decoration-none text-dark">Vgod Freebase E Liquid Cubano 3Mg 60Ml</a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.4,500.00</span> RS 3,500.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-category="e-liquids" data-brand="VGOD" data-link="./E-liquids-products/Vgod-VGOD-Freebase-e-liquid-CubanoBlack-3mg-60mL-data.html" data-image="./assets/img/acceerece/E-liquids/Vgod/VGOD-Freebase-e-liquid-CubanoBlack-3mg-60mL.webp" data-name="Vgod Freebase E Liquid Cubanoblack 3Mg 60Ml" data-price="3500.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="./E-liquids-products/Vgod-VGOD-Freebase-e-liquid-CubanoBlack-3mg-60mL-data.html">
+                    <img src="./assets/img/acceerece/E-liquids/Vgod/VGOD-Freebase-e-liquid-CubanoBlack-3mg-60mL.webp" alt="Vgod Freebase E Liquid Cubanoblack 3Mg 60Ml">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Vgod-VGOD-Freebase-e-liquid-CubanoBlack-3mg-60mL-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> VGOD</span>
+                <h3 class="title"><a href="./E-liquids-products/Vgod-VGOD-Freebase-e-liquid-CubanoBlack-3mg-60mL-data.html" class="text-decoration-none text-dark">Vgod Freebase E Liquid Cubanoblack 3Mg 60Ml</a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.4,500.00</span> RS 3,500.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-brand="VGOD" data-image="./assets/img/acceerece/E-liquids/Vgod/VGOD-Freebase-e-liquid-CubanoSilver-3mg-60mL.webp" data-link="./E-liquids-products/Vgod-VGOD-Freebase-e-liquid-CubanoSilver-3mg-60mL-data.html" data-category="e-liquids" data-name="Vgod Freebase E Liquid Cubanosilver 3Mg 60Ml" data-price="3500.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="./E-liquids-products/Vgod-VGOD-Freebase-e-liquid-CubanoSilver-3mg-60mL-data.html">
+                    <img src="./assets/img/acceerece/E-liquids/Vgod/VGOD-Freebase-e-liquid-CubanoSilver-3mg-60mL.webp" alt="Vgod Freebase E Liquid Cubanosilver 3Mg 60Ml">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Vgod-VGOD-Freebase-e-liquid-CubanoSilver-3mg-60mL-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> VGOD</span>
+                <h3 class="title"><a href="./E-liquids-products/Vgod-VGOD-Freebase-e-liquid-CubanoSilver-3mg-60mL-data.html" class="text-decoration-none text-dark">Vgod Freebase E Liquid Cubanosilver 3Mg 60Ml</a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.4,500.00</span> RS 3,500.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-category="e-liquids" data-brand="VGOD" data-link="./E-liquids-products/Vgod-VGOD-Freebase-e-liquid-IcedAppleBomb-3mg-60mL-data.html" data-image="./assets/img/acceerece/E-liquids/Vgod/VGOD-Freebase-e-liquid-IcedAppleBomb-3mg-60mL.webp" data-name="Vgod Freebase E Liquid Icedapplebomb 3Mg 60Ml" data-price="3500.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="./E-liquids-products/Vgod-VGOD-Freebase-e-liquid-IcedAppleBomb-3mg-60mL-data.html">
+                    <img src="./assets/img/acceerece/E-liquids/Vgod/VGOD-Freebase-e-liquid-IcedAppleBomb-3mg-60mL.webp" alt="Vgod Freebase E Liquid Icedapplebomb 3Mg 60Ml">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Vgod-VGOD-Freebase-e-liquid-IcedAppleBomb-3mg-60mL-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> VGOD</span>
+                <h3 class="title"><a href="./E-liquids-products/Vgod-VGOD-Freebase-e-liquid-IcedAppleBomb-3mg-60mL-data.html" class="text-decoration-none text-dark">Vgod Freebase E Liquid Icedapplebomb 3Mg 60Ml</a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.4,500.00</span> RS 3,500.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-category="e-liquids" data-brand="VGOD" data-link="./E-liquids-products/Vgod-VGOD-Freebase-e-liquid-IcedBananaBomb-3mg-60mL-data.html" data-image="./assets/img/acceerece/E-liquids/Vgod/VGOD-Freebase-e-liquid-IcedBananaBomb-3mg-60mL.webp" data-name="Vgod Freebase E Liquid Icedbananabomb 3Mg 60Ml" data-price="3500.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="./E-liquids-products/Vgod-VGOD-Freebase-e-liquid-IcedBananaBomb-3mg-60mL-data.html">
+                    <img src="./assets/img/acceerece/E-liquids/Vgod/VGOD-Freebase-e-liquid-IcedBananaBomb-3mg-60mL.webp" alt="Vgod Freebase E Liquid Icedbananabomb 3Mg 60Ml">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Vgod-VGOD-Freebase-e-liquid-IcedBananaBomb-3mg-60mL-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> VGOD</span>
+                <h3 class="title"><a href="./E-liquids-products/Vgod-VGOD-Freebase-e-liquid-IcedBananaBomb-3mg-60mL-data.html" class="text-decoration-none text-dark">Vgod Freebase E Liquid Icedbananabomb 3Mg 60Ml</a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.4,500.00</span> RS 3,500.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-brand="VGOD" data-image="./assets/img/acceerece/E-liquids/Vgod/VGOD-Freebase-e-liquid-IcedMangoBomb-3mg-60mL.webp" data-link="./E-liquids-products/Vgod-VGOD-Freebase-e-liquid-IcedMangoBomb-3mg-60mL-data.html" data-category="e-liquids" data-name="Vgod Freebase E Liquid Icedmangobomb 3Mg 60Ml" data-price="3500.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="./E-liquids-products/Vgod-VGOD-Freebase-e-liquid-IcedMangoBomb-3mg-60mL-data.html">
+                    <img src="./assets/img/acceerece/E-liquids/Vgod/VGOD-Freebase-e-liquid-IcedMangoBomb-3mg-60mL.webp" alt="Vgod Freebase E Liquid Icedmangobomb 3Mg 60Ml">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Vgod-VGOD-Freebase-e-liquid-IcedMangoBomb-3mg-60mL-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> VGOD</span>
+                <h3 class="title"><a href="./E-liquids-products/Vgod-VGOD-Freebase-e-liquid-IcedMangoBomb-3mg-60mL-data.html" class="text-decoration-none text-dark">Vgod Freebase E Liquid Icedmangobomb 3Mg 60Ml</a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.4,500.00</span> RS 3,500.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-category="e-liquids" data-brand="VGOD" data-link="./E-liquids-products/Vgod-VGOD-Freebase-e-liquid-IcedPurpleBomb-3mg-60mL-data.html" data-image="./assets/img/acceerece/E-liquids/Vgod/VGOD-Freebase-e-liquid-IcedPurpleBomb-3mg-60mL.webp" data-name="Vgod Freebase E Liquid Icedpurplebomb 3Mg 60Ml" data-price="3500.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="./E-liquids-products/Vgod-VGOD-Freebase-e-liquid-IcedPurpleBomb-3mg-60mL-data.html">
+                    <img src="./assets/img/acceerece/E-liquids/Vgod/VGOD-Freebase-e-liquid-IcedPurpleBomb-3mg-60mL.webp" alt="Vgod Freebase E Liquid Icedpurplebomb 3Mg 60Ml">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Vgod-VGOD-Freebase-e-liquid-IcedPurpleBomb-3mg-60mL-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> VGOD</span>
+                <h3 class="title"><a href="./E-liquids-products/Vgod-VGOD-Freebase-e-liquid-IcedPurpleBomb-3mg-60mL-data.html" class="text-decoration-none text-dark">Vgod Freebase E Liquid Icedpurplebomb 3Mg 60Ml</a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.4,500.00</span> RS 3,500.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-category="e-liquids" data-brand="VGOD" data-link="./E-liquids-products/Vgod-VGOD-Freebase-e-liquid-Luscious-3mg-60mL-data.html" data-image="./assets/img/acceerece/E-liquids/Vgod/VGOD-Freebase-e-liquid-Luscious-3mg-60mL.webp" data-name="Vgod Freebase E Liquid Luscious 3Mg 60Ml" data-price="3500.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="./E-liquids-products/Vgod-VGOD-Freebase-e-liquid-Luscious-3mg-60mL-data.html">
+                    <img src="./assets/img/acceerece/E-liquids/Vgod/VGOD-Freebase-e-liquid-Luscious-3mg-60mL.webp" alt="Vgod Freebase E Liquid Luscious 3Mg 60Ml">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Vgod-VGOD-Freebase-e-liquid-Luscious-3mg-60mL-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> VGOD</span>
+                <h3 class="title"><a href="./E-liquids-products/Vgod-VGOD-Freebase-e-liquid-Luscious-3mg-60mL-data.html" class="text-decoration-none text-dark">Vgod Freebase E Liquid Luscious 3Mg 60Ml</a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.4,500.00</span> RS 3,500.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-brand="VGOD" data-image="./assets/img/acceerece/E-liquids/Vgod/VGOD-Freebase-e-liquid-LushIce-3mg-60mL.webp" data-link="./E-liquids-products/Vgod-VGOD-Freebase-e-liquid-LushIce-3mg-60mL-data.html" data-category="e-liquids" data-name="Vgod Freebase E Liquid Lushice 3Mg 60Ml" data-price="3500.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="./E-liquids-products/Vgod-VGOD-Freebase-e-liquid-LushIce-3mg-60mL-data.html">
+                    <img src="./assets/img/acceerece/E-liquids/Vgod/VGOD-Freebase-e-liquid-LushIce-3mg-60mL.webp" alt="Vgod Freebase E Liquid Lushice 3Mg 60Ml">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Vgod-VGOD-Freebase-e-liquid-LushIce-3mg-60mL-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> VGOD</span>
+                <h3 class="title"><a href="./E-liquids-products/Vgod-VGOD-Freebase-e-liquid-LushIce-3mg-60mL-data.html" class="text-decoration-none text-dark">Vgod Freebase E Liquid Lushice 3Mg 60Ml</a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.4,500.00</span> RS 3,500.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-category="e-liquids" data-brand="VGOD" data-link="./E-liquids-products/Vgod-VGOD-Freebase-e-liquid-MangoBomb-3mg-60mL-data.html" data-image="./assets/img/acceerece/E-liquids/Vgod/VGOD-Freebase-e-liquid-MangoBomb-3mg-60mL.webp" data-name="Vgod Freebase E Liquid Mangobomb 3Mg 60Ml" data-price="3500.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="./E-liquids-products/Vgod-VGOD-Freebase-e-liquid-MangoBomb-3mg-60mL-data.html">
+                    <img src="./assets/img/acceerece/E-liquids/Vgod/VGOD-Freebase-e-liquid-MangoBomb-3mg-60mL.webp" alt="Vgod Freebase E Liquid Mangobomb 3Mg 60Ml">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Vgod-VGOD-Freebase-e-liquid-MangoBomb-3mg-60mL-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> VGOD</span>
+                <h3 class="title"><a href="./E-liquids-products/Vgod-VGOD-Freebase-e-liquid-MangoBomb-3mg-60mL-data.html" class="text-decoration-none text-dark">Vgod Freebase E Liquid Mangobomb 3Mg 60Ml</a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.4,500.00</span> RS 3,500.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-category="e-liquids" data-brand="VGOD" data-link="./E-liquids-products/Vgod-VGOD-Freebase-e-liquid-PurpleBomb-3mg-60mL-data.html" data-image="./assets/img/acceerece/E-liquids/Vgod/VGOD-Freebase-e-liquid-PurpleBomb-3mg-60mL.webp" data-name="Vgod Freebase E Liquid Purplebomb 3Mg 60Ml" data-price="3500.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="./E-liquids-products/Vgod-VGOD-Freebase-e-liquid-PurpleBomb-3mg-60mL-data.html">
+                    <img src="./assets/img/acceerece/E-liquids/Vgod/VGOD-Freebase-e-liquid-PurpleBomb-3mg-60mL.webp" alt="Vgod Freebase E Liquid Purplebomb 3Mg 60Ml">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Vgod-VGOD-Freebase-e-liquid-PurpleBomb-3mg-60mL-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> VGOD</span>
+                <h3 class="title"><a href="./E-liquids-products/Vgod-VGOD-Freebase-e-liquid-PurpleBomb-3mg-60mL-data.html" class="text-decoration-none text-dark">Vgod Freebase E Liquid Purplebomb 3Mg 60Ml</a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.4,500.00</span> RS 3,500.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-brand="VGOD" data-image="./assets/img/acceerece/E-liquids/Vgod/VGOD-Freebase-e-liquid-Sourlicious-3mg-60mL.webp" data-link="./E-liquids-products/Vgod-VGOD-Freebase-e-liquid-Sourlicious-3mg-60mL-data.html" data-category="e-liquids" data-name="Vgod Freebase E Liquid Sourlicious 3Mg 60Ml" data-price="3500.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="./E-liquids-products/Vgod-VGOD-Freebase-e-liquid-Sourlicious-3mg-60mL-data.html">
+                    <img src="./assets/img/acceerece/E-liquids/Vgod/VGOD-Freebase-e-liquid-Sourlicious-3mg-60mL.webp" alt="Vgod Freebase E Liquid Sourlicious 3Mg 60Ml">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Vgod-VGOD-Freebase-e-liquid-Sourlicious-3mg-60mL-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> VGOD</span>
+                <h3 class="title"><a href="./E-liquids-products/Vgod-VGOD-Freebase-e-liquid-Sourlicious-3mg-60mL-data.html" class="text-decoration-none text-dark">Vgod Freebase E Liquid Sourlicious 3Mg 60Ml</a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.4,500.00</span> RS 3,500.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-category="e-liquids" data-brand="VGOD" data-link="./E-liquids-products/Vgod-VGOD-Freebase-eLiquid-Iced-Cherry-Lime-3mg-60mL-data.html" data-image="./assets/img/acceerece/E-liquids/Vgod/VGOD-Freebase-eLiquid-Iced-Cherry-Lime-3mg-60mL.webp" data-name="Vgod Freebase Eliquid Iced Cherry Lime 3Mg 60Ml" data-price="3500.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="./E-liquids-products/Vgod-VGOD-Freebase-eLiquid-Iced-Cherry-Lime-3mg-60mL-data.html">
+                    <img src="./assets/img/acceerece/E-liquids/Vgod/VGOD-Freebase-eLiquid-Iced-Cherry-Lime-3mg-60mL.webp" alt="Vgod Freebase Eliquid Iced Cherry Lime 3Mg 60Ml">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Vgod-VGOD-Freebase-eLiquid-Iced-Cherry-Lime-3mg-60mL-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> VGOD</span>
+                <h3 class="title"><a href="./E-liquids-products/Vgod-VGOD-Freebase-eLiquid-Iced-Cherry-Lime-3mg-60mL-data.html" class="text-decoration-none text-dark">Vgod Freebase Eliquid Iced Cherry Lime 3Mg 60Ml</a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.4,500.00</span> RS 3,500.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-category="e-liquids" data-brand="VGOD" data-link="./E-liquids-products/Vgod-VGOD-Freebase-eLiquid-IcedBlueRazz-3mg-60mL-data.html" data-image="./assets/img/acceerece/E-liquids/Vgod/VGOD-Freebase-eLiquid-IcedBlueRazz-3mg-60mL.webp" data-name="Vgod Freebase Eliquid Icedbluerazz 3Mg 60Ml" data-price="3500.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="./E-liquids-products/Vgod-VGOD-Freebase-eLiquid-IcedBlueRazz-3mg-60mL-data.html">
+                    <img src="./assets/img/acceerece/E-liquids/Vgod/VGOD-Freebase-eLiquid-IcedBlueRazz-3mg-60mL.webp" alt="Vgod Freebase Eliquid Icedbluerazz 3Mg 60Ml">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Vgod-VGOD-Freebase-eLiquid-IcedBlueRazz-3mg-60mL-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> VGOD</span>
+                <h3 class="title"><a href="./E-liquids-products/Vgod-VGOD-Freebase-eLiquid-IcedBlueRazz-3mg-60mL-data.html" class="text-decoration-none text-dark">Vgod Freebase Eliquid Icedbluerazz 3Mg 60Ml</a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.4,500.00</span> RS 3,500.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-brand="VGOD" data-image="./assets/img/acceerece/E-liquids/Vgod/VGOD-Freebase-eLiquid-IcedBubbleGrapes-3mg-60mL.webp" data-link="./E-liquids-products/Vgod-VGOD-Freebase-eLiquid-IcedBubbleGrapes-3mg-60mL-data.html" data-category="e-liquids" data-name="Vgod Freebase Eliquid Icedbubblegrapes 3Mg 60Ml" data-price="3500.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="./E-liquids-products/Vgod-VGOD-Freebase-eLiquid-IcedBubbleGrapes-3mg-60mL-data.html">
+                    <img src="./assets/img/acceerece/E-liquids/Vgod/VGOD-Freebase-eLiquid-IcedBubbleGrapes-3mg-60mL.webp" alt="Vgod Freebase Eliquid Icedbubblegrapes 3Mg 60Ml">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Vgod-VGOD-Freebase-eLiquid-IcedBubbleGrapes-3mg-60mL-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> VGOD</span>
+                <h3 class="title"><a href="./E-liquids-products/Vgod-VGOD-Freebase-eLiquid-IcedBubbleGrapes-3mg-60mL-data.html" class="text-decoration-none text-dark">Vgod Freebase Eliquid Icedbubblegrapes 3Mg 60Ml</a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.4,500.00</span> RS 3,500.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-category="e-liquids" data-brand="VGOD" data-link="./E-liquids-products/Vgod-VGOD-Freebase-eLiquid-IcedBubbleWatermelon-3mg-60mL-data.html" data-image="./assets/img/acceerece/E-liquids/Vgod/VGOD-Freebase-eLiquid-IcedBubbleWatermelon-3mg-60mL.webp" data-name="Vgod Freebase Eliquid Icedbubblewatermelon 3Mg 60Ml" data-price="3500.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="./E-liquids-products/Vgod-VGOD-Freebase-eLiquid-IcedBubbleWatermelon-3mg-60mL-data.html">
+                    <img src="./assets/img/acceerece/E-liquids/Vgod/VGOD-Freebase-eLiquid-IcedBubbleWatermelon-3mg-60mL.webp" alt="Vgod Freebase Eliquid Icedbubblewatermelon 3Mg 60Ml">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Vgod-VGOD-Freebase-eLiquid-IcedBubbleWatermelon-3mg-60mL-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> VGOD</span>
+                <h3 class="title"><a href="./E-liquids-products/Vgod-VGOD-Freebase-eLiquid-IcedBubbleWatermelon-3mg-60mL-data.html" class="text-decoration-none text-dark">Vgod Freebase Eliquid Icedbubblewatermelon 3Mg 60Ml</a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.4,500.00</span> RS 3,500.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-category="e-liquids" data-brand="VGOD" data-link="./E-liquids-products/Vgod-VGOD-Freebase-eLiquid-IcedPeachMango-3mg-60mL-data.html" data-image="./assets/img/acceerece/E-liquids/Vgod/VGOD-Freebase-eLiquid-IcedPeachMango-3mg-60mL.webp" data-name="Vgod Freebase Eliquid Icedpeachmango 3Mg 60Ml" data-price="3500.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="./E-liquids-products/Vgod-VGOD-Freebase-eLiquid-IcedPeachMango-3mg-60mL-data.html">
+                    <img src="./assets/img/acceerece/E-liquids/Vgod/VGOD-Freebase-eLiquid-IcedPeachMango-3mg-60mL.webp" alt="Vgod Freebase Eliquid Icedpeachmango 3Mg 60Ml">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Vgod-VGOD-Freebase-eLiquid-IcedPeachMango-3mg-60mL-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> VGOD</span>
+                <h3 class="title"><a href="./E-liquids-products/Vgod-VGOD-Freebase-eLiquid-IcedPeachMango-3mg-60mL-data.html" class="text-decoration-none text-dark">Vgod Freebase Eliquid Icedpeachmango 3Mg 60Ml</a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.4,500.00</span> RS 3,500.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-brand="VGOD" data-image="./assets/img/acceerece/E-liquids/Vgod/VGOD-Freebase-eLiquid-IcedStrawberryApple-3mg-60mL.webp" data-link="./E-liquids-products/Vgod-VGOD-Freebase-eLiquid-IcedStrawberryApple-3mg-60mL-data.html" data-category="e-liquids" data-name="Vgod Freebase Eliquid Icedstrawberryapple 3Mg 60Ml" data-price="3500.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="./E-liquids-products/Vgod-VGOD-Freebase-eLiquid-IcedStrawberryApple-3mg-60mL-data.html">
+                    <img src="./assets/img/acceerece/E-liquids/Vgod/VGOD-Freebase-eLiquid-IcedStrawberryApple-3mg-60mL.webp" alt="Vgod Freebase Eliquid Icedstrawberryapple 3Mg 60Ml">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Vgod-VGOD-Freebase-eLiquid-IcedStrawberryApple-3mg-60mL-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> VGOD</span>
+                <h3 class="title"><a href="./E-liquids-products/Vgod-VGOD-Freebase-eLiquid-IcedStrawberryApple-3mg-60mL-data.html" class="text-decoration-none text-dark">Vgod Freebase Eliquid Icedstrawberryapple 3Mg 60Ml</a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.4,500.00</span> RS 3,500.00</div>
+            </div>
+        </div>
+
+    </div>
+<!-- Yezzi products -->
+    <div id="Yezzi" class="product-grid tab-content mt-5">
+
+        <div class="product-item" data-category="e-liquids" data-brand="YEZZI" data-link="./E-liquids-products/Yezzi-Yezzi-Salt-Pineapple-Mango-30ml-50mg-data.html" data-image="./assets/img/acceerece/E-liquids/Yezzi/Yezzi-Salt-Pineapple-Mango-30ml-50mg.webp" data-name="Yezzi Salt Pineapple Mango 30Ml 50Mg" data-price="1800.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="./E-liquids-products/Yezzi-Yezzi-Salt-Pineapple-Mango-30ml-50mg-data.html">
+                    <img src="./assets/img/acceerece/E-liquids/Yezzi/Yezzi-Salt-Pineapple-Mango-30ml-50mg.webp" alt="Yezzi Salt Pineapple Mango 30Ml 50Mg">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Yezzi-Yezzi-Salt-Pineapple-Mango-30ml-50mg-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> YEZZI</span>
+                <h3 class="title"><a href="./E-liquids-products/Yezzi-Yezzi-Salt-Pineapple-Mango-30ml-50mg-data.html" class="text-decoration-none text-dark">Yezzi Salt Pineapple Mango 30Ml 50Mg</a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.2,500.00</span> RS 1,800.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-category="e-liquids" data-brand="YEZZI" data-link="./E-liquids-products/Yezzi-Yezzi-Salt-Pineapple-Passion-Fruit-30ml-35mg-data.html" data-image="./assets/img/acceerece/E-liquids/Yezzi/Yezzi-Salt-Pineapple-Passion-Fruit-30ml-35mg.webp" data-name="Yezzi Salt Pineapple Passion Fruit 30Ml 35Mg" data-price="1800.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="./E-liquids-products/Yezzi-Yezzi-Salt-Pineapple-Passion-Fruit-30ml-35mg-data.html">
+                    <img src="./assets/img/acceerece/E-liquids/Yezzi/Yezzi-Salt-Pineapple-Passion-Fruit-30ml-35mg.webp" alt="Yezzi Salt Pineapple Passion Fruit 30Ml 35Mg">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Yezzi-Yezzi-Salt-Pineapple-Passion-Fruit-30ml-35mg-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> YEZZI</span>
+                <h3 class="title"><a href="./E-liquids-products/Yezzi-Yezzi-Salt-Pineapple-Passion-Fruit-30ml-35mg-data.html" class="text-decoration-none text-dark">Yezzi Salt Pineapple Passion Fruit 30Ml 35Mg</a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.2,500.00</span> RS 1,800.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-brand="YEZZI" data-image="./assets/img/acceerece/E-liquids/Yezzi/Yezzi-Salt-Pink-Lychee-30ml-35mg.webp" data-link="./E-liquids-products/Yezzi-Yezzi-Salt-Pink-Lychee-30ml-35mg-data.html" data-category="e-liquids" data-name="Yezzi Salt Pink Lychee 30Ml 35Mg" data-price="1800.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="./E-liquids-products/Yezzi-Yezzi-Salt-Pink-Lychee-30ml-35mg-data.html">
+                    <img src="./assets/img/acceerece/E-liquids/Yezzi/Yezzi-Salt-Pink-Lychee-30ml-35mg.webp" alt="Yezzi Salt Pink Lychee 30Ml 35Mg">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Yezzi-Yezzi-Salt-Pink-Lychee-30ml-35mg-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> YEZZI</span>
+                <h3 class="title"><a href="./E-liquids-products/Yezzi-Yezzi-Salt-Pink-Lychee-30ml-35mg-data.html" class="text-decoration-none text-dark">Yezzi Salt Pink Lychee 30Ml 35Mg</a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.2,500.00</span> RS 1,800.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-category="e-liquids" data-brand="YEZZI" data-link="./E-liquids-products/Yezzi-Yezzi-Salt-Wild-Blueberry-30ml-35mg-data.html" data-image="./assets/img/acceerece/E-liquids/Yezzi/Yezzi-Salt-Wild-Blueberry-30ml-35mg.webp" data-name="Yezzi Salt Wild Blueberry 30Ml 35Mg" data-price="1800.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="./E-liquids-products/Yezzi-Yezzi-Salt-Wild-Blueberry-30ml-35mg-data.html">
+                    <img src="./assets/img/acceerece/E-liquids/Yezzi/Yezzi-Salt-Wild-Blueberry-30ml-35mg.webp" alt="Yezzi Salt Wild Blueberry 30Ml 35Mg">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Yezzi-Yezzi-Salt-Wild-Blueberry-30ml-35mg-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> YEZZI</span>
+                <h3 class="title"><a href="./E-liquids-products/Yezzi-Yezzi-Salt-Wild-Blueberry-30ml-35mg-data.html" class="text-decoration-none text-dark">Yezzi Salt Wild Blueberry 30Ml 35Mg</a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.2,500.00</span> RS 1,800.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-category="e-liquids" data-brand="YEZZI" data-link="./E-liquids-products/Yezzi-Yezzi-Salt-Winter-Mint-30ml-50mg-data.html" data-image="./assets/img/acceerece/E-liquids/Yezzi/Yezzi-Salt-Winter-Mint-30ml-50mg.webp" data-name="Yezzi Salt Winter Mint 30Ml 50Mg" data-price="1800.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="./E-liquids-products/Yezzi-Yezzi-Salt-Winter-Mint-30ml-50mg-data.html">
+                    <img src="./assets/img/acceerece/E-liquids/Yezzi/Yezzi-Salt-Winter-Mint-30ml-50mg.webp" alt="Yezzi Salt Winter Mint 30Ml 50Mg">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Yezzi-Yezzi-Salt-Winter-Mint-30ml-50mg-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> YEZZI</span>
+                <h3 class="title"><a href="./E-liquids-products/Yezzi-Yezzi-Salt-Winter-Mint-30ml-50mg-data.html" class="text-decoration-none text-dark">Yezzi Salt Winter Mint 30Ml 50Mg</a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.2,500.00</span> RS 1,800.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-brand="YEZZI" data-image="./assets/img/acceerece/E-liquids/Yezzi/Yezzi-Ultra-Cool-Salt-Burst-Watermelon-30ml.webp" data-link="./E-liquids-products/Yezzi-Yezzi-Ultra-Cool-Salt-Burst-Watermelon-30ml-data.html" data-category="e-liquids" data-name="Yezzi Ultra Cool Salt Burst Watermelon 30Ml" data-price="1800.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="./E-liquids-products/Yezzi-Yezzi-Ultra-Cool-Salt-Burst-Watermelon-30ml-data.html">
+                    <img src="./assets/img/acceerece/E-liquids/Yezzi/Yezzi-Ultra-Cool-Salt-Burst-Watermelon-30ml.webp" alt="Yezzi Ultra Cool Salt Burst Watermelon 30Ml">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Yezzi-Yezzi-Ultra-Cool-Salt-Burst-Watermelon-30ml-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> YEZZI</span>
+                <h3 class="title"><a href="./E-liquids-products/Yezzi-Yezzi-Ultra-Cool-Salt-Burst-Watermelon-30ml-data.html" class="text-decoration-none text-dark">Yezzi Ultra Cool Salt Burst Watermelon 30Ml</a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.2,500.00</span> RS 1,800.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-category="e-liquids" data-brand="YEZZI" data-link="./E-liquids-products/Yezzi-Yezzi-Ultra-Cool-Salt-Green-Mango-30ml-35mg-data.html" data-image="./assets/img/acceerece/E-liquids/Yezzi/Yezzi-Ultra-Cool-Salt-Green-Mango-30ml-35mg.webp" data-name="Yezzi Ultra Cool Salt Green Mango 30Ml 35Mg" data-price="1800.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="./E-liquids-products/Yezzi-Yezzi-Ultra-Cool-Salt-Green-Mango-30ml-35mg-data.html">
+                    <img src="./assets/img/acceerece/E-liquids/Yezzi/Yezzi-Ultra-Cool-Salt-Green-Mango-30ml-35mg.webp" alt="Yezzi Ultra Cool Salt Green Mango 30Ml 35Mg">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Yezzi-Yezzi-Ultra-Cool-Salt-Green-Mango-30ml-35mg-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> YEZZI</span>
+                <h3 class="title"><a href="./E-liquids-products/Yezzi-Yezzi-Ultra-Cool-Salt-Green-Mango-30ml-35mg-data.html" class="text-decoration-none text-dark">Yezzi Ultra Cool Salt Green Mango 30Ml 35Mg</a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.2,500.00</span> RS 1,800.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-category="e-liquids" data-brand="YEZZI" data-link="./E-liquids-products/Yezzi-Yezzi-Ultra-Cool-Salt-Pineapple-30ml-50mg-data.html" data-image="./assets/img/acceerece/E-liquids/Yezzi/Yezzi-Ultra-Cool-Salt-Pineapple-30ml-50mg.webp" data-name="Yezzi Ultra Cool Salt Pineapple 30Ml 50Mg" data-price="1800.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="./E-liquids-products/Yezzi-Yezzi-Ultra-Cool-Salt-Pineapple-30ml-50mg-data.html">
+                    <img src="./assets/img/acceerece/E-liquids/Yezzi/Yezzi-Ultra-Cool-Salt-Pineapple-30ml-50mg.webp" alt="Yezzi Ultra Cool Salt Pineapple 30Ml 50Mg">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Yezzi-Yezzi-Ultra-Cool-Salt-Pineapple-30ml-50mg-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> YEZZI</span>
+                <h3 class="title"><a href="./E-liquids-products/Yezzi-Yezzi-Ultra-Cool-Salt-Pineapple-30ml-50mg-data.html" class="text-decoration-none text-dark">Yezzi Ultra Cool Salt Pineapple 30Ml 50Mg</a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.2,500.00</span> RS 1,800.00</div>
+            </div>
+        </div>
+        <div class="product-item" data-category="e-liquids" data-brand="YEZZI" data-link="./E-liquids-products/Yezzi-Yezzi-Ultra-Cool-Salt-Pineapple-Guava-30ml-35mg-data.html" data-image="./assets/img/acceerece/E-liquids/Yezzi/Yezzi-Ultra-Cool-Salt-Pineapple-Guava-30ml-35mg.webp" data-name="Yezzi Ultra Cool Salt Pineapple Guava 30Ml 35Mg" data-price="1800.00">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="./E-liquids-products/Yezzi-Yezzi-Ultra-Cool-Salt-Pineapple-Guava-30ml-35mg-data.html">
+                    <img src="./assets/img/acceerece/E-liquids/Yezzi/Yezzi-Ultra-Cool-Salt-Pineapple-Guava-30ml-35mg.webp" alt="Yezzi Ultra Cool Salt Pineapple Guava 30Ml 35Mg">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Detail" onclick="location.href='./E-liquids-products/Yezzi-Yezzi-Ultra-Cool-Salt-Pineapple-Guava-30ml-35mg-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> YEZZI</span>
+                <h3 class="title"><a href="./E-liquids-products/Yezzi-Yezzi-Ultra-Cool-Salt-Pineapple-Guava-30ml-35mg-data.html" class="text-decoration-none text-dark">Yezzi Ultra Cool Salt Pineapple Guava 30Ml 35Mg</a></h3>
+                <div class="rating">????? <span class="review-count">(5 reviews)</span></div>
+                <div class="price"><span class="old">Rs.2,500.00</span> RS 1,800.00</div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+    
+
+      
+    </div>
+    </div>
+
+
+        <!-- footer -->
+    <footer class="footer-section pt-5">
+        <div class="container footer-top">
+            <div class="row">
+                <!-- Column 1: Brand & About -->
+                <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
+                    <div class="footer-logo-box"><a class="footer-navbar-brand" href="./index.html"><img src="./assets/img/web-logo.png" alt=""></a></div>
+                    <p class="footer-about-text">
+                        Discover the ultimate vaping experience with VAPE CLUSTER. We provide premium devices, 
+                        expertly crafted e-liquids, and high-performance coils for enthusiasts and beginners alike.
+                    </p>
+                                        <div class="footer-social-icons">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="col-lg-2 col-md-6 mb-5 mb-lg-0">
+                    <h4 class="footer-heading">Shop Info</h4>
+                    <ul class="footer-links">
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./about.html">About Our Story</a></li>
+                        <li><a href="./contact.html">Contact Support</a></li>
+                        <li><a href="./privacy-policy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Collections -->
+                <div class="col-lg-2 col-md-6 mb-5 mb-lg-0">
+                    <h4 class="footer-heading">Collections</h4>
+                    <ul class="footer-links">
+                        <li><a href="./E-Liquids.html">E-Liquids</a></li>
+                        <li><a href="./coils.html">Premium Coils</a></li>
+                        <li><a href="./OXVA.html">OXVA Series</a></li>
+                        <li><a href="./vaporesso.html">Vaporesso</a></li>
+                        <li><a href="./UWELL.html">Uwell Kits</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Newsletter -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="newsletter-form-container">
+                        <h4 class="newsletter-title">Stay Updated</h4>
+                        <p class="newsletter-desc">Subscribe to get notified about new arrivals and exclusive discounts.</p>
+                        <form action="#" class="newsletter-input-wrap">
+                            <input type="email" placeholder="Your email address" required>
+                            <button type="submit">Subscribe</button>
+                        </form>
+                        <div class="mt-4">
+                            <h6 class="text-white-50 small text-uppercase mb-2">Customer Care</h6>
+                            <ul class="footer-contact-info">
+                                <li><i class="fa-solid fa-phone"></i> +92 3200489485</li>
+                                <li><i class="fa-solid fa-envelope"></i> vapecluster872@gmail.com</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+                <div class="footer-bottom mt-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12 text-center">
+                        <p class="copyright-text">ï¿½ 2026 VAPE CLUSTER | ALL RIGHTS RESERVED.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function switchTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
+            }
+            tablinks = document.getElementsByClassName("tab-link");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

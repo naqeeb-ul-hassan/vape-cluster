@@ -1,0 +1,404 @@
+{% extends 'admin/base_admin.html' %}
+{% load static %}
+
+{% block title %}Add New Product | Vapier Admin{% endblock %}
+{% block page_title %}Add New Product{% endblock %}
+
+{% block extra_css %}
+<style>
+    .form-label {
+        color: var(--text-muted);
+        font-size: 13px;
+        font-weight: 600;
+        margin-bottom: 8px;
+    }
+    .form-control-admin {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid var(--border-color);
+        color: white;
+        padding: 12px 15px;
+        border-radius: 8px;
+        width: 100%;
+        transition: all 0.3s ease;
+    }
+    .form-control-admin:focus {
+        background: rgba(255, 255, 255, 0.08);
+        border-color: var(--accent-red);
+        outline: none;
+        box-shadow: 0 0 0 2px rgba(255, 68, 68, 0.2);
+    }
+    .image-preview-box {
+        width: 100%;
+        height: 180px;
+        border: 2px dashed var(--border-color);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        overflow: hidden;
+        background: rgba(255, 255, 255, 0.02);
+    }
+    .image-preview-box:hover {
+        border-color: var(--accent-red);
+        background: rgba(255, 68, 68, 0.05);
+    }
+    .image-preview-box img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+    }
+    select.form-control-admin {
+        appearance: none;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='white' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 15px center;
+    }
+    .step-indicator {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 25px;
+    }
+    .step-dot {
+        height: 6px;
+        flex: 1;
+        background: var(--border-color);
+        border-radius: 10px;
+        transition: all 0.3s ease;
+    }
+    .step-dot.active {
+        background: var(--accent-red);
+    }
+</style>
+{% endblock %}
+
+{% block admin_content %}
+<!-- Form Section -->
+<div class="row g-4 justify-content-center">
+    <div class="col-lg-10">
+        <div class="table-container p-4">
+            <div class="step-indicator">
+                <div class="step-dot active" id="dot1"></div>
+                <div class="step-dot" id="dot2"></div>
+            </div>
+
+            <form id="addProductForm" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <!-- Step 1: Inventory & Basic Info -->
+                <div id="step1">
+                    <h5 class="mb-4">Step 1: Inventory & Media</h5>
+                    <div class="row g-3">
+                        <div class="col-md-8">
+                            <div class="row g-3">
+                                <div class="col-md-12">
+                                    <label class="form-label">Product Name / Model</label>
+                                    <input type="text" name="name" class="form-control-admin" id="prodName" placeholder="e.g. OXVA Xlim Pro Purple" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Category / Brand</label>
+                                    <select name="brand" class="form-control-admin" id="prodBrand" required>
+                                        <option value="" selected disabled>Select Category</option>
+                                        {% for brand in brands %}
+                                            <option value="{{ brand.id }}">{{ brand.name }}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Price (RS)</label>
+                                    <input type="number" name="price" class="form-control-admin" id="prodPrice" placeholder="0000.00" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Stock Status</label>
+                                    <select name="stock_status" class="form-control-admin" id="prodStock" required>
+                                        <option value="In Stock">In Stock</option>
+                                        <option value="Out of Stock">Out of Stock</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Stock Quantity</label>
+                                    <input type="number" name="stock" class="form-control-admin" id="prodQty" value="0" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">Main Image</label>
+                            <div class="image-preview-box mb-3" onclick="document.getElementById('mainImgFile').click()">
+                                <img id="mainPreview" src="" alt="" style="display: none;">
+                                <div id="mainPlaceholder" class="text-center">
+                                    <i class="fas fa-cloud-upload-alt fa-2x mb-2" style="color: var(--accent-red);"></i>
+                                    <p class="mb-0 small text-muted">Primary Image</p>
+                                </div>
+                                <input type="file" name="thumbnail" id="mainImgFile" style="display: none;" accept="image/*">
+                            </div>
+                            
+                            <label class="form-label">Hover Image</label>
+                            <div class="image-preview-box" onclick="document.getElementById('hoverImgFile').click()">
+                                <img id="hoverPreview" src="" alt="" style="display: none;">
+                                <div id="hoverPlaceholder" class="text-center">
+                                    <i class="fas fa-plus-circle fa-2x mb-2" style="color: var(--accent-red);"></i>
+                                    <p class="mb-0 small text-muted">Hover Image</p>
+                                </div>
+                                <input type="file" name="hover_thumbnail" id="hoverImgFile" style="display: none;" accept="image/*">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4 text-end">
+                        <button type="button" class="btn-admin btn-primary-admin" id="nextBtn">Next: Frontend Details <i class="fas fa-arrow-right ms-2"></i></button>
+                    </div>
+                </div>
+
+                <!-- Step 2: Frontend Metadata -->
+                <div id="step2" style="display: none;">
+                    <h5 class="mb-4">Step 2: Frontend Product Details</h5>
+                    <div class="row g-3">
+                        <div class="col-md-12">
+                            <label class="form-label">Frontend Page Title</label>
+                            <input type="text" name="meta_title" class="form-control-admin" id="frontTitle" placeholder="e.g. Buy OXVA Xlim Pro Online in Pakistan">
+                        </div>
+                        
+                        <div class="col-md-12">
+                            <label class="form-label">Color Variant Management</label>
+                            <div class="d-flex gap-2 align-items-center mb-2">
+                                <select class="form-control-admin" id="addVariantDropdown" style="width: auto; flex-grow: 1;">
+                                    <option value="0">Default Variant</option>
+                                </select>
+                                <button type="button" class="btn-admin" id="addNewVariantBtn" style="background: var(--accent-red); color: white; border: none; padding: 12px 15px; border-radius: 8px;"><i class="fas fa-plus"></i></button>
+                                <button type="button" class="btn-admin" id="removeNewVariantBtn" style="background: #dc3545; color: white; border: none; padding: 12px 15px; border-radius: 8px;"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <label class="form-label">Variant Primary Image</label>
+                            <div class="image-preview-box mb-3" onclick="document.getElementById('variantPrimaryFile').click()" style="height: 120px;">
+                                <img id="variantPrimaryPreview" src="" alt="" style="display: none;">
+                                <div id="variantPrimaryPlaceholder" class="text-center">
+                                    <i class="fas fa-image fa-2x mb-2" style="color: var(--accent-red);"></i>
+                                    <p class="mb-0 small text-muted">Primary Image</p>
+                                </div>
+                                <input type="file" id="variantPrimaryFile" style="display: none;" accept="image/*">
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <label class="form-label">Variant Hover Image</label>
+                            <div class="image-preview-box mb-3" onclick="document.getElementById('variantHoverFile').click()" style="height: 120px;">
+                                <img id="variantHoverPreview" src="" alt="" style="display: none;">
+                                <div id="variantHoverPlaceholder" class="text-center">
+                                    <i class="fas fa-image fa-2x mb-2" style="color: var(--accent-red);"></i>
+                                    <p class="mb-0 small text-muted">Hover Image</p>
+                                </div>
+                                <input type="file" id="variantHoverFile" style="display: none;" accept="image/*">
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-12">
+                            <label class="form-label">Description</label>
+                            <textarea name="description" class="form-control-admin" id="frontDesc" rows="3"></textarea>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Technical Specs (Key: Value;)</label>
+                            <textarea name="tab_specifications" class="form-control-admin" id="frontSpecs" rows="3" placeholder="Battery: 1000mAh; Power: 30W;"></textarea>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Key Features (One per line)</label>
+                            <textarea name="tab_description" class="form-control-admin" id="frontFeatures" rows="3" placeholder="Adjustable Airflow&#10;Fast Charging"></textarea>
+                        </div>
+                    </div>
+                    <div class="mt-4 d-flex justify-content-between">
+                        <button type="button" class="btn-admin" id="backBtn" style="background: rgba(255,255,255,0.05); color: white;"><i class="fas fa-arrow-left me-2"></i> Back</button>
+                        <button type="submit" class="btn-admin btn-primary-admin">Publish Product</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('addProductForm');
+        const step1 = document.getElementById('step1');
+        const step2 = document.getElementById('step2');
+        const dot1 = document.getElementById('dot1');
+        const dot2 = document.getElementById('dot2');
+        const nextBtn = document.getElementById('nextBtn');
+        const backBtn = document.getElementById('backBtn');
+
+        // Image Preview Handlers
+        function handleImagePreview(inputId, imgId, placeholderId) {
+            const input = document.getElementById(inputId);
+            const img = document.getElementById(imgId);
+            const placeholder = document.getElementById(placeholderId);
+
+            input.addEventListener('change', function() {
+                if (this.files && this.files[0]) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        img.src = e.target.result;
+                        img.style.display = 'block';
+                        placeholder.style.display = 'none';
+                    }
+                    reader.readAsDataURL(this.files[0]);
+                }
+            });
+        }
+
+        handleImagePreview('mainImgFile', 'mainPreview', 'mainPlaceholder');
+        handleImagePreview('hoverImgFile', 'hoverPreview', 'hoverPlaceholder');
+
+        // Variant Management Logic
+        let productVariants = [{ name: 'Default Variant', primary: '', hover: '' }];
+        let selectedVariantIdx = 0;
+        const variantDropdown = document.getElementById('addVariantDropdown');
+        const variantPrimaryImg = document.getElementById('variantPrimaryPreview');
+        const variantPrimaryPlaceholder = document.getElementById('variantPrimaryPlaceholder');
+        const variantHoverImg = document.getElementById('variantHoverPreview');
+        const variantHoverPlaceholder = document.getElementById('variantHoverPlaceholder');
+
+        function renderVariantDropdown() {
+            variantDropdown.innerHTML = '';
+            productVariants.forEach((v, idx) => {
+                const opt = document.createElement('option');
+                opt.value = idx;
+                opt.textContent = v.name;
+                if(idx === selectedVariantIdx) opt.selected = true;
+                variantDropdown.appendChild(opt);
+            });
+            
+            const currVar = productVariants[selectedVariantIdx];
+            if(currVar.primary) {
+                variantPrimaryImg.src = currVar.primary;
+                variantPrimaryImg.style.display = 'block';
+                variantPrimaryPlaceholder.style.display = 'none';
+            } else {
+                variantPrimaryImg.src = '';
+                variantPrimaryImg.style.display = 'none';
+                variantPrimaryPlaceholder.style.display = 'block';
+            }
+            
+            if(currVar.hover) {
+                variantHoverImg.src = currVar.hover;
+                variantHoverImg.style.display = 'block';
+                variantHoverPlaceholder.style.display = 'none';
+            } else {
+                variantHoverImg.src = '';
+                variantHoverImg.style.display = 'none';
+                variantHoverPlaceholder.style.display = 'block';
+            }
+        }
+
+        variantDropdown.addEventListener('change', function() {
+            selectedVariantIdx = parseInt(this.value);
+            renderVariantDropdown();
+        });
+
+        document.getElementById('addNewVariantBtn').addEventListener('click', function() {
+            const name = prompt("Enter new variant name:");
+            if(name && name.trim()) {
+                productVariants.push({ name: name.trim(), primary: '', hover: '' });
+                selectedVariantIdx = productVariants.length - 1;
+                renderVariantDropdown();
+            }
+        });
+
+        document.getElementById('removeNewVariantBtn').addEventListener('click', function() {
+            if(productVariants.length <= 1) {
+                alert("Must have at least one variant.");
+                return;
+            }
+            if(confirm("Remove this variant?")) {
+                productVariants.splice(selectedVariantIdx, 1);
+                selectedVariantIdx = 0;
+                renderVariantDropdown();
+            }
+        });
+
+        document.getElementById('variantPrimaryFile').addEventListener('change', function() {
+            if (this.files && this.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    productVariants[selectedVariantIdx].primary = e.target.result;
+                    renderVariantDropdown();
+                    if(selectedVariantIdx === 0) {
+                        document.getElementById('mainPreview').src = e.target.result;
+                        document.getElementById('mainPreview').style.display = 'block';
+                        document.getElementById('mainPlaceholder').style.display = 'none';
+                    }
+                }
+                reader.readAsDataURL(this.files[0]);
+            }
+        });
+        
+        document.getElementById('variantHoverFile').addEventListener('change', function() {
+            if (this.files && this.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    productVariants[selectedVariantIdx].hover = e.target.result;
+                    renderVariantDropdown();
+                    if(selectedVariantIdx === 0) {
+                        document.getElementById('hoverPreview').src = e.target.result;
+                        document.getElementById('hoverPreview').style.display = 'block';
+                        document.getElementById('hoverPlaceholder').style.display = 'none';
+                    }
+                }
+                reader.readAsDataURL(this.files[0]);
+            }
+        });
+        
+        // Sync from Step 1 to Default Variant
+        document.getElementById('mainImgFile').addEventListener('change', function() {
+            if (this.files && this.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    productVariants[0].primary = e.target.result;
+                    if(selectedVariantIdx === 0) renderVariantDropdown();
+                }
+                reader.readAsDataURL(this.files[0]);
+            }
+        });
+        
+        document.getElementById('hoverImgFile').addEventListener('change', function() {
+            if (this.files && this.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    productVariants[0].hover = e.target.result;
+                    if(selectedVariantIdx === 0) renderVariantDropdown();
+                }
+                reader.readAsDataURL(this.files[0]);
+            }
+        });
+
+        // Step Navigation
+        nextBtn.addEventListener('click', function() {
+            const name = document.getElementById('prodName').value;
+            const price = document.getElementById('prodPrice').value;
+            if (!name || !price) {
+                alert('Please fill in required fields in Step 1');
+                return;
+            }
+
+            step1.style.display = 'none';
+            step2.style.display = 'block';
+            dot1.classList.remove('active');
+            dot2.classList.add('active');
+        });
+
+        backBtn.addEventListener('click', function() {
+            step2.style.display = 'none';
+            step1.style.display = 'block';
+            dot2.classList.remove('active');
+            dot1.classList.add('active');
+        });
+
+        // Form Submission
+        form.addEventListener('submit', function(e) {
+            // Let the form submit naturally to the backend
+            // But we can add an AJAX or simple success alert if we want
+        });
+    });
+</script>
+{% endblock %}

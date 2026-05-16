@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="icon" type="icon" href="./assets/img/web-logo.png">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Rajdhani:wght@600;700&family=Audiowide&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    
+    <link rel="icon" type="icon" href="./assets/img/web-logo.png">
+    <title>Contact Us - VAPE CLUSTER Egic Store</title>
+
+</head>
+
+<body>
+
+   
+
+    <!-- navbar section -->
+                          <nav class="navbar navbar-expand-lg ">
+        <div class="container">
+            <a class="navbar-brand" href="./index.html"><img src="./assets/img/web-logo.png" alt=""></a>
+            <div class="mobile-nav-actions d-lg-none ms-auto">
+                <a href="javascript:void(0)" class="nav-icon-link search-trigger" title="Search"><i class="fas fa-search"></i></a>
+                <a href="javascript:void(0)" class="nav-icon-link cart-trigger" title="Shopping Bag"><i class="fa-solid fa-cart-shopping"></i><span class="badge-count">0</span></a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+                    <li class="nav-item dropdown-custom">
+                        <a class="nav-link dropdown-toggle-custom" href="#">Collections <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+                        <div class="dropdown-menu-custom">
+                              <div class="dropdown-category" data-target="vapes-sub">
+                                <span class="dropdown-category-title">Vapes <i class="fas fa-chevron-right sub-arrow"></i></span>
+                                <ul class="sub-menu" id="vapes-sub">
+                                    <li><a href="./voopoo.html" >VOOPOO</a></li>
+                                    <li><a href="./vaporesso.html" >VAPORESSO</a></li>
+                                    <li><a href="./UWELL.html" >UWELL</a></li>
+                                    <li><a href="./OXVA.html" >OXVA</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown-category" data-target="disposable-sub">
+                                <span class="dropdown-category-title">Disposable Vape <i class="fas fa-chevron-right sub-arrow"></i></span>
+                                <ul class="sub-menu" id="disposable-sub">
+                                    <li class="text-center text-white py-2">COMING SOON</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="./E-Liquids.html" >E-Liquids</a></li>
+                     <li class="nav-item"><a class="nav-link" href="./coils.html" >Coils</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./about.html" >About Us</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="./contact.html" >Contact</a></li>
+                </ul>
+                  <div class="d-flex gap-4 align-items-center justify-content-center mt-3 mt-lg-0">
+                    <a href="javascript:void(0)" class="nav-icon-link search-trigger" id="searchIcon" title="Search" ><i class="fas fa-search"></i></a>
+                    <a href="javascript:void(0)" class="nav-icon-link cart-trigger" id="cartIcon" title="Shopping Bag" ><i class="fa-solid fa-cart-shopping"></i><span class="badge-count">0</span></a>
+                    <a href="./login-signup.html" class="nav-icon-link" id="userIcon" title="Login" target="_blank"><i class="fas fa-user"></i></a>
+                </div>
+            </div>
+            <div class="navbar-search-overlay" id="navbarSearch">
+                <div class="search-input-wrapper">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="Search for products, brands..." autocomplete="off">
+                    <button type="button" id="closeSearch" title="Close Search"><i class="fas fa-times"></i></button>
+                </div>
+                <div class="search-dropdown" id="searchDropdown">
+                    <div class="search-popular-queries" id="popularQueries">
+                        <h3>Trending Searches</h3>
+                        <div class="popular-tags">
+                            <a href="#" class="popular-tag">Argus G3</a>
+                            <a href="#" class="popular-tag">XROS 4</a>
+                            <a href="#" class="popular-tag">Tokyo E-Juice</a>
+                            <a href="#" class="popular-tag">OXVA Oneo</a>
+                        </div>
+                    </div>
+                    <div class="search-results-grid" id="searchResults"></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+     <!-- Cart Sidebar Overlay -->
+    <div class="cart-sidebar-overlay" id="cartOverlay"></div>
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button type="button" id="closeCartBtn"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-body" id="cartItemsContainer">
+            <div class="empty-cart-msg">
+                <i class="fas fa-shopping-cart"></i>
+                <p>Your cart is currently empty.</p>
+                <a href="#" class="btn-shop-cart" id="continueShoppingBtn">Return to Shop</a>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Subtotal:</span>
+                <span id="cartSubtotal">RS 0.00</span>
+            </div>
+            <p class="tax-note">Taxes and shipping calculated at checkout</p>
+            <a href="./checkout.html" class="checkout-btn">Check Out</a>
+        </div>
+    </div>
+   
+
+    <!-- Page Header -->
+      <section class="page-hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1 class="page-hero-title">CONTACT US</h1>
+                    <p class="page-hero-subtitle">Premium Pod Systems & Vapes by VAPE CLUSTER</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info Cards Section -->
+    <section class="section-padding bg-light animate-on-scroll">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="contact-info-card">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <h3 class="contact-card-title">Our Store</h3>
+                        <p class="contact-card-text">Lahore, Johr town, Punjab, Pakistan 53900 Vape Cluster</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="contact-info-card">
+                        <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                        <h3 class="contact-card-title">Call Us</h3>
+                        <p class="contact-card-text">+92 3200489485<br>Mon-Sat (11 AM - 10 PM)</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="contact-info-card">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <h3 class="contact-card-title">Email Us</h3>
+                        <p class="contact-card-text">vapecluster872@gmail.com</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="contact-info-card">
+                        <div class="contact-icon"><i class="fas fa-clock"></i></div>
+                        <h3 class="contact-card-title">Online Support</h3>
+                        <p class="contact-card-text">24/7 Support for<br>online orders</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form Section -->
+    <section class="section-padding animate-on-scroll">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="row g-5">
+                        <div class="col-md-6">
+                            <div class="contact-form-wrapper">
+                                <h2 class="contact-card-title mb-4">Send us a Message</h2>
+                                <form action="#" method="POST">
+                                    <div class="mb-3">
+                                        <label for="name" class="form-label">Full Name</label>
+                                        <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">Email Address</label>
+                                        <input type="email" class="form-control" id="email" placeholder="example@mail.com" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="subject" class="form-label">Subject</label>
+                                        <input type="text" class="form-control" id="subject" placeholder="How can we help?" required>
+                                    </div>
+                                    <div class="mb-4">
+                                        <label for="message" class="form-label">Your Message</label>
+                                        <textarea class="form-control" id="message" rows="4" placeholder="Write your message here..." required></textarea>
+                                    </div>
+                                    <button type="submit" class="btn-submit">Send Message</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                             <div class="map-wrapper h-100">
+                              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3402.9812118589048!2d74.2990926!3d31.469703!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39190314e603c21b%3A0x934ad5dd97791b00!2sTobacco%20Town%26%20Vapes%20valley!5e0!3m2!1sen!2s!4v1778189042177!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Float Button -->
+    <!-- <div class="whatsapp-float">
+        <a href="https://wa.me/923001234567" target="_blank" class="whatsapp-btn" title="Chat with us on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div> -->
+
+        <!-- footer -->
+    <footer class="footer-section pt-5">
+        <div class="container footer-top">
+            <div class="row">
+                <!-- Column 1: Brand & About -->
+                <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
+                    <div class="footer-logo-box">
+                        <a class="footer-navbar-brand" href="./index.html"><img src="./assets/img/web-logo.png" alt=""></a>
+                    </div>
+                    <p class="footer-about-text">
+                        Discover the ultimate vaping experience with VAPE CLUSTER. We provide premium devices, 
+                        expertly crafted e-liquids, and high-performance coils for enthusiasts and beginners alike.
+                    </p>
+                                        <div class="footer-social-icons">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="col-lg-2 col-md-6 mb-5 mb-lg-0">
+                    <h4 class="footer-heading">Shop Info</h4>
+                    <ul class="footer-links">
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./about.html">About Our Story</a></li>
+                        <li><a href="./contact.html">Contact Support</a></li>
+                        <li><a href="./privacy-policy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Collections -->
+                <div class="col-lg-2 col-md-6 mb-5 mb-lg-0">
+                    <h4 class="footer-heading">Collections</h4>
+                    <ul class="footer-links">
+                        <li><a href="./E-Liquids.html">E-Liquids</a></li>
+                        <li><a href="./coils.html">Premium Coils</a></li>
+                        <li><a href="./OXVA.html">OXVA Series</a></li>
+                        <li><a href="./vaporesso.html">Vaporesso</a></li>
+                        <li><a href="./UWELL.html">Uwell Kits</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Newsletter -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="newsletter-form-container">
+                        <h4 class="newsletter-title">Stay Updated</h4>
+                        <p class="newsletter-desc">Subscribe to get notified about new arrivals and exclusive discounts.</p>
+                        <form action="#" class="newsletter-input-wrap">
+                            <input type="email" placeholder="Your email address" required>
+                            <button type="submit">Subscribe</button>
+                        </form>
+                        <div class="mt-4">
+                            <h6 class="text-white-50 small text-uppercase mb-2">Customer Care</h6>
+                            <ul class="footer-contact-info">
+                                <li><i class="fa-solid fa-phone"></i> +92 3200489485</li>
+                                <li><i class="fa-solid fa-envelope"></i> vapecluster872@gmail.com</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+                <div class="footer-bottom mt-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12 text-center">
+                        <p class="copyright-text">� 2026 VAPE CLUSTER | ALL RIGHTS RESERVED.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+    
+    <script>
+        // Simple Scroll Animation
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.1
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+            
+            document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+        });
+    </script>
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

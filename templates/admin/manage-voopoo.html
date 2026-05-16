@@ -1,0 +1,740 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Voopoo | Vapier Admin</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/img/web-logo.png">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Rajdhani:wght@600;700&family=Audiowide&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Custom Admin CSS -->
+    <link rel="stylesheet" href="css/admin-style.css">
+</head>
+<body>
+
+    <div class="admin-wrapper">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <img src="../assets/img/web-logo.png" alt="Vapier Logo">
+            </div>
+            
+            <ul class="sidebar-menu">
+                <li class="menu-label">Main</li>
+                <li class="menu-item">
+                    <a href="index.html" class="menu-link">
+                        <i class="fas fa-th-large"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="orders.html" class="menu-link">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Orders</span>
+                    </a>
+                </li>
+
+                <li class="menu-label">Inventory Management</li>
+                <li class="menu-item">
+                    <a href="manage-eliquids.html" class="menu-link">
+                        <i class="fas fa-tint"></i>
+                        <span>E-Liquids</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="manage-deals.html" class="menu-link">
+                        <i class="fas fa-tags"></i>
+                        <span>Deals</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="manage-oxva.html" class="menu-link">
+                        <i class="fas fa-bolt"></i>
+                        <span>OXVA</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="manage-voopoo.html" class="menu-link active">
+                        <i class="fas fa-fire"></i>
+                        <span>Voopoo</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="manage-vaporesso.html" class="menu-link">
+                        <i class="fas fa-vial"></i>
+                        <span>Vaporesso</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="manage-uwell.html" class="menu-link">
+                        <i class="fas fa-atom"></i>
+                        <span>UWELL</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="manage-coils.html" class="menu-link">
+                        <i class="fas fa-sync-alt"></i>
+                        <span>Coils</span>
+                    </a>
+                </li>
+
+                <li class="menu-label">Content Management</li>
+                <li class="menu-item">
+                    <a href="manage-home.html" class="menu-link">
+                        <i class="fas fa-home"></i>
+                        <span>Home Page</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="about-us.html" class="menu-link">
+                        <i class="fas fa-info-circle"></i>
+                        <span>About Us</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="contact-us.html" class="menu-link">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contact Us</span>
+                    </a>
+                </li>
+
+                <li class="menu-label">Settings</li>
+                <li class="menu-item">
+                    <a href="add-product.html" class="menu-link">
+                        <i class="fas fa-plus-circle"></i>
+                        <span>Add New Product</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="../index.html" class="menu-link">
+                        <i class="fas fa-external-link-alt"></i>
+                        <span>View Website</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Bar -->
+            <div class="top-bar">
+                <div class="page-title d-flex align-items-center">
+                    <button class="mobile-toggle-btn d-lg-none me-3">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1 class="mb-0">Manage Voopoo Products</h1>
+                </div>
+                <div class="user-profile">
+                    <a href="add-product.html" class="btn-admin btn-primary-admin me-3">
+                        <i class="fas fa-plus"></i> Add Voopoo Product
+                    </a>
+                    <div class="user-avatar">AD</div>
+                </div>
+            </div>
+
+            <!-- Products List -->
+            <div class="table-container">
+                <div class="table-header">
+                    <h5 class="mb-0">Voopoo Inventory</h5>
+                    <div class="search-box">
+                        <input type="text" class="form-control-custom" placeholder="Search Voopoo..." style="background: rgba(255,255,255,0.05); border: 1px solid var(--border-color); color: white; padding: 5px 15px; border-radius: 5px; font-size: 13px;">
+                    </div>
+                </div>
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Image</th>
+                            <th>Model</th>
+                            <th>Series</th>
+                            <th>Price</th>
+                            <th>Stock Status</th>
+                            <th>Quantity</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-variants='[{"primary":"../../assets/img/devices/VOOPOO/ARGUS-G2-MINI/aurora-blue1.png","name":"Aurora Blue","hover":"../../assets/img/devices/VOOPOO/ARGUS-G2-MINI/aurora-blue2.webp"},{"primary":"../../assets/img/devices/VOOPOO/ARGUS-G2-MINI/midnight-black1.png","name":"Midnight Black","hover":"../../assets/img/devices/VOOPOO/ARGUS-G2-MINI/midnight-black2.webp"},{"primary":"../../assets/img/devices/VOOPOO/ARGUS-G2-MINI/moonlit-gray1.png","name":"Moonlit Gray","hover":"../../assets/img/devices/VOOPOO/ARGUS-G2-MINI/moonlit-gray2.webp"},{"primary":"../../assets/img/devices/VOOPOO/ARGUS-G2-MINI/pink1.png","name":"Pink","hover":"../../assets/img/devices/VOOPOO/ARGUS-G2-MINI/pink2.webp"},{"primary":"../../assets/img/devices/VOOPOO/ARGUS-G2-MINI/spring-green1.png","name":"Spring Green","hover":"../../assets/img/devices/VOOPOO/ARGUS-G2-MINI/spring-green2.webp"},{"primary":"../../assets/img/devices/VOOPOO/ARGUS-G2-MINI/starry-silver1.png","name":"Starry Silver - Unavailable","hover":"../../assets/img/devices/VOOPOO/ARGUS-G2-MINI/starry-silver2.webp"},{"primary":"../../assets/img/devices/VOOPOO/ARGUS-G2-MINI/sunset-silver1.png","name":"Sunset Silver","hover":"../../assets/img/devices/VOOPOO/ARGUS-G2-MINI/sunset-silver2.webp"},{"primary":"../../assets/img/devices/VOOPOO/ARGUS-G2-MINI/violet-pink1.png","name":"Violet Pink - Unavailable","hover":"../../assets/img/devices/VOOPOO/ARGUS-G2-MINI/violet-pink2.webp"},{"primary":"../../assets/img/devices/VOOPOO/ARGUS-G2-MINI/violet-red1.png","name":"Violet Red","hover":"../../assets/img/devices/VOOPOO/ARGUS-G2-MINI/violet-red2.webp"}]' data-primary="../assets/img/devices/VOOPOO/ARGUS-G2-MINI/midnight-black1.png"
+                            data-hover="../assets/img/devices/VOOPOO/ARGUS-G2-MINI/midnight-black2.webp"
+                            data-frontend-title="Voopoo Argus G2 Mini Pod Kit 30W At Best Price In Pakistan"
+                            data-rating="4.7"
+                            data-reviews="15"
+                            data-description="The Argus G2 Mini is a compact yet powerful pod system, offering 30W of output and a reliable 1200mAh battery for all-day vaping."
+                            data-specs="Output: 30W; Battery: 1200mAh; Pod: 3ml; Material: PC + Aluminum Alloy"
+                            data-features="Compact Mini Design; 30W Max Output; Long-lasting Battery; Argus Pod Compatibility"
+                            data-box="1 x Argus G2 Mini Device; 1 x Argus Pod 0.7Î©; 1 x User Manual"
+                            data-why="Portability without compromise; Great flavor; Budget-friendly">
+                            <td><img src="../assets/img/devices/VOOPOO/ARGUS-G2-MINI/midnight-black1.png" alt="" style="width: 40px; height: 40px; object-fit: contain;"></td>
+                            <td>Argus G2 Mini</td>
+                            <td>Argus Series</td>
+                            <td>RS 2,990.00</td>
+                            <td><span class="text-success">In Stock</span></td>
+                            <td>12</td>
+                            <td>
+                                <a href="../vape-products/voopoo/Argus-G2-Mini-data.html" target="_blank" class="btn-admin btn-sm" style="background:rgba(255,255,255,0.1);color:white;"><i class="fas fa-eye"></i></a>
+                                <button class="btn-admin btn-sm edit-product-btn" style="background: rgba(0, 123, 255, 0.1); color: #007bff;"><i class="fas fa-edit"></i></button>
+                                <button class="btn-admin btn-sm" style="background: rgba(220, 53, 69, 0.1); color: #dc3545;"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr data-variants='[{"primary":"../../assets/img/devices/VOOPOO/ARGUS-G3/pearl-white1.png","name":"Pearl White","hover":"../../assets/img/devices/VOOPOO/ARGUS-G3/pearl-white2.webp"},{"primary":"../../assets/img/devices/VOOPOO/ARGUS-G3/aurora-blue1.png","name":"Aurora Blue","hover":"../../assets/img/devices/VOOPOO/ARGUS-G3/aurora-blue2.webp"},{"primary":"../../assets/img/devices/VOOPOO/ARGUS-G3/aurora-purple1.png","name":"Aurora Purple","hover":"../../assets/img/devices/VOOPOO/ARGUS-G3/aurora-purple2.webp"},{"primary":"../../assets/img/devices/VOOPOO/ARGUS-G3/diamond-pink1.png","name":"Diamond Pink","hover":"../../assets/img/devices/VOOPOO/ARGUS-G3/diamond-pink2.webp"},{"primary":"../../assets/img/devices/VOOPOO/ARGUS-G3/diamond-white1.png","name":"Diamond White","hover":"../../assets/img/devices/VOOPOO/ARGUS-G3/diamond-white2.webp"},{"primary":"../../assets/img/devices/VOOPOO/ARGUS-G3/midnight-black1.png","name":"Midnight Black","hover":"../../assets/img/devices/VOOPOO/ARGUS-G3/midnight-black2.webp"},{"primary":"../../assets/img/devices/VOOPOO/ARGUS-G3/moss-green1.png","name":"Moss Green","hover":"../../assets/img/devices/VOOPOO/ARGUS-G3/moss-green2.webp"},{"primary":"../../assets/img/devices/VOOPOO/ARGUS-G3/snow-blue1.png","name":"Snow Blue","hover":"../../assets/img/devices/VOOPOO/ARGUS-G3/snow-blue2.webp"},{"primary":"../../assets/img/devices/VOOPOO/ARGUS-G3/space-gray1.png","name":"Space Gray","hover":"../../assets/img/devices/VOOPOO/ARGUS-G3/space-gray2.webp"}]' data-primary="../assets/img/devices/VOOPOO/ARGUS-G3/pearl-white1.png" 
+                            data-hover="../assets/img/devices/VOOPOO/ARGUS-G3/pearl-white2.webp"
+                            data-frontend-title="Voopoo Argus G3 Pod System 30W At Best Price In Pakistan"
+                            data-rating="4.8"
+                            data-reviews="12"
+                            data-description="Looking for a device that doesn't compromise on power or style? The Voopoo Argus G3 is the compact powerhouse that's changing how Pakistan vapes! Crafted from premium Aluminum Alloy + PCTG materials, this sleek device isn't just built to lastâ€”it's designed to impress."
+                            data-specs="Output Power: 5-30W; Battery Capacity: 1500mAh; Charging Port: Type-C Fast Charging; Screen: 0.96 inch OLED; E-Liquid Capacity: 3ml"
+                            data-features="GENE.AI Chip for smart vaping; Dual Activation (Draw & Button); Adjustable MTL to RDL Airflow; Leak-proof Pod Design; Smart & RBA Modes"
+                            data-box="1 x ARGUS G3 Device; 1 x ARGUS Pod (Pre-installed); 1 x Type-C Cable; 1 x User Manual"
+                            data-why="Smart Power Meets Pocket-Sized Perfection; Premium Aluminum Alloy Build; All-day 1500mAh Battery; Advanced Gene.AI Chipset">
+                            <td><img src="../assets/img/devices/VOOPOO/ARGUS-G3/pearl-white1.png" alt="" style="width: 40px; height: 40px; object-fit: contain;"></td>
+                            <td>Argus G3</td>
+                            <td>Argus Series</td>
+                            <td>RS 5,800.00</td>
+                            <td><span class="text-success">In Stock</span></td>
+                            <td>8</td>
+                            <td>
+                                <a href="../vape-products/voopoo/ARGUS-G3-data.html" target="_blank" class="btn-admin btn-sm" style="background:rgba(255,255,255,0.1);color:white;"><i class="fas fa-eye"></i></a>
+                                <button class="btn-admin btn-sm edit-product-btn" style="background: rgba(0, 123, 255, 0.1); color: #007bff;"><i class="fas fa-edit"></i></button>
+                                <button class="btn-admin btn-sm" style="background: rgba(220, 53, 69, 0.1); color: #dc3545;"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr data-variants='[{"primary":"../../assets/img/devices/VOOPOO/ARGUS-G3-MINI/grass-green1.png","name":"Grass Green","hover":"../../assets/img/devices/VOOPOO/ARGUS-G3-MINI/grass-green2.webp"},{"primary":"../../assets/img/devices/VOOPOO/ARGUS-G3-MINI/hot-pink1.png","name":"Hot Pink","hover":"../../assets/img/devices/VOOPOO/ARGUS-G3-MINI/hot-pink2.webp"},{"primary":"../../assets/img/devices/VOOPOO/ARGUS-G3-MINI/lilac-purple1.png","name":"Lilac Purple","hover":"../../assets/img/devices/VOOPOO/ARGUS-G3-MINI/lilac-purple2.webp"},{"primary":"../../assets/img/devices/VOOPOO/ARGUS-G3-MINI/midnight-black1.png","name":"Midnight Black","hover":"../../assets/img/devices/VOOPOO/ARGUS-G3-MINI/midnight-black2.webp"},{"primary":"../../assets/img/devices/VOOPOO/ARGUS-G3-MINI/moonlight-silver1.png","name":"Moonlight Silver","hover":"../../assets/img/devices/VOOPOO/ARGUS-G3-MINI/moonlight-silver2.webp"},{"primary":"../../assets/img/devices/VOOPOO/ARGUS-G3-MINI/rose-gold1.png","name":"Rose Gold","hover":"../../assets/img/devices/VOOPOO/ARGUS-G3-MINI/rose-gold2.webp"},{"primary":"../../assets/img/devices/VOOPOO/ARGUS-G3-MINI/scarlet-red1.png","name":"Scarlet Red","hover":"../../assets/img/devices/VOOPOO/ARGUS-G3-MINI/scarlet-red2.webp"},{"primary":"../../assets/img/devices/VOOPOO/ARGUS-G3-MINI/sky-blue1.png","name":"Sky Blue","hover":"../../assets/img/devices/VOOPOO/ARGUS-G3-MINI/sky-blue2.webp"},{"primary":"../../assets/img/devices/VOOPOO/ARGUS-G3-MINI/space-gray1.png","name":"Space Gray","hover":"../../assets/img/devices/VOOPOO/ARGUS-G3-MINI/space-gray2.webp"}]' data-primary="../assets/img/devices/VOOPOO/ARGUS-G3-MINI/midnight-black1.png"
+                            data-hover="../assets/img/devices/VOOPOO/ARGUS-G3-MINI/midnight-black1.png"
+                            data-frontend-title="Voopoo Argus G3 Mini Pod Kit At Best Price In Pakistan"
+                            data-rating="4.8"
+                            data-reviews="10"
+                            data-description="The Argus G3 Mini brings the performance of the G3 series into an even smaller form factor, perfect for stealthy vaping."
+                            data-specs="Output: 30W; Battery: 1200mAh; Pod: 3ml; Material: Aluminum Alloy"
+                            data-features="Ultra-compact Form; Pro-level Flavor; 1200mAh Battery; Smart Wattage Adjustment"
+                            data-box="1 x Argus G3 Mini Device; 1 x Argus Pod 0.7Î©; 1 x User Manual"
+                            data-why="Perfect for on-the-go; Sleek metallic finish; Reliable Voopoo quality">
+                            <td><img src="../assets/img/devices/VOOPOO/ARGUS-G3-MINI/midnight-black1.png" alt="" style="width: 40px; height: 40px; object-fit: contain;"></td>
+                            <td>ARGUS G3 MINI</td>
+                            <td>Argus Series</td>
+                            <td>RS 3,490.00</td>
+                            <td><span class="text-success">In Stock</span></td>
+                            <td>15</td>
+                            <td>
+                                <a href="../vape-products/voopoo/ARGUS-G3-MINI-data.html" target="_blank" class="btn-admin btn-sm" style="background:rgba(255,255,255,0.1);color:white;"><i class="fas fa-eye"></i></a>
+                                <button class="btn-admin btn-sm edit-product-btn" style="background: rgba(0, 123, 255, 0.1); color: #007bff;"><i class="fas fa-edit"></i></button>
+                                <button class="btn-admin btn-sm" style="background: rgba(220, 53, 69, 0.1); color: #dc3545;"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr data-variants='[{"primary":"../../assets/img/devices/VOOPOO/ARGUS-Z2/lake-blue1.png","name":"Lake Blue","hover":"../../assets/img/devices/VOOPOO/ARGUS-Z2/lake-blue2.webp"},{"primary":"../../assets/img/devices/VOOPOO/ARGUS-Z2/lavender1.png","name":"Lavender","hover":"../../assets/img/devices/VOOPOO/ARGUS-Z2/lavender2.webp"},{"primary":"../../assets/img/devices/VOOPOO/ARGUS-Z2/mint-blue1.png","name":"Mint Blue","hover":"../../assets/img/devices/VOOPOO/ARGUS-Z2/mint-blue2.webp"},{"primary":"../../assets/img/devices/VOOPOO/ARGUS-Z2/moss-green1.png","name":"Moss Green","hover":"../../assets/img/devices/VOOPOO/ARGUS-Z2/moss-green2.webp"},{"primary":"../../assets/img/devices/VOOPOO/ARGUS-Z2/rose-pink1.png","name":"Rose Pink","hover":"../../assets/img/devices/VOOPOO/ARGUS-Z2/rose-pink2.webp"},{"primary":"../../assets/img/devices/VOOPOO/ARGUS-Z2/shell-white1.png","name":"Shell White","hover":"../../assets/img/devices/VOOPOO/ARGUS-Z2/shell-white2.webp"},{"primary":"../../assets/img/devices/VOOPOO/ARGUS-Z2/silk-black1.png","name":"Silk Black","hover":"../../assets/img/devices/VOOPOO/ARGUS-Z2/silk-black2.webp"},{"primary":"../../assets/img/devices/VOOPOO/ARGUS-Z2/sunlight-orange1.png","name":"Sunlight Orange","hover":"../../assets/img/devices/VOOPOO/ARGUS-Z2/sunlight-orange2.webp"}]' data-primary="../assets/img/devices/VOOPOO/ARGUS-Z2/moss-green1.png"
+                            data-hover="../assets/img/devices/VOOPOO/ARGUS-Z2/moss-green2.webp"
+                            data-frontend-title="Voopoo Argus Z2 Pod System At Best Price In Pakistan"
+                            data-rating="4.6"
+                            data-reviews="20"
+                            data-description="The Argus Z2 features a unique design with a focus on simplicity and ease of use, making it an excellent choice for beginners."
+                            data-specs="Output: 30W; Battery: 1000mAh; Pod: 2ml; Material: Aluminum Alloy + PC"
+                            data-features="Easy Auto-draw; 1000mAh Internal Battery; Multi-layer Leakage Proof; Argus Pod Compatible"
+                            data-box="1 x Argus Z2 Device; 1 x Argus Pod 0.7Î©; 1 x Type-C Cable; 1 x User Manual"
+                            data-why="Stylish and simple; Leak-proof design; Great for Nic Salts">
+                            <td><img src="../assets/img/devices/VOOPOO/ARGUS-Z2/moss-green1.png" alt="" style="width: 40px; height: 40px; object-fit: contain;"></td>
+                            <td>ARGUS Z2</td>
+                            <td>Argus Series</td>
+                            <td>RS 3,290.00</td>
+                            <td><span class="text-success">In Stock</span></td>
+                            <td>22</td>
+                            <td>
+                                <a href="../vape-products/voopoo/argus-z2-data.html" target="_blank" class="btn-admin btn-sm" style="background:rgba(255,255,255,0.1);color:white;"><i class="fas fa-eye"></i></a>
+                                <button class="btn-admin btn-sm edit-product-btn" style="background: rgba(0, 123, 255, 0.1); color: #007bff;"><i class="fas fa-edit"></i></button>
+                                <button class="btn-admin btn-sm" style="background: rgba(220, 53, 69, 0.1); color: #dc3545;"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr data-variants='[{"primary":"../../assets/img/devices/VOOPOO/V-MATE-MINI/classic-black1.png","name":"Classic Black","hover":"../../assets/img/devices/VOOPOO/V-MATE-MINI/classic-black2.webp"},{"primary":"../../assets/img/devices/VOOPOO/V-MATE-MINI/lav-purple1.png","name":"Lavender Purple","hover":"../../assets/img/devices/VOOPOO/V-MATE-MINI/lav-purple2.webp"},{"primary":"../../assets/img/devices/VOOPOO/V-MATE-MINI/matcha-green1.png","name":"Matcha Green","hover":"../../assets/img/devices/VOOPOO/V-MATE-MINI/matcha-green2.webp"},{"primary":"../../assets/img/devices/VOOPOO/V-MATE-MINI/pure-white1.png","name":"Pure White","hover":"../../assets/img/devices/VOOPOO/V-MATE-MINI/pure-white2.webp"},{"primary":"../../assets/img/devices/VOOPOO/V-MATE-MINI/soul-red1.png","name":"Soul Red","hover":"../../assets/img/devices/VOOPOO/V-MATE-MINI/soul-red2.webp"},{"primary":"../../assets/img/devices/VOOPOO/V-MATE-MINI/tiffany-green1.png","name":"Tiffany Green","hover":"../../assets/img/devices/VOOPOO/V-MATE-MINI/tiffany-green2.webp"}]' data-primary="../assets/img/devices/VOOPOO/V-MATE-MINI/soul-red1.png"
+                            data-hover="../assets/img/devices/VOOPOO/V-MATE-MINI/soul-red2.webp"
+                            data-frontend-title="Voopoo Vmate Mini Pod System At Best Price In Pakistan"
+                            data-rating="4.7"
+                            data-reviews="25"
+                            data-description="The VMate Mini is a simple, compact, and effective pod system designed for pure flavor and ease of use."
+                            data-specs="Output: 17W; Battery: 900mAh; Pod: 3ml; Material: Aluminum Alloy"
+                            data-features="Compact Mini Design; Auto-draw; 900mAh Battery; Pure Flavor Experience"
+                            data-box="1 x VMate Mini Device; 1 x VMate Pod 0.7Î©; 1 x User Manual"
+                            data-why="Great for starters; Lightweight; Long pod life">
+                            <td><img src="../assets/img/devices/VOOPOO/V-MATE-MINI/soul-red1.png" alt="" style="width: 40px; height: 40px; object-fit: contain;"></td>
+                            <td>V MATE MINI</td>
+                            <td>V Series</td>
+                            <td>RS 3,499.00</td>
+                            <td><span class="text-success">In Stock</span></td>
+                            <td>10</td>
+                            <td>
+                                <a href="../vape-products/voopoo/V-MATE-MINI-data.html" target="_blank" class="btn-admin btn-sm" style="background:rgba(255,255,255,0.1);color:white;"><i class="fas fa-eye"></i></a>
+                                <button class="btn-admin btn-sm edit-product-btn" style="background: rgba(0, 123, 255, 0.1); color: #007bff;"><i class="fas fa-edit"></i></button>
+                                <button class="btn-admin btn-sm" style="background: rgba(220, 53, 69, 0.1); color: #dc3545;"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr data-variants='[{"primary":"../../assets/img/devices/VOOPOO/V-MATE-PRO/mint-blue1.png","name":"Mint Blue","hover":"../../assets/img/devices/VOOPOO/V-MATE-PRO/mint-blue2.png"}]' data-primary="../assets/img/devices/VOOPOO/V-MATE-PRO/mint-blue1.png"
+                            data-hover="../assets/img/devices/VOOPOO/V-MATE-PRO/mint-blue2.png"
+                            data-frontend-title="Voopoo Vmate Pro 25W Pod System At Best Price In Pakistan"
+                            data-rating="4.8"
+                            data-reviews="15"
+                            data-description="The Vmate Pro is an upgraded version of the Vmate series, offering 25W of power and a precise OLED screen for better control."
+                            data-specs="Output: 5-25W; Battery: 900mAh; Pod: 3ml; Screen: 0.69-inch OLED"
+                            data-features="Adjustable Wattage; 0.69' OLED Screen; Infinite Airflow System; 25W Max Power"
+                            data-box="1 x Vmate Pro Device; 1 x Vmate Pod 0.7Î©; 1 x Vmate Pod 1.2Î©; 1 x Type-C Cable; 1 x User Manual"
+                            data-why="Professional features; Compact size; Accurate screen readout">
+                            <td><img src="../assets/img/devices/VOOPOO/V-MATE-PRO/mint-blue1.png" alt="" style="width: 40px; height: 40px; object-fit: contain;"></td>
+                            <td>V MATE PRO</td>
+                            <td>V Series</td>
+                            <td>RS 5,999.00</td>
+                            <td><span class="text-success">In Stock</span></td>
+                            <td>10</td>
+                            <td>
+                                <a href="../vape-products/voopoo/V-MATE-PRO-data.html" target="_blank" class="btn-admin btn-sm" style="background:rgba(255,255,255,0.1);color:white;"><i class="fas fa-eye"></i></a>
+                                <button class="btn-admin btn-sm edit-product-btn" style="background: rgba(0, 123, 255, 0.1); color: #007bff;"><i class="fas fa-edit"></i></button>
+                                <button class="btn-admin btn-sm" style="background: rgba(220, 53, 69, 0.1); color: #dc3545;"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr data-variants='[{"primary":"../../assets/img/devices/VOOPOO/V-THRU-PRO/eternity1.png","name":"Eternity","hover":"../../assets/img/devices/VOOPOO/V-THRU-PRO/eternity2.webp"},{"primary":"../../assets/img/devices/VOOPOO/V-THRU-PRO/green1.png","name":"Green","hover":"../../assets/img/devices/VOOPOO/V-THRU-PRO/green2.png"},{"primary":"../../assets/img/devices/VOOPOO/V-THRU-PRO/light-blue1.png","name":"Light Blue","hover":"../../assets/img/devices/VOOPOO/V-THRU-PRO/light-blue2.webp"},{"primary":"../../assets/img/devices/VOOPOO/V-THRU-PRO/luxury-gold1.png","name":"Luxury Gold","hover":"../../assets/img/devices/VOOPOO/V-THRU-PRO/luxury-gold2.webp"},{"primary":"../../assets/img/devices/VOOPOO/V-THRU-PRO/moon-white1.png","name":"Moon White","hover":"../../assets/img/devices/VOOPOO/V-THRU-PRO/moon-white2.webp"},{"primary":"../../assets/img/devices/VOOPOO/V-THRU-PRO/red1.png","name":"Red","hover":"../../assets/img/devices/VOOPOO/V-THRU-PRO/red2.webp"},{"primary":"../../assets/img/devices/VOOPOO/V-THRU-PRO/silver1.png","name":"Silver","hover":"../../assets/img/devices/VOOPOO/V-THRU-PRO/silver2.png"}]' data-primary="../assets/img/devices/VOOPOO/V-THRU-PRO/eternity1.png"
+                            data-hover="../assets/img/devices/VOOPOO/V-THRU-PRO/eternity2.webp"
+                            data-frontend-title="Voopoo V Thru Pro Pod Kit At Best Price In Pakistan"
+                            data-rating="4.9"
+                            data-reviews="55"
+                            data-description="The V.THRU Pro is a next-generation flavorful and easy-to-use pod system that offers adjustable wattage and a clear screen."
+                            data-specs="Output: 5-25W; Battery: 900mAh; Pod: 3ml; Screen: 0.69-inch OLED"
+                            data-features="GENE Chip; Childproof Mode; 0.69' OLED Screen; Adjustable Wattage"
+                            data-box="1 x V.THRU Pro Device; 1 x V.THRU Pod 0.7Î©; 1 x V.THRU Pod 1.2Î©; 1 x Type-C Cable; 1 x User Manual"
+                            data-why="Exceptional flavor; Smart chipset; Sleek and lightweight">
+                            <td><img src="../assets/img/devices/VOOPOO/V-THRU-PRO/eternity1.png" alt="" style="width: 40px; height: 40px; object-fit: contain;"></td>
+                            <td>V THRU PRO</td>
+                            <td>V Series</td>
+                            <td>RS 5,899.00</td>
+                            <td><span class="text-success">In Stock</span></td>
+                            <td>10</td>
+                            <td>
+                                <a href="../vape-products/voopoo/V-THRU-PRO-data.html" target="_blank" class="btn-admin btn-sm" style="background:rgba(255,255,255,0.1);color:white;"><i class="fas fa-eye"></i></a>
+                                <button class="btn-admin btn-sm edit-product-btn" style="background: rgba(0, 123, 255, 0.1); color: #007bff;"><i class="fas fa-edit"></i></button>
+                                <button class="btn-admin btn-sm" style="background: rgba(220, 53, 69, 0.1); color: #dc3545;"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <!-- Edit Product Modal -->
+    <div class="modal fade" id="editProductModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content" style="background: #1a1a1a; color: white; border: 1px solid #333;">
+                <div class="modal-header" style="border-bottom: 1px solid #333;">
+                    <h5 class="modal-title">Edit Voopoo Product</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="editProductForm">
+                        <!-- Step 1: Basic Inventory Info -->
+                        <div id="step1">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label">Model Name</label>
+                                    <input type="text" class="form-control" id="editModel" style="background: #2a2a2a; border: 1px solid #444; color: white;">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Series</label>
+                                    <input type="text" class="form-control" id="editSeries" style="background: #2a2a2a; border: 1px solid #444; color: white;">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Price</label>
+                                    <input type="text" class="form-control" id="editPrice" style="background: #2a2a2a; border: 1px solid #444; color: white;">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Stock Status</label>
+                                    <select class="form-select" id="editStock" style="background: #2a2a2a; border: 1px solid #444; color: white;">
+                                        <option value="In Stock">In Stock</option>
+                                        <option value="Out of Stock">Out of Stock</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-12" id="quantityContainer">
+                                    <label class="form-label">Quantity</label>
+                                    <input type="number" class="form-control" id="editQuantity" style="background: #2a2a2a; border: 1px solid #444; color: white;" min="0">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Product Image (Main)</label>
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="image-preview-container" onclick="document.getElementById('editImageFile').click();" style="cursor: pointer; width: 80px; height: 80px; border: 1px dashed #444; display: flex; align-items: center; justify-content: center; border-radius: 5px; overflow: hidden; background: #2a2a2a;">
+                                            <img id="mainPreview" src="" alt="" style="width: 100%; height: 100%; object-fit: contain; display: none;">
+                                            <i class="fas fa-plus text-white-50" id="mainPlusIcon"></i>
+                                        </div>
+                                        <input type="file" class="form-control" id="editImageFile" accept="image/*" style="background: #2a2a2a; border: 1px solid #444; color: white;">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Product Image (Hover)</label>
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="image-preview-container" onclick="document.getElementById('editHoverImageFile').click();" style="cursor: pointer; width: 80px; height: 80px; border: 1px dashed #444; display: flex; align-items: center; justify-content: center; border-radius: 5px; overflow: hidden; background: #2a2a2a;">
+                                            <img id="hoverPreview" src="" alt="" style="width: 100%; height: 100%; object-fit: contain; display: none;">
+                                            <i class="fas fa-plus text-white-50" id="hoverPlusIcon"></i>
+                                        </div>
+                                        <input type="file" class="form-control" id="editHoverImageFile" accept="image/*" style="background: #2a2a2a; border: 1px solid #444; color: white;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Frontend Product Details -->
+                        <div id="step2" style="display: none;">
+                            <div class="row g-3">
+                                <div class="col-md-12">
+                                    <label class="form-label">Frontend Page Title</label>
+                                    <input type="text" class="form-control" id="editFrontendTitle" style="background: #2a2a2a; border: 1px solid #444; color: white;">
+                                </div>
+                                <div class="col-md-12">
+                                    <label class="form-label">Color Variant Management</label>
+                                    <div class="d-flex gap-2 align-items-center mb-2">
+                                        <select class="form-select" id="editVariantDropdown" style="background: #2a2a2a; border: 1px solid #444; color: white;">
+                                            <option value="default">Default Variant</option>
+                                        </select>
+                                        <button type="button" class="btn btn-sm btn-primary" id="addVariantBtn" style="background: var(--accent-red); border: none; padding: 0.5rem 1rem;" title="Add Variant"><i class="fas fa-plus"></i></button>
+                                        <button type="button" class="btn btn-sm btn-danger" id="removeVariantBtn" style="background: #dc3545; border: none; padding: 0.5rem 1rem;" title="Remove Variant"><i class="fas fa-trash"></i></button>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Frontend Primary Image</label>
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="image-preview-container" onclick="document.getElementById('editFrontendImageFile').click();" style="cursor: pointer; width: 80px; height: 80px; border: 1px dashed #444; display: flex; align-items: center; justify-content: center; border-radius: 5px; overflow: hidden; background: #2a2a2a;">
+                                            <img id="frontendPreview" src="" alt="" style="width: 100%; height: 100%; object-fit: contain; display: none;">
+                                            <i class="fas fa-image text-white-50" id="frontendPlusIcon"></i>
+                                        </div>
+                                        <input type="file" class="form-control" id="editFrontendImageFile" accept="image/*" style="background: #2a2a2a; border: 1px solid #444; color: white;">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Frontend Hover Image</label>
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="image-preview-container" onclick="document.getElementById('editFrontendHoverImageFile').click();" style="cursor: pointer; width: 80px; height: 80px; border: 1px dashed #444; display: flex; align-items: center; justify-content: center; border-radius: 5px; overflow: hidden; background: #2a2a2a;">
+                                            <img id="frontendHoverPreview" src="" alt="" style="width: 100%; height: 100%; object-fit: contain; display: none;">
+                                            <i class="fas fa-image text-white-50" id="frontendHoverPlusIcon"></i>
+                                        </div>
+                                        <input type="file" class="form-control" id="editFrontendHoverImageFile" accept="image/*" style="background: #2a2a2a; border: 1px solid #444; color: white;">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Rating (1-5)</label>
+                                    <input type="number" class="form-control" id="editRating" step="0.1" min="0" max="5" style="background: #2a2a2a; border: 1px solid #444; color: white;">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Review Count</label>
+                                    <input type="number" class="form-control" id="editReviewCount" style="background: #2a2a2a; border: 1px solid #444; color: white;">
+                                </div>
+                                <div class="col-md-12">
+                                    <label class="form-label">Product Description</label>
+                                    <textarea class="form-control" id="editDescription" rows="4" style="background: #2a2a2a; border: 1px solid #444; color: white;"></textarea>
+                                </div>
+                                <div class="col-md-12">
+                                    <label class="form-label">Technical Specs (e.g. Battery: 1800mAh; Power: 40W)</label>
+                                    <textarea class="form-control" id="editSpecs" rows="3" style="background: #2a2a2a; border: 1px solid #444; color: white;"></textarea>
+                                </div>
+                                <div class="col-md-12">
+                                    <label class="form-label">Key Features (One per line)</label>
+                                    <textarea class="form-control" id="editFeatures" rows="4" style="background: #2a2a2a; border: 1px solid #444; color: white;"></textarea>
+                                </div>
+                                <div class="col-md-12">
+                                    <label class="form-label">What's in the Box (One per line)</label>
+                                    <textarea class="form-control" id="editBoxContents" rows="3" style="background: #2a2a2a; border: 1px solid #444; color: white;"></textarea>
+                                </div>
+                                <div class="col-md-12">
+                                    <label class="form-label">Why You'll Love It (One per line)</label>
+                                    <textarea class="form-control" id="editWhyLove" rows="3" style="background: #2a2a2a; border: 1px solid #444; color: white;"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 text-end mt-4">
+                            <button type="button" class="btn btn-secondary me-2" id="backBtn" style="display: none;">Back</button>
+                            <button type="button" class="btn btn-secondary me-2" data-bs-dismiss="modal" id="cancelBtn">Cancel</button>
+                            <button type="button" class="btn btn-primary" id="nextBtn" style="background: var(--accent-red); border: none;">Next</button>
+                            <button type="submit" class="btn btn-success" id="saveBtn" style="display: none;">Save All Changes</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="js/admin-main.js"></script>
+    <script src="js/admin-variant-manager.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const editModal = new bootstrap.Modal(document.getElementById('editProductModal'));
+            const editForm = document.getElementById('editProductForm');
+            let currentEditingRow = null;
+
+            // Handle Edit Button Click
+            document.querySelectorAll('.edit-product-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    currentEditingRow = this.closest('tr');
+                    
+                    // Get current values
+                    const model = currentEditingRow.cells[1].innerText;
+                    const series = currentEditingRow.cells[2].innerText;
+                    const price = currentEditingRow.cells[3].innerText;
+                    const stock = currentEditingRow.cells[4].innerText.trim();
+                    const quantity = currentEditingRow.cells[5].innerText.trim();
+                    
+                    // Populate Modal
+                    document.getElementById('editModel').value = model;
+                    document.getElementById('editSeries').value = series;
+                    document.getElementById('editPrice').value = price;
+                    document.getElementById('editStock').value = stock;
+                    document.getElementById('editQuantity').value = quantity;
+                    
+                    // Populate Step 2 Data
+                    document.getElementById('editFrontendTitle').value = currentEditingRow.getAttribute('data-frontend-title') || '';
+                    document.getElementById('editRating').value = currentEditingRow.getAttribute('data-rating') || '4.8';
+                    document.getElementById('editReviewCount').value = currentEditingRow.getAttribute('data-reviews') || '12';
+                    document.getElementById('editDescription').value = currentEditingRow.getAttribute('data-description') || '';
+                    document.getElementById('editSpecs').value = currentEditingRow.getAttribute('data-specs') || '';
+                    document.getElementById('editFeatures').value = currentEditingRow.getAttribute('data-features') || '';
+                    document.getElementById('editBoxContents').value = currentEditingRow.getAttribute('data-box') || '';
+                    document.getElementById('editWhyLove').value = currentEditingRow.getAttribute('data-why') || '';
+
+                    // Toggle quantity field visibility based on stock status
+                    document.getElementById('quantityContainer').style.display = (stock === 'In Stock') ? 'block' : 'none';
+
+                    // Populate Image Previews
+                    const mainImgSrc = currentEditingRow.cells[0].querySelector('img').src;
+                    const hoverImgSrc = currentEditingRow.getAttribute('data-hover');
+                    
+                    const mainPreview = document.getElementById('mainPreview');
+                    const mainIcon = document.getElementById('mainPlusIcon');
+                    if (mainImgSrc) {
+                        mainPreview.src = mainImgSrc;
+                        mainPreview.style.display = 'block';
+                        mainIcon.style.display = 'none';
+                    }
+
+                    const hoverPreview = document.getElementById('hoverPreview');
+                    const hoverIcon = document.getElementById('hoverPlusIcon');
+                    if (hoverImgSrc) {
+                        hoverPreview.src = hoverImgSrc;
+                        hoverPreview.style.display = 'block';
+                        hoverIcon.style.display = 'none';
+                        
+                        // Sync to Frontend Previews in Step 2
+                        document.getElementById('frontendHoverPreview').src = hoverImgSrc;
+                        document.getElementById('frontendHoverPreview').style.display = 'block';
+                        document.getElementById('frontendHoverPlusIcon').style.display = 'none';
+                    } else {
+                        hoverPreview.style.display = 'none';
+                        hoverIcon.style.display = 'block';
+                        document.getElementById('frontendHoverPreview').style.display = 'none';
+                        document.getElementById('frontendHoverPlusIcon').style.display = 'block';
+                    }
+
+                    if (mainImgSrc) {
+                        document.getElementById('frontendPreview').src = mainImgSrc;
+                        document.getElementById('frontendPreview').style.display = 'block';
+                        document.getElementById('frontendPlusIcon').style.display = 'none';
+                    }
+
+                    // Reset steps
+                    document.getElementById('step1').style.display = 'block';
+                    document.getElementById('step2').style.display = 'none';
+                    document.getElementById('nextBtn').style.display = 'inline-block';
+                    document.getElementById('saveBtn').style.display = 'none';
+                    document.getElementById('backBtn').style.display = 'none';
+                    document.getElementById('cancelBtn').style.display = 'inline-block';
+
+                    editModal.show();
+                });
+            });
+
+            document.getElementById('editImageFile').addEventListener('change', function() {
+                const file = this.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        document.getElementById('mainPreview').src = e.target.result;
+                        document.getElementById('mainPreview').style.display = 'block';
+                        document.getElementById('mainPlusIcon').style.display = 'none';
+                        
+                        // Sync to Step 2
+                        document.getElementById('frontendPreview').src = e.target.result;
+                        document.getElementById('frontendPreview').style.display = 'block';
+                        document.getElementById('frontendPlusIcon').style.display = 'none';
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+
+            document.getElementById('editFrontendImageFile').addEventListener('change', function() {
+                const file = this.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        document.getElementById('frontendPreview').src = e.target.result;
+                        document.getElementById('frontendPreview').style.display = 'block';
+                        document.getElementById('frontendPlusIcon').style.display = 'none';
+                        
+                        // Sync to Step 1
+                        document.getElementById('mainPreview').src = e.target.result;
+                        document.getElementById('mainPreview').style.display = 'block';
+                        document.getElementById('mainPlusIcon').style.display = 'none';
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+
+            document.getElementById('editHoverImageFile').addEventListener('change', function() {
+                const file = this.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        document.getElementById('hoverPreview').src = e.target.result;
+                        document.getElementById('hoverPreview').style.display = 'block';
+                        document.getElementById('hoverPlusIcon').style.display = 'none';
+                        
+                        // Sync to Step 2
+                        document.getElementById('frontendHoverPreview').src = e.target.result;
+                        document.getElementById('frontendHoverPreview').style.display = 'block';
+                        document.getElementById('frontendHoverPlusIcon').style.display = 'none';
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+
+            document.getElementById('editFrontendHoverImageFile').addEventListener('change', function() {
+                const file = this.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        document.getElementById('frontendHoverPreview').src = e.target.result;
+                        document.getElementById('frontendHoverPreview').style.display = 'block';
+                        document.getElementById('frontendHoverPlusIcon').style.display = 'none';
+                        
+                        // Sync to Step 1
+                        document.getElementById('hoverPreview').src = e.target.result;
+                        document.getElementById('hoverPreview').style.display = 'block';
+                        document.getElementById('hoverPlusIcon').style.display = 'none';
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+
+            // Handle Step Switching
+            document.getElementById('nextBtn').addEventListener('click', function() {
+                document.getElementById('step1').style.display = 'none';
+                document.getElementById('step2').style.display = 'block';
+                document.getElementById('nextBtn').style.display = 'none';
+                document.getElementById('saveBtn').style.display = 'inline-block';
+                document.getElementById('backBtn').style.display = 'inline-block';
+                document.getElementById('cancelBtn').style.display = 'none';
+            });
+
+            document.getElementById('backBtn').addEventListener('click', function() {
+                document.getElementById('step1').style.display = 'block';
+                document.getElementById('step2').style.display = 'none';
+                document.getElementById('nextBtn').style.display = 'inline-block';
+                document.getElementById('saveBtn').style.display = 'none';
+                document.getElementById('backBtn').style.display = 'none';
+                document.getElementById('cancelBtn').style.display = 'inline-block';
+            });
+
+            // Handle Stock Status Change in Modal
+            document.getElementById('editStock').addEventListener('change', function() {
+                document.getElementById('quantityContainer').style.display = (this.value === 'In Stock') ? 'block' : 'none';
+            });
+
+            // Handle Form Submission
+            editForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                if (currentEditingRow) {
+                    // Update table row with new values
+                    currentEditingRow.cells[1].innerText = document.getElementById('editModel').value;
+                    currentEditingRow.cells[2].innerText = document.getElementById('editSeries').value;
+                    currentEditingRow.cells[3].innerText = document.getElementById('editPrice').value;
+                    
+                    const newStock = document.getElementById('editStock').value;
+                    const newQuantity = document.getElementById('editQuantity').value;
+                    
+                    currentEditingRow.cells[4].innerHTML = `<span class="${newStock === 'Out of Stock' ? 'text-danger' : 'text-success'}">${newStock}</span>`;
+                    currentEditingRow.cells[5].innerText = newQuantity;
+
+                    // Update Step 2 Data Attributes
+                    currentEditingRow.setAttribute('data-frontend-title', document.getElementById('editFrontendTitle').value);
+                    currentEditingRow.setAttribute('data-rating', document.getElementById('editRating').value);
+                    currentEditingRow.setAttribute('data-reviews', document.getElementById('editReviewCount').value);
+                    currentEditingRow.setAttribute('data-description', document.getElementById('editDescription').value);
+                    currentEditingRow.setAttribute('data-specs', document.getElementById('editSpecs').value);
+                    currentEditingRow.setAttribute('data-features', document.getElementById('editFeatures').value);
+                    currentEditingRow.setAttribute('data-box', document.getElementById('editBoxContents').value);
+                    currentEditingRow.setAttribute('data-why', document.getElementById('editWhyLove').value);
+
+                    // Handle Image File Updates (Checking both Step 1 and Step 2 inputs)
+                    const imageFile = document.getElementById('editImageFile').files[0] || document.getElementById('editFrontendImageFile').files[0];
+                    const hoverFile = document.getElementById('editHoverImageFile').files[0] || document.getElementById('editFrontendHoverImageFile').files[0];
+                    const targetImg = currentEditingRow.cells[0].querySelector('img');
+
+                    if (imageFile) {
+                        const reader = new FileReader();
+                        reader.onload = function(e) {
+                            targetImg.src = e.target.result;
+                            currentEditingRow.setAttribute('data-primary', e.target.result);
+                        };
+                        reader.readAsDataURL(imageFile);
+                    }
+
+                    if (hoverFile) {
+                        const reader = new FileReader();
+                        reader.onload = function(e) {
+                            currentEditingRow.setAttribute('data-hover', e.target.result);
+                            // Ensure hover effect is active
+                            setupHoverEffect(targetImg);
+                        };
+                        reader.readAsDataURL(hoverFile);
+                    }
+
+                    editModal.hide();
+                    alert('Product updated successfully!');
+                }
+            });
+
+            // Initialize hover effects for existing images
+            function setupHoverEffect(img) {
+                if (!img.getAttribute('data-primary')) {
+                    img.setAttribute('data-primary', img.src);
+                }
+                
+                // If the img doesn't have data-hover, try to get it from the parent tr
+                if (!img.getAttribute('data-hover')) {
+                    const row = img.closest('tr');
+                    if (row && row.getAttribute('data-hover')) {
+                        img.setAttribute('data-hover', row.getAttribute('data-hover'));
+                    }
+                }
+                
+                img.onmouseenter = function() {
+                    const hoverSrc = this.getAttribute('data-hover');
+                    if (hoverSrc) this.src = hoverSrc;
+                };
+                img.onmouseleave = function() {
+                    this.src = this.getAttribute('data-primary');
+                };
+                img.onclick = function() {
+                    const row = this.closest('tr');
+                    const editBtn = row.querySelector('.edit-product-btn, .edit-deal-btn');
+                    if (editBtn) editBtn.click();
+                };
+                img.style.transition = "0.3s all ease";
+                img.style.cursor = "pointer";
+                img.title = "Click to edit product images";
+            }
+
+            document.querySelectorAll('.admin-table img').forEach(setupHoverEffect);
+        });
+    </script>
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,739 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage UWELL | Vapier Admin</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/img/web-logo.png">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Rajdhani:wght@600;700&family=Audiowide&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Custom Admin CSS -->
+    <link rel="stylesheet" href="css/admin-style.css">
+</head>
+<body>
+
+    <div class="admin-wrapper">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <img src="../assets/img/web-logo.png" alt="Vapier Logo">
+            </div>
+            
+            <ul class="sidebar-menu">
+                <li class="menu-label">Main</li>
+                <li class="menu-item">
+                    <a href="index.html" class="menu-link">
+                        <i class="fas fa-th-large"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="orders.html" class="menu-link">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Orders</span>
+                    </a>
+                </li>
+
+                <li class="menu-label">Inventory Management</li>
+                <li class="menu-item">
+                    <a href="manage-eliquids.html" class="menu-link">
+                        <i class="fas fa-tint"></i>
+                        <span>E-Liquids</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="manage-deals.html" class="menu-link">
+                        <i class="fas fa-tags"></i>
+                        <span>Deals</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="manage-oxva.html" class="menu-link">
+                        <i class="fas fa-bolt"></i>
+                        <span>OXVA</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="manage-voopoo.html" class="menu-link">
+                        <i class="fas fa-fire"></i>
+                        <span>Voopoo</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="manage-vaporesso.html" class="menu-link">
+                        <i class="fas fa-vial"></i>
+                        <span>Vaporesso</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="manage-uwell.html" class="menu-link active">
+                        <i class="fas fa-atom"></i>
+                        <span>UWELL</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="manage-coils.html" class="menu-link">
+                        <i class="fas fa-sync-alt"></i>
+                        <span>Coils</span>
+                    </a>
+                </li>
+
+                <li class="menu-label">Content Management</li>
+                <li class="menu-item">
+                    <a href="manage-home.html" class="menu-link">
+                        <i class="fas fa-home"></i>
+                        <span>Home Page</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="about-us.html" class="menu-link">
+                        <i class="fas fa-info-circle"></i>
+                        <span>About Us</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="contact-us.html" class="menu-link">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contact Us</span>
+                    </a>
+                </li>
+
+                <li class="menu-label">Settings</li>
+                <li class="menu-item">
+                    <a href="add-product.html" class="menu-link">
+                        <i class="fas fa-plus-circle"></i>
+                        <span>Add New Product</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="../index.html" class="menu-link">
+                        <i class="fas fa-external-link-alt"></i>
+                        <span>View Website</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Bar -->
+            <div class="top-bar">
+                <div class="page-title d-flex align-items-center">
+                    <button class="mobile-toggle-btn d-lg-none me-3">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1 class="mb-0">Manage UWELL Products</h1>
+                </div>
+                <div class="user-profile">
+                    <a href="add-product.html" class="btn-admin btn-primary-admin me-3">
+                        <i class="fas fa-plus"></i> Add UWELL Product
+                    </a>
+                    <div class="user-avatar">AD</div>
+                </div>
+            </div>
+
+            <!-- Products List -->
+            <div class="table-container">
+                <div class="table-header">
+                    <h5 class="mb-0">UWELL Inventory</h5>
+                    <div class="search-box">
+                        <input type="text" class="form-control-custom" placeholder="Search UWELL..." style="background: rgba(255,255,255,0.05); border: 1px solid var(--border-color); color: white; padding: 5px 15px; border-radius: 5px; font-size: 13px;">
+                    </div>
+                </div>
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Image</th>
+                            <th>Model</th>
+                            <th>Series</th>
+                            <th>Price</th>
+                            <th>Stock Status</th>
+                            <th>Quantity</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-variants='[{"primary":"../../assets/img/devices/UWELL/g3-LITE/space-black1.png","name":"Space Black","hover":"../../assets/img/devices/UWELL/g3-LITE/space-black2.png"},{"primary":"../../assets/img/devices/UWELL/g3-LITE/basalt-gray1.png","name":"Basalt Gray","hover":"../../assets/img/devices/UWELL/g3-LITE/basalt-gray2.png"},{"primary":"../../assets/img/devices/UWELL/g3-LITE/chili-red1.png","name":"Chili Red","hover":"../../assets/img/devices/UWELL/g3-LITE/chili-red2.png"},{"primary":"../../assets/img/devices/UWELL/g3-LITE/ice-blue1.png","name":"Ice Blue","hover":"../../assets/img/devices/UWELL/g3-LITE/ice-blue2.png"},{"primary":"../../assets/img/devices/UWELL/g3-LITE/mint-green1.png","name":"Mint Green","hover":"../../assets/img/devices/UWELL/g3-LITE/mint-green2.png"},{"primary":"../../assets/img/devices/UWELL/g3-LITE/pale-purple1.png","name":"Pale Purple","hover":"../../assets/img/devices/UWELL/g3-LITE/pale-purple2.png"},{"primary":"../../assets/img/devices/UWELL/g3-LITE/pastel-pink1.png","name":"Pastel Pink","hover":"../../assets/img/devices/UWELL/g3-LITE/pastel-pink2.png"},{"primary":"../../assets/img/devices/UWELL/g3-LITE/pearl-white1.png","name":"Pearl White","hover":"../../assets/img/devices/UWELL/g3-LITE/pearl-white2.png"},{"primary":"../../assets/img/devices/UWELL/g3-LITE/vision1.png","name":"Vision (Special Ed.)","hover":"../../assets/img/devices/UWELL/g3-LITE/vision2.png"},{"primary":"../../assets/img/devices/UWELL/g3-LITE/weave1.png","name":"Weave (Special Ed.)","hover":"../../assets/img/devices/UWELL/g3-LITE/weave2.png"}]' data-primary="../assets/img/devices/UWELL/g3-LITE/space-black1.png"
+                            data-hover="../assets/img/devices/UWELL/g3-LITE/space-black1.png"
+                            data-frontend-title="Uwell Caliburn G3 Lite Pod Kit At Best Price In Pakistan"
+                            data-rating="4.5"
+                            data-reviews="10"
+                            data-description="The Caliburn G3 Lite is a lightweight, pocket-friendly version of the G3, maintaining the same great flavor profile with a simpler design."
+                            data-specs="Output: 25W; Battery: 1200mAh; Pod: 2.5ml; Material: PCTG + PC"
+                            data-features="Lightweight Design; U2 Mesh Coil Technology; 1200mAh Battery; Transparent Pod"
+                            data-box="1 x Caliburn G3 Lite Device; 1 x G3 Pod 0.9Î©; 1 x User Manual"
+                            data-why="Excellent flavor; Very affordable; Compact and easy to carry">
+                            <td><img src="../assets/img/devices/UWELL/g3-LITE/space-black1.png" alt="" style="width: 40px; height: 40px; object-fit: contain;"></td>
+                            <td>G3 LITE</td>
+                            <td>Caliburn Series</td>
+                            <td>RS 4,000.00</td>
+                            <td><span class="text-success">In Stock</span></td>
+                            <td>12</td>
+                            <td>
+                                <a href="../vape-products/uwell/g3-LITE-data.html" target="_blank" class="btn-admin btn-sm" style="background:rgba(255,255,255,0.1);color:white;"><i class="fas fa-eye"></i></a>
+                                <button class="btn-admin btn-sm edit-product-btn" style="background: rgba(0, 123, 255, 0.1); color: #007bff;"><i class="fas fa-edit"></i></button>
+                                <button class="btn-admin btn-sm" style="background: rgba(220, 53, 69, 0.1); color: #dc3545;"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr data-variants='[{"primary":"../../assets/img/devices/UWELL/G3-PRO/Emerald-Green2.png","name":"Emerald Green","hover":"../../assets/img/devices/UWELL/G3-PRO/Emerald-Green2.png"},{"primary":"../../assets/img/devices/UWELL/G3-PRO/Brown-Leather2.png","name":"Brown Leather","hover":"../../assets/img/devices/UWELL/G3-PRO/Brown-Leather2.png"},{"primary":"../../assets/img/devices/UWELL/G3-PRO/Midnight-Black2.png","name":"Midnight Black","hover":"../../assets/img/devices/UWELL/G3-PRO/Midnight-Black2.png"},{"primary":"../../assets/img/devices/UWELL/G3-PRO/Pacific-Blue2.png","name":"Pacific Blue","hover":"../../assets/img/devices/UWELL/G3-PRO/Pacific-Blue2.png"},{"primary":"../../assets/img/devices/UWELL/G3-PRO/Rose-Gold2.png","name":"Rose Gold","hover":"../../assets/img/devices/UWELL/G3-PRO/Rose-Gold2.png"},{"primary":"../../assets/img/devices/UWELL/G3-PRO/Stone-Gray2.png","name":"Stone Gray","hover":"../../assets/img/devices/UWELL/G3-PRO/Stone-Gray2.png"}]' data-primary="../assets/img/devices/UWELL/G3-PRO/Emerald-Green1.png" 
+                            data-hover="../assets/img/devices/UWELL/G3-PRO/Emerald-Green2.png"
+                            data-frontend-title="Uwell Caliburn G3 Pro Pod Kit Best Price In Pakistan"
+                            data-rating="5.0"
+                            data-reviews="12"
+                            data-description="The Uwell Caliburn G3 Pro Pod Kit is the first smart touchscreen vape by Uwell. Powered by an 1800mAh integrated battery delivering up to 35W output, and paired with upgraded leak-proof pods, it ensures a smooth, flavorful, and mess-free vape."
+                            data-specs="Output Power: Up to 35W; Battery: 1800mAh Integrated; Charging: Type-C 5V/2A; Screen: 2.51-inch Touchscreen; Pod Capacity: 3ml"
+                            data-features="First Smart Touchscreen Vape; Customizable Modes (Wave/Storm/Custom); 6 UI Themes with animations; Upgraded GPP Leak-proof Pods; Personalized Naming Option"
+                            data-box="1 x Uwell Caliburn G3 Pro Device; 1 x Uwell GPP Pod 0.4Î©; 1 x Uwell GPP Pod 0.6Î©; 1 x User Manual"
+                            data-why="Smart Touchscreen interface; Dual Pod Options (RDL/MTL); Leak-proof design; Strong 1800mAh Battery">
+                            <td><img src="../assets/img/devices/UWELL/G3-PRO/Emerald-Green1.png" alt="" style="width: 40px; height: 40px; object-fit: contain;"></td>
+                            <td>G3 PRO</td>
+                            <td>Caliburn Series</td>
+                            <td>RS 6,300.00</td>
+                            <td><span class="text-success">In Stock</span></td>
+                            <td>8</td>
+                            <td>
+                                <a href="../vape-products/uwell/G3-PRO-data.html" target="_blank" class="btn-admin btn-sm" style="background:rgba(255,255,255,0.1);color:white;"><i class="fas fa-eye"></i></a>
+                                <button class="btn-admin btn-sm edit-product-btn" style="background: rgba(0, 123, 255, 0.1); color: #007bff;"><i class="fas fa-edit"></i></button>
+                                <button class="btn-admin btn-sm" style="background: rgba(220, 53, 69, 0.1); color: #dc3545;"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr data-variants='[{"primary":"../../assets/img/devices/UWELL/G3-PRO-KOKO/space-gray1.png","name":"Space Gray","hover":"../../assets/img/devices/UWELL/G3-PRO-KOKO/space-gray2.png"},{"primary":"../../assets/img/devices/UWELL/G3-PRO-KOKO/midnight-black1.png","name":"Midnight Black","hover":"../../assets/img/devices/UWELL/G3-PRO-KOKO/midnight-black2.png"},{"primary":"../../assets/img/devices/UWELL/G3-PRO-KOKO/light-silver1.png","name":"Light Silver","hover":"../../assets/img/devices/UWELL/G3-PRO-KOKO/light-silver2.png"},{"primary":"../../assets/img/devices/UWELL/G3-PRO-KOKO/lilac-purple1.png","name":"Lilac Purple","hover":"../../assets/img/devices/UWELL/G3-PRO-KOKO/lilac-purple2.png"},{"primary":"../../assets/img/devices/UWELL/G3-PRO-KOKO/luxury-gold1.png","name":"Luxury Gold","hover":"../../assets/img/devices/UWELL/G3-PRO-KOKO/luxury-gold2.png"},{"primary":"../../assets/img/devices/UWELL/G3-PRO-KOKO/rose-pink1.png","name":"Rose Pink","hover":"../../assets/img/devices/UWELL/G3-PRO-KOKO/rose-pink2.png"},{"primary":"../../assets/img/devices/UWELL/G3-PRO-KOKO/sky-blue1.png","name":"Sky Blue","hover":"../../assets/img/devices/UWELL/G3-PRO-KOKO/sky-blue2.png"}]' data-primary="../assets/img/devices/UWELL/G3-Pro-KOKO/space-gray1.png"
+                            data-hover="../assets/img/devices/UWELL/G3-Pro-KOKO/space-gray1.png"
+                            data-frontend-title="Uwell Caliburn G3 Pro KOKO Pod Kit At Best Price In Pakistan"
+                            data-rating="4.9"
+                            data-reviews="15"
+                            data-description="The KOKO version of the G3 Pro series, featuring the iconic square design with the latest G3 Pro technology and touchscreen."
+                            data-specs="Output: 35W; Battery: 1250mAh; Screen: OLED Touch; Pod: 3ml"
+                            data-features="Touchscreen Controls; KOKO Square Design; High Power Output; Pro-level Flavor"
+                            data-box="1 x G3 Pro KOKO Device; 1 x G3 Pod 0.6Î©; 1 x G3 Pod 0.9Î©; 1 x Lanyard; 1 x User Manual"
+                            data-why="Iconic KOKO style; Advanced touchscreen; Superior performance">
+                            <td><img src="../assets/img/devices/UWELL/G3-Pro-KOKO/space-gray1.png" alt="" style="width: 40px; height: 40px; object-fit: contain;"></td>
+                            <td>G3 Pro KOKO</td>
+                            <td>KOKO Series</td>
+                            <td>RS 6,300.00</td>
+                            <td><span class="text-success">In Stock</span></td>
+                            <td>15</td>
+                            <td>
+                                <a href="../vape-products/uwell/G3-Pro-KOKO-data.html" target="_blank" class="btn-admin btn-sm" style="background:rgba(255,255,255,0.1);color:white;"><i class="fas fa-eye"></i></a>
+                                <button class="btn-admin btn-sm edit-product-btn" style="background: rgba(0, 123, 255, 0.1); color: #007bff;"><i class="fas fa-edit"></i></button>
+                                <button class="btn-admin btn-sm" style="background: rgba(220, 53, 69, 0.1); color: #dc3545;"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr data-variants='[{"primary":"../../assets/img/devices/UWELL/G4/flamingo-red1.png","name":"Flamingo Red","hover":"../../assets/img/devices/UWELL/G4/flamingo-red2.png"},{"primary":"../../assets/img/devices/UWELL/G4/glacier-blue1.png","name":"Glacier Blue","hover":"../../assets/img/devices/UWELL/G4/glacier-blue2.png"},{"primary":"../../assets/img/devices/UWELL/G4/gunmetal-grey1.png","name":"Gunmetal Grey","hover":"../../assets/img/devices/UWELL/G4/gunmetal-grey2.png"},{"primary":"../../assets/img/devices/UWELL/G4/sahara-gold1.png","name":"Sahara Gold","hover":"../../assets/img/devices/UWELL/G4/sahara-gold2.png"},{"primary":"../../assets/img/devices/UWELL/G4/seashell-white1.png","name":"Seashell White","hover":"../../assets/img/devices/UWELL/G4/seashell-white2.png"}]' data-primary="../assets/img/devices/UWELL/G4/flamingo-red1.png"
+                            data-hover="../assets/img/devices/UWELL/G4/flamingo-red2.png"
+                            data-frontend-title="Uwell Caliburn G4 Pod Kit At Best Price In Pakistan"
+                            data-rating="4.9"
+                            data-reviews="35"
+                            data-description="The Caliburn G4 is the next generation of the legendary G series, offering enhanced power and a refined airflow system."
+                            data-specs="Output: 30W; Battery: 1200mAh; Pod: 3ml; Material: Aluminum Alloy"
+                            data-features="Advanced Airflow Control; 1200mAh Internal Battery; Pro-FOCS Flavor Tech; Type-C Fast Charging"
+                            data-box="1 x Caliburn G4 Device; 1 x G4 Pod 0.6Î©; 1 x G4 Pod 0.9Î©; 1 x Type-C Cable; 1 x User Manual"
+                            data-why="Legendary flavor profile; Durable build; Large battery capacity">
+                            <td><img src="../assets/img/devices/UWELL/G4/flamingo-red1.png" alt="" style="width: 40px; height: 40px; object-fit: contain;"></td>
+                            <td>G4</td>
+                            <td>Caliburn Series</td>
+                            <td>RS 6,500.00</td>
+                            <td><span class="text-success">In Stock</span></td>
+                            <td>22</td>
+                            <td>
+                                <a href="../vape-products/uwell/G4-data.html" target="_blank" class="btn-admin btn-sm" style="background:rgba(255,255,255,0.1);color:white;"><i class="fas fa-eye"></i></a>
+                                <button class="btn-admin btn-sm edit-product-btn" style="background: rgba(0, 123, 255, 0.1); color: #007bff;"><i class="fas fa-edit"></i></button>
+                                <button class="btn-admin btn-sm" style="background: rgba(220, 53, 69, 0.1); color: #dc3545;"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr data-variants='[{"primary":"../../assets/img/devices/UWELL/G4-LITE/Knight_Black.webp","name":"Knight Black","hover":"../../assets/img/devices/UWELL/G4-LITE/Knight_Black.webp"},{"primary":"../../assets/img/devices/UWELL/G4-LITE/Candy_Pink.webp","name":"Candy Pink","hover":"../../assets/img/devices/UWELL/G4-LITE/Candy_Pink.webp"},{"primary":"../../assets/img/devices/UWELL/G4-LITE/Coral_Orange.webp","name":"Coral Orange","hover":"../../assets/img/devices/UWELL/G4-LITE/Coral_Orange.webp"},{"primary":"../../assets/img/devices/UWELL/G4-LITE/Creamy_Celadon.webp","name":"Creamy Celadon","hover":"../../assets/img/devices/UWELL/G4-LITE/Creamy_Celadon.webp"},{"primary":"../../assets/img/devices/UWELL/G4-LITE/Lemon_Green.webp","name":"Lemon Green","hover":"../../assets/img/devices/UWELL/G4-LITE/Lemon_Green.webp"},{"primary":"../../assets/img/devices/UWELL/G4-LITE/Mint_Green.webp","name":"Mint Green","hover":"../../assets/img/devices/UWELL/G4-LITE/Mint_Green.webp"},{"primary":"../../assets/img/devices/UWELL/G4-LITE/Ocean_Blue.webp","name":"Ocean Blue","hover":"../../assets/img/devices/UWELL/G4-LITE/Ocean_Blue.webp"},{"primary":"../../assets/img/devices/UWELL/G4-LITE/Starry_Gray.webp","name":"Starry Gray","hover":"../../assets/img/devices/UWELL/G4-LITE/Starry_Gray.webp"}]' data-primary="../assets/img/devices/UWELL/G4-LITE/Knight_Black.webp"
+                            data-hover="../assets/img/devices/UWELL/G4-LITE/Knight_Black.webp"
+                            data-frontend-title="Uwell Caliburn G4 Lite Pod Kit At Best Price In Pakistan"
+                            data-rating="4.7"
+                            data-reviews="20"
+                            data-description="The Caliburn G4 Lite is a streamlined version of the G4, perfect for vapers who want top-tier flavor in a simplified package."
+                            data-specs="Output: 25W; Battery: 1000mAh; Pod: 2.5ml; Material: PCTG + PC"
+                            data-features="Lightweight Design; Auto-draw Only; Transparent Pods; Efficient Power Management"
+                            data-box="1 x Caliburn G4 Lite Device; 1 x G4 Pod 0.9Î©; 1 x User Manual"
+                            data-why="Excellent value; Ultra-portable; No-fuss vaping">
+                            <td><img src="../assets/img/devices/UWELL/G4-LITE/Knight_Black.webp" alt="" style="width: 40px; height: 40px; object-fit: contain;"></td>
+                            <td>G4 LITE</td>
+                            <td>Caliburn Series</td>
+                            <td>RS 4,000.00</td>
+                            <td><span class="text-success">In Stock</span></td>
+                            <td>10</td>
+                            <td>
+                                <a href="../vape-products/uwell/G4-LITE-data.html" target="_blank" class="btn-admin btn-sm" style="background:rgba(255,255,255,0.1);color:white;"><i class="fas fa-eye"></i></a>
+                                <button class="btn-admin btn-sm edit-product-btn" style="background: rgba(0, 123, 255, 0.1); color: #007bff;"><i class="fas fa-edit"></i></button>
+                                <button class="btn-admin btn-sm" style="background: rgba(220, 53, 69, 0.1); color: #dc3545;"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr data-variants='[{"primary":"../../assets/img/devices/UWELL/G4-PRO/frost-white1.png","name":"Frost White","hover":"../../assets/img/devices/UWELL/G4-PRO/frost-white2.png"},{"primary":"../../assets/img/devices/UWELL/G4-PRO/desert-gold1.png","name":"Desert Gold","hover":"../../assets/img/devices/UWELL/G4-PRO/desert-gold2.png"},{"primary":"../../assets/img/devices/UWELL/G4-PRO/fantasy-pink1.png","name":"Fantasy Pink","hover":"../../assets/img/devices/UWELL/G4-PRO/fantasy-pink2.png"},{"primary":"../../assets/img/devices/UWELL/G4-PRO/ink-blue1.png","name":"Ink Blue","hover":"../../assets/img/devices/UWELL/G4-PRO/ink-blue2.png"},{"primary":"../../assets/img/devices/UWELL/G4-PRO/iron-gray1.png","name":"Iron Gray","hover":"../../assets/img/devices/UWELL/G4-PRO/iron-gray2.png"},{"primary":"../../assets/img/devices/UWELL/G4-PRO/light-green1.png","name":"Light Green","hover":"../../assets/img/devices/UWELL/G4-PRO/light-green2.png"},{"primary":"../../assets/img/devices/UWELL/G4-PRO/silver1.png","name":"Silver","hover":"../../assets/img/devices/UWELL/G4-PRO/silver2.png"},{"primary":"../../assets/img/devices/UWELL/G4-PRO/stripe-black1.png","name":"Stripe Black","hover":"../../assets/img/devices/UWELL/G4-PRO/stipe-black2.webp"}]' data-primary="../assets/img/devices/UWELL/G4-PRO/stripe-black1.png"
+                            data-hover="../assets/img/devices/UWELL/G4-PRO/stipe-black2.webp"
+                            data-frontend-title="Uwell Caliburn G4 Pro Pod Kit At Best Price In Pakistan"
+                            data-rating="5.0"
+                            data-reviews="50"
+                            data-description="The Caliburn G4 Pro is the ultimate pro-level pod kit, featuring a full-color touchscreen and maximum power for a truly customizable vape."
+                            data-specs="Output: 35W; Battery: 1300mAh; Screen: Color Touch; Pod: 3ml"
+                            data-features="Full Color Touchscreen; 35W Maximum Power; Intelligent Coil Detection; Smart & RBA Modes"
+                            data-box="1 x Caliburn G4 Pro Device; 1 x G4 Pod 0.4Î©; 1 x G4 Pod 0.6Î©; 1 x Type-C Cable; 1 x User Manual"
+                            data-why="Advanced touchscreen; High power; Premium build quality">
+                            <td><img src="../assets/img/devices/UWELL/G4-PRO/stripe-black1.png" alt="" style="width: 40px; height: 40px; object-fit: contain;"></td>
+                            <td>G4 PRO</td>
+                            <td>Caliburn Series</td>
+                            <td>RS 7,400.00</td>
+                            <td><span class="text-success">In Stock</span></td>
+                            <td>10</td>
+                            <td>
+                                <a href="../vape-products/uwell/G4-PRO-data.html" target="_blank" class="btn-admin btn-sm" style="background:rgba(255,255,255,0.1);color:white;"><i class="fas fa-eye"></i></a>
+                                <button class="btn-admin btn-sm edit-product-btn" style="background: rgba(0, 123, 255, 0.1); color: #007bff;"><i class="fas fa-edit"></i></button>
+                                <button class="btn-admin btn-sm" style="background: rgba(220, 53, 69, 0.1); color: #dc3545;"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr data-variants='[{"primary":"../../assets/img/devices/UWELL/G4-PRO-KOKO/coral-pink1.png","name":"Coral Pink","hover":"../../assets/img/devices/UWELL/G4-PRO-KOKO/coral-pink2.png"},{"primary":"../../assets/img/devices/UWELL/G4-PRO-KOKO/cosmic-gray1.png","name":"Cosmic Gray","hover":"../../assets/img/devices/UWELL/G4-PRO-KOKO/cosmic-gray2.png"},{"primary":"../../assets/img/devices/UWELL/G4-PRO-KOKO/crystal-white1.png","name":"Crystal White","hover":"../../assets/img/devices/UWELL/G4-PRO-KOKO/crystal-white2.png"},{"primary":"../../assets/img/devices/UWELL/G4-PRO-KOKO/desert-gold1.png","name":"Desert Gold","hover":"../../assets/img/devices/UWELL/G4-PRO-KOKO/desert-gold2.png"},{"primary":"../../assets/img/devices/UWELL/G4-PRO-KOKO/glass-blue1.png","name":"Glass Blue","hover":"../../assets/img/devices/UWELL/G4-PRO-KOKO/glass-blue2.png"},{"primary":"../../assets/img/devices/UWELL/G4-PRO-KOKO/Light_Green.webp","name":"Light Green","hover":"../../assets/img/devices/UWELL/G4-PRO-KOKO/Light_Green.webp"},{"primary":"../../assets/img/devices/UWELL/G4-PRO-KOKO/Mirror_Silver.webp","name":"Mirror Silver","hover":"../../assets/img/devices/UWELL/G4-PRO-KOKO/Mirror_Silver.webp"},{"primary":"../../assets/img/devices/UWELL/G4-PRO-KOKO/Waves_Black.webp","name":"Waves Black","hover":"../../assets/img/devices/UWELL/G4-PRO-KOKO/Waves_Black.webp"}]' data-primary="../assets/img/devices/UWELL/G4-PRO-KOKO/glass-blue1.png"
+                            data-hover="../assets/img/devices/UWELL/G4-PRO-KOKO/glass-blue2.png"
+                            data-frontend-title="Uwell Caliburn G4 Pro KOKO Pod Kit At Best Price In Pakistan"
+                            data-rating="5.0"
+                            data-reviews="25"
+                            data-description="The G4 Pro KOKO combines the iconic square design with the latest G4 Pro touchscreen technology for a futuristic vaping experience."
+                            data-specs="Output: 35W; Battery: 1300mAh; Screen: Color Touch; Pod: 3ml"
+                            data-features="Square KOKO Pro Design; Touchscreen Controls; Lanyard Compatible; High Power Output"
+                            data-box="1 x Caliburn G4 Pro KOKO Device; 1 x G4 Pod 0.6Î©; 1 x G4 Pod 0.9Î©; 1 x Lanyard; 1 x User Manual"
+                            data-why="Iconic KOKO style; Smart touchscreen; Superior performance">
+                            <td><img src="../assets/img/devices/UWELL/G4-PRO-KOKO/glass-blue1.png" alt="" style="width: 40px; height: 40px; object-fit: contain;"></td>
+                            <td>G4 PRO KOKO</td>
+                            <td>KOKO Series</td>
+                            <td>RS 7,400.00</td>
+                            <td><span class="text-success">In Stock</span></td>
+                            <td>10</td>
+                            <td>
+                                <a href="../vape-products/uwell/G4-PRO-KOKO-data.html" target="_blank" class="btn-admin btn-sm" style="background:rgba(255,255,255,0.1);color:white;"><i class="fas fa-eye"></i></a>
+                                <button class="btn-admin btn-sm edit-product-btn" style="background: rgba(0, 123, 255, 0.1); color: #007bff;"><i class="fas fa-edit"></i></button>
+                                <button class="btn-admin btn-sm" style="background: rgba(220, 53, 69, 0.1); color: #dc3545;"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <!-- Edit Product Modal -->
+    <div class="modal fade" id="editProductModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content" style="background: #1a1a1a; color: white; border: 1px solid #333;">
+                <div class="modal-header" style="border-bottom: 1px solid #333;">
+                    <h5 class="modal-title">Edit UWELL Product</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="editProductForm">
+                        <!-- Step 1: Basic Inventory Info -->
+                        <div id="step1">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label">Model Name</label>
+                                    <input type="text" class="form-control" id="editModel" style="background: #2a2a2a; border: 1px solid #444; color: white;">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Series</label>
+                                    <input type="text" class="form-control" id="editSeries" style="background: #2a2a2a; border: 1px solid #444; color: white;">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Price</label>
+                                    <input type="text" class="form-control" id="editPrice" style="background: #2a2a2a; border: 1px solid #444; color: white;">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Stock Status</label>
+                                    <select class="form-select" id="editStock" style="background: #2a2a2a; border: 1px solid #444; color: white;">
+                                        <option value="In Stock">In Stock</option>
+                                        <option value="Out of Stock">Out of Stock</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-12" id="quantityContainer">
+                                    <label class="form-label">Quantity</label>
+                                    <input type="number" class="form-control" id="editQuantity" style="background: #2a2a2a; border: 1px solid #444; color: white;" min="0">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Product Image (Main)</label>
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="image-preview-container" onclick="document.getElementById('editImageFile').click();" style="cursor: pointer; width: 80px; height: 80px; border: 1px dashed #444; display: flex; align-items: center; justify-content: center; border-radius: 5px; overflow: hidden; background: #2a2a2a;">
+                                            <img id="mainPreview" src="" alt="" style="width: 100%; height: 100%; object-fit: contain; display: none;">
+                                            <i class="fas fa-plus text-white-50" id="mainPlusIcon"></i>
+                                        </div>
+                                        <input type="file" class="form-control" id="editImageFile" accept="image/*" style="background: #2a2a2a; border: 1px solid #444; color: white;">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Product Image (Hover)</label>
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="image-preview-container" onclick="document.getElementById('editHoverImageFile').click();" style="cursor: pointer; width: 80px; height: 80px; border: 1px dashed #444; display: flex; align-items: center; justify-content: center; border-radius: 5px; overflow: hidden; background: #2a2a2a;">
+                                            <img id="hoverPreview" src="" alt="" style="width: 100%; height: 100%; object-fit: contain; display: none;">
+                                            <i class="fas fa-plus text-white-50" id="hoverPlusIcon"></i>
+                                        </div>
+                                        <input type="file" class="form-control" id="editHoverImageFile" accept="image/*" style="background: #2a2a2a; border: 1px solid #444; color: white;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Frontend Product Details -->
+                        <div id="step2" style="display: none;">
+                            <div class="row g-3">
+                                <div class="col-md-12">
+                                    <label class="form-label">Frontend Page Title</label>
+                                    <input type="text" class="form-control" id="editFrontendTitle" style="background: #2a2a2a; border: 1px solid #444; color: white;">
+                                </div>
+                                <div class="col-md-12">
+                                    <label class="form-label">Color Variant Management</label>
+                                    <div class="d-flex gap-2 align-items-center mb-2">
+                                        <select class="form-select" id="editVariantDropdown" style="background: #2a2a2a; border: 1px solid #444; color: white;">
+                                            <option value="default">Default Variant</option>
+                                        </select>
+                                        <button type="button" class="btn btn-sm btn-primary" id="addVariantBtn" style="background: var(--accent-red); border: none; padding: 0.5rem 1rem;" title="Add Variant"><i class="fas fa-plus"></i></button>
+                                        <button type="button" class="btn btn-sm btn-danger" id="removeVariantBtn" style="background: #dc3545; border: none; padding: 0.5rem 1rem;" title="Remove Variant"><i class="fas fa-trash"></i></button>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Frontend Primary Image</label>
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="image-preview-container" onclick="document.getElementById('editFrontendImageFile').click();" style="cursor: pointer; width: 80px; height: 80px; border: 1px dashed #444; display: flex; align-items: center; justify-content: center; border-radius: 5px; overflow: hidden; background: #2a2a2a;">
+                                            <img id="frontendPreview" src="" alt="" style="width: 100%; height: 100%; object-fit: contain; display: none;">
+                                            <i class="fas fa-image text-white-50" id="frontendPlusIcon"></i>
+                                        </div>
+                                        <input type="file" class="form-control" id="editFrontendImageFile" accept="image/*" style="background: #2a2a2a; border: 1px solid #444; color: white;">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Frontend Hover Image</label>
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="image-preview-container" onclick="document.getElementById('editFrontendHoverImageFile').click();" style="cursor: pointer; width: 80px; height: 80px; border: 1px dashed #444; display: flex; align-items: center; justify-content: center; border-radius: 5px; overflow: hidden; background: #2a2a2a;">
+                                            <img id="frontendHoverPreview" src="" alt="" style="width: 100%; height: 100%; object-fit: contain; display: none;">
+                                            <i class="fas fa-image text-white-50" id="frontendHoverPlusIcon"></i>
+                                        </div>
+                                        <input type="file" class="form-control" id="editFrontendHoverImageFile" accept="image/*" style="background: #2a2a2a; border: 1px solid #444; color: white;">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Rating (1-5)</label>
+                                    <input type="number" class="form-control" id="editRating" step="0.1" min="0" max="5" style="background: #2a2a2a; border: 1px solid #444; color: white;">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Review Count</label>
+                                    <input type="number" class="form-control" id="editReviewCount" style="background: #2a2a2a; border: 1px solid #444; color: white;">
+                                </div>
+                                <div class="col-md-12">
+                                    <label class="form-label">Product Description</label>
+                                    <textarea class="form-control" id="editDescription" rows="4" style="background: #2a2a2a; border: 1px solid #444; color: white;"></textarea>
+                                </div>
+                                <div class="col-md-12">
+                                    <label class="form-label">Technical Specs (e.g. Battery: 1800mAh; Power: 40W)</label>
+                                    <textarea class="form-control" id="editSpecs" rows="3" style="background: #2a2a2a; border: 1px solid #444; color: white;"></textarea>
+                                </div>
+                                <div class="col-md-12">
+                                    <label class="form-label">Key Features (One per line)</label>
+                                    <textarea class="form-control" id="editFeatures" rows="4" style="background: #2a2a2a; border: 1px solid #444; color: white;"></textarea>
+                                </div>
+                                <div class="col-md-12">
+                                    <label class="form-label">What's in the Box (One per line)</label>
+                                    <textarea class="form-control" id="editBoxContents" rows="3" style="background: #2a2a2a; border: 1px solid #444; color: white;"></textarea>
+                                </div>
+                                <div class="col-md-12">
+                                    <label class="form-label">Why You'll Love It (One per line)</label>
+                                    <textarea class="form-control" id="editWhyLove" rows="3" style="background: #2a2a2a; border: 1px solid #444; color: white;"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 text-end mt-4">
+                            <button type="button" class="btn btn-secondary me-2" id="backBtn" style="display: none;">Back</button>
+                            <button type="button" class="btn btn-secondary me-2" data-bs-dismiss="modal" id="cancelBtn">Cancel</button>
+                            <button type="button" class="btn btn-primary" id="nextBtn" style="background: var(--accent-red); border: none;">Next</button>
+                            <button type="submit" class="btn btn-success" id="saveBtn" style="display: none;">Save All Changes</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="js/admin-main.js"></script>
+    <script src="js/admin-variant-manager.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const editModal = new bootstrap.Modal(document.getElementById('editProductModal'));
+            const editForm = document.getElementById('editProductForm');
+            let currentEditingRow = null;
+
+            // Handle Edit Button Click
+            document.querySelectorAll('.edit-product-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    currentEditingRow = this.closest('tr');
+                    
+                    // Get current values
+                    const model = currentEditingRow.cells[1].innerText;
+                    const series = currentEditingRow.cells[2].innerText;
+                    const price = currentEditingRow.cells[3].innerText;
+                    const stock = currentEditingRow.cells[4].innerText.trim();
+                    const quantity = currentEditingRow.cells[5].innerText.trim();
+
+                    // Populate Modal
+                    document.getElementById('editModel').value = model;
+                    document.getElementById('editSeries').value = series;
+                    document.getElementById('editPrice').value = price;
+                    document.getElementById('editStock').value = stock;
+                    document.getElementById('editQuantity').value = quantity;
+                    
+                    // Populate Step 2 Data
+                    document.getElementById('editFrontendTitle').value = currentEditingRow.getAttribute('data-frontend-title') || '';
+                    document.getElementById('editRating').value = currentEditingRow.getAttribute('data-rating') || '4.8';
+                    document.getElementById('editReviewCount').value = currentEditingRow.getAttribute('data-reviews') || '12';
+                    document.getElementById('editDescription').value = currentEditingRow.getAttribute('data-description') || '';
+                    document.getElementById('editSpecs').value = currentEditingRow.getAttribute('data-specs') || '';
+                    document.getElementById('editFeatures').value = currentEditingRow.getAttribute('data-features') || '';
+                    document.getElementById('editBoxContents').value = currentEditingRow.getAttribute('data-box') || '';
+                    document.getElementById('editWhyLove').value = currentEditingRow.getAttribute('data-why') || '';
+
+                    // Toggle quantity field visibility based on stock status
+                    document.getElementById('quantityContainer').style.display = (stock === 'In Stock') ? 'block' : 'none';
+
+                    // Populate Image Previews
+                    const mainImgSrc = currentEditingRow.cells[0].querySelector('img').src;
+                    const hoverImgSrc = currentEditingRow.getAttribute('data-hover');
+                    
+                    const mainPreview = document.getElementById('mainPreview');
+                    const mainIcon = document.getElementById('mainPlusIcon');
+                    if (mainImgSrc) {
+                        mainPreview.src = mainImgSrc;
+                        mainPreview.style.display = 'block';
+                        mainIcon.style.display = 'none';
+                    }
+
+                    const hoverPreview = document.getElementById('hoverPreview');
+                    const hoverIcon = document.getElementById('hoverPlusIcon');
+                    if (hoverImgSrc) {
+                        hoverPreview.src = hoverImgSrc;
+                        hoverPreview.style.display = 'block';
+                        hoverIcon.style.display = 'none';
+                        
+                        // Sync to Frontend Previews in Step 2
+                        document.getElementById('frontendHoverPreview').src = hoverImgSrc;
+                        document.getElementById('frontendHoverPreview').style.display = 'block';
+                        document.getElementById('frontendHoverPlusIcon').style.display = 'none';
+                    } else {
+                        hoverPreview.style.display = 'none';
+                        hoverIcon.style.display = 'block';
+                        document.getElementById('frontendHoverPreview').style.display = 'none';
+                        document.getElementById('frontendHoverPlusIcon').style.display = 'block';
+                    }
+
+                    if (mainImgSrc) {
+                        document.getElementById('frontendPreview').src = mainImgSrc;
+                        document.getElementById('frontendPreview').style.display = 'block';
+                        document.getElementById('frontendPlusIcon').style.display = 'none';
+                    }
+
+                    // Reset steps
+                    document.getElementById('step1').style.display = 'block';
+                    document.getElementById('step2').style.display = 'none';
+                    document.getElementById('nextBtn').style.display = 'inline-block';
+                    document.getElementById('saveBtn').style.display = 'none';
+                    document.getElementById('backBtn').style.display = 'none';
+                    document.getElementById('cancelBtn').style.display = 'inline-block';
+
+                    editModal.show();
+                });
+            });
+
+            document.getElementById('editImageFile').addEventListener('change', function() {
+                const file = this.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        document.getElementById('mainPreview').src = e.target.result;
+                        document.getElementById('mainPreview').style.display = 'block';
+                        document.getElementById('mainPlusIcon').style.display = 'none';
+                        
+                        // Sync to Step 2
+                        document.getElementById('frontendPreview').src = e.target.result;
+                        document.getElementById('frontendPreview').style.display = 'block';
+                        document.getElementById('frontendPlusIcon').style.display = 'none';
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+
+            document.getElementById('editFrontendImageFile').addEventListener('change', function() {
+                const file = this.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        document.getElementById('frontendPreview').src = e.target.result;
+                        document.getElementById('frontendPreview').style.display = 'block';
+                        document.getElementById('frontendPlusIcon').style.display = 'none';
+                        
+                        // Sync to Step 1
+                        document.getElementById('mainPreview').src = e.target.result;
+                        document.getElementById('mainPreview').style.display = 'block';
+                        document.getElementById('mainPlusIcon').style.display = 'none';
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+
+            document.getElementById('editHoverImageFile').addEventListener('change', function() {
+                const file = this.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        document.getElementById('hoverPreview').src = e.target.result;
+                        document.getElementById('hoverPreview').style.display = 'block';
+                        document.getElementById('hoverPlusIcon').style.display = 'none';
+                        
+                        // Sync to Step 2
+                        document.getElementById('frontendHoverPreview').src = e.target.result;
+                        document.getElementById('frontendHoverPreview').style.display = 'block';
+                        document.getElementById('frontendHoverPlusIcon').style.display = 'none';
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+
+            document.getElementById('editFrontendHoverImageFile').addEventListener('change', function() {
+                const file = this.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        document.getElementById('frontendHoverPreview').src = e.target.result;
+                        document.getElementById('frontendHoverPreview').style.display = 'block';
+                        document.getElementById('frontendHoverPlusIcon').style.display = 'none';
+                        
+                        // Sync to Step 1
+                        document.getElementById('hoverPreview').src = e.target.result;
+                        document.getElementById('hoverPreview').style.display = 'block';
+                        document.getElementById('hoverPlusIcon').style.display = 'none';
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+
+            // Handle Step Switching
+            document.getElementById('nextBtn').addEventListener('click', function() {
+                document.getElementById('step1').style.display = 'none';
+                document.getElementById('step2').style.display = 'block';
+                document.getElementById('nextBtn').style.display = 'none';
+                document.getElementById('saveBtn').style.display = 'inline-block';
+                document.getElementById('backBtn').style.display = 'inline-block';
+                document.getElementById('cancelBtn').style.display = 'none';
+            });
+
+            document.getElementById('backBtn').addEventListener('click', function() {
+                document.getElementById('step1').style.display = 'block';
+                document.getElementById('step2').style.display = 'none';
+                document.getElementById('nextBtn').style.display = 'inline-block';
+                document.getElementById('saveBtn').style.display = 'none';
+                document.getElementById('backBtn').style.display = 'none';
+                document.getElementById('cancelBtn').style.display = 'inline-block';
+            });
+
+            // Handle Stock Status Change in Modal
+            document.getElementById('editStock').addEventListener('change', function() {
+                document.getElementById('quantityContainer').style.display = (this.value === 'In Stock') ? 'block' : 'none';
+            });
+
+            // Handle Form Submission
+            editForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                if (currentEditingRow) {
+                    // Update table row with new values
+                    currentEditingRow.cells[1].innerText = document.getElementById('editModel').value;
+                    currentEditingRow.cells[2].innerText = document.getElementById('editSeries').value;
+                    currentEditingRow.cells[3].innerText = document.getElementById('editPrice').value;
+                    
+                    const newStock = document.getElementById('editStock').value;
+                    const newQuantity = document.getElementById('editQuantity').value;
+                    
+                    currentEditingRow.cells[4].innerHTML = `<span class="${newStock === 'Out of Stock' ? 'text-danger' : 'text-success'}">${newStock}</span>`;
+                    currentEditingRow.cells[5].innerText = newQuantity;
+
+                    // Update Step 2 Data Attributes
+                    currentEditingRow.setAttribute('data-frontend-title', document.getElementById('editFrontendTitle').value);
+                    currentEditingRow.setAttribute('data-rating', document.getElementById('editRating').value);
+                    currentEditingRow.setAttribute('data-reviews', document.getElementById('editReviewCount').value);
+                    currentEditingRow.setAttribute('data-description', document.getElementById('editDescription').value);
+                    currentEditingRow.setAttribute('data-specs', document.getElementById('editSpecs').value);
+                    currentEditingRow.setAttribute('data-features', document.getElementById('editFeatures').value);
+                    currentEditingRow.setAttribute('data-box', document.getElementById('editBoxContents').value);
+                    currentEditingRow.setAttribute('data-why', document.getElementById('editWhyLove').value);
+
+                    // Handle Image File Updates (Checking both Step 1 and Step 2 inputs)
+                    const imageFile = document.getElementById('editImageFile').files[0] || document.getElementById('editFrontendImageFile').files[0];
+                    const hoverFile = document.getElementById('editHoverImageFile').files[0] || document.getElementById('editFrontendHoverImageFile').files[0];
+                    const targetImg = currentEditingRow.cells[0].querySelector('img');
+
+                    if (imageFile) {
+                        const reader = new FileReader();
+                        reader.onload = function(e) {
+                            targetImg.src = e.target.result;
+                            currentEditingRow.setAttribute('data-primary', e.target.result);
+                        };
+                        reader.readAsDataURL(imageFile);
+                    }
+
+                    if (hoverFile) {
+                        const reader = new FileReader();
+                        reader.onload = function(e) {
+                            currentEditingRow.setAttribute('data-hover', e.target.result);
+                            // Ensure hover effect is active
+                            setupHoverEffect(targetImg);
+                        };
+                        reader.readAsDataURL(hoverFile);
+                    }
+
+                    editModal.hide();
+                    alert('Product updated successfully!');
+                }
+            });
+
+            // Initialize hover effects for existing images
+            function setupHoverEffect(img) {
+                if (!img.getAttribute('data-primary')) {
+                    img.setAttribute('data-primary', img.src);
+                }
+                
+                // If the img doesn't have data-hover, try to get it from the parent tr
+                if (!img.getAttribute('data-hover')) {
+                    const row = img.closest('tr');
+                    if (row && row.getAttribute('data-hover')) {
+                        img.setAttribute('data-hover', row.getAttribute('data-hover'));
+                    }
+                }
+                
+                img.onmouseenter = function() {
+                    const hoverSrc = this.getAttribute('data-hover');
+                    if (hoverSrc) this.src = hoverSrc;
+                };
+                img.onmouseleave = function() {
+                    this.src = this.getAttribute('data-primary');
+                };
+                img.onclick = function() {
+                    const row = this.closest('tr');
+                    const editBtn = row.querySelector('.edit-product-btn, .edit-deal-btn');
+                    if (editBtn) editBtn.click();
+                };
+                img.style.transition = "0.3s all ease";
+                img.style.cursor = "pointer";
+                img.title = "Click to edit product images";
+            }
+
+            document.querySelectorAll('.admin-table img').forEach(setupHoverEffect);
+        });
+    </script>
+</body>
+</html>
+
+
+

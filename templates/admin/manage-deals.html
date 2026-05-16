@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Deals | Vapier Admin</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/img/web-logo.png">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Rajdhani:wght@600;700&family=Audiowide&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Custom Admin CSS -->
+    <link rel="stylesheet" href="css/admin-style.css">
+</head>
+<body>
+
+    <div class="admin-wrapper">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <img src="../assets/img/web-logo.png" alt="Vapier Logo">
+            </div>
+            
+            <ul class="sidebar-menu">
+                <li class="menu-label">Main</li>
+                <li class="menu-item">
+                    <a href="index.html" class="menu-link">
+                        <i class="fas fa-th-large"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="orders.html" class="menu-link">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Orders</span>
+                    </a>
+                </li>
+
+                <li class="menu-label">Inventory Management</li>
+                <li class="menu-item">
+                    <a href="manage-eliquids.html" class="menu-link">
+                        <i class="fas fa-tint"></i>
+                        <span>E-Liquids</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="manage-deals.html" class="menu-link active">
+                        <i class="fas fa-tags"></i>
+                        <span>Deals</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="manage-oxva.html" class="menu-link">
+                        <i class="fas fa-bolt"></i>
+                        <span>OXVA</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="manage-voopoo.html" class="menu-link">
+                        <i class="fas fa-fire"></i>
+                        <span>Voopoo</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="manage-vaporesso.html" class="menu-link">
+                        <i class="fas fa-vial"></i>
+                        <span>Vaporesso</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="manage-uwell.html" class="menu-link">
+                        <i class="fas fa-atom"></i>
+                        <span>UWELL</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="manage-coils.html" class="menu-link">
+                        <i class="fas fa-sync-alt"></i>
+                        <span>Coils</span>
+                    </a>
+                </li>
+
+                <li class="menu-label">Content Management</li>
+                <li class="menu-item">
+                    <a href="manage-home.html" class="menu-link">
+                        <i class="fas fa-home"></i>
+                        <span>Home Page</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="about-us.html" class="menu-link">
+                        <i class="fas fa-info-circle"></i>
+                        <span>About Us</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="contact-us.html" class="menu-link">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contact Us</span>
+                    </a>
+                </li>
+
+                <li class="menu-label">Settings</li>
+                <li class="menu-item">
+                    <a href="add-product.html" class="menu-link">
+                        <i class="fas fa-plus-circle"></i>
+                        <span>Add New Product</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="../index.html" class="menu-link">
+                        <i class="fas fa-external-link-alt"></i>
+                        <span>View Website</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Bar -->
+            <div class="top-bar">
+                <div class="page-title d-flex align-items-center">
+                    <button class="mobile-toggle-btn d-lg-none me-3">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1 class="mb-0">Manage Deals</h1>
+                </div>
+                <div class="user-profile">
+                    <a href="add-product.html" class="btn-admin btn-primary-admin me-3">
+                        <i class="fas fa-plus"></i> Add New Deal
+                    </a>
+                    <div class="user-avatar">AD</div>
+                </div>
+            </div>
+
+            <!-- Deals List -->
+            <div class="table-container">
+                <div class="table-header">
+                    <h5 class="mb-0">Active Deals</h5>
+                    <div class="search-box">
+                        <input type="text" class="form-control-custom" placeholder="Search deals..." style="background: rgba(255,255,255,0.05); border: 1px solid var(--border-color); color: white; padding: 5px 15px; border-radius: 5px; font-size: 13px;">
+                    </div>
+                </div>
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Image</th>
+                            <th>Deal Name</th>
+                            <th>Category</th>
+                            <th>Original Price</th>
+                            <th>Deal Price</th>
+                            <th>Discount</th>
+                            <th>Stock Status</th>
+                            <th>Quantity</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Deal 1 -->
+                        <tr data-primary="../assets/img/deals/vape-mod.png"
+                            data-hover="../assets/img/deals/vape-mod.png"
+                            data-frontend-title="Pro Mod Kit At Best Price In Pakistan - VAPE CLUSTER"
+                            data-rating="5.0"
+                            data-reviews="15"
+                            data-description="Grab the powerful Pro Mod Kit at an exclusive 20% discount. Designed for serious vapers who demand performance, style, and longevity from their device."
+                            data-includes="1 x Pro Mod Device; 2 x Replacement Coils; 1 x Type-C Cable; 1 x User Manual">
+                            <td><img src="../assets/img/deals/vape-mod.png" style="width:40px;height:40px;object-fit:contain;" alt=""></td>
+                            <td>PRO MOD KIT</td>
+                            <td>PREMIUM SERIES</td>
+                            <td>Rs. 12,000</td>
+                            <td>Rs. 9,600</td>
+                            <td><span class="text-danger">20% OFF</span></td>
+                            <td><span class="text-success">In Stock</span></td>
+                            <td>50</td>
+                            <td>
+                                <a href="../deals-products/pro-mod-kit-data.html" target="_blank" class="btn-admin btn-sm" style="background:rgba(255,255,255,0.1);color:white;"><i class="fas fa-eye"></i></a>
+                                <button class="btn-admin btn-sm edit-deal-btn" style="background:rgba(0,123,255,0.1);color:#007bff;"><i class="fas fa-edit"></i></button>
+                                <button class="btn-admin btn-sm" style="background:rgba(220,53,69,0.1);color:#dc3545;"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <!-- Deal 2 -->
+                        <tr data-primary="../assets/img/deals/pod-system.png"
+                            data-hover="../assets/img/deals/pod-system.png"
+                            data-frontend-title="Slim Pod System Deal At Best Price In Pakistan - VAPE CLUSTER"
+                            data-rating="4.8"
+                            data-reviews="12"
+                            data-description="The Slim Pod System is perfect for on-the-go vaping. Compact, efficient, and now available at a 15% discount."
+                            data-includes="1 x Slim Pod Device; 1 x Replacement Pod; 1 x User Manual">
+                            <td><img src="../assets/img/deals/pod-system.png" style="width:40px;height:40px;object-fit:contain;" alt=""></td>
+                            <td>SLIM POD SYSTEM</td>
+                            <td>ELITE SERIES</td>
+                            <td>Rs. 5,500</td>
+                            <td>Rs. 4,675</td>
+                            <td><span class="text-danger">15% OFF</span></td>
+                            <td><span class="text-success">In Stock</span></td>
+                            <td>50</td>
+                            <td>
+                                <a href="../deals-products/slim-pod-system-data.html" target="_blank" class="btn-admin btn-sm" style="background:rgba(255,255,255,0.1);color:white;"><i class="fas fa-eye"></i></a>
+                                <button class="btn-admin btn-sm edit-deal-btn" style="background:rgba(0,123,255,0.1);color:#007bff;"><i class="fas fa-edit"></i></button>
+                                <button class="btn-admin btn-sm" style="background:rgba(220,53,69,0.1);color:#dc3545;"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <!-- Deal 3 -->
+                        <tr data-primary="../assets/img/deals/disposable.png"
+                            data-hover="../assets/img/deals/disposable.png"
+                            data-frontend-title="Colorful Disposables Bundle At Best Price In Pakistan"
+                            data-rating="4.9"
+                            data-reviews="25"
+                            data-description="Get a vibrant set of colorful disposables. Perfect for trying out new flavors with zero maintenance."
+                            data-includes="5 x Assorted Colorful Disposables">
+                            <td><img src="../assets/img/deals/disposable.png" style="width:40px;height:40px;object-fit:contain;" alt=""></td>
+                            <td>COLORFUL DISPOSABLES</td>
+                            <td>VIBRANT VAPES</td>
+                            <td>Rs. 2,500</td>
+                            <td>Rs. 1,875</td>
+                            <td><span class="text-danger">25% OFF</span></td>
+                            <td><span class="text-success">In Stock</span></td>
+                            <td>50</td>
+                            <td>
+                                <a href="../deals-products/colorful-disposables-data.html" target="_blank" class="btn-admin btn-sm" style="background:rgba(255,255,255,0.1);color:white;"><i class="fas fa-eye"></i></a>
+                                <button class="btn-admin btn-sm edit-deal-btn" style="background:rgba(0,123,255,0.1);color:#007bff;"><i class="fas fa-edit"></i></button>
+                                <button class="btn-admin btn-sm" style="background:rgba(220,53,69,0.1);color:#dc3545;"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <!-- Deal 4 -->
+                        <tr>
+                            <td><img src="../assets/img/deals/eliquid-fruit.png" style="width:40px;height:40px;object-fit:contain;" alt=""></td>
+                            <td>TROPICAL FRUIT JUICE</td>
+                            <td>FRESH JUICE CO</td>
+                            <td>Rs. 4,500</td>
+                            <td>Rs. 3,150</td>
+                            <td><span class="text-danger">30% OFF</span></td>
+                            <td><span class="text-success">In Stock</span></td>
+                            <td>50</td>
+                            <td>
+                                <a href="../deals-products/tropical-fruit-juice-data.html" target="_blank" class="btn-admin btn-sm" style="background:rgba(255,255,255,0.1);color:white;"><i class="fas fa-eye"></i></a>
+                                <button class="btn-admin btn-sm edit-deal-btn" style="background:rgba(0,123,255,0.1);color:#007bff;"><i class="fas fa-edit"></i></button>
+                                <button class="btn-admin btn-sm" style="background:rgba(220,53,69,0.1);color:#dc3545;"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <!-- Deal 5 -->
+                        <tr>
+                            <td><img src="../assets/img/deals/eliquid-dessert.png" style="width:40px;height:40px;object-fit:contain;" alt=""></td>
+                            <td>LUXURY DESSERT BLEND</td>
+                            <td>PREMIUM E-LIQUID</td>
+                            <td>Rs. 6,000</td>
+                            <td>Rs. 4,800</td>
+                            <td><span class="text-danger">20% OFF</span></td>
+                            <td><span class="text-success">In Stock</span></td>
+                            <td>50</td>
+                            <td>
+                                <a href="../deals-products/luxury-dessert-blend-data.html" target="_blank" class="btn-admin btn-sm" style="background:rgba(255,255,255,0.1);color:white;"><i class="fas fa-eye"></i></a>
+                                <button class="btn-admin btn-sm edit-deal-btn" style="background:rgba(0,123,255,0.1);color:#007bff;"><i class="fas fa-edit"></i></button>
+                                <button class="btn-admin btn-sm" style="background:rgba(220,53,69,0.1);color:#dc3545;"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <!-- Deal 6 -->
+                        <tr>
+                            <td><img src="../assets/img/deals/coils.png" style="width:40px;height:40px;object-fit:contain;" alt=""></td>
+                            <td>ULTRA MESH COILS</td>
+                            <td>TECH COILS</td>
+                            <td>Rs. 3,500</td>
+                            <td>Rs. 2,100</td>
+                            <td><span class="text-danger">40% OFF</span></td>
+                            <td><span class="text-success">In Stock</span></td>
+                            <td>50</td>
+                            <td>
+                                <a href="../deals-products/ultra-mesh-coils-data.html" target="_blank" class="btn-admin btn-sm" style="background:rgba(255,255,255,0.1);color:white;"><i class="fas fa-eye"></i></a>
+                                <button class="btn-admin btn-sm edit-deal-btn" style="background:rgba(0,123,255,0.1);color:#007bff;"><i class="fas fa-edit"></i></button>
+                                <button class="btn-admin btn-sm" style="background:rgba(220,53,69,0.1);color:#dc3545;"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <!-- Deal 7 -->
+                        <tr>
+                            <td><img src="../assets/img/deals/coils.png" style="width:40px;height:40px;object-fit:contain;" alt=""></td>
+                            <td>ULTIMATE POWER PACK</td>
+                            <td>PRO BUNDLE</td>
+                            <td>Rs. 15,000</td>
+                            <td>Rs. 11,250</td>
+                            <td><span class="text-danger">25% OFF</span></td>
+                            <td><span class="text-success">In Stock</span></td>
+                            <td>50</td>
+                            <td>
+                                <a href="../deals-products/ultimate-power-pack-data.html" target="_blank" class="btn-admin btn-sm" style="background:rgba(255,255,255,0.1);color:white;"><i class="fas fa-eye"></i></a>
+                                <button class="btn-admin btn-sm edit-deal-btn" style="background:rgba(0,123,255,0.1);color:#007bff;"><i class="fas fa-edit"></i></button>
+                                <button class="btn-admin btn-sm" style="background:rgba(220,53,69,0.1);color:#dc3545;"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <!-- Deal 8 -->
+                        <tr>
+                            <td><img src="../assets/img/deals/eliquid-fruit.png" style="width:40px;height:40px;object-fit:contain;" alt=""></td>
+                            <td>STARTER CLOUD BUNDLE</td>
+                            <td>STARTER PACK</td>
+                            <td>Rs. 10,500</td>
+                            <td>Rs. 8,400</td>
+                            <td><span class="text-danger">20% OFF</span></td>
+                            <td><span class="text-success">In Stock</span></td>
+                            <td>50</td>
+                            <td>
+                                <a href="../deals-products/starter-cloud-bundle-data.html" target="_blank" class="btn-admin btn-sm" style="background:rgba(255,255,255,0.1);color:white;"><i class="fas fa-eye"></i></a>
+                                <button class="btn-admin btn-sm edit-deal-btn" style="background:rgba(0,123,255,0.1);color:#007bff;"><i class="fas fa-edit"></i></button>
+                                <button class="btn-admin btn-sm" style="background:rgba(220,53,69,0.1);color:#dc3545;"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <!-- Deal 9 -->
+                        <tr>
+                            <td><img src="../assets/img/deals/eliquid-dessert.png" style="width:40px;height:40px;object-fit:contain;" alt=""></td>
+                            <td>REFILL & REFRESH PACK</td>
+                            <td>REFRESH BUNDLE</td>
+                            <td>Rs. 6,000</td>
+                            <td>Rs. 4,200</td>
+                            <td><span class="text-danger">30% OFF</span></td>
+                            <td><span class="text-success">In Stock</span></td>
+                            <td>50</td>
+                            <td>
+                                <a href="../deals-products/refill-refresh-pack-data.html" target="_blank" class="btn-admin btn-sm" style="background:rgba(255,255,255,0.1);color:white;"><i class="fas fa-eye"></i></a>
+                                <button class="btn-admin btn-sm edit-deal-btn" style="background:rgba(0,123,255,0.1);color:#007bff;"><i class="fas fa-edit"></i></button>
+                                <button class="btn-admin btn-sm" style="background:rgba(220,53,69,0.1);color:#dc3545;"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <!-- Deal 10 -->
+                        <tr>
+                            <td><img src="../assets/img/deals/pod-system.png" style="width:40px;height:40px;object-fit:contain;" alt=""></td>
+                            <td>PREMIUM FLAVOR DUO</td>
+                            <td>ELITE DUO</td>
+                            <td>Rs. 12,000</td>
+                            <td>Rs. 10,200</td>
+                            <td><span class="text-danger">15% OFF</span></td>
+                            <td><span class="text-success">In Stock</span></td>
+                            <td>50</td>
+                            <td>
+                                <a href="../deals-products/premium-flavor-duo-data.html" target="_blank" class="btn-admin btn-sm" style="background:rgba(255,255,255,0.1);color:white;"><i class="fas fa-eye"></i></a>
+                                <button class="btn-admin btn-sm edit-deal-btn" style="background:rgba(0,123,255,0.1);color:#007bff;"><i class="fas fa-edit"></i></button>
+                                <button class="btn-admin btn-sm" style="background:rgba(220,53,69,0.1);color:#dc3545;"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <!-- Edit Deal Modal -->
+    <div class="modal fade" id="editDealModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content" style="background: #1a1a1a; color: white; border: 1px solid #333;">
+                <div class="modal-header" style="border-bottom: 1px solid #333;">
+                    <h5 class="modal-title">Edit Deal</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="editDealForm">
+                        <!-- Step 1: Basic Deal Info -->
+                        <div id="step1">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label">Deal Name</label>
+                                    <input type="text" class="form-control" id="editDealName" style="background: #2a2a2a; border: 1px solid #444; color: white;">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Category</label>
+                                    <input type="text" class="form-control" id="editDealCategory" style="background: #2a2a2a; border: 1px solid #444; color: white;">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Original Price</label>
+                                    <input type="text" class="form-control" id="editOrigPrice" style="background: #2a2a2a; border: 1px solid #444; color: white;">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Deal Price</label>
+                                    <input type="text" class="form-control" id="editDealPrice" style="background: #2a2a2a; border: 1px solid #444; color: white;">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Discount Text</label>
+                                    <input type="text" class="form-control" id="editDiscount" style="background: #2a2a2a; border: 1px solid #444; color: white;">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Stock Status</label>
+                                    <select class="form-select" id="editDealStock" style="background: #2a2a2a; border: 1px solid #444; color: white;">
+                                        <option value="In Stock">In Stock</option>
+                                        <option value="Out of Stock">Out of Stock</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-12" id="dealQuantityContainer">
+                                    <label class="form-label">Quantity</label>
+                                    <input type="number" class="form-control" id="editDealQuantity" style="background: #2a2a2a; border: 1px solid #444; color: white;" min="0">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Deal Image (Main)</label>
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="image-preview-container" onclick="document.getElementById('editDealImageFile').click();" style="cursor: pointer; width: 80px; height: 80px; border: 1px dashed #444; display: flex; align-items: center; justify-content: center; border-radius: 5px; overflow: hidden; background: #2a2a2a;">
+                                            <img id="mainDealPreview" src="" alt="" style="width: 100%; height: 100%; object-fit: contain; display: none;">
+                                            <i class="fas fa-plus text-white-50" id="mainDealPlusIcon"></i>
+                                        </div>
+                                        <input type="file" class="form-control" id="editDealImageFile" accept="image/*" style="background: #2a2a2a; border: 1px solid #444; color: white;">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Deal Image (Hover)</label>
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="image-preview-container" onclick="document.getElementById('editHoverDealImageFile').click();" style="cursor: pointer; width: 80px; height: 80px; border: 1px dashed #444; display: flex; align-items: center; justify-content: center; border-radius: 5px; overflow: hidden; background: #2a2a2a;">
+                                            <img id="hoverDealPreview" src="" alt="" style="width: 100%; height: 100%; object-fit: contain; display: none;">
+                                            <i class="fas fa-plus text-white-50" id="hoverDealPlusIcon"></i>
+                                        </div>
+                                        <input type="file" class="form-control" id="editHoverDealImageFile" accept="image/*" style="background: #2a2a2a; border: 1px solid #444; color: white;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Frontend Deal Details -->
+                        <div id="step2" style="display: none;">
+                            <div class="row g-3">
+                                <div class="col-md-12">
+                                    <label class="form-label">Frontend Page Title</label>
+                                    <input type="text" class="form-control" id="editDealFrontendTitle" style="background: #2a2a2a; border: 1px solid #444; color: white;">
+                                </div>
+                                <div class="col-md-12">
+                                    <label class="form-label">Color Variant Management</label>
+                                    <div class="d-flex gap-2 align-items-center mb-2">
+                                        <select class="form-select" id="editVariantDropdown" style="background: #2a2a2a; border: 1px solid #444; color: white;">
+                                            <option value="default">Default Variant</option>
+                                        </select>
+                                        <button type="button" class="btn btn-sm btn-primary" id="addVariantBtn" style="background: var(--accent-red); border: none; padding: 0.5rem 1rem;" title="Add Variant"><i class="fas fa-plus"></i></button>
+                                        <button type="button" class="btn btn-sm btn-danger" id="removeVariantBtn" style="background: #dc3545; border: none; padding: 0.5rem 1rem;" title="Remove Variant"><i class="fas fa-trash"></i></button>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Frontend Deal Image</label>
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="image-preview-container" onclick="document.getElementById('editFrontendDealImageFile').click();" style="cursor: pointer; width: 80px; height: 80px; border: 1px dashed #444; display: flex; align-items: center; justify-content: center; border-radius: 5px; overflow: hidden; background: #2a2a2a;">
+                                            <img id="frontendDealPreview" src="" alt="" style="width: 100%; height: 100%; object-fit: contain; display: none;">
+                                            <i class="fas fa-image text-white-50" id="frontendDealPlusIcon"></i>
+                                        </div>
+                                        <input type="file" class="form-control" id="editFrontendDealImageFile" accept="image/*" style="background: #2a2a2a; border: 1px solid #444; color: white;">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Frontend Deal Hover Image</label>
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="image-preview-container" onclick="document.getElementById('editFrontendHoverDealImageFile').click();" style="cursor: pointer; width: 80px; height: 80px; border: 1px dashed #444; display: flex; align-items: center; justify-content: center; border-radius: 5px; overflow: hidden; background: #2a2a2a;">
+                                            <img id="frontendHoverDealPreview" src="" alt="" style="width: 100%; height: 100%; object-fit: contain; display: none;">
+                                            <i class="fas fa-image text-white-50" id="frontendHoverDealPlusIcon"></i>
+                                        </div>
+                                        <input type="file" class="form-control" id="editFrontendHoverDealImageFile" accept="image/*" style="background: #2a2a2a; border: 1px solid #444; color: white;">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Rating (1-5)</label>
+                                    <input type="number" class="form-control" id="editDealRating" step="0.1" min="0" max="5" style="background: #2a2a2a; border: 1px solid #444; color: white;">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Review Count</label>
+                                    <input type="number" class="form-control" id="editDealReviewCount" style="background: #2a2a2a; border: 1px solid #444; color: white;">
+                                </div>
+                                <div class="col-md-12">
+                                    <label class="form-label">Deal Description</label>
+                                    <textarea class="form-control" id="editDealDescription" rows="4" style="background: #2a2a2a; border: 1px solid #444; color: white;"></textarea>
+                                </div>
+                                <div class="col-md-12">
+                                    <label class="form-label">Deal Includes (One per line)</label>
+                                    <textarea class="form-control" id="editDealIncludes" rows="4" style="background: #2a2a2a; border: 1px solid #444; color: white;"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 text-end mt-4">
+                            <button type="button" class="btn btn-secondary me-2" id="backBtn" style="display: none;">Back</button>
+                            <button type="button" class="btn btn-secondary me-2" data-bs-dismiss="modal" id="cancelBtn">Cancel</button>
+                            <button type="button" class="btn btn-primary" id="nextBtn" style="background: var(--accent-red); border: none;">Next</button>
+                            <button type="submit" class="btn btn-success" id="saveBtn" style="display: none;">Save All Changes</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="js/admin-main.js"></script>
+    <script src="js/admin-variant-manager.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const editModal = new bootstrap.Modal(document.getElementById('editDealModal'));
+            const editForm = document.getElementById('editDealForm');
+            let currentEditingRow = null;
+
+            // Handle Edit Button Click
+            document.querySelectorAll('.edit-deal-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    currentEditingRow = this.closest('tr');
+                    
+                    // Get current values
+                    const name = currentEditingRow.cells[1].innerText;
+                    const category = currentEditingRow.cells[2].innerText;
+                    const origPrice = currentEditingRow.cells[3].innerText;
+                    const dealPrice = currentEditingRow.cells[4].innerText;
+                    const discount = currentEditingRow.cells[5].innerText;
+                    const stock = currentEditingRow.cells[6].innerText.trim();
+                    const quantity = currentEditingRow.cells[7].innerText.trim();
+
+                    // Populate Modal
+                    document.getElementById('editDealName').value = name;
+                    document.getElementById('editDealCategory').value = category;
+                    document.getElementById('editOrigPrice').value = origPrice;
+                    document.getElementById('editDealPrice').value = dealPrice;
+                    document.getElementById('editDiscount').value = discount;
+                    document.getElementById('editDealStock').value = stock;
+                    document.getElementById('editDealQuantity').value = quantity;
+
+                    // Populate Step 2 Data
+                    document.getElementById('editDealFrontendTitle').value = currentEditingRow.getAttribute('data-frontend-title') || '';
+                    document.getElementById('editDealRating').value = currentEditingRow.getAttribute('data-rating') || '4.8';
+                    document.getElementById('editDealReviewCount').value = currentEditingRow.getAttribute('data-reviews') || '12';
+                    document.getElementById('editDealDescription').value = currentEditingRow.getAttribute('data-description') || '';
+                    document.getElementById('editDealIncludes').value = currentEditingRow.getAttribute('data-includes') || '';
+
+                    // Toggle quantity field visibility
+                    document.getElementById('dealQuantityContainer').style.display = (stock === 'In Stock') ? 'block' : 'none';
+
+                    // Populate Image Previews
+                    const mainImgSrc = currentEditingRow.cells[0].querySelector('img').src;
+                    const hoverImgSrc = currentEditingRow.getAttribute('data-hover');
+                    
+                    const mainPreview = document.getElementById('mainDealPreview');
+                    const mainIcon = document.getElementById('mainDealPlusIcon');
+                    if (mainImgSrc) {
+                        mainPreview.src = mainImgSrc;
+                        mainPreview.style.display = 'block';
+                        mainIcon.style.display = 'none';
+                    }
+
+                    const hoverPreview = document.getElementById('hoverDealPreview');
+                    const hoverIcon = document.getElementById('hoverDealPlusIcon');
+                    if (hoverImgSrc) {
+                        hoverPreview.src = hoverImgSrc;
+                        hoverPreview.style.display = 'block';
+                        hoverIcon.style.display = 'none';
+                        
+                        // Sync to Frontend Previews in Step 2
+                        document.getElementById('frontendHoverDealPreview').src = hoverImgSrc;
+                        document.getElementById('frontendHoverDealPreview').style.display = 'block';
+                        document.getElementById('frontendHoverDealPlusIcon').style.display = 'none';
+                    } else {
+                        hoverPreview.style.display = 'none';
+                        hoverIcon.style.display = 'block';
+                        document.getElementById('frontendHoverDealPreview').style.display = 'none';
+                        document.getElementById('frontendHoverDealPlusIcon').style.display = 'block';
+                    }
+
+                    if (mainImgSrc) {
+                        document.getElementById('frontendDealPreview').src = mainImgSrc;
+                        document.getElementById('frontendDealPreview').style.display = 'block';
+                        document.getElementById('frontendDealPlusIcon').style.display = 'none';
+                    }
+
+                    // Reset steps
+                    document.getElementById('step1').style.display = 'block';
+                    document.getElementById('step2').style.display = 'none';
+                    document.getElementById('nextBtn').style.display = 'inline-block';
+                    document.getElementById('saveBtn').style.display = 'none';
+                    document.getElementById('backBtn').style.display = 'none';
+                    document.getElementById('cancelBtn').style.display = 'inline-block';
+
+                    editModal.show();
+                });
+            });
+
+            document.getElementById('editDealImageFile').addEventListener('change', function() {
+                const file = this.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        document.getElementById('mainDealPreview').src = e.target.result;
+                        document.getElementById('mainDealPreview').style.display = 'block';
+                        document.getElementById('mainDealPlusIcon').style.display = 'none';
+                        
+                        // Sync to Step 2
+                        document.getElementById('frontendDealPreview').src = e.target.result;
+                        document.getElementById('frontendDealPreview').style.display = 'block';
+                        document.getElementById('frontendDealPlusIcon').style.display = 'none';
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+
+            document.getElementById('editFrontendDealImageFile').addEventListener('change', function() {
+                const file = this.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        document.getElementById('frontendDealPreview').src = e.target.result;
+                        document.getElementById('frontendDealPreview').style.display = 'block';
+                        document.getElementById('frontendDealPlusIcon').style.display = 'none';
+                        
+                        // Sync to Step 1
+                        document.getElementById('mainDealPreview').src = e.target.result;
+                        document.getElementById('mainDealPreview').style.display = 'block';
+                        document.getElementById('mainDealPlusIcon').style.display = 'none';
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+
+            document.getElementById('editHoverDealImageFile').addEventListener('change', function() {
+                const file = this.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        document.getElementById('hoverDealPreview').src = e.target.result;
+                        document.getElementById('hoverDealPreview').style.display = 'block';
+                        document.getElementById('hoverDealPlusIcon').style.display = 'none';
+                        
+                        // Sync to Step 2
+                        document.getElementById('frontendHoverDealPreview').src = e.target.result;
+                        document.getElementById('frontendHoverDealPreview').style.display = 'block';
+                        document.getElementById('frontendHoverDealPlusIcon').style.display = 'none';
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+
+            document.getElementById('editFrontendHoverDealImageFile').addEventListener('change', function() {
+                const file = this.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        document.getElementById('frontendHoverDealPreview').src = e.target.result;
+                        document.getElementById('frontendHoverDealPreview').style.display = 'block';
+                        document.getElementById('frontendHoverDealPlusIcon').style.display = 'none';
+                        
+                        // Sync to Step 1
+                        document.getElementById('hoverDealPreview').src = e.target.result;
+                        document.getElementById('hoverDealPreview').style.display = 'block';
+                        document.getElementById('hoverDealPlusIcon').style.display = 'none';
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+
+            // Handle Step Switching
+            document.getElementById('nextBtn').addEventListener('click', function() {
+                document.getElementById('step1').style.display = 'none';
+                document.getElementById('step2').style.display = 'block';
+                document.getElementById('nextBtn').style.display = 'none';
+                document.getElementById('saveBtn').style.display = 'inline-block';
+                document.getElementById('backBtn').style.display = 'inline-block';
+                document.getElementById('cancelBtn').style.display = 'none';
+            });
+
+            document.getElementById('backBtn').addEventListener('click', function() {
+                document.getElementById('step1').style.display = 'block';
+                document.getElementById('step2').style.display = 'none';
+                document.getElementById('nextBtn').style.display = 'inline-block';
+                document.getElementById('saveBtn').style.display = 'none';
+                document.getElementById('backBtn').style.display = 'none';
+                document.getElementById('cancelBtn').style.display = 'inline-block';
+            });
+
+            // Handle Stock Status Change in Modal
+            document.getElementById('editDealStock').addEventListener('change', function() {
+                document.getElementById('dealQuantityContainer').style.display = (this.value === 'In Stock') ? 'block' : 'none';
+            });
+
+            // Handle Form Submission
+            editForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                if (currentEditingRow) {
+                    // Update table row with new values
+                    currentEditingRow.cells[1].innerText = document.getElementById('editDealName').value;
+                    currentEditingRow.cells[2].innerText = document.getElementById('editDealCategory').value;
+                    currentEditingRow.cells[3].innerText = document.getElementById('editOrigPrice').value;
+                    currentEditingRow.cells[4].innerText = document.getElementById('editDealPrice').value;
+                    currentEditingRow.cells[5].innerHTML = `<span class="text-danger">${document.getElementById('editDiscount').value}</span>`;
+                    
+                    const newStock = document.getElementById('editDealStock').value;
+                    const newQuantity = document.getElementById('editDealQuantity').value;
+                    currentEditingRow.setAttribute('data-stock', newStock);
+                    currentEditingRow.setAttribute('data-quantity', newQuantity);
+                    
+                    // Update Step 2 Data Attributes
+                    currentEditingRow.setAttribute('data-frontend-title', document.getElementById('editDealFrontendTitle').value);
+                    currentEditingRow.setAttribute('data-rating', document.getElementById('editDealRating').value);
+                    currentEditingRow.setAttribute('data-reviews', document.getElementById('editDealReviewCount').value);
+                    currentEditingRow.setAttribute('data-description', document.getElementById('editDealDescription').value);
+                    currentEditingRow.setAttribute('data-includes', document.getElementById('editDealIncludes').value);
+
+                    currentEditingRow.cells[6].innerHTML = `<span class="${newStock === 'Out of Stock' ? 'text-danger' : 'text-success'}">${newStock}</span>`;
+                    currentEditingRow.cells[7].innerText = newQuantity;
+                    
+                    if (newStock === 'Out of Stock') {
+                        currentEditingRow.style.opacity = '0.5';
+                    } else {
+                        currentEditingRow.style.opacity = '1';
+                    }
+
+                    // Handle Image File Updates (Checking both Step 1 and Step 2 inputs)
+                    const imageFile = document.getElementById('editDealImageFile').files[0] || document.getElementById('editFrontendDealImageFile').files[0];
+                    const hoverFile = document.getElementById('editHoverDealImageFile').files[0] || document.getElementById('editFrontendHoverDealImageFile').files[0];
+                    const targetImg = currentEditingRow.cells[0].querySelector('img');
+
+                    if (imageFile) {
+                        const reader = new FileReader();
+                        reader.onload = function(e) {
+                            targetImg.src = e.target.result;
+                            currentEditingRow.setAttribute('data-primary', e.target.result);
+                        };
+                        reader.readAsDataURL(imageFile);
+                    }
+
+                    if (hoverFile) {
+                        const reader = new FileReader();
+                        reader.onload = function(e) {
+                            currentEditingRow.setAttribute('data-hover', e.target.result);
+                            // Ensure hover effect is active
+                            setupHoverEffect(targetImg);
+                        };
+                        reader.readAsDataURL(hoverFile);
+                    }
+
+                    editModal.hide();
+                    alert('Deal updated successfully!');
+                }
+            });
+
+            // Initialize hover effects for existing images
+            function setupHoverEffect(img) {
+                if (!img.getAttribute('data-primary')) {
+                    img.setAttribute('data-primary', img.src);
+                }
+                
+                // If the img doesn't have data-hover, try to get it from the parent tr
+                if (!img.getAttribute('data-hover')) {
+                    const row = img.closest('tr');
+                    if (row && row.getAttribute('data-hover')) {
+                        img.setAttribute('data-hover', row.getAttribute('data-hover'));
+                    }
+                }
+                
+                img.onmouseenter = function() {
+                    const hoverSrc = this.getAttribute('data-hover');
+                    if (hoverSrc) this.src = hoverSrc;
+                };
+                img.onmouseleave = function() {
+                    this.src = this.getAttribute('data-primary');
+                };
+                img.onclick = function() {
+                    const row = this.closest('tr');
+                    const editBtn = row.querySelector('.edit-product-btn, .edit-deal-btn');
+                    if (editBtn) editBtn.click();
+                };
+                img.style.transition = "0.3s all ease";
+                img.style.cursor = "pointer";
+                img.title = "Click to edit product images";
+            }
+
+            document.querySelectorAll('.admin-table img').forEach(setupHoverEffect);
+        });
+    </script>
+</body>
+</html>
+
+
+
+

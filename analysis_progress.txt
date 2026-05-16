@@ -1,0 +1,4997 @@
+## Analysis: vape_cluster Frontend - Chunk 1/146 (style.css only)
+
+### 1. HTML File Names Found
+- **None** identified in this chunk (CSS only)
+
+### 2. Form Fields
+- **None** identified (CSS only)
+
+### 3. URLs/Routes Used
+- `../img/E LIQUID FLAVOUR.png` — background image reference
+
+### 4. JavaScript API Calls
+- **None** identified (CSS only)
+
+### 5. Page Purposes Inferred from CSS Classes
+| Class/Component | Inferred Page/Feature |
+|---|---|
+| `.age-overlay`, `.age-modal` | **Age verification gate** (21+ check) |
+| `.quickview-overlay`, `.quickview-modal` | **Product quick view modal** |
+| `.navbar`, `.nav-link` | **Global navigation** |
+| `.hero-banner`, `.carousel-item` | **Homepage hero slider** |
+| `.product-grid`, `.tab-link`, `.tab-content` | **Product listing/shop page** |
+| `.cart-toast`, `.badge-count` | **Shopping cart functionality** |
+| `.category-box`, `.category-item` | **Category browsing page** |
+| `.banner-wrapper` | **Promotional banners** |
+
+### Key Observations
+- Site uses **Bootstrap** framework (carousel, navbar classes)
+- Fonts: **Montserrat, Rajdhani, Audiowide**
+- Primary brand color: `#cc0000` / `#bd0028` (red)
+- Age verification modal suggests **regulatory compliance** for vape sales===CHUNK_SEPARATOR===## Analysis of Frontend Code Chunk 2/146 - Vape Cluster
+
+### 1. HTML File Names Found
+- None explicitly mentioned (CSS-only chunk)
+
+### 2. Form Fields
+- **Search/Filter:** Search input (navbar search, blog search, product filter)
+- **Checkout fields:** form-control, form-select inputs implied
+- **Auth fields:** form-floating inputs (email/password implied by `.btn-auth`, `.btn-facebook`, `.btn-google`)
+- **Contact form:** Fields with `.form-label`, `.form-control` styling
+
+### 3. URLs/Routes Used
+- `../img/blog/blog-hero.png` (background image reference)
+
+### 4. JavaScript API Calls
+- None (CSS-only chunk)
+
+### 5. Page Purposes Identified
+| CSS Class/Section | Page Purpose |
+|---|---|
+| `.auth-page`, `.btn-auth`, `.btn-social` | **Login/Signup** |
+| `.checkout-page`, `.checkout-left/right` | **Checkout** |
+| `.cart-sidebar`, `.cart-toast` | **Shopping Cart** |
+| `.blog-hero`, `.blog-card` | **Blog Listing** |
+| `.contact-info-card`, `.contact-form-wrapper` | **Contact** |
+| `.about-story-img`, `.value-card` | **About** |
+| `.page-hero`, `.filter-title` | **Products/Category** |
+
+**Note:** This chunk is **entirely CSS** — no logic, routes, or API calls present.===CHUNK_SEPARATOR===## Analysis: Vape Cluster Frontend Code Chunk 3/146
+
+### 1. HTML File Names
+- None explicitly mentioned in this CSS chunk
+
+### 2. Form Fields Identified
+- **Newsletter:** Email input
+- **Login form:** Email/username, Password (with toggle visibility)
+- **Signup form:** Standard registration fields (implied by `.signup-panel`)
+- **OTP Verification:** 6x OTP digit inputs (`.otp-input`)
+- **Checkout form:** Name, address, shipping/billing fields, discount code input
+- **Quantity selector:** Number input field
+
+### 3. URLs/Routes Used
+- None explicitly found (pure CSS/styling chunk)
+
+### 4. JavaScript API Calls
+- None found (CSS only)
+
+### 5. Page Purposes Identified
+| CSS Class | Page Purpose |
+|-----------|-------------|
+| `.auth-page`, `.auth-panel` | Login/Signup combined page |
+| `.otp-container` | OTP Verification page |
+| `.checkout-page` | Checkout/Payment page |
+| `.product-container` | Product Detail page |
+| `.blog-card`, `.blog-search-form` | Blog listing page |
+| `.privacy-content` | Privacy Policy page |
+| `.newsletter-sidebar` | Blog sidebar widget |
+
+### Key Notes
+- Auth system uses a **sliding panel toggle** (login ↔ signup)
+- Checkout page has dark theme (`#111` background)
+- Brand colors: **Crimson red `#cc0000`** throughout===CHUNK_SEPARATOR===## Analysis: Vape Cluster Frontend - Chunk 4/146
+
+### 1. HTML File Names
+- None explicitly found
+
+### 2. Form Fields
+- **Newsletter**: `input` (email implied, inside `.newsletter-input-wrap`)
+- **Checkout/Payment**: `.payment-form-input` (transaction/confirmation field)
+- **Billing**: `#diffBillingForm` (alternate billing form)
+
+### 3. URLs/Routes
+- `https://www.google.com` (age verification "No" redirect)
+- `../img/acceerece/Banners/slider-4.png` (deals hero background image)
+
+### 4. JavaScript API Calls
+- **None** (no fetch/AJAX calls in this chunk)
+
+### 5. Key JS Functions & Page Purposes
+
+| Function/Feature | Purpose |
+|---|---|
+| `ageVerifyOverlay` + `localStorage` | Age gate verification |
+| `switchTab()` | Product tab switching |
+| `.dropdown-custom` toggle | Navigation collections dropdown |
+| `.compare-bar` / `.compare-modal` | Product comparison UI |
+| `.quickview-overlay` | Quick view modal |
+| `navbar.scrolled` | Sticky navbar on scroll |
+
+### 6. Page Contexts Identified
+- **Checkout page** (payment options: bank transfer, EasyPaisa, JazzCash, card)
+- **Shop/Product listing** (compare bar, quick view, product cards)
+- **Deals page** (`.deals-hero` section)===CHUNK_SEPARATOR===## Analysis: Vape Cluster Frontend - Chunk 5/146
+
+### 1. HTML File Names Found
+**Vape Products:**
+- `ARGUS-G3-data.html`, `X-ROS-4-NANO-data.html`, `G3-PRO-data.html`, `OXVA-ONEO-data.html`, `V-MATE-PRO-data.html`, `X-ROS-5-NANO-data.html`, `VIBE-SE-data.html`, `X-ROS-4-data.html`, `X-ROS-5-data.html`, `X-ROS-5-MINI-data.html`, `X-ROS-PRO-data.html`, `G4-PRO-KOKO-data.html`, `g3-LITE-data.html`, `G3-Pro-KOKO-data.html`, `G4-data.html`, `G4-LITE-data.html`, `G4-PRO-data.html`, `OXVA-XLIM-3-ULTRA-data.html`, `XLIM-PRO-data.html`, `XLIM-PRO-2-data.html`, `XLIM-GO-data.html`, `XLIM-GO-2-data.html`, `OXVA-NEXLIM-GO-data.html`, `Argus-G2-Mini-data.html`, `ARGUS-G3-MINI-data.html`, `argus-z2-data.html`, `V-MATE-MINI-data.html`, `V-THRU-PRO-data.html`
+
+**E-Liquid Products:**
+- `Drip-Down-Cola-Ice-1-data..html` *(note: double dot — likely a typo/bug)*, `Drip-Down-Apple-Ice-data.html`, `Drip-Down-Apple-Peach-Ice-Saltnic-25mg-data.html`, `Drip-Down-E-Juice-Passion-Lychee-Ice-100ml-6mg-data.html`, `Drip-Down-Edition-Apple-Peach-Ice-100ml-3mg-data.html`, `Drip-Down-Edition-Grape-Apple-Ice-100ml-3mg-data.html`, `Drip-Down-Edition-Kiwi-Dragon-Fruit-Ice-100ml-0mg-data.html`, `Drip-Down-Edition-Lychee-Blueberry-Ice-100ml-3mg-data.html`, `Drip-Down-Edition-Mango-Guava-Ice-100ml-0mg-data.html`, `Drip-Down-Edition-Mango-Peach-Ice-100ml-3mg-data.html`, `Drip-Down-Edition-Strawmelon-kiwi-Ice-100ml-3mg-data.html`, `Drip-Down-Edition-Watermelon-Grape-Ice-100ml-3mg-data.html`
+
+---
+
+### 2. Form Fields
+- **`productQty`** – quantity input (number stepper)
+- **`colorSelect`** – dropdown for product color selection
+- **`qvTitle`** – Quick View product title (read)
+- **`qvPrice`** – Quick View price (read)
+- **`qvImage`** – Quick View image (read)
+
+---
+
+### 3. URLs/Routes Used
+| Type | Path |
+|------|------|
+| Vape products | `./vape-products/[brand]/[product]-data.html` |
+| E-liquid products | `./E-liquids-products/[product]-data.html` |
+| Subdirectory prefix | `../../` (for `/vape-products/`) |
+| Subdirectory prefix | `../` (for `/E-liquids-products/`) |
+| Cart action | `javascript:void(0)` (close cart) |
+
+---
+
+### 4. JavaScript API Calls
+- **`localStorage.getItem('vapeCartItems')`** – retrieve cart
+- **`localStorage.setItem('vapeCartItems', ...)`** – save cart
+- **`window.scrollTo()`** – back-to-top button
+- **`IntersectionObserver`** – scroll animation
+- No external fetch/AJAX calls detected in this chunk
+
+---
+
+### 5. Page Purposes
+| Purpose | Evidence |
+|---------|----------|
+| **Product Detail Page** | `productQty`, `colorSelect`, `addToCart()`, `mainProductImg` |
+| **Shopping Cart (Sidebar/Drawer)** | `cartItemsContainer`, `renderCart()`, `cartSubtotal` |
+| **Quick View Modal** | `qvTitle`, `qvPrice`, `qvImage`, `isQuickView` flag |
+| **Product Listing/Catalog** | `PRODUCTS_DATA` array, `renderRelevantProducts()` |
+| **Search** | `PRODUCTS_DATA` used as search data source |
+
+---
+
+### Notable Flags
+- 🐛 **Typo bug**: `Drip-Down-Cola-Ice-1-data..html` has double dot
+- 🛒 Cart is **fully client-side** using `localStorage` (no backend sync)
+- 🔍 Search uses **static in-memory array** (`PRODUCTS_DATA`) — no API
+- 💰 Currency displayed in **Pakistani Rupees (RS/Rs.)**===CHUNK_SEPARATOR===## Analysis of Frontend Code Chunk 6/146 - Vape Cluster
+
+### 1. HTML File Names Found
+**DRIP-DOWN brand:**
+- `drip-down-frosty-berry-ice--data.html`
+- `Drip-Down-Grape-Ice-data.html`
+- `Drip-Down-Guava-Ice-100ml-data.html`
+- `Drip-Down-Lychee-Ice-E-Liquids-100ml-data.html`
+- `Drip-Down-Mango-Ice-E-Liquids-100ml-data.html`
+- `Drip-Down-Passion-Fruit-Ice-E-Liquids-100ml-data.html`
+- `Drip-Down-Passion-Fruit-Ice-E-Liquids-60ml-data.html`
+- `Drip-Down-Peach-Ice-E-Liquids-100ml-data.html`
+- `Drip-Down-Watermelon-Ice-E-Liquids-100ml-data.html`
+- `Drip-Down-Watermelon-Ice-E-Liquids-60ml-data.html`
+
+**OX-PASSION brand:** 15 product HTML files
+
+**TOKYO brand:** 15 product HTML files
+
+### 2. Form Fields
+- **None present** in this chunk
+
+### 3. URLs/Routes Used
+- Base path: `./E-liquids-products/`
+- Assets: `./assets/img/acceerece/E-liquids/[Brand]/`
+
+### 4. JavaScript API Calls
+- **None present**
+
+### 5. Page Purpose
+- **Product catalog/data chunk** — JSON-structured e-liquid product listings with pricing (RS 2,800–3,499), brand categorization, and specs (nicotine/capacity)===CHUNK_SEPARATOR===## Analysis of Chunk 7/146 - Vape Cluster Frontend
+
+### 1. HTML File Names Found
+**E-liquids (UDOO brand):**
+- `Udoo-pinapple-peach-data.html`, `Udoo-pineapple-grape-data.html`, `Udoo-pineapple-ice-data.html`, `Udoo-pineapple-lychee-data.html`, `Udoo-pineapple-passion-fruit-data.html`, `Udoo-pineapple-peach-mango-data.html`
+
+**E-liquids (VGOD brand):** 14 files following pattern `Vgod-VGOD-Freebase-[flavor]-data.html`
+
+**E-liquids (YEZZI brand):** 9 files following pattern `Yezzi-Yezzi-[product]-data.html`
+
+**Coils:** `Oxva-oneo-data.html`, `Oxva-data.html`, `uwell-caliburn-data.html`, `uwell-caliburn-GPP-replacement-data.html`, `vaporesso-data.html`, `Voopoo-data.html`
+
+### 2. Form Fields
+- **None found** in this chunk
+
+### 3. URLs/Routes
+- `./E-liquids-products/` (directory for e-liquid pages)
+- `./vape-products/oxva-coil/`, `./vape-products/uwell-coils/`, `./vape-products/vaporesso-coil/`, `./vape-products/Voopoo-coil/`
+
+### 4. JavaScript API Calls
+- **None found** — partial JS visible: `document.querySelectorAll('#searchInput')`, `getElementById('navbarSearch')`, `getElementById('closeSearch')`, `getElementById('searchDropdown')`, `getElementById('searchResul...` *(truncated)*
+
+### 5. Page Purpose
+- **Product catalog/data file** — JSON array defining e-liquid and coil products with specs, pricing (PKR), brand, and links
+- **Search functionality** being initialized (navbar-integrated search)===CHUNK_SEPARATOR===## Analysis: Vape Cluster Frontend - Chunk 8/146
+
+### 1. HTML File Names
+- `about.html`
+- `index.html`
+- `voopoo.html`
+- `vaporesso.html`
+- `UWELL.html`
+- `OXVA.html`
+- `E-Liquids.html`
+- `coils.html`
+- `contact.html`
+
+### 2. Form Fields
+- `searchInput` (navbar search)
+- `productSearch` (product filter search)
+- `priceRange` (price range slider, max: 50,000 PKR)
+- `colorSelect` (product color/variant dropdown)
+
+### 3. URLs/Routes
+- `./index.html`, `./about.html`, `./contact.html`
+- `./voopoo.html`, `./vaporesso.html`, `./UWELL.html`, `./OXVA.html`
+- `./E-Liquids.html`, `./coils.html`
+- `./assets/css/bootstrap.min.css`, `./assets/css/style.css`
+- `./assets/img/web-logo.png`
+- Google Fonts CDN, Font Awesome CDN
+
+### 4. JavaScript API Calls
+- `localStorage.getItem/setItem('vapeCompareList')` — compare list persistence
+- `window.addToCart()` — cart function call
+- `window.toggleCompare()` — compare toggle
+
+### 5. Page Purposes
+- **About page** (`about.html`) — brand information
+- **Search overlay** — live product search with trending tags
+- **Quick View modal** — product preview without leaving page
+- **Cart sidebar** — slide-in shopping cart
+- **Product comparison** — side-by-side comparison (max 3 products)
+- **Product filter** — search + price range filtering for collection pages===CHUNK_SEPARATOR===## Frontend Code Chunk 9/146 Analysis
+
+### 1. HTML File Names Found
+- `about.html` (current page - About Us)
+- `checkout.html` (second page in chunk)
+- `login-signup.html`
+- `index.html`
+- `contact.html`
+- `privacy-policy.html`
+- `OXVA.html`, `voopoo.html`, `UWELL.html`, `vaporesso.html`
+- `E-Liquids.html`, `coils.html`
+
+### 2. Form Fields
+**Checkout Form (`checkoutForm`):**
+- `contactInfo` (email/phone)
+- `firstName`, `lastName`
+- `address`, `apartment`
+- `city`, `postalCode`
+- `phone` (tel, maxlength=11)
+- `countrySelect` (dropdown, Pakistan only)
+- `saveInfo` (checkbox)
+- `textOffers` (checkbox)
+- `discountCode` (gift card/discount)
+- Newsletter: `email` (footer)
+
+### 3. URLs/Routes
+- `./login-signup.html`, `./checkout.html`, `./index.html`
+- `./about.html`, `./contact.html`, `./privacy-policy.html`
+- Google Maps embed iframe (Lahore location)
+
+### 4. JavaScript API Calls
+- `saveCheckoutInfo(event)` — saves form data locally (truncated)
+- Cart manipulation via `script.js`
+
+### 5. Page Purposes
+- **about.html** — Brand story, values, store location
+- **checkout.html** — Order checkout with delivery info and order summary===CHUNK_SEPARATOR===## Chunk 10/146 Analysis
+
+### 1. HTML File Names
+- `payment.html`
+- `coils.html`
+- `contact.html`
+- `checkout.html`
+- `index.html`
+- `login-signup.html`
+- `about.html`
+- `E-Liquids.html`
+- `OXVA.html`
+- `vaporesso.html`
+- `UWELL.html`
+- `voopoo.html`
+- `privacy-policy.html`
+- `vape-products/oxva-coil/Oxva-oneo-data.html`
+- `vape-products/oxva-coil/Oxva-data.html`
+- `vape-products/uwell-coils/uwell-caliburn-data.html`
+- `vape-products/uwell-coils/uwell-caliburn-GPP-replacement-data.html`
+- `vape-products/vaporesso-coil/vaporesso-data.html`
+- `vape-products/Voopoo-coil/Voopoo-data.html`
+
+### 2. Form Fields
+- `contactInfo`, `firstName`, `lastName`, `address`, `apartment`, `city`, `postalCode`, `phone`, `saveInfo` *(checkout form)*
+- `email` *(newsletter)*
+- `productSearch` *(filter sidebar)*
+- `priceRange` *(range slider)*
+
+### 3. URLs/Routes
+- `./checkout.html`, `payment.html` *(navigation)*
+- `./login-signup.html` *(user icon)*
+- All product detail pages listed above
+
+### 4. JavaScript API Calls
+- **None** — only `localStorage` operations (`getItem`, `setItem`, `removeItem`)
+
+### 5. Page Purposes
+- **Checkout form** → collects shipping info, saves to localStorage, redirects to payment
+- **coils.html** → product listing page for coils/accessories with filter sidebar
+- **contact.html** → contact page *(truncated)*===CHUNK_SEPARATOR===## Frontend Code Chunk 11/146 Analysis
+
+### 1. HTML File Names
+- `contact.html`
+- `deals.html`
+- `index.html`, `about.html`, `login-signup.html`, `checkout.html`
+- `voopoo.html`, `vaporesso.html`, `UWELL.html`, `OXVA.html`
+- `E-Liquids.html`, `coils.html`, `privacy-policy.html`
+- `deals-products/pro-mod-kit-data.html`
+- `deals-products/slim-pod-system-data.html`
+- `deals-products/colorful-disposables-data.html`
+- `deals-products/tropical-fruit-juice-data.html`
+- `deals-products/luxury-dessert-blend-data.html`
+- `deals-products/ultra-mesh-coils-data.html`
+
+### 2. Form Fields
+- **Contact Form:** `name` (text), `email`, `subject` (text), `message` (textarea)
+- **Newsletter Form:** `email`
+
+### 3. URLs/Routes
+- Form actions: `#` (placeholder — no real endpoint)
+- Google Maps embed iframe
+- Checkout: `./checkout.html`
+
+### 4. JavaScript API Calls
+- **None** — only IntersectionObserver scroll animation; cart/search handled via `script.js`
+
+### 5. Page Purposes
+- **contact.html** — Contact form + store info display
+- **deals.html** — Discounted products listing page (6+ deal items with percentage savings)===CHUNK_SEPARATOR===# Frontend Code Chunk 12/146 Analysis - Vape Cluster
+
+## 1. HTML File Names Found
+- `deals-products/ultimate-power-pack-data.html`
+- `deals-products/starter-cloud-bundle-data.html`
+- `deals-products/premium-flavor-duo-data.html`
+- `E-Liquids.html`
+- `index.html`, `about.html`, `contact.html`, `privacy-policy.html`
+- `E-Liquids.html`, `coils.html`, `OXVA.html`, `vaporesso.html`, `UWELL.html`, `voopoo.html`
+- `login-signup.html`, `checkout.html`
+- Multiple E-liquid product detail pages (Drip-Down variants)
+
+## 2. Form Fields
+- `email` (newsletter subscription input, placeholder: "Your email address", required)
+
+## 3. URLs/Routes
+- `./checkout.html`, `./login-signup.html`
+- `./E-liquids-products/Drip-Down-[variant]-data.html` (multiple)
+- `#` (placeholder links for social icons, unfinished products)
+
+## 4. JavaScript API Calls
+- **None detected** — only `switchTab()`, `location.href` redirects, and Bootstrap JS
+
+## 5. Page Purposes
+- **Deals/Bundles page** (product listing with discounts)
+- **E-Liquids.html** — E-liquid product catalog with brand tabs (Drip-Down, Tokyo, Vgod, etc.)
+- **Newsletter subscription** (footer form)
+- **Cart sidebar** (session-based, no backend calls visible)===CHUNK_SEPARATOR===## Analysis: Frontend Code Chunk 13/146 - Vape Cluster
+
+### 1. HTML File Names Found
+**DRIP-DOWN Products:**
+- `Drip-Down-Edition-Mango-Guava-Ice-100ml-0mg-data.html`
+- `Drip-Down-Edition-Mango-Peach-Ice-100ml-3mg-data.html`
+- `Drip-Down-Edition-Strawmelon-kiwi-Ice-100ml-3mg-data.html`
+- `Drip-Down-Edition-Watermelon-Grape-Ice-100ml-3mg-data.html`
+- `drip-down-frosty-berry-ice--data.html`
+- `Drip-Down-Grape-Ice-data.html`
+- `Drip-Down-Guava-Ice-100ml-data.html`
+- `Drip-Down-Lychee-Ice-E-Liquids-100ml-data.html`
+- `Drip-Down-Mango-Ice-E-Liquids-100ml-data.html`
+- `Drip-Down-Passion-Fruit-Ice-E-Liquids-100ml-data.html`
+- `Drip-Down-Passion-Fruit-Ice-E-Liquids-60ml-data.html`
+- `Drip-Down-Peach-Ice-E-Liquids-100ml-data.html`
+- `Drip-Down-Watermelon-Ice-E-Liquids-100ml-data.html`
+- `Drip-Down-Watermelon-Ice-E-Liquids-60ml-data.html`
+
+**OX-PASSION Products:**
+- `Ox-Passion-Berries-Mojito-data.html`
+- `Ox-Passion-Blackberry-Candy-data.html`
+- `Ox-Passion-Blue-Mango-data.html`
+- `Ox-Passion-Blueberry-Raspberry-data.html`
+
+---
+
+### 2. Form Fields
+**None present** in this chunk.
+
+---
+
+### 3. URLs/Routes Used
+**Directories:**
+- `./E-liquids-products/` *(all product detail pages)*
+- `./assets/img/acceerece/E-liquids/Drip-Down/`
+- `./assets/img/acceerece/E-liquids/Ox-passion/`
+
+---
+
+### 4. JavaScript API Calls
+- **Only inline JS:** `location.href='./E-liquids-products/[product]-data.html'`
+- No fetch/AJAX/API calls present.
+
+---
+
+### 5. Page Purpose
+- **Product Listing/Catalog Page** — displays e-liquid products under two brands:
+  - **DRIP-DOWN** (13 products @ RS 3,499)
+  - **OX-PASSION** (4+ products @ RS 3,200)
+- Features: Compare, Quick View, and Product Detail buttons
+- Data attributes used for filtering by `category`, `brand`, `price`===CHUNK_SEPARATOR===## Analysis: Vape Cluster - Chunk 14/146
+
+### 1. HTML File Names Found
+**OX-PASSION Brand:**
+- `Ox-Passion-Blueberry-Raspberry-data.html`
+- `Ox-Passion-Cherry-Burst-data.html`
+- `Ox-Passion-Cinnamon-BBG-data.html`
+- `Ox-Passion-Creamy-Mint-data.html`
+- `Ox-Passion-Grapeach-data.html`
+- `Ox-Passion-Honeydew-data.html`
+- `Ox-Passion-Juicy-Peach-data.html`
+- `Ox-Passion-Luxury-data.html`
+- `Ox-Passion-Melon-Banana-data.html`
+- `Ox-Passion-Pink-Guava-data.html`
+- `Ox-Passion-Pom-Black-data.html`
+- `Ox-Passion-Sparkling-Cider-data.html`
+- `Ox-Passion-Strawberry-Ice-data.html`
+- `Ox-Passion-Strawberry-Orange-data.html`
+
+**TOKYO Brand:**
+- `Tokyo-Passion-fruit-kiwi--data.html`
+- `Tokyo-Tokyo-Super-Cool-Yakult-Salt-data.html`
+- `Tokyo-Tokyo_Super_Cool_Dragonfruit_Kiwi-data.html`
+- `Tokyo-blue-pineapple-data.html`
+- `Tokyo-cherry-ice-data.html`
+- `Tokyo-mango-lassi-data.html`
+
+### 2. Form Fields
+- **None** found in this chunk
+
+### 3. URLs/Routes Used
+- Pattern: `./E-liquids-products/[Brand]-[Product]-data.html`
+- All links are relative, static HTML product pages
+
+### 4. JavaScript API Calls
+- **None** — only inline `onclick="location.href='...'"` navigation
+
+### 5. Page Purpose
+- **Product Listing/Catalog Page** — E-liquids category
+- Displays OX-PASSION (Rs.3,200) and TOKYO (Rs.2,800) brand products
+- Features: Compare, Quick View, Product Detail buttons
+- Tab-based brand filtering (`#Tokyo` section ID visible)===CHUNK_SEPARATOR===## Chunk 15/146 Analysis — vape_cluster
+
+### 1. HTML File Names Found
+**Tokyo Brand:**
+- `Tokyo-mango-lassi-data.html`
+- `Tokyo-mango_lychee-data.html`
+- `Tokyo-pineapple-guava-data.html`
+- `Tokyo-tokyo-e-juice-saltnic-super-cool-breezy-pineapple-data.html`
+- `Tokyo-tokyo-e-juice-saltnic-super-cool-four-berries-data.html`
+- `Tokyo-tokyo-e-juice-saltnic-super-cool-peach-orange-lemongrass--data.html`
+- `Tokyo-tokyo-e-juice-saltnic-super-cool-pineapple-jam-data.html`
+- `Tokyo-tokyo-e-juice-saltnic-super-cool-pineapple-peach-data.html`
+- `Tokyo-tokyo-e-juice-saltnic-super-cool-watermelon-bubble-gum-data.html`
+- `Tokyo-tokyo-saltnic-super-cool-dragon-fruit-data.html`
+- `Tokyo-tripple-mango-data.html`
+
+**Udoo Brand:**
+- `Udoo-pinapple-peach-data.html`, `Udoo-pineapple-grape-data.html`, `Udoo-pineapple-ice-data.html`, `Udoo-pineapple-lychee-data.html`, `Udoo-pineapple-passion-fruit-data.html`, `Udoo-pineapple-peach-mango-data.html`
+
+**Vgod Brand (partial):**
+- `Vgod-VGOD-Freebase-e-Liquid-Dry-Tobacco-3mg-60mL-data.html`
+- `Vgod-VGOD-Freebase-e-liquid-AppleBomb-3mg-60mL-data.html`
+
+---
+
+### 2. Form Fields
+- **None** in this chunk
+
+---
+
+### 3. URLs/Routes Used
+- All relative paths under `./E-liquids-products/`
+- Image assets under `./assets/img/acceerece/E-liquids/Tokyo/`, `/Udoo/`, `/Vgod/`
+
+---
+
+### 4. JavaScript API Calls
+- Only inline `location.href` redirects on button clicks
+- **No fetch/AJAX calls**
+
+---
+
+### 5. Page Purpose
+- **Product Listing Page** — E-liquids category displaying Tokyo, Udoo, and Vgod branded products
+- Pricing: Tokyo @ RS 2,800 | Udoo @ RS 2,500 | Vgod @ RS 3,500
+- Features: Compare, Quick View, and Product Detail buttons per item===CHUNK_SEPARATOR===## Analysis of Frontend Code Chunk 16/146 - Vape Cluster
+
+### 1. HTML File Names Found
+All located in `./E-liquids-products/` directory:
+- `Vgod-VGOD-Freebase-e-liquid-AppleBomb-3mg-60mL-data.html`
+- `Vgod-VGOD-Freebase-e-liquid-BerryBomb-3mg-60mL-data.html`
+- `Vgod-VGOD-Freebase-e-liquid-Cubano-3mg-60mL-data.html`
+- `Vgod-VGOD-Freebase-e-liquid-CubanoBlack-3mg-60mL-data.html`
+- `Vgod-VGOD-Freebase-e-liquid-CubanoSilver-3mg-60mL-data.html`
+- `Vgod-VGOD-Freebase-e-liquid-IcedAppleBomb-3mg-60mL-data.html`
+- `Vgod-VGOD-Freebase-e-liquid-IcedBananaBomb-3mg-60mL-data.html`
+- `Vgod-VGOD-Freebase-e-liquid-IcedMangoBomb-3mg-60mL-data.html`
+- `Vgod-VGOD-Freebase-e-liquid-IcedPurpleBomb-3mg-60mL-data.html`
+- `Vgod-VGOD-Freebase-e-liquid-Luscious-3mg-60mL-data.html`
+- `Vgod-VGOD-Freebase-e-liquid-LushIce-3mg-60mL-data.html`
+- `Vgod-VGOD-Freebase-e-liquid-MangoBomb-3mg-60mL-data.html`
+- `Vgod-VGOD-Freebase-e-liquid-PurpleBomb-3mg-60mL-data.html`
+- `Vgod-VGOD-Freebase-e-liquid-Sourlicious-3mg-60mL-data.html`
+- `Vgod-VGOD-Freebase-eLiquid-Iced-Cherry-Lime-3mg-60mL-data.html`
+- `Vgod-VGOD-Freebase-eLiquid-IcedBlueRazz-3mg-60mL-data.html`
+- `Vgod-VGOD-Freebase-eLiquid-IcedBubbleGrapes-3mg-60mL-data.html`
+- `Vgod-VGOD-Freebase-eLiquid-IcedBubbleWatermelon-3mg-60mL-data.html`
+
+### 2. Form Fields
+- **None** present in this chunk
+
+### 3. URLs/Routes Used
+- All routes follow pattern: `./E-liquids-products/Vgod-VGOD-Freebase-[flavor]-3mg-60mL-data.html`
+- Image assets: `./assets/img/acceerece/E-liquids/Vgod/*.webp`
+
+### 4. JavaScript API Calls
+- **None** — only inline `location.href` navigation:
+```javascript
+onclick="location.href='./E-liquids-products/[product]-data.html'"
+```
+
+### 5. Page Purpose
+- **Product Listing/Catalog Page** — displays VGOD brand e-liquid products (Freebase, 3mg, 60mL)
+- Features: product cards with Compare, Quick View, and Product Detail buttons
+- Pricing: Rs.3,500 (discounted from Rs.4,500)
+- All items tagged `"Hot"` badge, category `"e-liquids"`===CHUNK_SEPARATOR===## Analysis of Frontend Code Chunk 17/146 - Vape Cluster
+
+### 1. HTML File Names Found
+- `Vgod-VGOD-Freebase-eLiquid-IcedBubbleWatermelon-3mg-60mL-data.html`
+- `Vgod-VGOD-Freebase-eLiquid-IcedPeachMango-3mg-60mL-data.html`
+- `Vgod-VGOD-Freebase-eLiquid-IcedStrawberryApple-3mg-60mL-data.html`
+- `Yezzi-Yezzi-Salt-Pineapple-Mango-30ml-50mg-data.html` (+ 8 more Yezzi variants)
+- `forgot-password.html`, `verify-code.html`, `login-signup.html`
+- `H-one.html`, `index.html`, `about.html`, `contact.html`, `privacy-policy.html`
+- `E-Liquids.html`, `coils.html`, `OXVA.html`, `vaporesso.html`, `UWELL.html`, `voopoo.html`
+
+### 2. Form Fields
+- **Email** (`type="email"`, placeholder: "Your email address") — Newsletter
+- **Email** (`type="email"`, placeholder: "Email Address") — Forgot Password form
+
+### 3. URLs/Routes
+- `./index.html`, `./about.html`, `./contact.html`, `./privacy-policy.html`
+- `./E-liquids-products/[product]-data.html`
+- `verify-code.html`, `login-signup.html`
+- `./assets/js/script.js`, `./assets/js/bootstrap.bundle.min.js`
+
+### 4. JavaScript API Calls
+- **None** — only DOM manipulation (`switchTab` function, `location.href` redirects)
+- Form submit redirects to `verify-code.html` via `onsubmit`
+
+### 5. Page Purposes
+- **E-Liquids product listing** (VGOD/Yezzi brands with pricing)
+- **Forgot Password** — email input to trigger reset code
+- **H-one.html** — Disposable vapes product category page
+- **Tab switching** — brand-based product filtering UI===CHUNK_SEPARATOR===## Chunk 18/146 Analysis — Vape Cluster
+
+### 1. HTML File Names
+- `OXVA.html`, `E-Liquids.html`, `coils.html`, `about.html`, `contact.html`
+- `login-signup.html`, `checkout.html`, `index.html`
+- `privacy-policy.html`, `vaporesso.html`, `UWELL.html`, `voopoo.html`
+- **Product detail pages:**
+  - `vape-products/oxva/OXVA-NEXLIM-GO-data.html`
+  - `vape-products/oxva/OXVA-ONEO-data.html`
+  - `vape-products/oxva/OXVA-XLIM-3-ULTRA-data.html`
+  - `vape-products/oxva/XLIM-GO-data.html`
+  - `vape-products/oxva/XLIM-GO-2-data.html`
+  - `vape-products/oxva/XLIM-PRO-data.html`
+  - `vape-products/oxva/XLIM-PRO-2-data.html`
+
+### 2. Form Fields
+- `productSearch` — text input (product filter)
+- `priceRange` — range input (0–50,000 RS)
+- Newsletter: `email` input (footer form)
+
+### 3. URLs/Routes
+- `./checkout.html` — cart sidebar checkout button
+- `./login-signup.html` — user icon link
+- `./index.html` — logo/home
+- `action="#"` — newsletter form (no real endpoint)
+
+### 4. JavaScript API Calls
+- **None** — only DOM-based filtering logic; no fetch/AJAX calls
+
+### 5. Page Purposes
+- **OXVA product listing page** — filtered grid of OXVA vape devices
+- **Age verification gate** — `localStorage` check (`ageVerified`)
+- **Cart sidebar** — UI only, no backend
+- **Homepage (`index.html`)** — navbar/hero starting point===CHUNK_SEPARATOR===## Analysis of Frontend Code Chunk 19/146 - Vape Cluster
+
+### 1. HTML File Names Found
+- `checkout.html`
+- `VAPORESSO.html`
+- `E-Liquids.html`
+- `deals.html`
+- `vape-products/voopoo/ARGUS-G3-data.html`
+- `vape-products/vaporesso/X-ROS-4-NANO-data.html`
+- `vape-products/vaporesso/X-ROS-5-NANO-data.html`
+- `vape-products/oxva/OXVA-ONEO-data.html`
+- `vape-products/oxva/OXVA-XLIM-3-ULTRA-data.html`
+- `vape-products/voopoo/V-MATE-PRO-data.html`
+- `vape-products/uwell/G3-PRO-data.html`
+- `vape-products/uwell/G4-PRO-KOKO-data.html`
+- `vape-products/uwell/G3-PRO-KOKO-data.html`
+- `vape-products/voopoo/Argus-G2-Mini-data.html`
+- `vape-products/oxva-coil/Oxva-oneo-data.html`
+- `vape-products/vaporesso-coil/vaporesso-data.html`
+- `E-liquids-products/Drip-Down-Cola-Ice-1-data..html`
+- `E-liquids-products/Tokyo-blue-pineapple-data.html`
+
+### 2. Form Fields
+- **None detected** in this chunk
+
+### 3. URLs/Routes Used
+- `./checkout.html`
+- `./E-Liquids.html`
+- `./VAPORESSO.html`
+- `./deals.html`
+- All product detail page paths listed above
+
+### 4. JavaScript API Calls
+- `switchTab(event, 'latest')` - tab switching function
+- `switchTab(event, 'top-rating')`
+- `switchTab(event, 'featured')`
+- `location.href` redirects for product detail buttons
+
+### 5. Page Purpose
+- **Homepage** - Main landing page featuring:
+  - Search dropdown with trending tags
+  - Cart sidebar
+  - Hero carousel/slider
+  - Top categories section
+  - Promotional banners
+  - Product tabs (Latest/Top Rating/Featured)===CHUNK_SEPARATOR===## Analysis of Frontend Code Chunk 20/146 - Vape Cluster
+
+### 1. HTML File Names Found
+- `login-signup.html`
+- `OXVA.html`
+- `forgot-password.html`
+- `index.html`
+- `about.html`
+- `contact.html`
+- `privacy-policy.html`
+- `E-Liquids.html`
+- `coils.html`
+- `vaporesso.html`
+- `voopoo.html`
+- `UWELL.html`
+
+### 2. Form Fields
+**Login Form:** `email`, `password`, `remember me (checkbox)`
+**Signup Form:** `full name`, `email`, `password`, `confirm password`
+**Newsletter Form:** `email`
+
+### 3. URLs/Routes Used
+- `./vape-products/vaporesso-coil/vaporesso-data.html`
+- `./vape-products/oxva/OXVA-NEXLIM-GO-data.html`
+- `./vape-products/vaporesso/X-ROS-5-NANO-data.html`
+- `./vape-products/oxva-coil/Oxva-data.html`
+- `./vape-products/Voopoo-coil/Voopoo-argus-coil-data.html`
+- `./E-liquids-products/Tokyo-blue-pineapple-data.html`
+- `./E-liquids-products/Drip-Down-Cola-Ice-1-data..html` *(double dot bug)*
+
+### 4. JavaScript API Calls
+- **None** — No fetch/AJAX calls; forms use `onsubmit="return false"` (no backend integration)
+- Local functions only: `switchTab()`, `toggleAuth()`, `togglePassword()`
+
+### 5. Page Purposes
+| Page | Purpose |
+|------|---------|
+| `login-signup.html` | Authentication (login/signup toggle) |
+| `OXVA.html` | Brand-specific product listing |
+| `index.html` | Homepage with product grid |
+| `forgot-password.html` | Password recovery |
+| Newsletter form | Email subscription (no backend) |
+
+**Notable Issue:** `Drip-Down-Cola-Ice-1-data..html` contains a double dot typo — broken link.===CHUNK_SEPARATOR===## Analysis of Frontend Code Chunk 21/146 - Vape Cluster
+
+### 1. HTML File Names Found
+- `index.html`, `voopoo.html`, `vaporesso.html`, `UWELL.html`, `OXVA.html`
+- `E-Liquids.html`, `coils.html`, `about.html`, `contact.html`
+- `login-signup.html`, `checkout.html`, `payment.html`, `privacy-policy.html`
+- `vape-products/oxva/OXVA-NEXLIM-GO-data.html`
+- `vape-products/oxva/OXVA-ONEO-data.html`
+- `vape-products/oxva/OXVA-XLIM-3-ULTRA-data.html`
+- `vape-products/oxva/XLIM-GO-data.html`
+- `vape-products/oxva/XLIM-GO-2-data.html`
+- `vape-products/oxva/XLIM-PRO-data.html`
+- `vape-products/oxva/XLIM-PRO-2-data.html`
+
+### 2. Form Fields
+- `searchInput` (text) — navbar search
+- `productSearch` (text) — product filter
+- `priceRange` (range, 0–50000 PKR)
+- `email` (newsletter subscription)
+
+### 3. URLs/Routes
+- `./checkout.html` — cart checkout button
+- `checkout.html` — payment breadcrumb link
+- `javascript:void(0)` — search/cart icons
+- `action="#"` — newsletter form
+
+### 4. JavaScript API Calls
+- **None** — only DOM manipulation for filtering/search
+
+### 5. Page Purposes
+- **OXVA.html** — OXVA brand product listing with filter/search
+- **payment.html** — Payment method selection (Card, EasyPaisa, JazzCash)===CHUNK_SEPARATOR===## Analysis: Frontend Code Chunk 22/146 - Vape Cluster
+
+### 1. HTML File Names
+- `index.html`
+- `privacy-policy.html`
+- `checkout.html`
+- `login-signup.html`
+- `about.html`
+- `contact.html`
+- `E-Liquids.html`
+- `coils.html`
+- `voopoo.html`
+- `vaporesso.html`
+- `UWELL.html`
+- `OXVA.html`
+
+### 2. Form Fields
+- **Card:** Card Number, Expiry (MM/YY), CVV, Name on Card
+- **EasyPaisa:** Mobile number (`id="easypaisaNumber"`, tel, maxlength=11)
+- **JazzCash:** Mobile number (`id="jazzcashNumber"`, tel, maxlength=11)
+- **Newsletter:** Email address (footer form)
+
+### 3. URLs/Routes
+- `./index.html`, `./checkout.html`, `./login-signup.html`
+- `./about.html`, `./contact.html`, `./privacy-policy.html`
+- `./voopoo.html`, `./vaporesso.html`, `./UWELL.html`, `./OXVA.html`
+- `./E-Liquids.html`, `./coils.html`
+
+### 4. JavaScript API Calls
+- `localStorage.getItem('vapeCartItems')` — reads cart data
+- No external API/fetch calls; payment processing is **simulated** with `setTimeout` + `alert`
+- Redirects to `index.html` after order placement
+
+### 5. Page Purposes
+- **Current chunk:** Checkout/Payment page (payment method selection: Card, EasyPaisa, JazzCash, COD)
+- **privacy-policy.html:** Privacy Policy page with standard GDPR-style content===CHUNK_SEPARATOR===## Chunk 23/146 Analysis
+
+### 1. HTML File Names
+- `UWELL.html`
+- `vaporesso.html` (partial)
+- `index.html`, `voopoo.html`, `OXVA.html`, `E-Liquids.html`, `coils.html`, `about.html`, `contact.html`, `login-signup.html`, `checkout.html`, `privacy-policy.html`
+
+### 2. Form Fields
+- `searchInput` (text) — product/navbar search
+- `productSearch` (text) — sidebar product filter
+- `priceRange` (range) — PKR 0–50,000
+- Email input (newsletter, no id, type="email")
+
+### 3. URLs/Routes
+- `./vape-products/uwell/g3-LITE-data.html`, `G3-PRO-data.html`, `G3-Pro-KOKO-data.html`, `G4-data.html`, `G4-LITE-data.html`, `G4-PRO-data.html`, `G4-PRO-KOKO-data.html`
+- `./checkout.html`
+- Newsletter form `action="#"` (no backend)
+
+### 4. JavaScript API Calls
+- **None** — only DOM manipulation (IntersectionObserver, filtering, event listeners)
+
+### 5. Page Purposes
+- **UWELL.html** — Brand-specific product listing page (UWELL vape devices) with sidebar filtering by name/price
+- **vaporesso.html** — Same pattern (Vaporesso brand listing, partial)
+- Footer section closes an unnamed preceding page===CHUNK_SEPARATOR===## Analysis: Frontend Code Chunk 24/146 — VAPE CLUSTER
+
+---
+
+### 1. HTML File Names Found
+- `vaporesso.html` *(implied from page title/context)*
+- `verify-code.html`
+- `vookbar.html`
+- `index.html`, `login-signup.html`, `checkout.html`
+- `voopoo.html`, `UWELL.html`, `OXVA.html`
+- `E-Liquids.html`, `coils.html`, `about.html`, `contact.html`
+- `forgot-password.html`, `privacy-policy.html`
+- Product detail pages: `VIBE-SE-data.html`, `X-ROS-4-data.html`, `X-ROS-4-NANO-data.html`, `X-ROS-5-data.html`, `X-ROS-5-MINI-data.html`, `X-ROS-5-NANO-data.html`, `X-ROS-PRO-data.html`
+
+---
+
+### 2. Form Fields
+- `productSearch` — text input (product filter)
+- `priceRange` — range slider (PKR 0–50,000)
+- `searchInput` — navbar search text input
+- **Newsletter form:** `email` input + submit button
+- **OTP/Verify form:** 4x single-character inputs (`otp1`–`otp4`, numeric only)
+
+---
+
+### 3. URLs/Routes Used
+- `./index.html`, `./checkout.html`, `./login-signup.html`
+- `./vaporesso.html`, `./voopoo.html`, `./UWELL.html`, `./OXVA.html`
+- `./E-Liquids.html`, `./coils.html`, `./about.html`, `./contact.html`
+- `./privacy-policy.html`, `./forgot-password.html`
+- `./vape-products/vaporesso/[product]-data.html` ×7
+- Newsletter `action="#"` (no backend endpoint)
+
+---
+
+### 4. JavaScript API Calls
+- **None** — no `fetch()`, `XMLHttpRequest`, or external API calls present
+- OTP logic is purely client-side DOM manipulation
+- Cart handled via `script.js` (external, not shown)
+
+---
+
+### 5. Page Purposes
+| File | Purpose |
+|---|---|
+| `vaporesso.html` | Product listing — VAPORESSO brand collection with filter/search |
+| `verify-code.html` | Email OTP verification (password reset flow) |
+| `vookbar.html` | Product listing — Vookbar disposable vapes *(partial)* |
+| `checkout.html` | Checkout/payment page |
+| `login-signup.html` | Authentication page |
+| `forgot-password.html` | Password recovery entry point |===CHUNK_SEPARATOR===## Analysis: Frontend Code Chunk 25/146 — Vape Cluster
+
+---
+
+### 1. HTML File Names Found
+- `voopoo.html`, `vaporesso.html`, `UWELL.html`, `OXVA.html`
+- `E-Liquids.html`, `coils.html`, `about.html`, `contact.html`
+- `login-signup.html`, `checkout.html`, `index.html`, `privacy-policy.html`
+- `vape-products/oxva/OXVA-NEXLIM-GO-data.html`
+- `vape-products/oxva/OXVA-ONEO-data.html`
+- `vape-products/oxva/OXVA-XLIM-3-ULTRA-data.html`
+- `vape-products/oxva/XLIM-GO-data.html`
+- `vape-products/oxva/XLIM-GO-2-data.html`
+- `vape-products/oxva/XLIM-PRO-data.html`
+- `vape-products/oxva/XLIM-PRO-2-data.html`
+
+---
+
+### 2. Form Fields
+- `productSearch` — text input (product search)
+- `priceRange` — range slider (min: 0, max: 50000)
+- Newsletter `email` input (footer, no name attribute)
+
+---
+
+### 3. URLs/Routes Used
+| URL | Context |
+|-----|---------|
+| `./checkout.html` | Cart sidebar checkout button |
+| `./login-signup.html` | User icon nav link |
+| `action="#"` | Newsletter form |
+
+---
+
+### 4. JavaScript API Calls
+- **None** — only local DOM manipulation (filtering logic via `input` events on search/range fields, no fetch/AJAX calls)
+
+---
+
+### 5. Page Purposes
+- **Current page (OXVA.html):** Product listing/collection page for OXVA brand vapes with client-side filtering
+- **voopoo.html** (new page starting): VOOPOO brand product collection page
+- **Shared components:** Navigation, cart sidebar, newsletter subscription footer===CHUNK_SEPARATOR===## Analysis: Frontend Code Chunk 26/146 - Vape Cluster
+
+### 1. HTML File Names Found
+- `voopoo.html` *(implied - first page)*
+- `yozo.html` *(second page, explicitly named)*
+- `checkout.html`
+- `login-signup.html`
+- `index.html`, `about.html`, `contact.html`, `privacy-policy.html`
+- `E-Liquids.html`, `coils.html`, `OXVA.html`, `vaporesso.html`, `UWELL.html`
+- **Product detail pages:**
+  - `./vape-products/voopoo/Argus-G2-Mini-data.html`
+  - `./vape-products/voopoo/ARGUS-G3-data.html`
+  - `./vape-products/voopoo/ARGUS-G3-MINI-data.html`
+  - `./vape-products/voopoo/argus-z2-data.html`
+  - `./vape-products/voopoo/V-MATE-MINI-data.html`
+  - `./vape-products/voopoo/V-MATE-PRO-data.html`
+  - `./vape-products/voopoo/V-THRU-PRO-data.html`
+
+### 2. Form Fields
+| Field | Type | Location |
+|-------|------|----------|
+| `productSearch` | text | Filter sidebar |
+| `priceRange` | range (0–50000) | Filter sidebar |
+| Newsletter email | email | Footer form |
+| `searchInput` | text | Navbar search overlay |
+
+### 3. URLs/Routes Used
+- `./checkout.html` — cart sidebar checkout button
+- `./login-signup.html` — user icon link
+- `javascript:void(0)` — search/cart triggers
+- `#` — placeholder links (social, popular tags, continue shopping)
+- Footer nav links to all main pages
+
+### 4. JavaScript API Calls
+- **None** — no fetch/AJAX/API calls present
+- Only DOM manipulation for filtering (search + price range)
+- Event listeners: `input`, `click` on filter controls
+
+### 5. Page Purposes
+| Page | Purpose |
+|------|---------|
+| `voopoo.html` | VOOPOO brand product listing with client-side filtering |
+| `yozo.html` | YOZO disposable vapes product listing (starts loading) |
+| Both pages | Share identical navbar, cart sidebar, and footer structure |
+
+**Key Pattern:** Static product catalog with client-side filtering only; no backend communication detected in this chunk.===CHUNK_SEPARATOR===## Analysis of Frontend Code Chunk 27/146 - Vape Cluster
+
+### 1. HTML File Names Found
+- `OXVA-NEXLIM-GO-data.html`
+- `OXVA-ONEO-data.html`
+- `OXVA-XLIM-3-ULTRA-data.html`
+- `XLIM-GO-data.html`
+- `XLIM-GO-2-data.html`
+- `XLIM-PRO-data.html`
+- `XLIM-PRO-2-data.html`
+- `index.html`, `about.html`, `contact.html`, `privacy-policy.html`
+- `E-Liquids.html`, `coils.html`, `OXVA.html`, `vaporesso.html`, `UWELL.html`
+
+### 2. Form Fields
+- `type="range"` — price filter (id: `priceRange`, min:0, max:50000)
+- `type="email"` — newsletter subscription (placeholder: "Your email address")
+
+### 3. URLs/Routes
+- `./vape-products/oxva/` — product detail pages
+- `./index.html`, `./about.html`, `./contact.html`, `./privacy-policy.html`
+- `./E-Liquids.html`, `./coils.html`, `./OXVA.html`, `./vaporesso.html`, `./UWELL.html`
+- Newsletter `form action="#"` (not yet implemented)
+
+### 4. JavaScript API Calls
+- **None** — only DOM manipulation for filtering (no fetch/AJAX calls)
+- `admin-main.js` starts sidebar toggle logic (truncated)
+
+### 5. Page Purposes
+- **Current page**: OXVA product listing/catalog with live filtering
+- **Admin section detected**: `admin.style.css` + `admin-main.js` — dashboard with sidebar, stats cards, tables, order statuses
+- **Footer**: newsletter signup, contact info display===CHUNK_SEPARATOR===## Analysis: Frontend Code Chunk 28/146 - Vape Cluster Admin Panel
+
+### 1. HTML File Names
+- `index.html` (admin dashboard)
+- `about-us.html` (admin)
+- `add-product.html` (admin)
+- `orders.html`
+- `manage-eliquids.html`
+- `manage-deals.html`
+- `manage-oxva.html`
+- `manage-voopoo.html`
+- `manage-vaporesso.html`
+- `manage-uwell.html`
+- `manage-home.html`
+- `contact-us.html`
+- `../index.html` (main website)
+
+### 2. Form Fields
+- Main Title (text input)
+- Subtitle (text input)
+- Story Title, Paragraph 1 & 2 (textarea)
+- Value 1/2/3 Title & Description (text/textarea)
+- Full Address (text)
+- Phone Number (text)
+- **Email Address** (email) — `vapecluster872@gmail.com`
+- Google Maps Embed URL (text)
+
+### 3. URLs/Routes
+- `https://www.google.com/maps/embed?pb=...` (store location embed)
+- `../assets/img/web-logo.png`
+- Google Fonts CDN, Bootstrap CDN, Font Awesome CDN
+
+### 4. JavaScript API Calls
+- **Chart.js** — `new Chart()` for revenue line chart
+- **FileReader API** — image upload previews
+- No fetch/AJAX calls; all data is **simulated/static**
+
+### 5. Page Purposes
+- **index.html** — Admin dashboard (sales stats, orders, brand performance)
+- **about-us.html** — CMS editor for About Us page content
+- **add-product.html** — Add new product form (truncated)
+- **admin-variant-manager.js** — Product/deal variant image manager (primary + hover images per variant)
+
+> ⚠️ All form submissions are **prototype simulations** (alert-based, no backend calls)===CHUNK_SEPARATOR===## Chunk 29/146 Analysis
+
+### 1. HTML File Names
+- `add-product.html` (current page - implied)
+- `contact-us.html` (admin)
+- `index.html`, `orders.html`, `manage-eliquids.html`, `manage-deals.html`
+- `manage-oxva.html`, `manage-voopoo.html`, `manage-vaporesso.html`
+- `manage-uwell.html`, `manage-coils.html`, `manage-home.html`
+- `about-us.html`, `contact-us.html`, `../index.html`
+
+### 2. Form Fields
+- `prodName` (Product Name/Model)
+- `prodBrand` (Category/Brand - select)
+- `prodPrice` (Price in RS)
+- `prodStock` (Stock Status - select)
+- `prodQty` (Stock Quantity)
+- `mainImgFile`, `hoverImgFile` (file uploads)
+- `frontTitle`, `frontRating`, `frontReviews`, `frontDesc`
+- `frontSpecs`, `frontFeatures`, `frontBox`, `frontWhy`
+- `variantPrimaryFile`, `variantHoverFile`
+
+### 3. URLs/Routes
+- `css/admin-style.css`, `js/admin-main.js`
+- `../assets/js/bootstrap.bundle.min.js`
+- Redirects to `index.html` on submit
+
+### 4. JavaScript API Calls
+- **None** — form submit uses `alert()` + `window.location.href` redirect (no backend call)
+
+### 5. Page Purposes
+- **add-product.html**: 2-step admin form to add new vape products with variant/image management
+- **contact-us.html**: Admin content management for Contact Us page===CHUNK_SEPARATOR===## Chunk 30/146 Analysis — Vape Cluster Admin Panel
+
+### 1. HTML File Names
+**Contact-us page sidebar/navigation:**
+- `index.html`, `orders.html`, `manage-eliquids.html`, `manage-deals.html`, `manage-oxva.html`, `manage-voopoo.html`, `manage-vaporesso.html`, `manage-uwell.html`, `manage-home.html`, `about-us.html`, `contact-us.html`, `add-product.html`, `../index.html`
+
+**Dedicated pages:**
+- `edit-product.html`, `manage-product-details.html`, `manage-coils.html`, `manage-home.hhtml` *(typo)*
+
+---
+
+### 2. Form Fields
+**Contact Info Form (`contactInfoForm`):**
+- Store Location (textarea), Phone Main, Phone Secondary, Support Email, Store Timing, Google Maps Embed URL
+
+**Edit Product Form (`editProductForm`):**
+- Product Name (`editName`), Category/Brand (`editCategory`), Price (`editPrice`), Product Description, Stock Quantity, SKU/Model Number, Product Image (file upload), Visibility toggle (checkbox)
+
+---
+
+### 3. URLs/Routes
+- `manage-product-details.html?name=` (redirect after edit)
+- `javascript:history.back()`
+- Google Maps embed URL (hardcoded)
+- `https://fonts.googleapis.com/...`, `https://cdnjs.cloudflare.com/...`, `https://cdn.jsdelivr.net/npm/chart.js`
+
+---
+
+### 4. JavaScript API Calls
+- **None** — prototype only; uses `alert()`, `URLSearchParams`, `FileReader`, `window.location.href`, `history.back()`
+
+---
+
+### 5. Page Purposes
+| Page | Purpose |
+|------|---------|
+| `contact-us.html` | Admin contact info editor + customer message viewer |
+| `edit-product.html` | Edit existing product (Step 1 of 2) |
+| `index.html` | Admin dashboard with Chart.js |
+
+**Notable:** Store contact is **Lahore, Johr Town, Pakistan**; email `vapecluster872@gmail.com`; phone `+92 3200489485`===CHUNK_SEPARATOR===## Analysis: Vape Cluster Frontend Code Chunk 31/146
+
+### 1. HTML File Names
+- `index.html` (Dashboard)
+- `orders.html`
+- `manage-coils.html` *(current page)*
+- `manage-eliquids.html`
+- `manage-deals.html`
+- `manage-oxva.html`
+- `manage-voopoo.html`
+- `manage-vaporesso.html`
+- `manage-uwell.html`
+- `manage-home.html`
+- `about-us.html`
+- `contact-us.html`
+- `add-product.html`
+- `../index.html`
+
+### 2. Form Fields
+- `editModel` (text)
+- `editSeries` / Brand (text)
+- `editPrice` (text)
+- `editStock` (select: In Stock/Out of Stock)
+- `editQuantity` (number)
+- `editImageFile` (file upload)
+- `editHoverImageFile` (file upload)
+- `editFrontendTitle` (text)
+- `editVariantDropdown` (select)
+- Search Coils (text, unnamed)
+
+### 3. URLs/Routes
+- `href="orders.html"`
+- `href="add-product.html"`
+- `href="../index.html"`
+
+### 4. JavaScript API Calls
+- None visible; references `admin-main.js` and `bootstrap.bundle.min.js`
+
+### 5. Page Purposes
+- **Dashboard Overview** – sales/order stats, revenue chart
+- **manage-coils.html** – Admin coil inventory management (CRUD: edit/delete/add)===CHUNK_SEPARATOR===## Analysis: Chunk 32/146 - Vape Cluster Admin Panel
+
+### 1. HTML File Names
+- `manage-deals.html` *(current page)*
+- `index.html`, `orders.html`, `manage-eliquids.html`, `manage-oxva.html`
+- `manage-voopoo.html`, `manage-vaporesso.html`, `manage-uwell.html`, `manage-coils.html`
+- `manage-home.html`, `about-us.html`, `contact-us.html`, `add-product.html`
+- `../index.html`
+- `../deals-products/pro-mod-kit-data.html`
+
+### 2. Form Fields
+- `editFrontendImageFile` (file), `editFrontendHoverImageFile` (file)
+- `editRating` (number, 0-5), `editReviewCount` (number)
+- `editDescription`, `editSpecs`, `editFeatures`, `editBoxContents`, `editWhyLove` (textareas)
+
+### 3. URLs/Routes
+- `../deals-products/pro-mod-kit-data.html` (deal product page)
+- `../assets/img/deals/vape-mod.png`, `pod-system.png`
+
+### 4. JavaScript API Calls
+- **None** — purely DOM manipulation with `FileReader` API; no fetch/AJAX calls
+
+### 5. Page Purposes
+- **manage-deals.html**: Admin CRUD interface for vape deals/promotions with 2-step edit modal (basic info + frontend display details)===CHUNK_SEPARATOR===## Analysis of Frontend Code Chunk 33/146 - Vape Cluster Admin Deals Management
+
+### 1. HTML File Names Found
+- `slim-pod-system-data.html`
+- `colorful-disposables-data.html`
+- `tropical-fruit-juice-data.html`
+- `luxury-dessert-blend-data.html`
+- `ultra-mesh-coils-data.html`
+- `ultimate-power-pack-data.html`
+- `starter-cloud-bundle-data.html`
+- `refill-refresh-pack-data.html`
+- `premium-flavor-duo-data.html`
+
+### 2. Form Fields
+| Field ID | Type | Purpose |
+|---|---|---|
+| `editDealName` | text | Deal name |
+| `editDealCategory` | text | Category |
+| `editOrigPrice` | text | Original price |
+| `editDealPrice` | text | Deal price |
+| `editDiscount` | text | Discount text |
+| `editDealStock` | select | Stock status |
+| `editDealQuantity` | number | Quantity |
+| `editDealFrontendTitle` | text | SEO page title |
+| `editDealRating` | number | Rating (1-5) |
+| `editDealReviewCount` | number | Review count |
+| `editDealDescription` | textarea | Description |
+| `editDealIncludes` | textarea | Package contents |
+| `editDealImageFile` | file | Main image |
+| `editHoverDealImageFile` | file | Hover image |
+
+### 3. URLs/Routes
+- `../deals-products/[product-name]-data.html` (view links, target="_blank")
+
+### 4. JavaScript API Calls
+- None (pure DOM manipulation, no fetch/AJAX calls)
+
+### 5. Page Purpose
+- **Admin Deals Management Dashboard** — table listing 10 deals with edit/delete/view actions and a multi-step edit modal===CHUNK_SEPARATOR===## Analysis: Chunk 34/146 - Vape Cluster Frontend
+
+### 1. HTML File Names Found
+**Admin Pages:**
+- `manage-eliquids.html` *(current page)*
+- `index.html`, `orders.html`, `manage-deals.html`, `manage-oxva.html`
+- `manage-voopoo.html`, `manage-vaporesso.html`, `manage-uwell.html`, `manage-coils.html`
+- `manage-home.html`, `about-us.html`, `contact-us.html`, `add-product.html`
+
+**Product Detail Pages (E-Liquids):**
+- `Drip-Down-Apple-Ice-data.html`, `Drip-Down-Cola-Ice-1-data.html`
+- `Drip-Down-Grape-Ice-data.html`, `Drip-Down-Mango-Ice-E-Liquids-100ml-data.html`
+- `Drip-Down-Peach-Ice-E-Liquids-100ml-data.html`, `Drip-Down-Watermelon-Ice-E-Liquids-100ml-data.html`
+- `Drip-Down-Lychee-Ice-E-Liquids-100ml-data.html`, `Drip-Down-Guava-Ice-100ml-data.html`
+- `Drip-Down-Passion-Fruit-Ice-E-Liquids-100ml-data.html`
+
+---
+
+### 2. Form Fields
+| Field ID | Type |
+|----------|------|
+| `editDealName` | Text |
+| `editDealCategory` | Text |
+| `editOrigPrice` | Price |
+| `editDealPrice` | Price |
+| `editDiscount` | Text |
+| `editDealStock` | Select |
+| `editDealQuantity` | Number |
+| `editDealFrontendTitle` | Text |
+| `editDealRating` | Number |
+| `editDealReviewCount` | Number |
+| `editDealDescription` | Textarea |
+| `editDealIncludes` | Text |
+| `editDealImageFile` / `editFrontendDealImageFile` | File |
+| `editHoverDealImageFile` / `editFrontendHoverDealImageFile` | File |
+| Search box | Text (unstyled) |
+
+---
+
+### 3. URLs/Routes Used
+```
+../index.html
+../assets/img/web-logo.png
+../assets/img/acceerece/E-liquids/Drip-Down/*.webp
+../E-liquids-products/*-data.html
+css/admin-style.css
+../assets/css/bootstrap.min.css
+https://fonts.googleapis.com/css2?family=Montserrat...
+https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css
+```
+
+---
+
+### 4. JavaScript API Calls
+- **None** — No fetch/AJAX calls; all operations are **client-side only**
+- Uses `FileReader API` for image previews
+- DOM manipulation for table row updates
+- `Bootstrap Modal` (`editModal.hide()`)
+
+---
+
+### 5. Page Purposes
+| Page | Purpose |
+|------|---------|
+| `manage-eliquids.html` | **Admin inventory management** for E-Liquid products |
+| Edit Modal (multi-step) | **Step 1:** Basic product info + images; **Step 2:** Frontend display details |
+| Product rows | Display/edit Drip Down brand e-liquids (price: Rs.1,000, 100ml, 30mg/50mg) |
+
+**Key Concern:** No backend API calls — all edits are **temporary/in-memory only**, lost on page refresh.===CHUNK_SEPARATOR===## Analysis of Frontend Code Chunk 35/146 - Vape Cluster Admin E-Liquids Management
+
+### 1. HTML File Names Found
+**Tokyo brand:**
+- `Tokyo-blue-pineapple-data.html`
+- `Tokyo-cherry-ice-data.html`
+- `Tokyo-mango-lassi-data.html`
+- `Tokyo-pineapple-guava-data.html`
+- `Tokyo-tripple-mango-data.html`
+
+**Ox Passion brand:**
+- `Ox-Passion-Strawberry-Ice-data.html`
+- `Ox-Passion-Juicy-Peach-data.html`
+- `Ox-Passion-Blue-Mango-data.html`
+- `Ox-Passion-Pink-Guava-data.html`
+- `Ox-Passion-Honeydew-data.html`
+
+**Yezzi/Udoo brands:**
+- `Yezzi-Yezzi-Salt-Winter-Mint-30ml-50mg-data.html`
+- `Yezzi-Yezzi-Ultra-Cool-Salt-Pineapple-30ml-50mg-data.html`
+- `Yezzi-Yezzi-Ultra-Cool-Salt-Green-Mango-30ml-35mg-data.html`
+- `Udoo-pineapple-ice-data.html`
+- `Udoo-pineapple-lychee-data.html`
+
+### 2. Form Fields
+| Field ID | Type | Purpose |
+|----------|------|---------|
+| `editName` | text | Product name |
+| `editFlavour` | text | Flavor |
+| `editNicotine` | text | Nicotine strength |
+| `editPrice` | text | Price |
+| `editStock` | select | Stock status |
+| `editQuantity` | number | Quantity |
+| `editImageFile` | file | Main image |
+| `editHoverImageFile` | file | Hover image |
+| `editFrontendTitle` | text | Page title |
+| `editFrontendImageFile` | file | Frontend primary image |
+| `editFrontendHoverImageFile` | file | Frontend hover image |
+| `editRating` | number | Rating (1-5) |
+| `editReviewCount` | number | Review count |
+| `editDescription` | textarea | Product description |
+| `editNicLevels` | text | Nicotine levels |
+| `editBottleSize` | text | Bottle size |
+
+### 3. URLs/Routes
+- `../E-liquids-products/[product-name]-data.html` (pattern for all product detail pages)
+- `../assets/img/acceerece/E-liquids/[Brand]/[image]` (asset paths)
+- `../assets/js/bootstrap.bundle.min.js`
+
+### 4. JavaScript Files/API Calls
+- `js/admin-main.js`
+- `js/admin-variant-manager.js`
+- Bootstrap Modal API: `new bootstrap.Modal()`
+- DOM event listeners on `.edit-product-btn` (truncated)
+
+### 5. Page Purpose
+**Admin product management dashboard** — specifically managing E-liquid inventory with a **two-step edit modal**:
+- Step 1: Inventory data (name, price, stock, images)
+- Step 2: Frontend display data (title, variants, description, ratings)===CHUNK_SEPARATOR===## Chunk 36/146 Analysis
+
+### 1. HTML File Names
+- `manage-home.html`
+- `index.html`
+- `orders.html`
+- `manage-eliquids.html`
+- `manage-deals.html`
+- `manage-oxva.html`
+- `manage-voopoo.html`
+- `manage-vaporesso.html`
+- `manage-uwell.html`
+- `manage-coils.html`
+- `about-us.html`
+- `contact-us.html`
+- `add-product.html`
+- `login-signup.html`
+- `E-Liquids.html`, `coils.html`, `about.html`, `contact.html`
+- `voopoo.html`, `vaporesso.html`, `UWELL.html`, `OXVA.html`
+
+### 2. Form Fields
+- `editName`, `editFlavour`, `editNicotine`, `editPrice`, `editStock`, `editQuantity`
+- `editFrontendTitle`, `editRating`, `editReviewCount`, `editDescription`, `editNicLevels`, `editBottleSize`
+- `editImageFile`, `editFrontendImageFile`, `editHoverImageFile`, `editFrontendHoverImageFile`
+- Shipping charges (number), free shipping threshold (number), announcement bar text
+- Navbar logo upload, logo link, login button link
+- Nav link labels/URLs (5 links), brand dropdowns (4), trending searches (4)
+
+### 3. URLs/Routes
+- `../assets/img/web-logo.png`
+- `./index.html`, `./login-signup.html`, `./E-Liquids.html`, `./coils.html`, `./about.html`, `./contact.html`
+- `./voopoo.html`, `./vaporesso.html`, `./UWELL.html`, `./OXVA.html`
+
+### 4. JavaScript API Calls
+- None (FileReader API only, no fetch/AJAX calls)
+
+### 5. Page Purpose
+- **Product edit modal**: Multi-step form for editing inventory items (images, stock, pricing, frontend display data)
+- **manage-home.html**: Admin CMS page for configuring homepage content — navbar links, shipping settings, announcement bar, brand dropdowns, trending searches===CHUNK_SEPARATOR===## Analysis of Chunk 37/146 - Admin Homepage Content Manager
+
+### 1. HTML File Names Found
+- `VAPORESSO.html`
+- `E-Liquids.html`
+- `OXVA.html`
+- `deals.html`
+- `vape-products/voopoo/ARGUS-G3-data.html`
+- `vape-products/vaporesso/X-ROS-4-NANO-data.html`
+
+### 2. Form Fields
+- **Background Image** (file upload + text path)
+- **Subtitle** (text input)
+- **Main Title** (textarea)
+- **Button Link** (text input)
+- **Category Name** (text input)
+- **Product Name, Brand, Current Price, Old Price** (text inputs)
+- **Product Link** (text input)
+- **Badge** (select: Hot, New, Sale, Featured, None)
+- **Tab Name & Tab ID** (text inputs)
+
+### 3. URLs/Routes
+- `./VAPORESSO.html`, `./E-Liquids.html`, `./OXVA.html`, `./deals.html`
+- `./vape-products/voopoo/ARGUS-G3-data.html`
+- `./vape-products/vaporesso/X-ROS-4-NANO-data.html`
+
+### 4. JavaScript API Calls
+- **None detected** in this chunk
+
+### 5. Page Purpose
+**Admin Homepage Content Editor** — manages hero sliders, category grids, promo banners, and product tab sections via a WYSIWYG-style admin panel===CHUNK_SEPARATOR===## Analysis of Frontend Code Chunk 38/146 - Vape Cluster
+
+### 1. HTML File Names Found
+- `G3-PRO-data.html`
+- `OXVA-ONEO-data.html`
+- `V-MATE-PRO-data.html`
+- `X-ROS-5-NANO-data.html`
+- `G4-PRO-KOKO-data.html`
+- `OXVA-XLIM-3-ULTRA-data.html`
+- `Argus-G2-Mini-data.html`
+
+### 2. Form Fields
+- **Product Image** (file upload + text path input)
+- **Product Name** (text)
+- **Brand** (text)
+- **Current Price** (text)
+- **Old Price** (text)
+- **Product Link** (text)
+- **Badge** (select: Hot, New, Sale, Featured, None)
+- **Tab Name** (text: e.g., "TOP RATING")
+- **Tab ID** (text: e.g., "top-rating")
+
+### 3. URLs/Routes
+- `./vape-products/uwell/G3-PRO-data.html`
+- `./vape-products/oxva/OXVA-ONEO-data.html`
+- `./vape-products/voopoo/V-MATE-PRO-data.html`
+- `./vape-products/vaporesso/X-ROS-5-NANO-data.html`
+- `./vape-products/uwell/G4-PRO-KOKO-data.html`
+- `./vape-products/oxva/OXVA-XLIM-3-ULTRA-data.html`
+- `./vape-products/voopoo/Argus-G2-Mini-data.html`
+
+### 4. JavaScript API Calls
+- **None found** in this chunk
+
+### 5. Page Purpose
+- **Admin Dashboard** — Product listing/tab management panel for editing featured product tabs (Hot Products, Top Rating), with CRUD controls (add/delete products, edit fields)===CHUNK_SEPARATOR===## Chunk 39/146 Analysis
+
+### 1. HTML File Names
+- `G3-PRO-KOKO-data.html`
+- `Oxva-oneo-data.html`
+- `vaporesso-data.html`
+- `Tokyo-blue-pineapple-data.html`
+- `OXVA-NEXLIM-GO-data.html`
+- `X-ROS-5-NANO-data.html`
+- `Oxva-data.html`
+
+### 2. Form Fields
+- **Product Image** (file upload + text path)
+- **Product Name** (text)
+- **Brand** (text)
+- **Current Price** (text)
+- **Old Price** (text)
+- **Product Link** (text)
+- **Badge** (select: Hot, New, Sale, Featured, None)
+- **Tab Name/ID** (text inputs)
+
+### 3. URLs/Routes
+- `./vape-products/uwell/G3-PRO-KOKO-data.html`
+- `./vape-products/oxva-coil/Oxva-oneo-data.html`
+- `./vape-products/vaporesso-coil/vaporesso-data.html`
+- `./E-liquids-products/Tokyo-blue-pineapple-data.html`
+- `./vape-products/oxva/OXVA-NEXLIM-GO-data.html`
+- `./vape-products/vaporesso/X-ROS-5-NANO-data.html`
+- `./vape-products/oxva-coil/Oxva-data.html`
+
+### 4. JavaScript API Calls
+- None visible in this chunk
+
+### 5. Page Purpose
+- **Admin Product Management Panel** — editing featured/hot product cards across tabs (Tab 2: HOT, Tab 3: FEATURED) with CRUD controls===CHUNK_SEPARATOR===## Analysis: Chunk 40/146 - Admin Content Management Pages
+
+### 1. HTML File Names
+- `manage-oxva.html`
+- `manage-home.html` (current page context)
+- `index.html`
+- `orders.html`
+- `manage-eliquids.html`
+- `manage-deals.html`
+- `manage-voopoo.html`
+- `manage-vaporesso.html`
+- `manage-uwell.html`
+- `manage-coils.html`
+- `about-us.html`
+- `contact-us.html`
+- `add-product.html`
+- `E-Liquids.html`, `voopoo.html`, `vaporesso.html`, `OXVA.html`, `UWELL.html`
+- `Voopoo-data.html`, `Tokyo-blue-pineapple-data.html`, `Drip-Down-Cola-Ice-1-data..html`
+
+### 2. Form Fields
+- Product Image (file upload + text path)
+- Product Name, Brand
+- Current Price, Old Price
+- Product Link
+- Badge (select: Hot/New/Sale/Featured/None)
+- Banner: Background Image, Title, Description, Button Link
+- Footer: Logo, About Text, Phone, Email, Social Links, Copyright Text
+
+### 3. URLs/Routes
+- `./E-Liquids.html`, `./voopoo.html`, `./vaporesso.html`, `./OXVA.html`, `./UWELL.html`
+- `https://facebook.com/vapecluster`
+- `https://instagram.com/vapecluster`
+- `https://twitter.com/vapecluster`
+
+### 4. JavaScript API Calls
+- `../assets/js/bootstrap.bundle.min.js`
+- `js/admin-main.js`
+- No fetch/API calls visible
+
+### 5. Page Purposes
+- **manage-home.html** — Admin editor for homepage products, banners, brand logos, footer
+- **manage-oxva.html** — Admin inventory management for OXVA brand products
+
+### Notable
+- Contact info exposed: `vapecluster872@gmail.com`, `+92 3200489485`
+- Typo in filename: `Drip-Down-Cola-Ice-1-data..html` (double dot)===CHUNK_SEPARATOR===## Analysis of Frontend Code Chunk 41/146 - Vape Cluster
+
+### 1. HTML File Names Found
+- `OXVA-NEXLIM-GO-data.html`
+- `OXVA-ONEO-data.html`
+- `OXVA-XLIM-3-ULTRA-data.html`
+- `XLIM-GO-data.html`
+- `XLIM-GO-2-data.html`
+- `XLIM-PRO-data.html`
+- `XLIM-PRO-2-data.html`
+
+### 2. Form Fields
+- `editModel` (text) — Model Name
+- `editSeries` (text) — Series
+- `editPrice` (text) — Price
+- `editStock` (select) — In Stock / Out of Stock
+- `editQuantity` (number) — Quantity
+- `editImageFile` (file) — Product Image upload
+
+### 3. URLs/Routes Used
+- `../vape-products/oxva/OXVA-NEXLIM-GO-data.html`
+- `../vape-products/oxva/OXVA-ONEO-data.html`
+- `../vape-products/oxva/OXVA-XLIM-3-ULTRA-data.html`
+- `../vape-products/oxva/XLIM-GO-data.html`
+- `../vape-products/oxva/XLIM-GO-2-data.html`
+- `../vape-products/oxva/XLIM-PRO-data.html`
+- `../vape-products/oxva/XLIM-PRO-2-data.html`
+
+### 4. JavaScript API Calls
+- **None visible** in this chunk
+
+### 5. Page Purpose
+- **Admin inventory management page** for OXVA brand products
+- Features: view, edit, delete products
+- Edit modal with multi-step form (`step1` visible)
+- Displays 7 OXVA pod kit products with pricing in Pakistani Rupees===CHUNK_SEPARATOR===## Chunk 42/146 Analysis — `vape_cluster`
+
+### 1. HTML File Names
+- `manage-product-details.html`
+- `index.html`
+- `orders.html`
+- `manage-eliquids.html`
+- `manage-deals.html`
+- `manage-oxva.html`
+- `edit-product.html`
+
+### 2. Form Fields
+| ID | Type | Purpose |
+|----|------|---------|
+| `editImageFile` | file | Product main image |
+| `editHoverImageFile` | file | Product hover image |
+| `editFrontendImageFile` | file | Frontend primary image |
+| `editFrontendHoverImageFile` | file | Frontend hover image |
+| `editFrontendTitle` | text | Frontend page title |
+| `editRating` | number | Product rating (1-5) |
+| `editReviewCount` | number | Review count |
+| `editDescription` | textarea | Product description |
+| `editSpecs` | textarea | Technical specs |
+| `editFeatures` | textarea | Key features |
+| `editBoxContents` | textarea | Box contents |
+| `editWhyLove` | textarea | Why you'll love it |
+| `editVariantDropdown` | select | Color variant selector |
+
+### 3. URLs/Routes
+- `../assets/js/bootstrap.bundle.min.js`
+- `js/admin-main.js`
+- `js/admin-variant-manager.js`
+- `css/admin-style.css`
+- `../assets/img/web-logo.png`
+
+### 4. JavaScript API Calls
+- **None** — All operations are **DOM-only** (FileReader, attribute manipulation, no fetch/XHR calls)
+
+### 5. Page Purposes
+- **Edit Product Modal** — Multi-step product editor (Step 1: basic info/images; Step 2: frontend details/specs)
+- **manage-product-details.html** — Admin page for advanced product detail management (specs, variants, descriptions)
+- Sidebar indicates: **OXVA product management** context===CHUNK_SEPARATOR===## Analysis: Frontend Code Chunk 43/146 - Vape Cluster
+
+### 1. HTML File Names Found
+- `manage-oxva.html`
+- `manage-uwell.html`
+- `index.html`
+- `orders.html`
+- `manage-eliquids.html`
+- `manage-deals.html`
+- `manage-voopoo.html`
+- `manage-vaporesso.html`
+- `manage-coils.html`
+- `manage-home.html`
+- `about-us.html`
+- `contact-us.html`
+- `add-product.html`
+- `g3-LITE-data.html`, `G3-PRO-data.html`, `G3-Pro-KOKO-data.html`, `G4-data.html`
+
+### 2. Form Fields
+- Product spec inputs (Battery Capacity, Wattage Range, Chassis Material, Pod Capacity, Dimensions, Charging)
+- Feature list text inputs
+- Color variant name/image path inputs
+- Search box: `placeholder="Search UWELL..."`
+
+### 3. URLs/Routes
+- `../vape-products/uwell/g3-LITE-data.html`
+- `../vape-products/uwell/G3-PRO-data.html`
+- `../vape-products/uwell/G3-Pro-KOKO-data.html`
+- `../vape-products/uwell/G4-data.html`
+- `../index.html`
+
+### 4. JavaScript API Calls
+- `new URLSearchParams(window.location.search)` — reads `name` query param
+- `window.location.href = 'manage-oxva.html'` — redirect on save
+- `alert()` — save confirmation
+- No fetch/AJAX calls detected
+
+### 5. Page Purposes
+- **Product Advanced Edit Page** — edits OXVA device specs, features, color variants
+- **manage-uwell.html** — Admin inventory management for UWELL brand products (Caliburn series: G3 Lite, G3 Pro, G3 Pro KOKO, G4)===CHUNK_SEPARATOR===## Analysis of Frontend Code Chunk 44/146
+
+### 1. HTML File Names
+- `G4-LITE-data.html`
+- `G4-PRO-data.html`
+- `G4-PRO-KOKO-data.html`
+
+### 2. Form Fields
+| ID | Type | Purpose |
+|----|------|---------|
+| `editModel` | text | Product model name |
+| `editSeries` | text | Product series |
+| `editPrice` | text | Product price |
+| `editStock` | select | Stock status (In Stock/Out of Stock) |
+| `editQuantity` | number | Stock quantity |
+| `editImageFile` | file | Main product image |
+| `editHoverImageFile` | file | Hover product image |
+| `editFrontendTitle` | text | SEO page title |
+| `editFrontendImageFile` | file | Frontend primary image |
+| `editFrontendHoverImageFile` | file | Frontend hover image |
+| `editRating` | number | Product rating |
+| `editReviewCount` | number | Review count |
+| `editDescription` | textarea | Product description |
+| `editSpecs` | textarea | Technical specs |
+| `editFeatures` | textarea | Key features |
+| `editBoxContents` | textarea | Box contents |
+| `editWhyLove` | textarea | Selling points |
+
+### 3. URLs/Routes
+- `../vape-products/uwell/G4-LITE-data.html`
+- `../vape-products/uwell/G4-PRO-data.html`
+- `../vape-products/uwell/G4-PRO-KOKO-data.html`
+- `../assets/js/bootstrap.bundle.min.js`
+
+### 4. JavaScript API Calls
+- **None** — uses `FileReader` API locally; no fetch/AJAX calls visible
+
+### 5. Page Purpose
+- **Admin product management dashboard** — specifically editing UWELL Caliburn series pod kit inventory with a **two-step edit modal** (Step 1: inventory data; Step 2: frontend display data)===CHUNK_SEPARATOR===## Analysis: Chunk 45/146 - Vape Cluster Frontend
+
+### 1. HTML File Names
+- `manage-vaporesso.html`
+- `index.html`, `orders.html`, `manage-eliquids.html`, `manage-deals.html`
+- `manage-oxva.html`, `manage-voopoo.html`, `manage-uwell.html`, `manage-coils.html`
+- `manage-home.html`, `about-us.html`, `contact-us.html`, `add-product.html`
+- `VIBE-SE-data.html`, `X-ROS-4-data.html`, `X-ROS-4-NANO-data.html`, `X-ROS-5-data.html`
+
+### 2. Form Fields
+- `editModel`, `editSeries`, `editPrice`, `editStock`, `editQuantity`
+- `editFrontendTitle`, `editRating`, `editReviewCount`, `editDescription`
+- `editSpecs`, `editFeatures`, `editBoxContents`, `editWhyLove`
+- `editImageFile`, `editFrontendImageFile`, `editHoverImageFile`, `editFrontendHoverImageFile`
+
+### 3. URLs/Routes
+- `../vape-products/vaporesso/VIBE-SE-data.html`
+- `../vape-products/vaporesso/X-ROS-4-data.html`
+- `../vape-products/vaporesso/X-ROS-4-NANO-data.html`
+- `../vape-products/vaporesso/X-ROS-5-data.html`
+- `../index.html`, `../assets/img/web-logo.png`
+
+### 4. JavaScript API Calls
+- **None** — purely client-side DOM manipulation using `FileReader API`
+
+### 5. Page Purpose
+- **Admin inventory management** page for Vaporesso brand products with edit/delete/view actions and multi-step product editing modal===CHUNK_SEPARATOR===## Analysis: Chunk 46/146 - Vaporesso Admin Product Management Page
+
+### 1. HTML File Names
+- `X-ROS-5-MINI-data.html`
+- `X-ROS-5-NANO-data.html`
+- `X-ROS-PRO-data.html`
+
+### 2. Form Fields
+| Field ID | Type | Purpose |
+|---|---|---|
+| `editModel` | text | Product model name |
+| `editRowFeatures` | text | Product series/features |
+| `editPrice` | text | Product price |
+| `editStock` | select | In Stock / Out of Stock |
+| `editQuantity` | number | Stock quantity |
+| `editImageFile` | file | Main product image |
+| `editHoverImageFile` | file | Hover product image |
+| `editFrontendTitle` | text | SEO page title |
+| `editRating` | number | Product rating (1-5) |
+| `editReviewCount` | number | Review count |
+| `editDescription` | textarea | Product description |
+| `editSpecs` | textarea | Technical specs |
+| `editFeatures` | textarea | Key features |
+| `editBoxContents` | textarea | Box contents |
+| `editWhyLove` | textarea | Marketing copy |
+
+### 3. URLs/Routes
+- `../vape-products/vaporesso/X-ROS-5-MINI-data.html`
+- `../vape-products/vaporesso/X-ROS-5-NANO-data.html`
+- `../vape-products/vaporesso/X-ROS-PRO-data.html`
+
+### 4. JavaScript API Calls
+- **None** — only DOM manipulation, `FileReader` API, and Bootstrap Modal instantiation
+- External scripts: `admin-main.js`, `admin-variant-manager.js`
+
+### 5. Page Purpose
+**Admin product inventory management page** — specifically for Vaporesso XROS series devices; supports inline editing via a **2-step modal** (Step 1: inventory data; Step 2: frontend/SEO details + variant management)===CHUNK_SEPARATOR===## Analysis: Chunk 47/146 - Vape Cluster Frontend
+
+### 1. HTML File Names
+- `manage-voopoo.html` *(current page)*
+- `index.html`, `orders.html`, `manage-eliquids.html`, `manage-deals.html`
+- `manage-oxva.html`, `manage-vaporesso.html`, `manage-uwell.html`, `manage-coils.html`
+- `manage-home.html`, `about-us.html`, `contact-us.html`, `add-product.html`
+- `../index.html`
+
+### 2. Form Fields
+- `editModel`, `editRowFeatures`, `editPrice`, `editStock`, `editQuantity`
+- `editFrontendTitle`, `editRating`, `editReviewCount`, `editDescription`
+- `editSpecs`, `editFeatures`, `editBoxContents`, `editWhyLove`
+- `editImageFile`, `editFrontendImageFile`, `editHoverImageFile`, `editFrontendHoverImageFile`
+- Search input (placeholder: "Search Voopoo...")
+
+### 3. URLs/Routes
+- `../vape-products/voopoo/Argus-G2-Mini-data.html`
+- `../vape-products/voopoo/ARGUS-G3-data.html`
+- `../vape-products/voopoo/ARGUS-G3-MINI-data.html`
+- `../vape-products/voopoo/argus-z2-data.html`
+
+### 4. JavaScript API Calls
+- **None** — purely DOM manipulation, `FileReader` API, modal/form handling
+
+### 5. Page Purpose
+**Admin Inventory Management** — Manage/edit Voopoo vape products (CRUD interface with image hover preview, multi-step edit modal, stock management)===CHUNK_SEPARATOR===## Analysis of Frontend Code Chunk 48/146 - Vape Cluster
+
+### 1. HTML File Names
+- `V-MATE-MINI-data.html`
+- `V-MATE-PRO-data.html`
+- `V-THRU-PRO-data.html`
+
+### 2. Form Fields
+| Field ID | Type | Purpose |
+|----------|------|---------|
+| `editModel` | text | Product model name |
+| `editSeries` | text | Product series |
+| `editPrice` | text | Product price |
+| `editStock` | select | Stock status (In Stock/Out of Stock) |
+| `editQuantity` | number | Stock quantity |
+| `editImageFile` | file | Main product image |
+| `editHoverImageFile` | file | Hover product image |
+| `editFrontendTitle` | text | SEO page title |
+| `editRating` | number | Product rating |
+| `editReviewCount` | number | Review count |
+| `editDescription` | textarea | Product description |
+| `editSpecs` | textarea | Technical specs |
+| `editFeatures` | textarea | Key features |
+| `editBoxContents` | textarea | Box contents |
+| `editWhyLove` | textarea | Selling points |
+
+### 3. URLs/Routes
+- `../vape-products/voopoo/V-MATE-MINI-data.html`
+- `../vape-products/voopoo/V-MATE-PRO-data.html`
+- `../vape-products/voopoo/V-THRU-PRO-data.html`
+
+### 4. JavaScript API Calls
+- **None detected** — uses `FileReader` API locally; no fetch/AJAX calls visible
+
+### 5. Page Purpose
+- **Admin product management panel** — specifically editing VOOPOO V-Series pod system products with a **two-step modal form** (inventory info → frontend display details)===CHUNK_SEPARATOR===## Analysis: Frontend Code Chunk 49/146 - Vape Cluster
+
+### 1. HTML File Names
+- `orders.html` (admin)
+- `index.html` (admin dashboard)
+- `manage-eliquids.html`
+- `manage-deals.html`
+- `manage-oxva.html`
+- `manage-voopoo.html`
+- `manage-vaporesso.html`
+- `manage-uwell.html`
+- `manage-home.html`
+- `about-us.html`
+- `contact-us.html`
+- `add-product.html`
+- `../index.html` (main site)
+
+### 2. Form Fields
+- `editDealName`, `editDealCategory`, `editOrigPrice`, `editDealPrice`, `editDiscount`, `editDealStock`, `editDealQuantity`
+- `editDealFrontendTitle`, `editDealRating`, `editDealReviewCount`, `editDealDescription`, `editDealIncludes`
+- Image uploads: `editDealImageFile`, `editFrontendDealImageFile`, `editHoverDealImageFile`, `editFrontendHoverDealImageFile`
+
+### 3. URLs/Routes
+- `../assets/img/web-logo.png`
+- `../assets/css/bootstrap.min.css`
+- `../assets/js/bootstrap.bundle.min.js`
+- `js/admin-main.js`, `css/admin-style.css`
+
+### 4. JavaScript API Calls
+- **None** — purely client-side DOM manipulation using `FileReader` API for image previews
+
+### 5. Page Purposes
+- **orders.html** — Admin order management (view/filter/complete orders)
+- **test.js** — Deal editing modal logic (2-step form with image sync)===CHUNK_SEPARATOR===## Analysis: Vape Cluster Frontend Code Chunk 50/146
+
+### 1. HTML File Names
+- `colorful-disposables-data.html`
+- `luxury-dessert-blend-data.html`
+- `output.html` (generated by gen_html.py)
+- `index.html`, `E-Liquids.html`, `coils.html`, `deals.html`, `about.html`, `contact.html`, `login-signup.html`, `checkout.html`
+
+### 2. Form Fields
+- `editDealReviewCount`, `editDealDescription`, `editDealIncludes` (admin edit modal)
+- `editDealImageFile`, `editFrontendDealImageFile`, `editHoverDealImageFile`, `editFrontendHoverDealImageFile` (file inputs)
+- `productQty` (number input, quantity selector)
+- Newsletter: `email` input (placeholder: "Your email address")
+- Admin product tab inputs: product name, brand, current price, old price, product link, image URL, badge select, file upload
+
+### 3. URLs/Routes
+- `../index.html`, `../E-Liquids.html`, `../coils.html`, `../deals.html`, `../about.html`, `../contact.html`, `../login-signup.html`, `../checkout.html`
+- Newsletter `action="#"`
+
+### 4. JavaScript API Calls
+- `FileReader.readAsDataURL()` (image preview)
+- `updateQty()` (inline quantity function)
+- No fetch/AJAX calls detected
+
+### 5. Page Purposes
+- **Admin panel**: Deal editing, product tab management, image hover effects
+- **colorful-disposables-data.html**: Deal product detail page (disposables)
+- **luxury-dessert-blend-data.html**: Deal product detail page (e-liquid)
+- **gen_html.py**: Code generator for product tab HTML===CHUNK_SEPARATOR===## Analysis: Chunk 51/146 — Vape Cluster Frontend
+
+### 1. HTML File Names
+- `premium-flavor-duo-data.html`
+- `pro-mod-kit-data.html`
+- `../index.html`
+- `../about.html`
+- `../contact.html`
+- `../deals.html`
+- `../E-Liquids.html`
+- `../coils.html`
+- `../OXVA.html`
+- `../vaporesso.html`
+- `../login-signup.html`
+- `../checkout.html`
+- `../privacy-policy.html`
+- `../voopoo.html`
+- `../vaporesso.html`
+- `../UWELL.html`
+
+### 2. Form Fields
+- `type="email"` — newsletter subscription (placeholder: "Your email address")
+- `type="number"` id=`productQty` — quantity selector (min=1, default=1, readonly)
+
+### 3. URLs/Routes
+- `../checkout.html` — checkout page
+- `../login-signup.html` — auth page
+- `action="#"` — newsletter form (no backend)
+- `javascript:void(0)` — search/cart triggers
+
+### 4. JavaScript API Calls
+- **None** — no fetch/AJAX calls present
+- Local functions only: `updateQty(c)` — increments/decrements quantity input
+
+### 5. Page Purposes
+- **`premium-flavor-duo-data.html`** — Product detail page (bundle deal)
+- **`pro-mod-kit-data.html`** — Product detail page (vape mod deal)
+- Both are **deals/product detail pages** with cart sidebar, quantity selector, and related products section===CHUNK_SEPARATOR===## Analysis: Frontend Code Chunk 52/146 — Vape Cluster
+
+### 1. HTML File Names
+- `refill-refresh-pack-data.html`
+- `slim-pod-system-data.html`
+- `starter-cloud-bundle-data.html`
+- `index.html`
+- `E-Liquids.html`
+- `coils.html`
+- `deals.html`
+- `about.html`
+- `contact.html`
+- `login-signup.html`
+- `checkout.html`
+- `OXVA.html`
+- `vaporesso.html`
+
+### 2. Form Fields
+- `type="email"` — placeholder: "Your email address" (newsletter, required)
+- `type="number"` id="productQty" — quantity selector (min=1, readonly)
+
+### 3. URLs/Routes
+- `action="#"` — newsletter form (no backend)
+- `../checkout.html`
+- `../login-signup.html`
+- `../index.html`
+
+### 4. JavaScript API Calls
+- **None** — no fetch/AJAX calls
+- Local JS only: `updateQty()` function for quantity control
+- External scripts: `bootstrap.bundle.min.js`, `script.js`
+
+### 5. Page Purposes
+- **Product Detail Pages** — deals category (Refill Pack, Slim Pod, Starter Bundle)
+- **Newsletter Subscription** — footer email capture
+- **Cart Sidebar** — slide-out cart UI
+- **Relevant Products** — cross-sell section===CHUNK_SEPARATOR===## Chunk 53/146 Analysis — Vape Cluster
+
+### 1. HTML File Names
+- `tropical-fruit-juice-data.html`
+- `ultimate-power-pack-data.html`
+- `ultra-mesh-coils-data.html`
+- `index.html`, `about.html`, `contact.html`, `deals.html`
+- `E-Liquids.html`, `coils.html`, `OXVA.html`, `vaporesso.html`
+- `login-signup.html`, `checkout.html`
+
+### 2. Form Fields
+- `type="email"` — placeholder: *"Your email address"* (newsletter)
+- `type="number"` id=`productQty` — quantity selector
+
+### 3. URLs/Routes
+- `../index.html`, `../about.html`, `../contact.html`, `../deals.html`
+- `../E-Liquids.html`, `../coils.html`, `../OXVA.html`, `../vaporesso.html`
+- `../login-signup.html`, `../checkout.html`
+- `action="#"` (newsletter form — inactive)
+
+### 4. JavaScript API Calls
+- **None** — no fetch/AJAX calls present
+- Local JS: `bootstrap.bundle.min.js`, `script.js`, inline `updateQty()`
+
+### 5. Page Purposes
+- **Product detail pages** (3): Tropical Fruit Juice, Ultimate Power Pack, Ultra Mesh Coils
+- **Deal/sale promotions** with quantity selector and Add-to-Cart
+- **Cart sidebar** with checkout link
+- **Newsletter subscription** footer===CHUNK_SEPARATOR===## Analysis of Frontend Code Chunk 54/146
+
+### 1. HTML File Names
+- `OXVA-NEXLIM-GO-data.html`
+- `OXVA-ONEO-data.html`
+- `index.html`
+- `about.html`
+- `contact.html`
+- `deals.html`
+- `login-signup.html`
+- `checkout.html`
+- `E-Liquids.html`
+- `coils.html`
+- `OXVA.html`
+- `vaporesso.html`
+- `voopoo.html`
+- `UWELL.html`
+- `privacy-policy.html`
+
+### 2. Form Fields
+- `email` (newsletter subscription input)
+- `productQty` (number input, quantity selector)
+- `colorSelect` (dropdown/select)
+- `searchInput` (text, product search)
+
+### 3. URLs/Routes
+- `../../index.html`, `../../about.html`, `../../contact.html`, `../../checkout.html`
+- `../../login-signup.html`
+- `../../privacy-policy.html`
+- `../../E-Liquids.html`, `../../coils.html`, `../../OXVA.html`, `../../vaporesso.html`, `../../UWELL.html`
+- `../../voopoo.html`, `form action="#"`
+
+### 4. JavaScript API Calls
+- **None** — no fetch/AJAX calls found; JS is limited to `updateQty()` function and DOM manipulation
+
+### 5. Page Purposes
+- **OXVA-NEXLIM-GO-data.html** — Product detail page (OXVA Nexlim Go Pod Kit)
+- **OXVA-ONEO-data.html** — Product detail page (OXVA Oneo 40W)
+- **checkout.html** — Checkout/payment page
+- **login-signup.html** — Authentication page
+- Cart sidebar — Shopping cart UI (client-side only)===CHUNK_SEPARATOR===## Analysis: Chunk 55/146 - Vape Cluster Frontend
+
+### 1. HTML File Names Found
+- `voopoo.html`, `vaporesso.html`, `UWELL.html`, `OXVA.html`
+- `E-Liquids.html`, `coils.html`, `about.html`, `contact.html`
+- `login-signup.html`, `checkout.html`, `index.html`
+- `privacy-policy.html`
+- `XLIM-PRO-data.html`, `OXVA-NEXLIM-GO-data.html`, `XLIM-GO-data.html`
+- `OXVA-XLIM-3-ULTRA-data.html` *(also starts as new page)*
+
+### 2. Form Fields
+- `type="email"` — newsletter subscription (placeholder: "Your email address")
+- `type="number"` id=`productQty` — quantity selector
+- `id="colorSelect"` — dropdown (color selection)
+- `id="searchInput"` — product search text input
+
+### 3. URLs/Routes
+- `../../checkout.html`, `../../login-signup.html`, `../../index.html`
+- `javascript:void(0)` — search/cart triggers
+- `form action="#"` — newsletter form (no backend endpoint)
+
+### 4. JavaScript API Calls
+- **None visible** — JS loaded externally via `script.js` and `bootstrap.bundle.min.js`
+
+### 5. Page Purposes
+- **Product Detail Page** — OXVA Oneo 40W & OXVA Xlim 3 Ultra
+- **Navigation/Cart Sidebar** — shared component
+- **Newsletter Signup** — footer form===CHUNK_SEPARATOR===## Analysis: Chunk 56/146 — Vape Cluster Frontend
+
+### 1. HTML File Names
+- `XLIM-GO-2-data.html`
+- `V-MATE-MINI-data.html`
+- `argus-z2-data.html`
+- `X-ROS-5-NANO-data.html`
+- `index.html`, `about.html`, `contact.html`
+- `privacy-policy.html`, `login-signup.html`
+- `E-Liquids.html`, `coils.html`, `checkout.html`
+- `voopoo.html`, `vaporesso.html`, `UWELL.html`, `OXVA.html`
+
+### 2. Form Fields
+- `colorSelect` — dropdown (color variants)
+- `productQty` — number input (quantity)
+- Newsletter `email` input (placeholder: "Your email address")
+
+### 3. URLs/Routes
+- `../../checkout.html`
+- `../../login-signup.html`
+- `../../index.html`, `../../about.html`, `../../contact.html`
+- `../../E-Liquids.html`, `../../coils.html`
+- Footer social links: `#` (placeholder)
+
+### 4. JavaScript API Calls
+- `updateQty(-1/1)` — quantity button handler
+- `script.js` — cart/search logic (external)
+
+### 5. Page Purposes
+- **Current page:** Product detail — OXVA XLIM Go 2 Pod Kit
+- **Relevant sections:** Color/variant selection, add-to-cart, product specs, related products, newsletter signup===CHUNK_SEPARATOR===## Analysis: Chunk 57/146 - Vape Cluster Frontend
+
+### 1. HTML File Names
+- `XLIM-GO-2-data.html` (current page - OXVA section)
+- `XLIM-GO-data.html` (second page in chunk)
+- `V-MATE-MINI-data.html`
+- `argus-z2-data.html`
+- `X-ROS-5-NANO-data.html`
+- `index.html`, `about.html`, `contact.html`, `privacy-policy.html`
+- `E-Liquids.html`, `coils.html`, `checkout.html`, `login-signup.html`
+- `voopoo.html`, `vaporesso.html`, `UWELL.html`, `OXVA.html`
+
+### 2. Form Fields
+- `productQty` (number input, min=1, readonly)
+- `colorSelect` (dropdown - 11 color options)
+- `searchInput` (text, product search)
+- Newsletter `email` input (placeholder: "Your email address")
+
+### 3. URLs/Routes
+- `../../checkout.html`
+- `../../login-signup.html`
+- `../../oxva/XLIM-GO-2-data.html`
+- `../../voopoo/V-MATE-MINI-data.html`
+
+### 4. JavaScript API Calls
+- `updateQty(-1/+1)` - quantity control function
+- Cart trigger/overlay interactions
+- Search dropdown (`searchDropdown`, `searchResults`)
+- Thumbnail gallery injection via JS
+
+### 5. Page Purposes
+- **Product Detail Pages** (OXVA XLIM GO / XLIM GO 2)
+- **Cart Sidebar** - add/manage cart items
+- **Search Overlay** - product search
+- **Newsletter Signup** - email subscription (footer)===CHUNK_SEPARATOR===## Analysis: Chunk 58/146 - Vape Cluster Frontend
+
+### 1. HTML File Names
+- `XLIM-PRO-2-data.html`
+- `index.html`
+- `about.html`
+- `contact.html`
+- `privacy-policy.html`
+- `E-Liquids.html`
+- `coils.html`
+- `OXVA.html`
+- `vaporesso.html`
+- `UWELL.html`
+- `login-signup.html`
+- `checkout.html`
+
+### 2. Form Fields
+- `email` (newsletter, placeholder: "Your email address")
+- `colorSelect` (dropdown/select)
+- `productQty` (number input, quantity)
+- `searchInput` (text, product search)
+
+### 3. URLs/Routes
+- `../../index.html`, `../../about.html`, `../../contact.html`
+- `../../login-signup.html`, `../../checkout.html`
+- `../../E-Liquids.html`, `../../coils.html`, `../../OXVA.html`
+- `../../vaporesso.html`, `../../UWELL.html`
+- Newsletter form action: `#` (not implemented)
+
+### 4. JavaScript API Calls
+- None visible; JS handled via `script.js` and `bootstrap.bundle.min.js`
+- `updateQty()` function called inline
+
+### 5. Page Purpose
+- **Product detail page** for OXVA XLIM PRO 2 pod kit
+- Color variant selection, quantity control, add-to-cart
+- Cart sidebar, search overlay, relevant products display===CHUNK_SEPARATOR===## Analysis of Vape Cluster Frontend Code - Chunk 59/146
+
+### 1. HTML File Names
+- `XLIM-PRO-data.html` (current page)
+- `index.html`
+- `about.html`
+- `contact.html`
+- `privacy-policy.html`
+- `E-Liquids.html`
+- `coils.html`
+- `OXVA.html`
+- `vaporesso.html`
+- `UWELL.html`
+- `voopoo.html`
+- `login-signup.html`
+- `checkout.html`
+
+### 2. Form Fields
+- **Newsletter form:** `email` (type="email", placeholder="Your email address")
+- **Product form:** `colorSelect` (dropdown), `productQty` (number input, min=1)
+- **Search:** `searchInput` (text, autocomplete="off")
+
+### 3. URLs/Routes
+- `../../index.html`, `../../about.html`, `../../contact.html`
+- `../../checkout.html`, `../../login-signup.html`
+- `../../privacy-policy.html`
+- Newsletter `action="#"` (non-functional placeholder)
+
+### 4. JavaScript API Calls
+- **None visible** — JS deferred to `script.js` and `bootstrap.bundle.min.js`
+- `updateQty()` function called inline for quantity buttons
+
+### 5. Page Purpose
+- **Product Detail Page** — OXVA Xlim Pro 30W pod kit with color selection, quantity control, add-to-cart, cart sidebar, and search overlay===CHUNK_SEPARATOR===## Chunk 60/146 Analysis
+
+### 1. HTML File Names
+- `Oxva-data.html`
+- `Oxva-oneo-data.html`
+
+### 2. Form Fields
+- **Newsletter form:** `email` (type="email", placeholder="Your email address")
+- **Product selector:** `colorSelect` (dropdown - Coil Resistance: 0.4, 0.6, 0.8, 1.2)
+- **Quantity input:** `productQty` (type="number", min="1")
+
+### 3. URLs/Routes
+- `../../index.html`, `../../about.html`, `../../contact.html`
+- `../../login-signup.html`
+- `../../checkout.html`
+- `../../E-Liquids.html`, `../../coils.html`
+- `../../voopoo.html`, `../../vaporesso.html`, `../../UWELL.html`, `../../OXVA.html`
+- `../../privacy-policy.html`
+
+### 4. JavaScript API Calls
+- None detected (empty `<script>` block)
+- External JS: `bootstrap.bundle.min.js`, `script.js`
+
+### 5. Page Purposes
+- **Oxva-data.html** — OXVA coil product detail page (Rs. 1,000)
+- **Oxva-oneo-data.html** — OXVA Oneo coil product detail page
+- Both include: cart sidebar, search overlay, relevant products section, newsletter signup footer===CHUNK_SEPARATOR===## Analysis of Frontend Code Chunk 61/146 - Vape Cluster
+
+### 1. HTML File Names
+- `g3-LITE-data.html`
+- `index.html`
+- `about.html`
+- `contact.html`
+- `privacy-policy.html`
+- `E-Liquids.html`
+- `coils.html`
+- `OXVA.html`
+- `vaporesso.html`
+- `UWELL.html`
+- `voopoo.html`
+- `login-signup.html`
+- `checkout.html`
+
+### 2. Form Fields
+- `colorSelect` (dropdown - Coil Resistance: 0.4, 0.6, 0.8 / Color variants)
+- `productQty` (number input, default: 1, min: 1)
+- Email input (newsletter subscription)
+
+### 3. URLs/Routes
+- `../../index.html`, `../../about.html`, `../../contact.html`
+- `../../checkout.html`, `../../login-signup.html`
+- `../../E-Liquids.html`, `../../coils.html`, `../../OXVA.html`
+- `../../vaporesso.html`, `../../UWELL.html`, `../../voopoo.html`
+- Newsletter `action="#"` (non-functional)
+
+### 4. JavaScript API Calls
+- `updateQty(-1/+1)` (quantity control)
+- No fetch/AJAX calls visible
+
+### 5. Page Purposes
+- **Current pages:** Two product detail pages (OXVA Oneo Coils + Uwell Caliburn G3 Lite)
+- **Cart sidebar** with checkout flow
+- **Newsletter subscription** form
+- **Search overlay** with trending tags===CHUNK_SEPARATOR===## Analysis: Chunk 62/146 — Vape Cluster Frontend
+
+### 1. HTML File Names
+- `G3-PRO-data.html` (current page)
+- `V-MATE-MINI-data.html`
+- `argus-z2-data.html`
+- `XLIM-GO-2-data.html`
+- `X-ROS-5-NANO-data.html`
+- `index.html`, `about.html`, `contact.html`, `privacy-policy.html`
+- `E-Liquids.html`, `coils.html`, `OXVA.html`, `vaporesso.html`, `UWELL.html`
+- `login-signup.html`, `checkout.html`
+
+### 2. Form Fields
+- **Newsletter form:** `email` (type=email, placeholder: "Your email address")
+- **Product form:** `colorSelect` (dropdown), `productQty` (number input, default=1)
+
+### 3. URLs/Routes
+- `../../checkout.html`
+- `../../login-signup.html`
+- `../../voopoo/`, `../../oxva/`, `../../vaporesso/`, `../../uwell/` (product directories)
+
+### 4. JavaScript API Calls
+- **None visible** — JS limited to `bootstrap.bundle.min.js` and `script.js`; cart/search logic deferred to `script.js`
+
+### 5. Page Purposes
+- **G3-PRO-data.html** — Product detail page (Uwell Caliburn G3 Pro)
+- **Previous page** — Product detail (Caliburn G3 Lite)
+- Cart sidebar, search overlay, newsletter subscription, relevant product display===CHUNK_SEPARATOR===## Analysis: Frontend Code Chunk 63/146 - Vape Cluster
+
+### 1. HTML File Names Found
+- `G3-Pro-KOKO-data.html`
+- `G4-data.html`
+- `index.html`
+- `about.html`
+- `contact.html`
+- `privacy-policy.html`
+- `login-signup.html`
+- `checkout.html`
+- `E-Liquids.html`
+- `coils.html`
+- `voopoo.html`, `vaporesso.html`, `UWELL.html`, `OXVA.html`
+- `V-MATE-MINI-data.html`, `argus-z2-data.html`, `XLIM-GO-2-data.html`, `X-ROS-5-NANO-data.html`
+
+### 2. Form Fields
+- `email` (newsletter subscription, placeholder: "Your email address")
+- `colorSelect` (dropdown/select)
+- `productQty` (number input, min=1)
+- `searchInput` (text, search overlay)
+
+### 3. URLs/Routes
+- `../../checkout.html`
+- `../../login-signup.html`
+- `javascript:void(0)` (cart/search triggers)
+- Form action: `#` (newsletter)
+
+### 4. JavaScript API Calls
+- **None explicit** — JS loaded via `script.js` and `bootstrap.bundle.min.js`
+- Dynamic functions: `updateQty()`, thumbnail injection via JS
+
+### 5. Page Purposes
+- **Product Detail Page** — Uwell Caliburn G3 Pro Koko Pod Kit
+- **Newsletter Subscription** — footer form
+- **Cart Sidebar** — slide-out cart UI
+- **Search Overlay** — product search with trending tags===CHUNK_SEPARATOR===## Analysis: Chunk 64/146 - Vape Cluster Frontend
+
+### 1. HTML File Names
+- `G4-data.html` (Uwell Caliburn G4 product page)
+- `G4-LITE-data.html` (Uwell Caliburn G4 Lite product page)
+- `index.html`
+- `login-signup.html`
+- `checkout.html`
+- `voopoo/V-MATE-MINI-data.html`
+- `voopoo/argus-z2-data.html`
+- `oxva/XLIM-GO-2-data.html`
+- `vaporesso/X-ROS-5-NANO-data.html`
+- `about.html`, `contact.html`, `privacy-policy.html`
+- `voopoo.html`, `vaporesso.html`, `UWELL.html`, `OXVA.html`
+- `E-Liquids.html`, `coils.html`
+
+### 2. Form Fields
+- **Search:** `type="text"` id=`searchInput`
+- **Color selector:** `id="colorSelect"` (dropdown)
+- **Quantity:** `type="number"` id=`productQty`
+- **Newsletter:** `type="email"` placeholder="Your email address"
+
+### 3. URLs/Routes
+- `../../index.html`, `../../checkout.html`, `../../login-signup.html`
+- `../../assets/css/style.css`, `../../assets/js/script.js`
+- `javascript:void(0)` (cart/search triggers)
+
+### 4. JavaScript API Calls
+- None explicit; JS handles **cart, search, quantity, thumbnail gallery** via `script.js`
+- `updateQty(-1/1)` function calls
+- `onclick="updateQty()"` button handlers
+
+### 5. Page Purposes
+- **G4-data.html** — Product detail page (Uwell Caliburn G4)
+- **G4-LITE-data.html** — Product detail page (Uwell Caliburn G4 Lite)
+- Cart sidebar — **mini cart/checkout flow**
+- Search overlay — **product search**
+- Newsletter form — **email subscription**===CHUNK_SEPARATOR===## Analysis: Chunk 65/146 - Vape Cluster Frontend
+
+### 1. HTML File Names
+- `G4-LITE-data.html` (implied - current page)
+- `G4-PRO-data.html`
+- `V-MATE-MINI-data.html`
+- `argus-z2-data.html`
+- `XLIM-GO-2-data.html`
+- `X-ROS-5-NANO-data.html`
+- `login-signup.html`
+- `checkout.html`
+- `index.html`, `about.html`, `contact.html`, `privacy-policy.html`
+- `E-Liquids.html`, `coils.html`, `OXVA.html`, `vaporesso.html`, `UWELL.html`, `voopoo.html`
+
+### 2. Form Fields
+- `colorSelect` (dropdown - color selection)
+- `productQty` (number input - quantity)
+- Email input (newsletter subscription)
+
+### 3. URLs/Routes
+- `../../checkout.html`
+- `../../login-signup.html`
+- `../../index.html`, `../../about.html`, `../../contact.html`
+- `../../assets/img/devices/UWELL/G4-LITE/` (image paths)
+- `../../assets/img/devices/UWELL/G4-PRO/` (image paths)
+
+### 4. JavaScript API Calls
+- `updateQty(-1/1)` - quantity adjustment function
+- `../../assets/js/script.js` - main JS file
+- `../../assets/js/bootstrap.bundle.min.js`
+
+### 5. Page Purposes
+- **G4-LITE-data.html** - Product detail page (Uwell Caliburn G4 Lite)
+- **G4-PRO-data.html** - Product detail page (Uwell Caliburn G4 Pro)
+- Both feature: color selection, quantity control, add-to-cart, relevant products, newsletter signup===CHUNK_SEPARATOR===## Analysis: Chunk 66/146 — Vape Cluster Frontend
+
+---
+
+### 1. HTML File Names
+- `G4-PRO-KOKO-data.html`
+- `index.html`
+- `about.html`
+- `contact.html`
+- `privacy-policy.html`
+- `E-Liquids.html`
+- `coils.html`
+- `OXVA.html`
+- `vaporesso.html`
+- `UWELL.html`
+- `voopoo.html`
+- `login-signup.html`
+- `checkout.html`
+
+---
+
+### 2. Form Fields
+- **Newsletter form:** `email` (type="email", placeholder="Your email address")
+- **Search:** `text` (id="searchInput")
+- **Quantity:** `number` (id="productQty")
+- **Color selector:** `select` (id="colorSelect")
+
+---
+
+### 3. URLs/Routes
+- `../../index.html`, `../../about.html`, `../../contact.html`
+- `../../login-signup.html`
+- `../../checkout.html`
+- `../../E-Liquids.html`, `../../coils.html`, `../../UWELL.html`, `../../OXVA.html`, `../../vaporesso.html`, `../../voopoo.html`
+- Newsletter `action="#"` (no backend endpoint)
+
+---
+
+### 4. JavaScript API Calls
+- None visible; JS loaded via:
+  - `./assets/js/bootstrap.bundle.min.js`
+  - `./assets/js/script.js`
+
+---
+
+### 5. Page Purpose
+- **Product detail page** for *Uwell Caliburn G4 Pro KOKO Pod Kit*
+- Features: color selection, quantity control, add-to-cart, cart sidebar, product search, relevant products section===CHUNK_SEPARATOR===## Analysis of Frontend Code Chunk 67/146
+
+### 1. HTML File Names
+- `V-MATE-MINI-data.html`
+- `argus-z2-data.html`
+- `XLIM-GO-2-data.html`
+- `X-ROS-5-NANO-data.html`
+- `uwell-caliburn-data.html` *(current page)*
+- `index.html`
+- `about.html`
+- `contact.html`
+- `privacy-policy.html`
+- `E-Liquids.html`
+- `coils.html`
+- `OXVA.html`
+- `vaporesso.html`
+- `UWELL.html`
+- `voopoo.html`
+- `login-signup.html`
+- `checkout.html`
+
+### 2. Form Fields
+- `email` (newsletter input, placeholder: "Your email address")
+- `colorSelect` (dropdown — coil resistance: 0.4, 0.6, 0.9, 1.2)
+- `productQty` (number input, quantity selector)
+- `searchInput` (text, product search)
+
+### 3. URLs/Routes
+- `../../checkout.html`
+- `../../login-signup.html`
+- `javascript:void(0)` (cart/search triggers)
+
+### 4. JavaScript API Calls
+- **None detected** (empty `<script>` block; JS deferred to `script.js`)
+
+### 5. Page Purpose
+- **Product detail page** for Uwell Caliburn Coils
+- Features: image gallery, resistance selector, quantity picker, Add to Cart, relevant products, newsletter signup===CHUNK_SEPARATOR===## Analysis of Frontend Code Chunk 68/146 - Vape Cluster
+
+### 1. HTML File Names Found
+- `uwell-caliburn-GPP-replacement-data.html`
+- `VIBE-SE-data.html`
+- `index.html`, `about.html`, `contact.html`, `privacy-policy.html`
+- `E-Liquids.html`, `coils.html`, `OXVA.html`, `vaporesso.html`, `UWELL.html`
+- `voopoo.html`, `checkout.html`, `login-signup.html`
+
+### 2. Form Fields
+- **Email** (`type="email"`, placeholder: "Your email address") — Newsletter form
+- **Text** (`id="searchInput"`, placeholder: "Search for products, brands...") — Search
+- **Number** (`id="productQty"`, value="1", min="1") — Quantity selector
+- **Select** (`id="colorSelect"`) — Coil Resistance (0.4, 0.6, 0.9, 1.2 ohm options)
+
+### 3. URLs/Routes
+- `../../checkout.html`, `../../login-signup.html`
+- `../../index.html`, `../../about.html`, `../../contact.html`
+- Newsletter form action: `#` (non-functional)
+
+### 4. JavaScript API Calls
+- **None detected** — empty `<script>` block; functionality deferred to `script.js`
+
+### 5. Page Purposes
+- **Product Detail Pages** — Uwell Caliburn GPP coils & Vaporesso Vibe SE
+- **Footer/Navigation** — Shared component across pages
+- **Cart Sidebar** — Client-side cart UI
+- **Search Overlay** — Product search interface===CHUNK_SEPARATOR===## Analysis: Chunk 69/146 - Vape Cluster Frontend
+
+### 1. HTML File Names
+- `VIBE-SE-data.html` (implied from context)
+- `X-ROS-4-data.html` (explicitly labeled)
+- `about.html`
+- `contact.html`
+- `login-signup.html`
+- `checkout.html`
+- `index.html`
+- `privacy-policy.html`
+- `E-Liquids.html`
+- `coils.html`
+- `OXVA.html`
+- `vaporesso.html`
+- `UWELL.html`
+- `voopoo.html`
+- `V-MATE-MINI-data.html`
+- `argus-z2-data.html`
+- `XLIM-GO-2-data.html`
+- `X-ROS-5-NANO-data.html`
+
+### 2. Form Fields
+- `searchInput` (text) — product search
+- `colorSelect` (dropdown) — color variant selection
+- `productQty` (number) — quantity selector
+- `email` (newsletter subscription input)
+
+### 3. URLs/Routes
+- `../../checkout.html`
+- `../../login-signup.html`
+- `../../about.html`, `../../contact.html`, `../../index.html`
+
+### 4. JavaScript API Calls
+- **None explicit** — JS handled via `script.js` and `bootstrap.bundle.min.js`
+- `updateQty()` function called inline
+
+### 5. Page Purposes
+- **Product Detail Pages** (Vibe SE, Xros 4)
+- **Cart Sidebar** — add/manage items
+- **Search Overlay** — product search
+- **Newsletter Signup** — email subscription footer===CHUNK_SEPARATOR===## Analysis: Chunk 70/146 - Vape Cluster Frontend
+
+### 1. HTML File Names
+- `X-ROS-4-NANO-data.html`
+- `V-MATE-MINI-data.html`
+- `argus-z2-data.html`
+- `XLIM-GO-2-data.html`
+- `X-ROS-5-NANO-data.html`
+- `index.html`, `about.html`, `contact.html`, `privacy-policy.html`
+- `login-signup.html`, `checkout.html`
+- `E-Liquids.html`, `coils.html`, `voopoo.html`, `vaporesso.html`, `UWELL.html`, `OXVA.html`
+
+### 2. Form Fields
+- `email` (newsletter input, placeholder: "Your email address")
+- `productQty` (number input, quantity selector)
+- `colorSelect` (dropdown/select)
+- `searchInput` (text, product search)
+
+### 3. URLs/Routes
+- `../../checkout.html`
+- `../../login-signup.html`
+- `../../voopoo/`, `../../vaporesso/`, `../../oxva/` (product paths)
+- `e-liquids.html` (internal article link)
+
+### 4. JavaScript API Calls
+- `updateQty(-1/1)` — quantity control
+- No fetch/AJAX calls visible in this chunk
+
+### 5. Page Purposes
+- **Product Detail Page** (Vaporesso XROS 4 / XROS 4 Nano)
+- **Add-to-Cart** functionality
+- **Newsletter Subscription** form
+- **Product Search** overlay===CHUNK_SEPARATOR===## Analysis: Chunk 71/146 - Vape Cluster Frontend
+
+### 1. HTML File Names
+- `voopoo/argus-z2-data.html`
+- `oxva/XLIM-GO-2-data.html`
+- `vaporesso/X-ROS-5-NANO-data.html`
+- `vaporesso/X-ROS-5-data.html`
+- `voopoo/V-MATE-MINI-data.html`
+- `index.html`
+- `about.html`, `contact.html`, `privacy-policy.html`
+- `E-Liquids.html`, `coils.html`
+- `voopoo.html`, `vaporesso.html`, `UWELL.html`, `OXVA.html`
+- `login-signup.html`
+- `checkout.html`
+
+### 2. Form Fields
+- `email` (newsletter, placeholder: "Your email address")
+- `colorSelect` (dropdown/select)
+- `productQty` (number input, default: 1)
+- `searchInput` (text, product search)
+
+### 3. URLs/Routes
+- `../../checkout.html`
+- `../../login-signup.html`
+- Newsletter form `action="#"` (inactive)
+
+### 4. JavaScript API Calls
+- None visible — DOM manipulation only (`updateQty()`, thumbnail injection, cart/search triggers)
+
+### 5. Page Purpose
+- **Product detail page** for Vaporesso Xros 5 Pod System
+- Features: color selection, quantity control, add-to-cart, cart sidebar, search overlay, relevant products section===CHUNK_SEPARATOR===## Analysis: Chunk 72/146 - Vaporesso XROS 5 Mini Product Page
+
+### 1. HTML File Names
+- `X-ROS-5-MINI-data.html` (current page)
+- `index.html`, `about.html`, `contact.html`, `privacy-policy.html`
+- `E-Liquids.html`, `coils.html`, `OXVA.html`, `vaporesso.html`, `UWELL.html`
+- `voopoo.html`, `vaporesso.html`, `login-signup.html`, `checkout.html`
+- `V-MATE-MINI-data.html`, `argus-z2-data.html`, `XLIM-GO-2-data.html`, `X-ROS-5-NANO-data.html`
+
+### 2. Form Fields
+- `email` (newsletter, placeholder: "Your email address")
+- `colorSelect` (dropdown/select)
+- `productQty` (number input, min=1, default=1)
+- `searchInput` (text, search overlay)
+
+### 3. URLs/Routes
+- `../../checkout.html`
+- `../../login-signup.html`
+- `../../voopoo/`, `../../oxva/`, `../../vaporesso/` (product subdirectories)
+
+### 4. JavaScript API Calls
+- No fetch/AJAX calls visible; JS limited to `updateQty()`, cart/search DOM manipulation via `script.js`
+
+### 5. Page Purpose
+- **Product detail page** — Vaporesso XROS 5 Mini pod system with color selection, quantity control, add-to-cart, and relevant product recommendations===CHUNK_SEPARATOR===## Analysis: Chunk 73/146 - Vape Cluster Frontend
+
+### 1. HTML File Names Found
+- `X-ROS-5-NANO-data.html`
+- `X-ROS-PRO-data.html`
+- `V-MATE-MINI-data.html`
+- `argus-z2-data.html`
+- `XLIM-GO-2-data.html`
+- `index.html`
+- `login-signup.html`
+- `checkout.html`
+- `about.html`, `contact.html`, `privacy-policy.html`
+- `voopoo.html`, `vaporesso.html`, `UWELL.html`, `OXVA.html`
+- `E-Liquids.html`, `coils.html`
+
+### 2. Form Fields
+- **Newsletter form:** `email` (type=email, placeholder="Your email address")
+- **Product:** `colorSelect` (dropdown), `productQty` (number input, min=1)
+
+### 3. URLs/Routes
+- `../../index.html`, `../../checkout.html`, `../../login-signup.html`
+- `../../voopoo/`, `../../vaporesso/`, `../../oxva/` (product subdirectories)
+- Newsletter form `action="#"` (non-functional)
+
+### 4. JavaScript API Calls
+- No fetch/AJAX calls visible
+- JS files: `bootstrap.bundle.min.js`, `script.js`
+- Functions: `updateQty(-1/1)` (quantity control)
+
+### 5. Page Purpose
+- **Product detail page** for Vaporesso Xros 5 Nano & Xros Pro
+- Color variant selection with dynamic image swapping
+- Cart sidebar integration
+- Search overlay with trending tags===CHUNK_SEPARATOR===## Analysis: Vape Cluster Frontend Chunk 74/146
+
+### 1. HTML File Names
+- `E-Liquids.html`
+- `coils.html`
+- `about.html`
+- `contact.html`
+- `login-signup.html`
+- `checkout.html`
+- `index.html`
+- `privacy-policy.html`
+- `voopoo.html`, `vaporesso.html`, `UWELL.html`, `OXVA.html`
+- `V-MATE-MINI-data.html`, `argus-z2-data.html`, `XLIM-GO-2-data.html`, `X-ROS-5-NANO-data.html`
+- `vaporesso-data.html`
+
+### 2. Form Fields
+- `searchInput` (text) — product search
+- `productQty` (number) — quantity selector
+- `colorSelect` (select) — color/coil resistance picker
+- Email input (newsletter, type="email")
+
+### 3. URLs/Routes
+- `../../checkout.html`
+- `../../login-signup.html`
+- `../../voopoo/`, `../../vaporesso/`, `../../oxva/` product paths
+- `action="#"` (newsletter form)
+
+### 4. JavaScript API Calls
+- None explicit; JS handled via `script.js` and `bootstrap.bundle.min.js`
+- Dynamic thumbnail injection via JS (`thumbnailGallery`)
+
+### 5. Page Purposes
+- **Product detail page** — Vaporesso Xros Pro Pod System
+- **Product detail page** — Vaporesso Coils (`vaporesso-data.html`)
+- **Cart sidebar** — add/view cart
+- **Search overlay** — product search
+- **Newsletter** — email subscription===CHUNK_SEPARATOR===## Analysis: Vape Cluster Frontend Code Chunk 75/146
+
+### 1. HTML File Names
+- `Argus-G2-Mini-data.html`
+- `index.html`
+- `about.html`
+- `contact.html`
+- `privacy-policy.html`
+- `E-Liquids.html`
+- `coils.html`
+- `OXVA.html`
+- `vaporesso.html`
+- `UWELL.html`
+- `voopoo.html`
+- `login-signup.html`
+- `checkout.html`
+- `V-MATE-MINI-data.html`
+
+### 2. Form Fields
+- `type="email"` — newsletter subscription (placeholder: "Your email address")
+- `type="number"` id=`productQty` — quantity selector (min=1, default=1)
+- `type="text"` id=`searchInput` — product search
+
+### 3. URLs/Routes
+- `../../index.html`, `../../about.html`, `../../contact.html`
+- `../../privacy-policy.html`, `../../E-Liquids.html`, `../../coils.html`
+- `../../login-signup.html`, `../../checkout.html`
+- `../../voopoo.html`, `../../vaporesso.html`, `../../UWELL.html`, `../../OXVA.html`
+- `form action="#"` — newsletter (no backend)
+
+### 4. JavaScript API Calls
+- `updateQty(-1/1)` — quantity control function
+- `onclick` handlers on quantity buttons
+- Scripts: `bootstrap.bundle.min.js`, `script.js`
+- **No fetch/AJAX API calls detected**
+
+### 5. Page Purposes
+- **Product Detail Page** — Vaporesso Coils & VOOPOO Argus G2 Mini (primary)
+- **E-commerce cart sidebar** — add to cart, subtotal, checkout flow
+- **Search overlay** — product search with trending tags
+- **Newsletter signup** — footer email subscription===CHUNK_SEPARATOR===## Analysis of Frontend Code Chunk 76/146
+
+### 1. HTML File Names Found
+- `ARGUS-G3-data.html`
+- `V-MATE-MINI-data.html`
+- `argus-z2-data.html`
+- `XLIM-GO-2-data.html`
+- `X-ROS-5-NANO-data.html`
+- `index.html`, `about.html`, `contact.html`, `privacy-policy.html`
+- `E-Liquids.html`, `coils.html`, `OXVA.html`, `vaporesso.html`, `UWELL.html`
+- `login-signup.html`, `checkout.html`
+
+### 2. Form Fields
+- `email` (newsletter input, placeholder: "Your email address")
+- `colorSelect` (dropdown/select)
+- `productQty` (number input, quantity selector)
+- `searchInput` (text, product search)
+
+### 3. URLs/Routes
+- `../../checkout.html`
+- `../../login-signup.html`
+- `../../voopoo.html`, `../../vaporesso.html`, `../../UWELL.html`, `../../OXVA.html`
+- Newsletter form `action="#"` (non-functional)
+
+### 4. JavaScript API Calls
+- None visible; JS handled via `script.js` and `bootstrap.bundle.min.js`
+- `updateQty()` function (inline onclick)
+
+### 5. Page Purposes
+- **ARGUS-G3-data.html** — Product detail page (vape device)
+- **Relevant products section** — Cross-sell/upsell display
+- **Footer form** — Newsletter subscription
+- **Cart sidebar** — Shopping cart UI with checkout flow===CHUNK_SEPARATOR===## Analysis: Chunk 77/146 - Vape Product Detail Pages
+
+### 1. HTML File Names
+- `ARGUS-G3-MINI-data.html`
+- `argus-z2-data.html`
+- `V-MATE-MINI-data.html`
+- `XLIM-GO-2-data.html`
+- `X-ROS-5-NANO-data.html`
+- `index.html`, `about.html`, `contact.html`, `privacy-policy.html`
+- `E-Liquids.html`, `coils.html`, `OXVA.html`, `vaporesso.html`, `UWELL.html`, `voopoo.html`
+- `login-signup.html`, `checkout.html`
+
+### 2. Form Fields
+- **Newsletter:** `email` (placeholder: "Your email address"), submit button
+- **Search:** `text` input (`id="searchInput"`)
+- **Product:** `colorSelect` (dropdown), `productQty` (number input)
+
+### 3. URLs/Routes
+- `../../checkout.html`
+- `../../login-signup.html`
+- `../../voopoo/V-MATE-MINI-data.html`, `argus-z2-data.html`
+- `../../oxva/XLIM-GO-2-data.html`
+- `../../vaporesso/X-ROS-5-NANO-data.html`
+
+### 4. JavaScript API Calls
+- No fetch/AJAX calls visible; functionality handled via `script.js`
+- `updateQty()` function called inline
+
+### 5. Page Purposes
+- **Product detail pages** (Argus G3 Mini, Argus Z2)
+- **Cart sidebar** with checkout flow
+- **Search overlay** with trending tags
+- **Newsletter subscription** footer===CHUNK_SEPARATOR===## Analysis: Chunk 78/146 - Vape Cluster Frontend
+
+### 1. HTML File Names
+- `vaporesso.html`, `UWELL.html`, `OXVA.html`, `voopoo.html`
+- `E-Liquids.html`, `coils.html`, `about.html`, `contact.html`
+- `login-signup.html`, `checkout.html`, `index.html`, `privacy-policy.html`
+- **Product pages:** `ARGUS-Z2-data.html` (implied), `V-MATE-MINI-data.html`
+
+### 2. Form Fields
+- **Search:** `input[type="text"]` id=`searchInput`
+- **Quantity:** `input[type="number"]` id=`productQty`
+- **Color:** `select` id=`colorSelect` (8 options: Lake Blue, Lavender, Mint Blue, Moss Green, Rose Pink, Shell White, Silk Black, Sunlight Orange)
+- **Newsletter:** `input[type="email"]` placeholder="Your email address"
+
+### 3. URLs/Routes
+- `../../checkout.html`, `../../login-signup.html`, `../../index.html`
+- `javascript:void(0)` (search/cart triggers)
+
+### 4. JavaScript API Calls
+- None explicit; JS functions: `updateQty()`, thumbnail injection via JS
+- Scripts: `bootstrap.bundle.min.js`, `script.js`
+
+### 5. Page Purposes
+- **ARGUS-Z2-data.html** — Product detail page (Voopoo Argus Z2, Rs.3,900)
+- **V-MATE-MINI-data.html** — Product detail page (Voopoo VMate Mini, Rs.3,499)
+- Both include cart sidebar, search overlay, relevant products section===CHUNK_SEPARATOR===## Analysis: Chunk 79/146 - Vape Cluster Frontend
+
+### 1. HTML File Names
+- `V-MATE-MINI-data.html`
+- `V-MATE-PRO-data.html`
+- `argus-z2-data.html`
+- `XLIM-GO-2-data.html`
+- `X-ROS-5-NANO-data.html`
+- `index.html`
+- `about.html`
+- `contact.html`
+- `privacy-policy.html`
+- `E-Liquids.html`
+- `coils.html`
+- `login-signup.html`
+- `checkout.html`
+- `voopoo.html`, `vaporesso.html`, `UWELL.html`, `OXVA.html`
+
+### 2. Form Fields
+- `colorSelect` (dropdown) — color variants
+- `productQty` (number input) — quantity selector
+- Newsletter: `email` input + submit button
+
+### 3. URLs/Routes
+- `../../checkout.html`
+- `../../login-signup.html`
+- `../../voopoo/[product]-data.html`
+- `../../oxva/XLIM-GO-2-data.html`
+- `../../vaporesso/X-ROS-5-NANO-data.html`
+
+### 4. JavaScript API Calls
+- `updateQty(-1/1)` — quantity control
+- `script.js` — cart/search logic (badge-count, cart sidebar)
+
+### 5. Page Purpose
+- **Product detail page** for VOOPOO V-MATE MINI & V-MATE PRO with color selection, cart functionality, and related products===CHUNK_SEPARATOR===## Analysis: Chunk 80/146 - Vape Cluster Frontend
+
+### 1. HTML File Names
+- `V-THRU-PRO-data.html` (current page)
+- `V-MATE-MINI-data.html`
+- `argus-z2-data.html`
+- `XLIM-GO-2-data.html`
+- `X-ROS-5-NANO-data.html`
+- `index.html`, `about.html`, `contact.html`, `privacy-policy.html`
+- `E-Liquids.html`, `coils.html`, `OXVA.html`, `vaporesso.html`, `UWELL.html`
+- `login-signup.html`, `checkout.html`
+- `voopoo.html`, `UWELL.html`
+
+### 2. Form Fields
+- **Newsletter:** `email` (type="email", placeholder="Your email address")
+- **Product:** `colorSelect` (dropdown), `productQty` (number input)
+
+### 3. URLs/Routes
+- `../../checkout.html`, `../../login-signup.html`
+- Product pages under `/voopoo/`, `/oxva/`, `/vaporesso/`
+- Newsletter `action="#"` (placeholder)
+
+### 4. JavaScript API Calls
+- None visible; JS handled via `script.js` and `bootstrap.bundle.min.js`
+- DOM functions: `updateQty()`, cart/search triggers (event-based)
+
+### 5. Page Purpose
+- **Product Detail Page** — Voopoo V-THRU PRO pod system
+- Features: color variant selector, quantity picker, Add to Cart, cart sidebar, search overlay, relevant products section===CHUNK_SEPARATOR===# Frontend Code Analysis - Chunk 81/146 (Vape Cluster)
+
+## 1. HTML File Names
+- `Voopoo-data.html`
+- `Drip-Down-Apple-Ice-data.html`
+- `index.html`
+- `login-signup.html`
+- `checkout.html`
+- `about.html`
+- `contact.html`
+- `privacy-policy.html`
+- `voopoo.html`
+- `vaporesso.html`
+- `UWELL.html`
+- `OXVA.html`
+- `E-Liquids.html`
+- `coils.html`
+
+## 2. Form Fields
+- `type="email"` — Newsletter subscription (placeholder: "Your email address")
+- `type="number"` id="productQty" — Quantity selector
+- `type="text"` id="searchInput" — Product search
+- `id="colorSelect"` (select) — Coil resistance options (0.15, 0.2, 0.3, 0.6)
+
+## 3. URLs/Routes
+- `../../index.html`, `../index.html`
+- `../../checkout.html`
+- `../../login-signup.html`, `../login-signup.html`
+- `../../assets/js/bootstrap.bundle.min.js`
+- `../../assets/js/script.js`
+- Newsletter form `action="#"`
+
+## 4. JavaScript API Calls
+- None explicit; JS handled via external `script.js`
+- DOM functions: `updateQty()`, thumbnail injection, cart management
+
+## 5. Page Purposes
+- **Voopoo-data.html** — Product detail page (VooPoo coils)
+- **Drip-Down-Apple-Ice-data.html** — Product detail page (E-liquid)
+- Footer/navbar — Shared layout components with newsletter subscription===CHUNK_SEPARATOR===## Analysis: Chunk 82/146 - Vape Cluster Frontend
+
+### 1. HTML File Names
+- `Drip-Down-Apple-Ice-data.html` (implied from first product)
+- `Drip-Down-Apple-Peach-Ice-Saltnic-25mg-data.html`
+- `checkout.html`
+- `login-signup.html`
+- `index.html`, `about.html`, `contact.html`, `privacy-policy.html`
+- `E-Liquids.html`, `coils.html`, `OXVA.html`, `vaporesso.html`, `UWELL.html`, `voopoo.html`
+
+### 2. Form Fields
+- `colorSelect` (select) — Nicotine Strength (30mg/50mg options)
+- `productQty` (number input) — Quantity, default=1, min=1
+- Email input — Newsletter subscription (`placeholder="Your email address"`)
+
+### 3. URLs/Routes
+- `../checkout.html`
+- `../login-signup.html`
+- `../index.html`, `../about.html`, `../contact.html`, `../privacy-policy.html`
+- `../E-Liquids.html`, `../coils.html`, `../OXVA.html`, `../vaporesso.html`, `../UWELL.html`
+- Newsletter form `action="#"` (no backend endpoint)
+
+### 4. JavaScript API Calls
+- **None detected** — empty `<script>` tags, JS deferred to `script.js`
+- Functions referenced: `updateQty(-1)`, `updateQty(1)`
+
+### 5. Page Purposes
+- **Product Detail Pages** — E-liquid product pages (Drip Down Apple Ice, Apple Peach Ice Saltnic)
+- **Cart Sidebar** — Add-to-cart, subtotal display
+- **Newsletter Signup** — Footer email subscription
+- **Navigation/Search** — Product search overlay with trending tags===CHUNK_SEPARATOR===## Analysis: Chunk 83/146 — Vape Cluster Frontend
+
+### 1. HTML File Names
+- `Drip-Down-Cola-Ice-1-data.html`
+- `Drip-Down-E-juice-Passion-Lychee-Ice-100ml-6mg-data.html`
+- `index.html`, `about.html`, `contact.html`, `privacy-policy.html`
+- `E-Liquids.html`, `coils.html`, `OXVA.html`, `vaporesso.html`, `UWELL.html`
+- `voopoo.html`, `login-signup.html`, `checkout.html`
+
+### 2. Form Fields
+- `email` (newsletter subscription, placeholder: "Your email address")
+- `colorSelect` (dropdown — Nicotine Strength: 30mg, 50mg)
+- `productQty` (number input, quantity selector)
+
+### 3. URLs/Routes
+- `../index.html`, `../about.html`, `../contact.html`, `../privacy-policy.html`
+- `../checkout.html`, `../login-signup.html`
+- `../E-Liquids.html`, `../coils.html`, `../OXVA.html`, `../vaporesso.html`, `../UWELL.html`, `../voopoo.html`
+- `form action="#"` (newsletter — no backend connected)
+
+### 4. JavaScript API Calls
+- **None found** — empty `<script>` block; relies on `script.js` and `bootstrap.bundle.min.js`
+
+### 5. Page Purposes
+- **Product detail pages** — E-liquid product pages (Cola Ice, Passion Lychee Ice)
+- **Cart sidebar** — add/view cart, checkout link
+- **Search overlay** — product search with trending tags
+- **Newsletter signup** — email subscription (static/unconnected)===CHUNK_SEPARATOR===## Analysis: Vape Cluster Frontend - Chunk 84/146
+
+### 1. HTML File Names
+- `Drip-Down-E-Juice-Passion-Lychee-Ice-100ml-6mg-data.html` (implied from first product)
+- `Drip-Down-Edition-Apple-Peach-ice-100ml-3mg-data.html`
+- `index.html`, `login-signup.html`, `checkout.html`
+- `voopoo.html`, `vaporesso.html`, `UWELL.html`, `OXVA.html`
+- `E-Liquids.html`, `coils.html`, `about.html`, `contact.html`, `privacy-policy.html`
+
+### 2. Form Fields
+- `searchInput` (text) — product search
+- `colorSelect` (select) — Nicotine Strength (30mg, 50mg)
+- `productQty` (number) — quantity selector
+- Newsletter: `email` input (placeholder: "Your email address")
+
+### 3. URLs/Routes
+- `../checkout.html`, `../login-signup.html`, `../index.html`
+- Newsletter form `action="#"` (non-functional)
+
+### 4. JavaScript API Calls
+- `updateQty(-1/+1)` — quantity function
+- No fetch/AJAX calls visible; JS deferred to `../assets/js/script.js`
+
+### 5. Page Purposes
+- **Product Detail Pages** — Two Drip Down E-Liquid products (Passion Lychee Ice, Apple Peach Ice)
+- **Cart sidebar** — add/view cart
+- **Search overlay** — product search UI===CHUNK_SEPARATOR===## Chunk 85/146 Analysis
+
+### 1. HTML File Names
+- `drip-down-edition-grape-apple-ice-100ml-3mg-data.html`
+- `../index.html`
+- `../about.html`
+- `../contact.html`
+- `../privacy-policy.html`
+- `../E-Liquids.html`
+- `../coils.html`
+- `../OXVA.html`
+- `../vaporesso.html`
+- `../UWELL.html`
+- `../voopoo.html`
+- `../login-signup.html`
+- `../checkout.html`
+
+### 2. Form Fields
+- `email` (newsletter input, placeholder: "Your email address")
+- `colorSelect` (dropdown: Nicotine Strength — 30mg, 50mg)
+- `productQty` (number input, quantity selector)
+- `searchInput` (text, product search)
+
+### 3. URLs/Routes
+- `../checkout.html`
+- `../login-signup.html`
+- `form action="#"` (newsletter — inactive)
+
+### 4. JavaScript API Calls
+- **None visible** — empty `<script>` block present
+
+### 5. Page Purpose
+- **Product Detail Page** — Drip Down Edition Grape Apple Ice 100ml e-liquid
+- Features: variant selection, quantity control, add-to-cart, relevant products, newsletter signup===CHUNK_SEPARATOR===## Analysis of Frontend Code Chunk 86/146
+
+### 1. HTML File Names
+- `drip-down-edition-kiwi-dragon-fruit-ice-100ml-0mg-data.html`
+- `drip-down-edition-lychee-blueberry-ice-100ml-3mg-data.html`
+- `privacy-policy.html`, `index.html`, `login-signup.html`, `checkout.html`
+- `E-Liquids.html`, `coils.html`, `about.html`, `contact.html`
+- `voopoo.html`, `vaporesso.html`, `UWELL.html`, `OXVA.html`
+
+### 2. Form Fields
+- **Newsletter:** `email` (placeholder: "Your email address"), submit button "Subscribe"
+- **Search:** `text` input (`id="searchInput"`, placeholder: "Search for products, brands...")
+- **Product:** `number` input (`id="productQty"`, quantity selector)
+- **Nicotine Strength:** `select` (`id="colorSelect"`) — options: 30mg, 50mg
+
+### 3. URLs/Routes
+- `../checkout.html`, `../login-signup.html`, `../index.html`
+- `form action="#"` (newsletter — no backend)
+- `javascript:void(0)` (cart/search triggers)
+
+### 4. JavaScript API Calls
+- **None explicit** — JS loaded via `script.js` and `bootstrap.bundle.min.js`
+- Cart/search functionality handled in external `script.js`
+
+### 5. Page Purposes
+- **Product detail pages** — E-liquid product listings (Drip Down Edition flavors)
+- **Footer** — Newsletter subscription, contact info
+- **Navigation** — Category browsing, cart sidebar, product search===CHUNK_SEPARATOR===## Analysis of Frontend Code Chunk 87/146 - Vape Cluster
+
+### 1. HTML File Names
+- `drip-down-edition-lychee-blueberry-ice-100ml-3mg-data.html` (implied from first section)
+- `drip-down-edition-mango-guava-ice-100ml-0mg-data.html`
+- `checkout.html`
+- `login-signup.html`
+- `index.html`, `about.html`, `contact.html`, `privacy-policy.html`
+- `E-Liquids.html`, `coils.html`, `OXVA.html`, `vaporesso.html`, `UWELL.html`, `voopoo.html`
+
+### 2. Form Fields
+- `email` (newsletter subscription input)
+- `colorSelect` (Nicotine Strength dropdown: 30mg, 50mg)
+- `productQty` (number input, quantity selector)
+
+### 3. URLs/Routes
+- `../checkout.html`
+- `../login-signup.html`
+- `../index.html`, `../about.html`, `../contact.html`
+- `../privacy-policy.html`
+- `javascript:void(0)` (cart/search triggers)
+- Newsletter form `action="#"` (unimplemented)
+
+### 4. JavaScript API Calls
+- **None detected** — empty `<script>` tags present; JS deferred to `script.js`
+
+### 5. Page Purposes
+- **Product detail pages** (two Drip Down E-liquid variants)
+- **Cart sidebar** (session-based, no backend calls visible)
+- **Newsletter signup** (frontend only)
+- **Search overlay** (trending tags, results via `script.js`)===CHUNK_SEPARATOR===## Analysis: Chunk 88/146 - Vape Cluster Frontend
+
+### 1. HTML File Names
+- `drip-down-edition-mango-peach-ice-100ml-3mg-data.html`
+- `drip-down-edition-strawmelon-kiwi-ice-100ml-3mg-data.html`
+- `index.html`, `about.html`, `contact.html`, `privacy-policy.html`
+- `E-Liquids.html`, `coils.html`, `OXVA.html`, `vaporesso.html`, `UWELL.html`
+- `voopoo.html`, `login-signup.html`, `checkout.html`
+
+### 2. Form Fields
+- **Newsletter:** `email` (placeholder: "Your email address"), submit button "Subscribe"
+- **Search:** `text` input (`id="searchInput"`, placeholder: "Search for products, brands...")
+- **Quantity:** `number` input (`id="productQty"`, default: 1, min: 1)
+- **Nicotine Strength Select:** `id="colorSelect"` — options: 30mg, 50mg
+
+### 3. URLs/Routes
+- `../checkout.html` — checkout navigation
+- `../login-signup.html` — user login
+- `action="#"` — newsletter form (no backend endpoint)
+
+### 4. JavaScript API Calls
+- **None detected** — empty `<script>` block; logic deferred to `script.js`
+- `updateQty()` function called inline (defined externally)
+
+### 5. Page Purposes
+- **Product Detail Pages** — E-liquid product pages (Drip Down flavor variants)
+- **Cart Sidebar** — add/view cart UI
+- **Search Overlay** — product search with trending tags
+- **Newsletter Subscription** — footer form===CHUNK_SEPARATOR===## Frontend Code Chunk 89/146 Analysis
+
+### 1. HTML File Names
+- `drip-down-edition-strawmelon-kiwi-ice-100ml-3mg-data.html`
+- `drip-down-edition-watermelon-grape-ice-100ml-3mg-data.html`
+- `voopoo.html`, `vaporesso.html`, `UWELL.html`, `OXVA.html`
+- `E-Liquids.html`, `coils.html`, `about.html`, `contact.html`
+- `login-signup.html`, `checkout.html`, `index.html`
+- `privacy-policy.html`
+
+### 2. Form Fields
+- `searchInput` (text) — product search
+- `colorSelect` (select) — nicotine strength (30mg/50mg)
+- `productQty` (number) — quantity selector
+- Newsletter `email` input
+
+### 3. URLs/Routes
+- `../checkout.html`, `../login-signup.html`, `../index.html`
+- `../voopoo.html`, `../vaporesso.html`, `../UWELL.html`, `../OXVA.html`
+- `../E-Liquids.html`, `../coils.html`, `../about.html`, `../contact.html`, `../privacy-policy.html`
+- Newsletter form `action="#"` (inactive)
+
+### 4. JavaScript API Calls
+- `updateQty()` — quantity adjustment
+- No external API/fetch calls detected
+
+### 5. Page Purposes
+- **Product Detail Pages** — Two Drip Down e-liquid products
+- **Cart Sidebar** — Add/view cart items
+- **Search Overlay** — Product search with trending tags
+- **Navigation** — Collections dropdown with brand subcategories===CHUNK_SEPARATOR===## Frontend Code Chunk 90/146 Analysis
+
+### 1. HTML File Names
+- `drip-down-frosty-berry-ice--data.html`
+- `index.html`, `about.html`, `contact.html`, `privacy-policy.html`
+- `E-Liquids.html`, `coils.html`, `checkout.html`, `login-signup.html`
+- `voopoo.html`, `vaporesso.html`, `UWELL.html`, `OXVA.html`
+
+### 2. Form Fields
+- `email` — newsletter subscription input (`type="email"`, placeholder: "Your email address")
+- `colorSelect` — nicotine strength dropdown (30mg / 50mg)
+- `productQty` — quantity number input (min: 1, readonly)
+
+### 3. URLs/Routes
+- `../checkout.html`, `../login-signup.html`, `../index.html`
+- `../about.html`, `../contact.html`, `../privacy-policy.html`
+- Newsletter form `action="#"` (non-functional)
+
+### 4. JavaScript API Calls
+- **None detected** — empty `<script>` block present; JS deferred to `script.js`
+- Cart/search logic handled externally via `../assets/js/script.js`
+
+### 5. Page Purpose
+- **Product Detail Page** — Drip Down Frosty Berry Ice E-Liquid
+- Features: nicotine strength selector, quantity picker, Add to Cart button, relevant products section, newsletter signup===CHUNK_SEPARATOR===## Chunk 91/146 Analysis - Vape Cluster
+
+### 1. HTML File Names
+- `drip-down-grape-ice-data.html`
+- `drip-down-guava-ice-100ml-data.html`
+- `OXVA.html`, `vaporesso.html`, `UWELL.html`, `voopoo.html`
+- `index.html`, `E-Liquids.html`, `coils.html`, `about.html`, `contact.html`
+- `login-signup.html`, `checkout.html`, `privacy-policy.html`
+
+### 2. Form Fields
+- `type="email"` — newsletter subscription (placeholder: "Your email address")
+- `type="number"` id="productQty" — quantity selector (min=1)
+- `type="text"` id="searchInput" — product search
+- `id="colorSelect"` (select) — Nicotine Strength (30mg / 50mg)
+
+### 3. URLs/Routes
+- `../checkout.html`, `../login-signup.html`, `../index.html`
+- `form action="#"` — newsletter (non-functional)
+- `javascript:void(0)` — cart/search triggers
+
+### 4. JavaScript API Calls
+- **None explicitly visible** — logic deferred to `script.js`
+
+### 5. Page Purposes
+- **Product detail pages** — Drip Down Grape Ice & Guava Ice E-Liquids
+- **Cart sidebar** — add/view cart items
+- **Search overlay** — product search
+- **Newsletter** — email subscription (static)===CHUNK_SEPARATOR===# Frontend Code Chunk 92/146 Analysis - Vape Cluster
+
+## 1. HTML File Names
+- `drip-down-guava-ice-100ml-data.html` *(implied from chunk context)*
+- `drip-down-lychee-ice-E-liquids-100ml-data.html`
+- `index.html`, `about.html`, `contact.html`, `privacy-policy.html`
+- `E-Liquids.html`, `coils.html`, `OXVA.html`, `vaporesso.html`, `UWELL.html`, `voopoo.html`
+- `login-signup.html`, `checkout.html`
+
+## 2. Form Fields
+- `colorSelect` — Nicotine Strength dropdown (30mg / 50mg)
+- `productQty` — Quantity number input (min=1)
+- Newsletter `email` input (placeholder: "Your email address")
+
+## 3. URLs/Routes
+- `../index.html`, `../about.html`, `../contact.html`, `../privacy-policy.html`
+- `../E-Liquids.html`, `../coils.html`, `../checkout.html`, `../login-signup.html`
+- `../OXVA.html`, `../vaporesso.html`, `../UWELL.html`, `../voopoo.html`
+- Newsletter form `action="#"` *(no backend endpoint)*
+
+## 4. JavaScript API Calls
+- **None detected** — `<script>` blocks are empty
+- JS functions referenced: `updateQty(-1/+1)`
+- External scripts: `bootstrap.bundle.min.js`, `script.js`
+
+## 5. Page Purposes
+- **Product Detail Pages** — Drip Down Guava Ice & Lychee Ice 100ml e-liquids
+- **Cart Sidebar** — Add to cart, subtotal, checkout navigation
+- **Search Overlay** — Product search with trending tags
+- **Newsletter Signup** — Email subscription (footer)===CHUNK_SEPARATOR===## Analysis: Chunk 93/146 - Vape Cluster Frontend
+
+### 1. HTML File Names
+- `drip-down-mango-ice-E-liquids-100ml-data.html`
+- `drip-down-passion-fruit-ice-E-liquids-60ml-data.html`
+
+### 2. Form Fields
+- **Newsletter form:** `type="email"` (placeholder: "Your email address"), submit button
+- **Product selector:** `id="colorSelect"` (nicotine strength: 30mg/50mg options)
+- **Quantity input:** `id="productQty"` (number, min=1, readonly)
+
+### 3. URLs/Routes
+- `../index.html`, `../about.html`, `../contact.html`, `../privacy-policy.html`
+- `../E-Liquids.html`, `../coils.html`, `../OXVA.html`, `../vaporesso.html`, `../UWELL.html`
+- `../voopoo.html`, `../login-signup.html`, `../checkout.html`
+- Newsletter form action: `#` (non-functional)
+
+### 4. JavaScript API Calls
+- **None detected** — empty `<script>` block present
+- Thumbnail injection via JS (`id="thumbnailGallery"`)
+- `updateQty()` function called inline
+
+### 5. Page Purposes
+- **Product detail pages** — E-Liquid product listings (Drip Down brand)
+- **Cart sidebar** — add/view cart functionality
+- **Search overlay** — product search UI
+- Category: `E-liquids-products` subfolder===CHUNK_SEPARATOR===## Chunk 94/146 Analysis - Vape Cluster
+
+### 1. HTML File Names
+- `drip-down-passion-fruit-ice-E-liquids-60ml-data.html` (implied from context)
+- `drip-down-passion-fruit-ice-E-liquids-100ml-data.html`
+- `E-Liquids.html`, `coils.html`, `about.html`, `contact.html`
+- `index.html`, `login-signup.html`, `checkout.html`
+- `privacy-policy.html`, `voopoo.html`, `vaporesso.html`, `UWELL.html`, `OXVA.html`
+
+### 2. Form Fields
+- `searchInput` (text) - product search
+- `colorSelect` (select) - Nicotine Strength (30mg, 50mg)
+- `productQty` (number) - quantity selector
+- Newsletter `email` input
+
+### 3. URLs/Routes
+- `../checkout.html`, `../login-signup.html`, `../index.html`
+- `../E-Liquids.html`, `../coils.html`, `../OXVA.html`, `../UWELL.html`
+- `javascript:void(0)` (search/cart triggers)
+- Newsletter `action="#"`
+
+### 4. JavaScript API Calls
+- `updateQty(-1/+1)` - quantity function
+- No fetch/AJAX calls visible
+
+### 5. Page Purposes
+- **Two product detail pages**: Drip Down Passion Fruit Ice E-Liquid (60ml & 100ml variants)
+- Cart sidebar management
+- Product search overlay===CHUNK_SEPARATOR===## Analysis: Frontend Code Chunk 95/146 - Vape Cluster
+
+### 1. HTML File Names
+- `drip-down-peach-ice-E-liquids-100ml-data.html`
+- `index.html`, `about.html`, `contact.html`, `privacy-policy.html`
+- `E-Liquids.html`, `coils.html`, `OXVA.html`, `vaporesso.html`, `UWELL.html`
+- `voopoo.html`, `login-signup.html`, `checkout.html`
+
+### 2. Form Fields
+- `email` input — newsletter subscription (placeholder: "Your email address")
+- `colorSelect` (select) — Nicotine Strength (30mg / 50mg)
+- `productQty` (number input) — quantity selector, default: 1
+- `searchInput` (text) — product search
+
+### 3. URLs/Routes
+- `../index.html`, `../about.html`, `../contact.html`, `../privacy-policy.html`
+- `../E-Liquids.html`, `../coils.html`, `../checkout.html`, `../login-signup.html`
+- `../OXVA.html`, `../vaporesso.html`, `../UWELL.html`, `../voopoo.html`
+- Newsletter form `action="#"` (non-functional)
+
+### 4. JavaScript API Calls
+- **None detected** — empty `<script>` block present
+
+### 5. Page Purpose
+- **Product Detail Page** — E-Liquid product (Drip Down Peach Ice 100ml)
+- Features: variant selection, quantity control, add-to-cart, cart sidebar, search overlay===CHUNK_SEPARATOR===## Chunk 96/146 Analysis
+
+### 1. HTML File Names
+- `Drip-Down-Watermelon-Ice-E-Liquid-60ml-data.html`
+- `drip-down-watermelon-ice-E-liquids-100ml-data.html`
+
+### 2. Form Fields
+- **Search:** `input type="text" id="searchInput"` (product search)
+- **Nicotine Strength:** `select id="colorSelect"` (options: 30mg, 50mg)
+- **Quantity:** `input type="number" id="productQty"` (min=1, readonly)
+- **Newsletter:** `input type="email"` (placeholder: "Your email address")
+
+### 3. URLs/Routes
+- `../index.html`, `../about.html`, `../contact.html`, `../login-signup.html`
+- `../E-Liquids.html`, `../coils.html`, `../checkout.html`, `../privacy-policy.html`
+- `../voopoo.html`, `../vaporesso.html`, `../UWELL.html`, `../OXVA.html`
+- Newsletter `form action="#"`
+
+### 4. JavaScript API Calls
+- None explicit; JS handled via `../assets/js/script.js`
+- `updateQty()` function for quantity buttons
+
+### 5. Page Purposes
+- **Product Detail Pages** — E-Liquid product pages (60ml & 100ml variants)
+- Includes cart sidebar, search overlay, relevant products, and newsletter signup===CHUNK_SEPARATOR===## Chunk 97/146 Analysis
+
+### 1. HTML File Names
+- `ox-passion-berries-mojito-data.html`
+- `../index.html`
+- `../about.html`
+- `../contact.html`
+- `../privacy-policy.html`
+- `../login-signup.html`
+- `../checkout.html`
+- `../E-Liquids.html`
+- `../coils.html`
+- `../OXVA.html`
+- `../vaporesso.html`
+- `../UWELL.html`
+- `../voopoo.html`
+
+### 2. Form Fields
+- `colorSelect` (select) – Nicotine Strength (30MG/50MG)
+- `productQty` (number input) – quantity, min=1
+- Email input – newsletter subscription
+- Search input (`searchInput`) – product search
+
+### 3. URLs/Routes
+- `../checkout.html`
+- `../login-signup.html`
+- Newsletter form `action="#"` (placeholder)
+
+### 4. JavaScript API Calls
+- `updateQty(-1)` / `updateQty(1)` – quantity buttons
+- No fetch/AJAX calls visible; `<script>` block is **empty**
+
+### 5. Page Purpose
+- **Product Detail Page** – Ox Passion Berries Mojito E-Liquid
+- Features: nicotine strength selector, quantity control, Add to Cart button, relevant products section, newsletter signup, search overlay, cart sidebar===CHUNK_SEPARATOR===## Chunk 98/146 Analysis
+
+### 1. HTML File Names
+- `ox-passion-blackberry-candy-data.html`
+- `ox-passion-blue-mango-data.html`
+
+### 2. Form Fields
+- **Newsletter form:** `email` (type="email", placeholder="Your email address")
+- **Product options:** `colorSelect` (nicotine strength dropdown: 30mg, 50mg)
+- **Quantity:** `productQty` (type="number", default=1, min=1)
+- **Search:** `searchInput` (type="text")
+
+### 3. URLs/Routes
+- `../index.html`, `../about.html`, `../contact.html`
+- `../privacy-policy.html`, `../login-signup.html`
+- `../checkout.html`
+- `../E-Liquids.html`, `../coils.html`
+- `../voopoo.html`, `../vaporesso.html`, `../UWELL.html`, `../OXVA.html`
+- Newsletter form: `action="#"` (no backend)
+
+### 4. JavaScript API Calls
+- `updateQty(-1/1)` — quantity control
+- `javascript:void(0)` triggers for search/cart
+- No fetch/AJAX calls visible
+
+### 5. Page Purposes
+- **Product detail pages** — OX Passion E-Liquid variants (Blackberry Candy, Blue Mango)
+- **Category:** E-Liquids, Rs. 1,000.00 per unit
+- Cart sidebar, search overlay, newsletter subscription UI===CHUNK_SEPARATOR===## Analysis: Chunk 99/146 — Vape Cluster Frontend
+
+### 1. HTML File Names
+- `ox-passion-blue-mango-data.html` (implied from first section)
+- `ox-passion-blueberry-raspberry-data.html` (explicit)
+- `login-signup.html`
+- `checkout.html`
+- `index.html`, `about.html`, `contact.html`, `privacy-policy.html`
+- `E-Liquids.html`, `coils.html`, `OXVA.html`, `vaporesso.html`, `UWELL.html`, `voopoo.html`
+
+### 2. Form Fields
+- `searchInput` — text (product search)
+- `colorSelect` — select (Nicotine Strength: 30mg / 50mg)
+- `productQty` — number (quantity, min=1)
+- Newsletter `email` input (placeholder: "Your email address")
+
+### 3. URLs/Routes
+- `../login-signup.html`, `../checkout.html`, `../index.html`
+- `../E-Liquids.html`, `../coils.html`, `../OXVA.html`, `../vaporesso.html`, `../UWELL.html`, `../voopoo.html`
+- Newsletter form `action="#"` (non-functional)
+
+### 4. JavaScript API Calls
+- `updateQty(-1/+1)` — inline quantity function
+- `script.js` — cart/search logic (external)
+- No fetch/AJAX calls visible in this chunk
+
+### 5. Page Purposes
+- **Product Detail Pages** — Ox Passion e-liquid variants (Blue Mango, Blueberry Raspberry)
+- **Cart Sidebar** — add/view/checkout items
+- **Search Overlay** — product search with trending tags
+- **Newsletter Signup** — email subscription (footer)===CHUNK_SEPARATOR===## Analysis: Frontend Code Chunk 100/146 — Vape Cluster
+
+---
+
+### 1. HTML File Names Found
+- `ox-passion-cherry-burst-data.html`
+- `ox-passion-cinnamon-bbg-data.html` *(partial/truncated)*
+- `index.html`
+- `about.html`
+- `contact.html`
+- `privacy-policy.html`
+- `E-Liquids.html`
+- `coils.html`
+- `OXVA.html`
+- `vaporesso.html`
+- `UWELL.html`
+- `voopoo.html`
+- `login-signup.html`
+- `checkout.html`
+
+---
+
+### 2. Form Fields
+- **Newsletter:** `type="email"` placeholder="Your email address"
+- **Nicotine Strength:** `<select id="colorSelect">` — options: `30mg`, `50mg`
+- **Quantity:** `type="number" id="productQty"` (min=1, readonly)
+
+---
+
+### 3. URLs/Routes Used
+| URL | Context |
+|-----|---------|
+| `../index.html` | Nav/Footer |
+| `../login-signup.html` | User icon |
+| `../checkout.html` | Cart sidebar |
+| `../about.html` | Nav/Footer |
+| `../contact.html` | Nav/Footer |
+| `../privacy-policy.html` | Footer |
+| `../E-Liquids.html` | Nav/Footer |
+| `../coils.html` | Nav/Footer |
+| `../OXVA.html` | Nav/Footer |
+| `../vaporesso.html` | Nav/Footer |
+| `../UWELL.html` | Nav/Footer |
+| `../voopoo.html` | Dropdown |
+| `form action="#"` | Newsletter |
+
+---
+
+### 4. JavaScript API Calls
+- `updateQty(-1)` / `updateQty(1)` — quantity buttons
+- `id="actionBtn"` — Add to Cart (handler in `script.js`)
+- `id="searchInput"` — live search (handled in `script.js`)
+- **No explicit fetch/AJAX calls visible** in this chunk
+- External JS: `bootstrap.bundle.min.js`, `script.js`
+
+---
+
+### 5. Page Purposes
+| File | Purpose |
+|------|---------|
+| `ox-passion-cherry-burst-data.html` | **Product Detail Page** — Ox Passion Cherry Burst E-Liquid |
+| `ox-passion-cinnamon-bbg-data.html` | **Product Detail Page** — Ox Passion Cinnamon (truncated) |
+| Both pages share | Navbar, cart sidebar, relevant products, newsletter footer |
+
+**Category:** E-Liquid product pages with add-to-cart, nicotine strength selector, image gallery, and relevant product recommendations.===CHUNK_SEPARATOR===## Analysis: Vape Cluster Frontend Chunk 101/146
+
+### 1. HTML File Names
+- `ox-passion-cinnamon-bbg-data.html` (implied from chunk context)
+- `ox-passion-creamy-mint-data.html`
+- `index.html`, `login-signup.html`, `checkout.html`
+- `voopoo.html`, `vaporesso.html`, `UWELL.html`, `OXVA.html`
+- `E-Liquids.html`, `coils.html`, `about.html`, `contact.html`, `privacy-policy.html`
+
+### 2. Form Fields
+- `searchInput` (text) – product search
+- `colorSelect` (select) – Nicotine Strength (30mg / 50mg)
+- `productQty` (number) – quantity selector
+- Newsletter `email` input (placeholder: "Your email address")
+
+### 3. URLs/Routes
+- `../checkout.html`, `../login-signup.html`, `../index.html`
+- `../E-Liquids.html`, `../coils.html`, `../about.html`, `../contact.html`, `../privacy-policy.html`
+
+### 4. JavaScript API Calls
+- **None detected** – empty `<script>` block; functionality deferred to `../assets/js/script.js`
+
+### 5. Page Purposes
+- **Product detail pages** – Ox Passion E-Liquid variants (Cinnamon BBG, Creamy Mint)
+- **Cart sidebar** – add/manage cart items
+- **Search overlay** – product search UI
+- **Newsletter subscription** – footer form===CHUNK_SEPARATOR===# Chunk 102/146 Analysis - Vape Cluster
+
+## 1. HTML File Names
+- `ox-passion-grapeach-data.html`
+- `index.html`
+- `about.html`
+- `contact.html`
+- `privacy-policy.html`
+- `E-Liquids.html`
+- `coils.html`
+- `OXVA.html`
+- `vaporesso.html`
+- `UWELL.html`
+- `voopoo.html`
+- `login-signup.html`
+- `checkout.html`
+
+## 2. Form Fields
+- `productQty` (number input, quantity selector)
+- `colorSelect` (dropdown - Nicotine Strength: 30mg, 50mg)
+- `searchInput` (text - product search)
+- Newsletter email input (`type="email"`, placeholder: "Your email address")
+
+## 3. URLs/Routes
+- `../index.html`, `../about.html`, `../contact.html`
+- `../checkout.html`, `../login-signup.html`
+- `../E-Liquids.html`, `../coils.html`
+- `../OXVA.html`, `../vaporesso.html`, `../UWELL.html`, `../voopoo.html`
+- Newsletter `action="#"` (inactive)
+
+## 4. JavaScript API Calls
+- `updateQty(-1/1)` - quantity control
+- No fetch/API calls visible
+
+## 5. Page Purpose
+- **Product Detail Page** — Ox Passion Grapeach & Creamy Mint E-Liquid listings with variant selection, cart sidebar, and related products===CHUNK_SEPARATOR===## Analysis of Frontend Code Chunk 103/146 - Vape Cluster
+
+### 1. HTML File Names Found
+- `ox-passion-honeydew-data.html`
+- `ox-passion-juicy-peach-data.html`
+- `index.html`, `about.html`, `contact.html`, `privacy-policy.html`
+- `E-Liquids.html`, `coils.html`, `voopoo.html`, `vaporesso.html`
+- `UWELL.html`, `OXVA.html`, `login-signup.html`, `checkout.html`
+
+### 2. Form Fields
+- **Email input:** `type="email"` placeholder="Your email address" (newsletter)
+- **Search input:** `id="searchInput"` placeholder="Search for products, brands..."
+- **Quantity input:** `id="productQty"` type="number" value="1"
+- **Nicotine dropdown:** `id="colorSelect"` (options: 30mg, 50mg)
+
+### 3. URLs/Routes
+- `../checkout.html`, `../login-signup.html`
+- `form action="#"` (newsletter - no backend)
+- All nav links via relative `../` paths
+
+### 4. JavaScript API Calls
+- **None detected** — empty `<script>` block; functionality deferred to `script.js`
+
+### 5. Page Purposes
+- **ox-passion-honeydew-data.html** — E-liquid product detail page (OX Passion Honeydew)
+- **ox-passion-juicy-peach-data.html** — E-liquid product detail page (OX Passion Juicy Peach)
+- Both include: cart sidebar, product gallery, quantity selector, add-to-cart button, relevant products section===CHUNK_SEPARATOR===# Frontend Code Chunk 104/146 Analysis
+
+## 1. HTML File Names
+- `ox-passion-juicy-peach-data.html` *(continuation from previous chunk)*
+- `ox-passion-luxury-data.html`
+- `checkout.html`
+- `login-signup.html`
+- `index.html`
+- `about.html`
+- `contact.html`
+- `privacy-policy.html`
+- `E-Liquids.html`
+- `coils.html`
+- `OXVA.html`
+- `vaporesso.html`
+- `UWELL.html`
+- `voopoo.html`
+
+## 2. Form Fields
+- `email` — newsletter subscription input
+- `colorSelect` — nicotine strength dropdown (30mg/50mg)
+- `productQty` — quantity number input
+- Newsletter submit button
+
+## 3. URLs/Routes
+- `../checkout.html`
+- `../login-signup.html`
+- `../index.html`
+- `../E-Liquids.html`, `../coils.html`, `../about.html`, `../contact.html`
+- `../OXVA.html`, `../vaporesso.html`, `../UWELL.html`, `../voopoo.html`
+
+## 4. JavaScript API Calls
+- **None detected** — empty `<script>` tags present
+- `updateQty()` function called inline (defined in `script.js`)
+
+## 5. Page Purposes
+- **Product Detail Pages** — Ox Passion Juicy Peach & Luxury E-Liquid
+- **Cart Sidebar** — slide-out cart with subtotal
+- **Checkout redirect** — via checkout button===CHUNK_SEPARATOR===## Analysis: Frontend Code Chunk 105/146 — Vape Cluster
+
+---
+
+### 1. HTML File Names Found
+- `ox-passion-melon-banana-data.html`
+- `ox-passion-pink-guava-data.html`
+- `index.html`
+- `about.html`
+- `contact.html`
+- `privacy-policy.html`
+- `E-Liquids.html`
+- `coils.html`
+- `OXVA.html`
+- `vaporesso.html`
+- `UWELL.html`
+- `voopoo.html`
+- `login-signup.html`
+- `checkout.html`
+
+---
+
+### 2. Form Fields
+- **Email** – `type="email"` placeholder: *"Your email address"* (newsletter)
+- **Quantity** – `type="number"` id: `productQty` (min=1, readonly)
+- **Nicotine Strength** – `<select>` id: `colorSelect` (options: 30mg, 50mg)
+- **Search** – `type="text"` id: `searchInput`
+
+---
+
+### 3. URLs/Routes Used
+| Type | URL |
+|------|-----|
+| Home | `../index.html` |
+| Checkout | `../checkout.html` |
+| Login | `../login-signup.html` |
+| Newsletter | `action="#"` |
+| Social | `href="#"` (Facebook, Instagram) |
+
+---
+
+### 4. JavaScript API Calls
+- **None explicit** — empty `<script>` block present
+- JS functions referenced: `updateQty(-1)`, `updateQty(1)`
+- Dynamic elements: `thumbnailGallery`, `searchResults`, `cartItemsContainer`, `cartSubtotal`
+- Scripts loaded: `bootstrap.bundle.min.js`, `script.js`
+
+---
+
+### 5. Page Purposes
+| File | Purpose |
+|------|---------|
+| `ox-passion-melon-banana-data.html` | E-liquid product detail page |
+| `ox-passion-pink-guava-data.html` | E-liquid product detail page |
+| Cart Sidebar | Add-to-cart / mini cart UI |
+| Newsletter form | Email subscription |
+| Search overlay | Product search |===CHUNK_SEPARATOR===## Analysis: Chunk 106/146 - Vape Cluster Frontend
+
+### 1. HTML File Names
+- `ox-passion-pink-guava-data.html` (implied from context)
+- `ox-passion-pom-black-data.html` (explicitly labeled)
+- `voopoo.html`, `vaporesso.html`, `UWELL.html`, `OXVA.html`
+- `E-Liquids.html`, `coils.html`, `about.html`, `contact.html`
+- `index.html`, `login-signup.html`, `checkout.html`, `privacy-policy.html`
+
+### 2. Form Fields
+- **Search:** `input[type="text"]` id=`searchInput`
+- **Nicotine Strength:** `select` id=`colorSelect` (options: 30mg, 50mg)
+- **Quantity:** `input[type="number"]` id=`productQty`
+- **Newsletter:** `input[type="email"]` (placeholder: "Your email address")
+
+### 3. URLs/Routes
+- `../checkout.html`, `../login-signup.html`, `../index.html`
+- `javascript:void(0)` (search/cart triggers)
+- `action="#"` (newsletter form — inactive)
+
+### 4. JavaScript API Calls
+- `updateQty(-1/1)` — quantity function
+- No external API/fetch calls visible
+
+### 5. Page Purposes
+- **Product Detail Pages** — Ox Passion Pink Guava & Pom Black E-Liquids
+- Nicotine strength selection, cart management, product search
+- Navigation to checkout/login flows===CHUNK_SEPARATOR===## Chunk 107/146 Analysis
+
+### 1. HTML File Names
+- `ox-passion-sparkling-cider-data.html`
+- `index.html`
+- `about.html`
+- `contact.html`
+- `privacy-policy.html`
+- `E-Liquids.html`
+- `coils.html`
+- `OXVA.html`
+- `vaporesso.html`
+- `UWELL.html`
+- `voopoo.html`
+- `login-signup.html`
+- `checkout.html`
+
+### 2. Form Fields
+- `email` (newsletter input, placeholder: "Your email address")
+- `colorSelect` (dropdown – Nicotine Strength: 30mg, 50mg)
+- `productQty` (number input, quantity selector)
+- `searchInput` (text, product search)
+
+### 3. URLs/Routes
+- `../index.html`, `../about.html`, `../contact.html`
+- `../privacy-policy.html`, `../E-Liquids.html`, `../coils.html`
+- `../OXVA.html`, `../vaporesso.html`, `../UWELL.html`, `../voopoo.html`
+- `../login-signup.html`, `../checkout.html`
+- `action="#"` (newsletter form)
+
+### 4. JavaScript API Calls
+- None found (empty `<script>` block)
+
+### 5. Page Purpose
+- **Product detail page** – Ox Passion Sparkling Cider E-Liquid (nicotine strength selection, add-to-cart, relevant products)===CHUNK_SEPARATOR===# Frontend Code Analysis - Chunk 108/146
+
+## 1. HTML File Names
+- `ox-passion-strawberry-ice-data.html`
+- `ox-passion-strawberry-orange-data.html`
+
+## 2. Form Fields
+| Field | Type | Purpose |
+|-------|------|---------|
+| Email input | `type="email"` | Newsletter subscription |
+| Quantity input | `type="number"` | Product quantity selector |
+| Nicotine Strength | `<select>` (30mg/50mg options) | Product variant selection |
+| Search input | `type="text"` | Product search |
+
+## 3. URLs/Routes
+- `../index.html`, `../about.html`, `../contact.html`, `../login-signup.html`
+- `../E-Liquids.html`, `../coils.html`, `../checkout.html`, `../privacy-policy.html`
+- `../voopoo.html`, `../vaporesso.html`, `../UWELL.html`, `../OXVA.html`
+- Newsletter form: `action="#"` (no backend)
+
+## 4. JavaScript API Calls
+- None explicit; uses `../assets/js/script.js` and `bootstrap.bundle.min.js`
+- `updateQty()` function for quantity buttons
+
+## 5. Page Purposes
+- **Product detail pages** for Ox Passion E-Liquid variants (Strawberry Ice, Strawberry Orange)
+- **Category:** E-Liquids (Rs. 1,000.00, nicotine salt variants)===CHUNK_SEPARATOR===## Chunk 109/146 Analysis — Vape Cluster
+
+### 1. HTML File Names
+- `tokyo-blue-pineapple-data.html`
+- `index.html`
+- `about.html`
+- `contact.html`
+- `privacy-policy.html`
+- `E-Liquids.html`
+- `coils.html`
+- `OXVA.html`
+- `vaporesso.html`
+- `UWELL.html`
+- `voopoo.html`
+- `login-signup.html`
+- `checkout.html`
+
+### 2. Form Fields
+- `colorSelect` — Nicotine strength dropdown (30mg / 50mg)
+- `productQty` — Number input (quantity, min=1, readonly)
+- `searchInput` — Product search text input
+- Newsletter: `email` input + submit button
+
+### 3. URLs/Routes
+- `../index.html`, `../about.html`, `../contact.html`, `../privacy-policy.html`
+- `../E-Liquids.html`, `../coils.html`, `../checkout.html`, `../login-signup.html`
+- `../OXVA.html`, `../vaporesso.html`, `../UWELL.html`, `../voopoo.html`
+- Newsletter `action="#"` (non-functional)
+
+### 4. JavaScript API Calls
+- **None detected** — empty `<script>` tag; JS references `updateQty()` and cart/search functions in external `script.js`
+
+### 5. Page Purposes
+- **Two product detail pages**: Ox Passion Strawberry Orange & TOKYO Blue Pineapple e-liquids
+- Add-to-cart, quantity selection, nicotine strength selection, relevant products display===CHUNK_SEPARATOR===## Frontend Code Chunk 110/146 Analysis
+
+### 1. HTML File Names Found
+- `tokyo-cherry-ice-data.html`
+- `tokyo-mango-lychee-data.html`
+- `index.html`
+- `about.html`
+- `contact.html`
+- `privacy-policy.html`
+- `E-Liquids.html`
+- `coils.html`
+- `voopoo.html`
+- `vaporesso.html`
+- `UWELL.html`
+- `OXVA.html`
+- `login-signup.html`
+- `checkout.html`
+
+### 2. Form Fields
+- `email` (newsletter subscription, placeholder: "Your email address")
+- `colorSelect` (dropdown — Nicotine Strength: 30mg, 50mg)
+- `productQty` (number input, quantity selector)
+- `searchInput` (text, product search)
+
+### 3. URLs/Routes
+- `../index.html`, `../about.html`, `../contact.html`
+- `../privacy-policy.html`, `../E-Liquids.html`, `../coils.html`
+- `../checkout.html`, `../login-signup.html`
+- `../voopoo.html`, `../vaporesso.html`, `../UWELL.html`, `../OXVA.html`
+- `form action="#"` (newsletter — no backend)
+
+### 4. JavaScript API Calls
+- **None detected** — empty `<script>` block present
+- JS files loaded: `bootstrap.bundle.min.js`, `script.js`
+
+### 5. Page Purposes
+- **tokyo-cherry-ice-data.html** — E-liquid product detail page (TOKYO Cherry Ice)
+- **tokyo-mango-lychee-data.html** — E-liquid product detail page (TOKYO Mango Lychee)
+- Both include: cart sidebar, search overlay, relevant products, newsletter signup, and checkout navigation===CHUNK_SEPARATOR===## Chunk 111/146 Analysis
+
+### 1. HTML File Names
+- `tokyo-mango-lychee-data.html` (implied from first section)
+- `tokyo-mango-lassi-data.html` (explicitly labeled)
+- `login-signup.html`
+- `checkout.html`
+- `index.html`, `about.html`, `contact.html`, `privacy-policy.html`
+- `E-Liquids.html`, `coils.html`, `voopoo.html`, `vaporesso.html`, `OXVA.html`, `UWELL.html`
+
+### 2. Form Fields
+- `searchInput` (text) - product search
+- `colorSelect` (select) - Nicotine Strength (30mg/50mg)
+- `productQty` (number) - quantity selector
+- Newsletter email input (`type="email"`, placeholder: "Your email address")
+
+### 3. URLs/Routes
+- `../login-signup.html`, `../checkout.html`, `../index.html`
+- `../E-Liquids.html`, `../coils.html`, `../about.html`, `../contact.html`
+- `../voopoo.html`, `../vaporesso.html`, `../OXVA.html`, `../UWELL.html`
+- Newsletter `action="#"` (non-functional)
+
+### 4. JavaScript API Calls
+- `updateQty(-1/+1)` - quantity function
+- No fetch/AJAX calls visible; JS deferred to `script.js`
+
+### 5. Page Purposes
+- **Two product detail pages**: Tokyo Mango Lychee & Tokyo Mango Lassi E-Liquids
+- Nicotine variant selection, cart sidebar, product search overlay===CHUNK_SEPARATOR===## Analysis: Chunk 112/146 — Vape Cluster Frontend
+
+### 1. HTML File Names
+- `tokyo-passion-fruit-kiwi--data.html`
+- `tokyo-pineapple-guava-data.html` *(partial, cut off)*
+- `../index.html`, `../about.html`, `../contact.html`
+- `../privacy-policy.html`, `../login-signup.html`, `../checkout.html`
+- `../E-Liquids.html`, `../coils.html`, `../OXVA.html`
+- `../vaporesso.html`, `../UWELL.html`, `../voopoo.html`
+
+### 2. Form Fields
+- `type="email"` — newsletter subscription (placeholder: "Your email address")
+- `type="number"` — quantity selector (`id="productQty"`, default: 1, min: 1)
+- `type="text"` — search input (`id="searchInput"`)
+- `<select id="colorSelect">` — Nicotine Strength (options: 30mg, 50mg)
+
+### 3. URLs/Routes
+- `../checkout.html` — cart checkout link
+- `../login-signup.html` — user login/signup
+- `form action="#"` — newsletter (no backend endpoint)
+
+### 4. JavaScript API Calls
+- **None detected** — empty `<script>` block; logic deferred to `../assets/js/script.js`
+
+### 5. Page Purposes
+- **Product Detail Pages** — Tokyo E-Liquid variants (Passion Fruit Kiwi, Pineapple Guava)
+- **Cart Sidebar** — add/view cart items
+- **Newsletter Signup** — footer email subscription
+- **Search Overlay** — product search with trending tags===CHUNK_SEPARATOR===## Chunk 113/146 Analysis
+
+### 1. HTML File Names
+- `tokyo-tokyo-super-cool-dragonfruit-kiwi-data.html` (partial, continuing)
+- Previous page: TOKYO Pineapple Guava product page (filename inferred)
+
+### 2. Form Fields
+- `colorSelect` — Nicotine Strength dropdown (options: 30mg, 50mg)
+- `productQty` — Quantity number input (min: 1, default: 1)
+- Newsletter `email` input (placeholder: "Your email address")
+- `searchInput` — text search field
+
+### 3. URLs/Routes
+- `../index.html`, `../about.html`, `../contact.html`, `../login-signup.html`
+- `../checkout.html`, `../E-Liquids.html`, `../coils.html`, `../privacy-policy.html`
+- `../voopoo.html`, `../vaporesso.html`, `../UWELL.html`, `../OXVA.html`
+- Newsletter form action: `#` (non-functional)
+
+### 4. JavaScript API Calls
+- `updateQty(-1/1)` — quantity control function
+- `../assets/js/script.js`, `../assets/js/bootstrap.bundle.min.js`
+- No external API calls detected
+
+### 5. Page Purposes
+- **Two product detail pages**: TOKYO E-Liquid flavor pages (Pineapple Guava + Dragonfruit Kiwi)
+- Add-to-cart functionality with cart sidebar
+- Product image gallery with variant selection===CHUNK_SEPARATOR===## Frontend Code Chunk 114/146 Analysis
+
+### 1. HTML File Names
+- `tokyo-tokyo-e-juice-saltnic-super-cool-breezy-pineapple-data.html`
+- `index.html`, `about.html`, `contact.html`, `privacy-policy.html`
+- `E-Liquids.html`, `coils.html`, `login-signup.html`, `checkout.html`
+- `voopoo.html`, `vaporesso.html`, `UWELL.html`, `OXVA.html`
+
+### 2. Form Fields
+- **Newsletter form:** `email` (type=email, placeholder: "Your email address")
+- **Product options:** `colorSelect` (nicotine strength: 30mg/50mg dropdown)
+- **Quantity:** `productQty` (number input, min=1, readonly)
+
+### 3. URLs/Routes
+- `../checkout.html`, `../login-signup.html`, `../index.html`
+- `action="#"` (newsletter form — non-functional)
+- `javascript:void(0)` (search/cart triggers)
+
+### 4. JavaScript API Calls
+- **None detected** — `<script>` tags are empty
+
+### 5. Page Purposes
+- **Product Detail Page** — TOKYO E-Liquid (Dragonfruit Kiwi / Breezy Pineapple variants)
+- Features: nicotine strength selection, quantity control, Add to Cart button, relevant products section, newsletter subscription footer===CHUNK_SEPARATOR===# Frontend Code Chunk 115/146 Analysis
+
+## 1. HTML File Names Found
+- `tokyo-tokyo-e-juice-saltnic-super-cool-four-berries-data.html`
+- `tokyo-tokyo-e-juice-saltnic-super-cool-peach-orange-lemongrass--data.html`
+- `index.html`, `about.html`, `contact.html`, `privacy-policy.html`
+- `E-Liquids.html`, `coils.html`, `voopoo.html`, `vaporesso.html`
+- `OXVA.html`, `UWELL.html`, `login-signup.html`, `checkout.html`
+
+## 2. Form Fields
+- **Newsletter:** `email` (placeholder: "Your email address"), submit button "Subscribe"
+- **Search:** `text` input (id: `searchInput`, placeholder: "Search for products, brands...")
+- **Product Quantity:** `number` input (id: `productQty`, value: 1, min: 1, readonly)
+- **Nicotine Strength:** `select` (id: `colorSelect`) — options: 30mg, 50mg
+
+## 3. URLs/Routes Used
+- `../index.html`, `../about.html`, `../contact.html`, `../privacy-policy.html`
+- `../E-Liquids.html`, `../coils.html`, `../checkout.html`, `../login-signup.html`
+- `../voopoo.html`, `../vaporesso.html`, `../OXVA.html`, `../UWELL.html`
+- Newsletter form action: `#`
+
+## 4. JavaScript API Calls
+- None explicit; references `../assets/js/script.js` and `../assets/js/bootstrap.bundle.min.js`
+- `updateQty(-1/1)` function called via onclick
+- Cart/search triggered via `cart-trigger` / `search-trigger` class handlers
+
+## 5. Page Purposes
+- **Product Detail Pages** — Two Tokyo E-Juice Saltnic e-liquid product pages
+- **Cart Sidebar** — Add to cart, subtotal display, checkout redirect
+- **Search Overlay** — Product search with trending tags
+- **Newsletter Signup** — Email subscription in footer===CHUNK_SEPARATOR===## Chunk 116/146 Analysis
+
+### 1. HTML File Names
+- `tokyo-tokyo-e-juice-saltnic-super-cool-peach-orange-lemongrass-data.html` *(implied from context)*
+- `tokyo-tokyo-e-juice-saltnic-super-cool-pineapple-jam-data.html`
+- `checkout.html`
+- `login-signup.html`
+- `index.html`
+- `about.html`
+- `contact.html`
+- `privacy-policy.html`
+- `E-Liquids.html`
+- `coils.html`
+- `voopoo.html`, `vaporesso.html`, `UWELL.html`, `OXVA.html`
+
+### 2. Form Fields
+- `email` (newsletter subscription input)
+- `colorSelect` (Nicotine Strength dropdown: 30mg/50mg)
+- `productQty` (quantity number input)
+- Search: `searchInput` (text)
+
+### 3. URLs/Routes
+- `../checkout.html`
+- `../login-signup.html`
+- `../index.html`
+- `../E-Liquids.html`, `../coils.html`, `../about.html`, `../contact.html`
+- Newsletter `action="#"`
+
+### 4. JavaScript API Calls
+- `updateQty(-1/1)` — quantity control
+- No fetch/AJAX calls visible
+
+### 5. Page Purposes
+- **Product Detail Pages** — Two Tokyo E-Liquid product pages
+- **Cart Sidebar** — Add/view cart items
+- **Newsletter Signup** — Email subscription in footer===CHUNK_SEPARATOR===## Chunk 117/146 Analysis
+
+### 1. HTML File Names
+- `tokyo-tokyo-e-juice-saltnic-super-cool-pineapple-peach-data.html`
+- `tokyo-tokyo-e-juice-saltnic-super-cool-watermelon-bubble-gum-data.hmtl` *(typo: .hmtl)*
+
+### 2. Form Fields
+- `email` input — newsletter subscription (placeholder: "Your email address")
+- `colorSelect` — dropdown for Nicotine Strength (30mg / 50mg)
+- `productQty` — number input for quantity (min: 1, readonly)
+
+### 3. URLs/Routes
+- `../index.html`, `../about.html`, `../contact.html`, `../privacy-policy.html`
+- `../E-Liquids.html`, `../coils.html`, `../OXVA.html`, `../vaporesso.html`, `../UWELL.html`
+- `../voopoo.html`, `../checkout.html`, `../login-signup.html`
+- Newsletter form: `action="#"` (inactive)
+
+### 4. JavaScript API Calls
+- None detected — empty `<script>` block present
+- JS from `../assets/js/script.js` (cart, search, quantity logic)
+
+### 5. Page Purposes
+- **Product detail pages** — Tokyo E-Liquid (Pineapple Peach & Watermelon Bubble Gum flavors)
+- Features: variant selection, quantity control, Add to Cart, cart sidebar, product search overlay===CHUNK_SEPARATOR===## Chunk 118/146 Analysis
+
+### 1. HTML File Names
+- `tokyo-tokyo-saltnic-super-cool-dragon-fruit-data.html`
+- `index.html`
+- `voopoo.html`, `vaporesso.html`, `UWELL.html`, `OXVA.html`
+- `E-Liquids.html`, `coils.html`, `about.html`, `contact.html`
+- `login-signup.html`
+- `checkout.html`
+- `privacy-policy.html`
+
+### 2. Form Fields
+- `searchInput` (text) — product search
+- `colorSelect` (select) — Nicotine Strength (30mg/50mg)
+- `productQty` (number) — quantity selector
+- Newsletter `email` input
+
+### 3. URLs/Routes
+- `../checkout.html`, `../login-signup.html`, `../index.html`
+- `form action="#"` (newsletter, no backend)
+
+### 4. JavaScript API Calls
+- `updateQty(-1/1)` — quantity function
+- No fetch/AJAX calls visible
+
+### 5. Page Purposes
+- **Product detail pages** — Two Tokyo E-Liquid products (Watermelon Bubble Gum, Dragon Fruit)
+- **Cart sidebar** — add/view cart
+- **Navigation/search overlay** — product discovery
+- **Newsletter subscription** — static form (no backend endpoint)===CHUNK_SEPARATOR===## Chunk 119/146 Analysis
+
+### 1. HTML File Names
+- `tokyo-tokyo-super-cool-yakult-salt-data.html`
+- `index.html`
+- `about.html`
+- `contact.html`
+- `privacy-policy.html`
+- `E-Liquids.html`
+- `coils.html`
+- `OXVA.html`
+- `vaporesso.html`
+- `UWELL.html`
+- `voopoo.html`
+- `login-signup.html`
+- `checkout.html`
+
+### 2. Form Fields
+- **Newsletter:** `email` (type=email, placeholder: "Your email address")
+- **Search:** `text` (id=searchInput, placeholder: "Search for products, brands...")
+- **Product:** `number` (id=productQty, quantity selector)
+- **Nicotine Strength:** `select` (id=colorSelect) — options: 30mg, 50mg
+
+### 3. URLs/Routes
+- `../index.html`, `../about.html`, `../contact.html`
+- `../privacy-policy.html`, `../checkout.html`, `../login-signup.html`
+- `../E-Liquids.html`, `../coils.html`, `../OXVA.html`, `../vaporesso.html`, `../UWELL.html`
+- Newsletter `action="#"` (placeholder)
+
+### 4. JavaScript API Calls
+- **None detected** (empty `<script>` block, external files only)
+- External JS: `bootstrap.bundle.min.js`, `script.js`
+
+### 5. Page Purpose
+- **Product Detail Page** — TOKYO Super Cool Yakult Salt E-Liquid
+- Features: nicotine strength selection, quantity control, add-to-cart, cart sidebar, product search overlay===CHUNK_SEPARATOR===## Analysis: Chunk 120/146 - Vape Cluster Frontend
+
+### 1. HTML File Names
+- `tokyo-tripple-mango-data.html`
+- `udoo-pineapple-peach-data.html`
+- `login-signup.html`
+- `checkout.html`
+- `index.html`, `about.html`, `contact.html`, `privacy-policy.html`
+- `E-Liquids.html`, `coils.html`, `voopoo.html`, `vaporesso.html`, `OXVA.html`, `UWELL.html`
+
+### 2. Form Fields
+- **Newsletter:** `email` (type="email", placeholder="Your email address")
+- **Search:** `text` (id="searchInput", placeholder="Search for products, brands...")
+- **Product:** `number` (id="productQty", quantity selector)
+- **Variant Select:** `colorSelect` (Nicotine Strength: 30mg, 50mg)
+
+### 3. URLs/Routes
+- `../checkout.html`, `../login-signup.html`
+- Newsletter form `action="#"` (no backend endpoint)
+- All collection/nav hrefs as listed above
+
+### 4. JavaScript API Calls
+- **None visible** — empty `<script>` block on product page
+- JS functionality delegated to `../assets/js/script.js`
+
+### 5. Page Purposes
+- **tokyo-tripple-mango-data.html** — E-liquid product detail page (Tokyo brand)
+- **udoo-pineapple-peach-data.html** — E-liquid product detail page (UDOO brand)
+- Both include: cart sidebar, search overlay, relevant products, newsletter signup footer===CHUNK_SEPARATOR===## Chunk 121/146 Analysis
+
+### 1. HTML File Names
+- `udoo-pineapple-peach-data.html` (implied from first segment)
+- `udoo-pineapple-grape-data.html`
+- `checkout.html`
+- `index.html`, `about.html`, `contact.html`, `privacy-policy.html`
+- `E-Liquids.html`, `coils.html`, `OXVA.html`, `vaporesso.html`, `UWELL.html`, `voopoo.html`
+- `login-signup.html`
+
+### 2. Form Fields
+- `email` — newsletter subscription input
+- `colorSelect` — Nicotine Strength dropdown (30mg / 50mg)
+- `productQty` — quantity number input (min: 1)
+
+### 3. URLs/Routes
+- `../checkout.html`
+- `../index.html`, `../about.html`, `../contact.html`
+- `../privacy-policy.html`, `../login-signup.html`
+- `../E-Liquids.html`, `../coils.html`, `../OXVA.html`, `../vaporesso.html`, `../UWELL.html`
+
+### 4. JavaScript API Calls
+- `updateQty(-1/1)` — quantity control function
+- No fetch/AJAX calls visible; `<script>` blocks are **empty**
+
+### 5. Page Purposes
+- **Product detail pages** — UDOO Pineapple Peach & Pineapple Grape E-Liquids
+- **Cart sidebar** — session cart management
+- **Checkout redirect** — via cart footer button===CHUNK_SEPARATOR===## Chunk 122/146 Analysis
+
+### 1. HTML File Names
+- `udoo-pineapple-ice-data.html`
+- `udoo-pineapple-lychee-data.html`
+
+### 2. Form Fields
+- **Newsletter form:** `email` (type="email", placeholder="Your email address")
+- **Product options:** `colorSelect` (select dropdown - Nicotine Strength: 30mg, 50mg)
+- **Quantity:** `productQty` (type="number", min=1)
+
+### 3. URLs/Routes
+- `../index.html`, `../about.html`, `../contact.html`, `../privacy-policy.html`
+- `../E-Liquids.html`, `../coils.html`, `../checkout.html`, `../login-signup.html`
+- `../voopoo.html`, `../vaporesso.html`, `../UWELL.html`, `../OXVA.html`
+- Newsletter form: `action="#"` (non-functional)
+
+### 4. JavaScript API Calls
+- **None detected** — empty `<script>` block; relies on `script.js` and `bootstrap.bundle.min.js`
+
+### 5. Page Purposes
+- **Product detail pages** for UDOO E-Liquid flavors (Pineapple Ice, Pineapple Lychee)
+- Features: nicotine strength selection, quantity selector, add-to-cart, cart sidebar, product search overlay===CHUNK_SEPARATOR===## Analysis: Chunk 123/146 — Vape Cluster Frontend
+
+### 1. HTML File Names
+- `udoo-pineapple-lychee-data.html` (implied from context)
+- `udoo-pineapple-passion-fruit-data.html`
+- `coils.html`, `about.html`, `contact.html`, `index.html`
+- `login-signup.html`, `checkout.html`, `E-Liquids.html`
+- `voopoo.html`, `vaporesso.html`, `UWELL.html`, `OXVA.html`
+- `privacy-policy.html`
+
+### 2. Form Fields
+- `searchInput` — text input (product search)
+- `colorSelect` — dropdown (Nicotine Strength: 30mg / 50mg)
+- `productQty` — number input (quantity, min=1)
+- Newsletter `email` input (footer, required)
+
+### 3. URLs/Routes
+- `../checkout.html`, `../login-signup.html`, `../index.html`
+- `../E-Liquids.html`, `../coils.html`, `../about.html`, `../contact.html`
+- `javascript:void(0)` (search/cart triggers)
+- `form action="#"` (newsletter, non-functional)
+
+### 4. JavaScript API Calls
+- `updateQty(-1/+1)` — inline onclick handlers
+- No fetch/AJAX calls visible; JS logic deferred to `script.js`
+
+### 5. Page Purposes
+- **Product Detail Pages** — UDOO E-Liquid variants (Pineapple Lychee, Pineapple Passion Fruit)
+- **Cart Sidebar** — add/view cart items
+- **Search Overlay** — product search UI
+- **Newsletter Signup** — footer email capture===CHUNK_SEPARATOR===## Analysis: Chunk 124/146
+
+### 1. HTML File Names
+- `udoo-pineapple-peach-mango-data.html`
+- `vgod-vgod-freebase-e-liquids-applebomb-3mg-60ml-data.html`
+- `index.html`, `about.html`, `contact.html`, `privacy-policy.html`
+- `E-Liquids.html`, `coils.html`, `OXVA.html`, `vaporesso.html`, `UWELL.html`
+- `login-signup.html`, `checkout.html`, `voopoo.html`
+
+### 2. Form Fields
+- `email` (newsletter, placeholder: "Your email address")
+- `colorSelect` (dropdown: Nicotine Strength — 30mg, 50mg)
+- `productQty` (number input, quantity selector)
+
+### 3. URLs/Routes
+- `../index.html`, `../about.html`, `../contact.html`, `../checkout.html`
+- `../login-signup.html`, `../privacy-policy.html`
+- `../E-Liquids.html`, `../coils.html`, `../OXVA.html`, `../vaporesso.html`, `../UWELL.html`
+- `form action="#"` (newsletter)
+
+### 4. JavaScript API Calls
+- None detected (empty `<script>` block)
+- External: `bootstrap.bundle.min.js`, `script.js`
+
+### 5. Page Purpose
+- **Product detail page** — UDOO Pineapple Peach Mango E-Liquid (nicotine strength selection, add-to-cart, relevant products)===CHUNK_SEPARATOR===## Chunk 125/146 Analysis
+
+### 1. HTML File Names
+- `vgod-vgod-freebase-e-liquids-applebomb-3mg-60ml-data.html` (implied from context)
+- `vgod-vgod-freebase-e-liquids-berrybomb-3mg-60ml-data.html`
+
+### 2. Form Fields
+- `searchInput` (text) - product search
+- `colorSelect` (select) - Nicotine Strength (30mg, 50mg options)
+- `productQty` (number) - quantity selector
+- Newsletter `email` input (footer)
+
+### 3. URLs/Routes
+- `../index.html`, `../about.html`, `../contact.html`
+- `../login-signup.html`, `../checkout.html`
+- `../E-Liquids.html`, `../coils.html`, `../privacy-policy.html`
+- `../voopoo.html`, `../vaporesso.html`, `../UWELL.html`, `../OXVA.html`
+
+### 4. JavaScript API Calls
+- `updateQty(-1/1)` - quantity update function
+- Cart/search trigger handlers via `script.js`
+- No external API calls detected
+
+### 5. Page Purposes
+- **Product detail pages** for VGOD Freebase E-Liquid variants:
+  - AppleBomb 3mg 60ml
+  - BerryBomb 3mg 60ml
+- Nicotine strength selection, add-to-cart, cart sidebar functionality===CHUNK_SEPARATOR===# Frontend Code Chunk 126/146 Analysis
+
+## 1. HTML File Names
+- `vgod-vgod-freebase-e-liquid-berrybomb-3mg-60ml-data.html` *(implied from chunk context)*
+- `vgod-vgod-freebase-e-liquid-cubano-3mg-60ml-data.html`
+- `index.html`, `about.html`, `contact.html`, `privacy-policy.html`
+- `E-Liquids.html`, `coils.html`, `OXVA.html`, `vaporesso.html`, `UWELL.html`
+- `login-signup.html`, `checkout.html`, `voopoo.html`
+
+## 2. Form Fields
+- `email` (newsletter subscription, placeholder: "Your email address")
+- `productQty` (number input, quantity selector)
+- `colorSelect` (nicotine strength: 30mg / 50mg)
+- `searchInput` (product search)
+
+## 3. URLs/Routes
+- `../index.html`, `../about.html`, `../contact.html`, `../privacy-policy.html`
+- `../E-Liquids.html`, `../coils.html`, `../checkout.html`
+- `../login-signup.html`, `../OXVA.html`, `../vaporesso.html`, `../UWELL.html`
+- Newsletter form `action="#"` *(not implemented)*
+
+## 4. JavaScript API Calls
+- `updateQty(-1/1)` — quantity control
+- No fetch/AJAX calls present; `<script>` blocks are **empty**
+
+## 5. Page Purposes
+- **Two product detail pages** — VGOD Freebase E-Liquid (BerryBomb & Cubano variants)
+- **Cart sidebar** — add/view cart items
+- **Newsletter signup** — email subscription
+- **Search overlay** — product search with trending tags===CHUNK_SEPARATOR===## Analysis of Frontend Code Chunk 127/146
+
+### 1. HTML File Names Found
+- `vgod-vgod-freebase-e-liquid-cubanoblack-3mg-60ml-data.html`
+- `vgod-vgod-freebase-e-liquid-cubanosilver-3mg-60ml-data.html`
+- `index.html`, `about.html`, `contact.html`, `privacy-policy.html`
+- `E-Liquids.html`, `coils.html`, `OXVA.html`, `vaporesso.html`, `UWELL.html`
+- `voopoo.html`, `login-signup.html`, `checkout.html`
+
+### 2. Form Fields
+- **Newsletter:** `email` (placeholder: "Your email address"), submit button "Subscribe"
+- **Search:** `text` input (id: `searchInput`, placeholder: "Search for products, brands...")
+- **Product:** `number` input (id: `productQty`, value: 1), nicotine strength `select` (id: `colorSelect`, options: 30mg/50mg)
+
+### 3. URLs/Routes Used
+- `../checkout.html`, `../login-signup.html`
+- `../index.html`, `../about.html`, `../contact.html`, `../privacy-policy.html`
+- `../assets/js/bootstrap.bundle.min.js`, `../assets/js/script.js`
+- `form action="#"` (newsletter, non-functional)
+
+### 4. JavaScript API Calls
+- **None detected** — empty `<script>` block; functionality deferred to `script.js`
+
+### 5. Page Purposes
+- **Product detail pages** — VGOD E-Liquid variants (CubanoBlack, CubanoSilver)
+- **Cart sidebar** — add/view cart items, subtotal display
+- **Newsletter subscription** — email capture footer widget
+- **Product search overlay** — live search with trending tags===CHUNK_SEPARATOR===# Code Chunk 128/146 Analysis
+
+## 1. HTML File Names
+- `vgod-vgod-freebase-e-liquid-dry-tobacco-3mg-60ml-data.html`
+- `checkout.html`
+- `login-signup.html`
+- `index.html`
+- `about.html`
+- `contact.html`
+- `privacy-policy.html`
+- `E-Liquids.html`
+- `coils.html`
+- `OXVA.html`
+- `vaporesso.html`
+- `UWELL.html`
+- `voopoo.html`
+
+## 2. Form Fields
+- `email` (newsletter subscription input)
+- `colorSelect` (Nicotine Strength dropdown: 30mg, 50mg)
+- `productQty` (number input, default: 1)
+
+## 3. URLs/Routes
+- `../checkout.html`
+- `../login-signup.html`
+- `../index.html`
+- `../about.html`, `../contact.html`, `../privacy-policy.html`
+- `../E-Liquids.html`, `../coils.html`, `../OXVA.html`, `../vaporesso.html`, `../UWELL.html`
+- Newsletter form action: `#` (not implemented)
+
+## 4. JavaScript API Calls
+- **None detected** — empty `<script>` block; relies on `script.js`
+
+## 5. Page Purpose
+- **Product Detail Page** — VGOD Freebase E-Liquid (Cubano Silver & Dry Tobacco variants), with cart sidebar, search overlay, and relevant products section===CHUNK_SEPARATOR===## Analysis: Chunk 129/146 — Vape Cluster Frontend
+
+### 1. HTML File Names
+- `vgod-vgod-freebase-e-liquid-icedapplebomb-3mg-60ml-data.html`
+- `vgod-vgod-freebase-e-liquid-icedbananabomb-3mg-60ml-data.html`
+- `index.html`, `about.html`, `contact.html`, `privacy-policy.html`
+- `E-Liquids.html`, `coils.html`, `OXVA.html`, `vaporesso.html`, `UWELL.html`
+- `login-signup.html`, `checkout.html`, `voopoo.html`
+
+### 2. Form Fields
+- `email` (newsletter, placeholder: "Your email address")
+- `colorSelect` (dropdown — Nicotine Strength: 30mg, 50mg)
+- `productQty` (number input, quantity selector)
+
+### 3. URLs/Routes
+- `../index.html`, `../about.html`, `../contact.html`, `../privacy-policy.html`
+- `../E-Liquids.html`, `../coils.html`, `../OXVA.html`, `../vaporesso.html`, `../UWELL.html`
+- `../login-signup.html`, `../checkout.html`, `../voopoo.html`
+- Newsletter form `action="#"` (non-functional)
+
+### 4. JavaScript API Calls
+- **None detected** — empty `<script>` block; logic deferred to `script.js`
+- `updateQty()` function called inline (defined externally)
+
+### 5. Page Purposes
+- **Product Detail Page** — VGOD E-Liquid variants (IcedAppleBomb, IcedBananaBomb)
+- **Cart sidebar** — quantity management, checkout redirect
+- **Newsletter subscription** — email capture (footer)===CHUNK_SEPARATOR===## Frontend Code Chunk 130/146 Analysis
+
+### 1. HTML File Names
+- `vgod-vgod-freebase-e-liquid-icedbananabomb-3mg-60ml-data.html` *(implied from context)*
+- `vgod-vgod-freebase-e-liquid-icedmangobomb-3mg-60ml-data.html`
+- `index.html`, `login-signup.html`, `checkout.html`
+- `voopoo.html`, `vaporesso.html`, `UWELL.html`, `OXVA.html`
+- `E-Liquids.html`, `coils.html`, `about.html`, `contact.html`, `privacy-policy.html`
+
+### 2. Form Fields
+- `searchInput` (text) — product search
+- `colorSelect` (select) — Nicotine Strength (30mg/50mg)
+- `productQty` (number) — quantity selector
+- Newsletter `email` input
+
+### 3. URLs/Routes
+- `../index.html`, `../login-signup.html`, `../checkout.html`
+- `../voopoo.html`, `../vaporesso.html`, `../UWELL.html`, `../OXVA.html`
+- `../E-Liquids.html`, `../coils.html`, `../about.html`, `../contact.html`, `../privacy-policy.html`
+
+### 4. JavaScript API Calls
+- `updateQty(-1/1)` — quantity control
+- `javascript:void(0)` triggers for search/cart
+- No external API/fetch calls visible
+
+### 5. Page Purposes
+- **Product Detail Pages** — Two VGOD e-liquid product pages
+- **Cart Sidebar** — Add/manage cart items
+- **Search Overlay** — Product search with trending tags
+- **Newsletter Signup** — Email subscription in footer===CHUNK_SEPARATOR===## Chunk 131/146 Analysis
+
+### 1. HTML File Names
+- `vgod-vgod-freebase-e-liquid-icedpurplebomb-3mg-60ml-data.html`
+- `index.html`
+- `about.html`
+- `contact.html`
+- `privacy-policy.html`
+- `E-Liquids.html`
+- `coils.html`
+- `OXVA.html`
+- `vaporesso.html`
+- `UWELL.html`
+- `login-signup.html`
+- `checkout.html`
+- `voopoo.html`
+
+### 2. Form Fields
+- `email` (newsletter input, placeholder: "Your email address")
+- `colorSelect` (dropdown — Nicotine Strength: 30mg, 50mg)
+- `productQty` (number input, quantity selector)
+- `searchInput` (text, product search)
+
+### 3. URLs/Routes
+- `../checkout.html`
+- `../login-signup.html`
+- `../index.html`
+- `../E-Liquids.html`, `../coils.html`, `../about.html`, `../contact.html`
+- Newsletter form `action="#"` (placeholder)
+
+### 4. JavaScript API Calls
+- `updateQty(1)` / `updateQty(-1)` — quantity control
+- No fetch/AJAX calls present
+
+### 5. Page Purpose
+- **Product detail page** — VGOD Freebase E-Liquid (IcedPurpleBomb 3mg 60ml), with Add-to-Cart, nicotine strength selection, and relevant product display===CHUNK_SEPARATOR===# Frontend Code Analysis - Chunk 132/146
+
+## 1. HTML File Names
+- `vgod-vgod-freebase-e-liquid-luscious-3mg-60ml-data.html`
+- `vgod-vgod-freebase-e-liquid-lushice-3mg-60ml-data.html`
+
+## 2. Form Fields
+- **Newsletter form:** `email` (placeholder: "Your email address", required)
+- **Search:** `text` input (id: `searchInput`, placeholder: "Search for products, brands...")
+- **Product quantity:** `number` input (id: `productQty`, value: 1, min: 1, readonly)
+- **Nicotine strength select:** id: `colorSelect` (options: 30mg, 50mg)
+
+## 3. URLs/Routes Used
+- `../index.html`, `../about.html`, `../contact.html`, `../privacy-policy.html`
+- `../E-Liquids.html`, `../coils.html`, `../OXVA.html`, `../vaporesso.html`, `../UWELL.html`
+- `../voopoo.html`, `../login-signup.html`, `../checkout.html`
+- Newsletter form action: `#` (no backend)
+
+## 4. JavaScript API Calls
+- None found; `onclick="updateQty(-1/1)"` are local functions
+- External scripts: `bootstrap.bundle.min.js`, `script.js`
+
+## 5. Page Purposes
+- **Product detail pages** — VGOD E-Liquid variants (Luscious & Lushice 3mg 60ml)
+- Features: cart sidebar, search overlay, nicotine strength selection, relevant products section===CHUNK_SEPARATOR===# Frontend Code Chunk 133/146 Analysis
+
+## 1. HTML File Names
+- `vgod-vgod-freebase-e-liquid-mangobomb-3mg-60ml-data.html`
+- `checkout.html`
+- `login-signup.html`
+- `index.html`
+- `about.html`
+- `contact.html`
+- `privacy-policy.html`
+- `E-Liquids.html`
+- `coils.html`
+- `OXVA.html`
+- `vaporesso.html`
+- `UWELL.html`
+- `voopoo.html`
+
+## 2. Form Fields
+- `email` (newsletter input — placeholder: "Your email address")
+- `searchInput` (text — product search)
+- `colorSelect` (select — Nicotine Strength: 30mg / 50mg)
+- `productQty` (number — quantity, default: 1, min: 1)
+
+## 3. URLs/Routes
+- `../checkout.html`
+- `../login-signup.html`
+- `../index.html`
+- `../about.html`, `../contact.html`, `../privacy-policy.html`
+- `../E-Liquids.html`, `../coils.html`, `../OXVA.html`, `../vaporesso.html`, `../UWELL.html`
+- Newsletter form `action="#"` (no backend endpoint)
+
+## 4. JavaScript API Calls
+- `updateQty(-1/+1)` — quantity adjustment
+- No fetch/AJAX API calls detected; JS logic deferred to `script.js`
+- External scripts: `bootstrap.bundle.min.js`, `assets/js/script.js`
+
+## 5. Page Purpose
+- **Product Detail Page** — VGOD Freebase E-Liquid (Lush Ice & Mango Bomb variants)
+- Features: variant selection, cart sidebar, quantity control, relevant products, newsletter signup===CHUNK_SEPARATOR===# Analysis: Frontend Code Chunk 134/146 - Vape Cluster
+
+## 1. HTML File Names
+- `vgod-vgod-freebase-e-liquid-purplebomb-3mg-60ml-data.html`
+- `vgod-vgod-freebase-e-liquid-sourlicious-3mg-60ml-data.html`
+- `index.html`, `about.html`, `contact.html`, `privacy-policy.html`
+- `E-Liquids.html`, `coils.html`, `OXVA.html`, `vaporesso.html`, `UWELL.html`
+- `voopoo.html`, `login-signup.html`, `checkout.html`
+
+## 2. Form Fields
+- `email` (newsletter, placeholder: "Your email address")
+- `colorSelect` (dropdown: Nicotine Strength — 30mg, 50mg)
+- `productQty` (number input, quantity selector)
+
+## 3. URLs/Routes
+- `../index.html`, `../about.html`, `../contact.html`, `../privacy-policy.html`
+- `../E-Liquids.html`, `../coils.html`, `../checkout.html`, `../login-signup.html`
+- `../OXVA.html`, `../vaporesso.html`, `../UWELL.html`, `../voopoo.html`
+- Newsletter form `action="#"` (non-functional)
+
+## 4. JavaScript API Calls
+- **None detected** — empty `<script>` block present
+- External JS: `bootstrap.bundle.min.js`, `script.js`
+
+## 5. Page Purposes
+- **Product Detail Pages** — VGOD E-liquid variants (Purplebomb, Sourlicious)
+- **Add to Cart** functionality (cart sidebar, badge counter)
+- **Newsletter Subscription** (footer)
+- **Search Overlay** with trending tags===CHUNK_SEPARATOR===# Frontend Code Analysis - Chunk 135/146 (Vape Cluster)
+
+## 1. HTML File Names
+- `vgod-vgod-freebase-eliquid-sourlicious-3mg-60ml-data.html` *(implied from context)*
+- `vgod-vgod-freebase-eliquid-iced-cherry-lime-3mg-60ml-data.html`
+- `index.html`, `login-signup.html`, `checkout.html`
+- `voopoo.html`, `vaporesso.html`, `UWELL.html`, `OXVA.html`
+- `E-Liquids.html`, `coils.html`, `about.html`, `contact.html`, `privacy-policy.html`
+
+## 2. Form Fields
+- `searchInput` — text (product search)
+- `colorSelect` — select (Nicotine Strength: 30mg, 50mg)
+- `productQty` — number (quantity, min=1)
+- Newsletter `email` input (footer)
+
+## 3. URLs/Routes
+- `../checkout.html`, `../login-signup.html`, `../index.html`
+- `../E-Liquids.html`, `../coils.html`, `../about.html`, `../contact.html`, `../privacy-policy.html`
+
+## 4. JavaScript API Calls
+- **None detected** — empty `<script>` tags; relies on `script.js` and `bootstrap.bundle.min.js`
+
+## 5. Page Purposes
+- **Two VGOD E-Liquid product detail pages** (Sourlicious & Iced Cherry Lime)
+- Cart sidebar, search overlay, newsletter subscription===CHUNK_SEPARATOR===# Analysis: Chunk 136/146 - VAPE CLUSTER Frontend
+
+## 1. HTML File Names
+- `vgod-vgod-freebase-eliquid-icedbluerazz-3mg-60ml-data.html`
+- `index.html`, `about.html`, `contact.html`, `privacy-policy.html`
+- `E-Liquids.html`, `coils.html`, `checkout.html`, `login-signup.html`
+- `voopoo.html`, `vaporesso.html`, `UWELL.html`, `OXVA.html`
+
+## 2. Form Fields
+- `type="email"` — newsletter subscription (placeholder: "Your email address")
+- `type="number"` id=`productQty` — quantity selector (min=1, readonly)
+- `id="colorSelect"` — Nicotine Strength dropdown (30mg, 50mg options)
+- `id="searchInput"` — product search (text input)
+
+## 3. URLs/Routes
+- `../checkout.html`, `../login-signup.html`
+- `../index.html`, `../about.html`, `../contact.html`
+- Newsletter form: `action="#"` (inactive)
+
+## 4. JavaScript API Calls
+- **None visible** — empty `<script>` block present; JS loaded via `script.js` and `bootstrap.bundle.min.js`
+
+## 5. Page Purpose
+- **Product Detail Page** — VGOD Freebase E-Liquid (Iced Blue Razz / Iced Cherry Lime variants)
+- Features: variant selection, quantity control, add-to-cart, relevant products, newsletter signup===CHUNK_SEPARATOR===## Chunk 137/146 Analysis
+
+### 1. HTML File Names
+- `vgod-vgod-freebase-eliquid-icedbubblegrapes-3mg-60ml-data.html`
+- `vgod-vgod-freebase-eliquid-icedbubblewatermelon-3mg-60ml-data.html`
+- `coils.html`, `OXVA.html`, `vaporesso.html`, `UWELL.html`
+- `index.html`, `about.html`, `contact.html`, `E-Liquids.html`
+- `voopoo.html`, `login-signup.html`, `checkout.html`, `privacy-policy.html`
+
+### 2. Form Fields
+- `type="email"` — newsletter subscription (placeholder: "Your email address")
+- `type="number"` id="productQty" — quantity selector (min=1)
+- `type="text"` id="searchInput" — product search
+- `<select>` id="colorSelect" — Nicotine Strength (options: 30mg, 50mg)
+
+### 3. URLs/Routes
+- `../checkout.html`, `../login-signup.html`, `../index.html`
+- `form action="#"` — newsletter (non-functional)
+
+### 4. JavaScript API Calls
+- None explicit; `script.js` handles cart/search logic
+- `updateQty()` — inline JS function for quantity
+
+### 5. Page Purposes
+- **Two VGOD E-Liquid product detail pages** (Iced Bubble Grapes & Iced Bubble Watermelon)
+- Features: cart sidebar, product image gallery, nicotine strength selector, relevant products section, newsletter footer===CHUNK_SEPARATOR===## Chunk 138/146 Analysis
+
+### 1. HTML File Names
+- `vgod-vgod-freebase-eliquid-icedbubblewatermelon-3mg-60ml-data.html` (implied from chunk)
+- `vgod-vgod-freebase-eliquid-icedpeachmango-3mg-60ml-data.html`
+- `checkout.html`
+- `index.html`
+- `about.html`
+- `contact.html`
+- `privacy-policy.html`
+- `login-signup.html`
+- `E-Liquids.html`, `coils.html`, `OXVA.html`, `vaporesso.html`, `UWELL.html`, `voopoo.html`
+
+### 2. Form Fields
+- `email` (newsletter subscription input)
+- `quantity` number input (`id="productQty"`)
+- `select` dropdown (`id="colorSelect"`) — Nicotine Strength (30mg/50mg)
+- Search text input (`id="searchInput"`)
+
+### 3. URLs/Routes
+- `../checkout.html`
+- `../index.html`, `../about.html`, `../contact.html`
+- `../login-signup.html`
+- Newsletter form `action="#"` (placeholder)
+
+### 4. JavaScript API Calls
+- **None detected** — empty `<script>` tags; functionality deferred to `script.js`
+
+### 5. Page Purposes
+- **Product Detail Pages** (two VGOD e-liquid variants)
+- **Cart sidebar** (subtotal, checkout flow)
+- **Newsletter signup** (footer)
+- **Product search overlay**===CHUNK_SEPARATOR===## Analysis: Chunk 139/146 - Vape Cluster Frontend
+
+### 1. HTML File Names
+- `vgod-vgod-freebase-eliquid-icedstrawberryapple-3mg-60ml-data.html`
+- `yezzi-yezzi-salt-pineapple-mango-30ml-50mg-data.html`
+- `index.html`, `about.html`, `contact.html`, `privacy-policy.html`
+- `E-Liquids.html`, `coils.html`, `OXVA.html`, `vaporesso.html`, `UWELL.html`
+- `voopoo.html`, `login-signup.html`, `checkout.html`
+
+### 2. Form Fields
+- **Newsletter form:** `email` (placeholder: "Your email address"), submit button
+- **Product options:** `colorSelect` (Nicotine Strength dropdown: 30mg, 50mg)
+- **Quantity:** `productQty` (number input, min=1)
+
+### 3. URLs/Routes
+- `../checkout.html`, `../login-signup.html`
+- `../index.html`, `../about.html`, `../contact.html`
+- Newsletter form `action="#"` (non-functional)
+
+### 4. JavaScript API Calls
+- **None detected** — empty `<script>` block on product page
+- JS limited to `updateQty()`, cart/search triggers via `script.js`
+
+### 5. Page Purposes
+- **Product detail pages** — two E-liquid product pages (VGOD, YEZZI brands)
+- **Add-to-cart** functionality with nicotine strength selection
+- **Relevant products** section (cross-selling)===CHUNK_SEPARATOR===# Frontend Code Chunk 140/146 Analysis
+
+## 1. HTML File Names
+- `yezzi-yezzi-salt-pineapple-mango-30ml-50mg-data.html` *(implied from first product)*
+- `yezzi-yezzi-salt-pineapple-passion-fruit-30ml-35mg-data.html`
+- `voopoo.html`, `vaporesso.html`, `UWELL.html`, `OXVA.html`
+- `E-Liquids.html`, `coils.html`, `about.html`, `contact.html`
+- `login-signup.html`, `checkout.html`, `index.html`, `privacy-policy.html`
+
+## 2. Form Fields
+- `searchInput` — text (product search)
+- `colorSelect` — select (Nicotine Strength: 30mg/50mg)
+- `productQty` — number (quantity, min=1, readonly)
+- Newsletter `email` input — email with subscribe button
+
+## 3. URLs/Routes
+- `../checkout.html`, `../login-signup.html`, `../index.html`
+- `../E-Liquids.html`, `../coils.html`, `../privacy-policy.html`
+
+## 4. JavaScript API Calls
+- `updateQty(-1/+1)` — quantity updater
+- No fetch/AJAX calls visible; JS deferred to `script.js`
+
+## 5. Page Purposes
+- **Two YEZZI e-liquid product detail pages**
+- Pineapple Mango 30ml 50mg — Rs. 1,800
+- Pineapple Passion Fruit 30ml 35mg — Rs. 1,800===CHUNK_SEPARATOR===## Analysis: Frontend Code Chunk 141/146
+
+### 1. HTML File Names
+- `yezzi-yezzi-salt-pink-lychee-30ml-35mg-data.html`
+- `index.html`, `about.html`, `contact.html`, `privacy-policy.html`
+- `E-Liquids.html`, `coils.html`, `OXVA.html`, `vaporesso.html`, `UWELL.html`
+- `login-signup.html`, `checkout.html`
+- `voopoo.html`
+
+### 2. Form Fields
+- **Newsletter form:** `email` (type="email", placeholder="Your email address")
+- **Product options:** `colorSelect` (nicotine strength: 30mg/50mg dropdown)
+- **Quantity:** `productQty` (number input, min=1, readonly)
+
+### 3. URLs/Routes
+- `../checkout.html`, `../login-signup.html`
+- `../index.html`, `../about.html`, `../contact.html`
+- `../E-Liquids.html`, `../coils.html`, `../OXVA.html`, `../vaporesso.html`, `../UWELL.html`
+- Newsletter `action="#"` (placeholder only)
+
+### 4. JavaScript API Calls
+- **None detected** (empty `<script>` block; relies on `script.js` and `bootstrap.bundle.min.js`)
+
+### 5. Page Purpose
+- **Product detail page** for YEZZI Salt Pink Lychee 30ml e-liquid
+- Features: variant selection, quantity control, add-to-cart, cart sidebar, product search overlay===CHUNK_SEPARATOR===## Chunk 142/146 Analysis
+
+### 1. HTML File Names
+- `yezzi-yezzi-salt-wild-blueberry-30ml-35mg-data.html`
+- `yezzi-yezzi-salt-winter-mint-30ml-50mg-data.html`
+
+### 2. Form Fields
+- `input type="email"` — Newsletter subscription (placeholder: "Your email address")
+- `input type="text"` id="searchInput" — Product search
+- `input type="number"` id="productQty" — Quantity selector (min=1, readonly)
+- `select` id="colorSelect" — Nicotine strength (options: 30mg, 50mg)
+
+### 3. URLs/Routes
+- `../index.html`, `../about.html`, `../contact.html`, `../E-Liquids.html`
+- `../coils.html`, `../voopoo.html`, `../vaporesso.html`, `../UWELL.html`, `../OXVA.html`
+- `../login-signup.html`, `../checkout.html`, `../privacy-policy.html`
+- Newsletter form: `action="#"` (no backend)
+
+### 4. JavaScript API Calls
+- None visible; JS deferred to `script.js`
+- `updateQty()` inline function for quantity buttons
+
+### 5. Page Purposes
+- **Two E-Liquid product detail pages** (YEZZI Wild Blueberry 35mg & Winter Mint 50mg)
+- Features: variant selection, cart sidebar, product search, newsletter signup, relevant products section===CHUNK_SEPARATOR===# Chunk 143/146 Analysis
+
+## 1. HTML File Names
+- `yezzi-yezzi-salt-winter-mint-30ml-data.html` (implied from first product)
+- `yezzi-yezzi-ultra-cool-salt-burst-watermelon-30ml-data.html`
+- `index.html`, `about.html`, `contact.html`, `privacy-policy.html`
+- `E-Liquids.html`, `coils.html`, `checkout.html`, `login-signup.html`
+- `voopoo.html`, `vaporesso.html`, `UWELL.html`, `OXVA.html`
+
+## 2. Form Fields
+- `colorSelect` (dropdown) — Nicotine Strength: 30mg / 50mg
+- `productQty` (number input) — Quantity, min=1
+- Newsletter: `email` input (placeholder: "Your email address")
+
+## 3. URLs/Routes
+- `../checkout.html`, `../login-signup.html`, `../index.html`
+- `../E-Liquids.html`, `../coils.html`, `../about.html`, `../contact.html`
+- Newsletter form `action="#"` (non-functional)
+
+## 4. JavaScript API Calls
+- `updateQty(-1/1)` — quantity control
+- **No fetch/API calls present**; empty `<script>` tags
+
+## 5. Page Purposes
+- **Two product detail pages** — YEZZI E-Liquid variants (Winter Mint & Watermelon)
+- Nicotine strength selection, cart management, relevant product display===CHUNK_SEPARATOR===# Frontend Code Chunk 144/146 Analysis
+
+## 1. HTML File Names
+- `yezzi-yezzi-ultra-cool-salt-green-mango-30ml-35mg-data.html`
+- `yezzi-yezzi-ultra-cool-salt-pineapple-30ml-50mg-data.html`
+
+## 2. Form Fields
+- **Newsletter:** `type="email"` placeholder="Your email address" (required)
+- **Nicotine Strength:** `<select id="colorSelect">` — options: 30mg, 50mg
+- **Quantity:** `<input type="number" id="productQty">` value="1", min="1", readonly
+
+## 3. URLs/Routes
+- `../index.html`, `../about.html`, `../contact.html`, `../privacy-policy.html`
+- `../E-Liquids.html`, `../coils.html`, `../OXVA.html`, `../vaporesso.html`, `../UWELL.html`, `../voopoo.html`
+- `../login-signup.html`, `../checkout.html`
+- `form action="#"` (newsletter, no backend)
+
+## 4. JavaScript API Calls
+- **None** — empty `<script>` block; relies on `script.js` and `bootstrap.bundle.min.js`
+
+## 5. Page Purposes
+- **Product Detail Pages** — YEZZI e-liquid listings (Green Mango 35mg, Pineapple 50mg)
+- **Cart sidebar** — add-to-cart, subtotal, checkout flow
+- **Newsletter subscription** widget===CHUNK_SEPARATOR===## Chunk 145/146 Analysis
+
+### 1. HTML File Names
+- `yezzi-yezzi-ultra-cool-salt-pineapple-30ml-50mg-data.html` (implied from first product)
+- `yezzi-yezzi-ultra-cool-salt-pineapple-guava-30ml-35mg-data.html`
+- `E-Liquids.html`, `coils.html`, `about.html`, `contact.html`
+- `login-signup.html`, `checkout.html`, `index.html`
+- `privacy-policy.html`, `voopoo.html`, `vaporesso.html`, `UWELL.html`, `OXVA.html`
+
+### 2. Form Fields
+- `searchInput` (text) — product search
+- `colorSelect` (select) — Nicotine Strength (30mg/50mg options)
+- `productQty` (number) — quantity selector, min=1, readonly
+- Newsletter `email` input — with submit button
+
+### 3. URLs/Routes
+- `../checkout.html`, `../login-signup.html`, `../index.html`
+- `../E-Liquids.html`, `../coils.html`, `../about.html`, `../contact.html`
+- `javascript:void(0)` — search/cart triggers
+
+### 4. JavaScript API Calls
+- `updateQty(-1/+1)` — quantity function
+- `../assets/js/script.js`, `../assets/js/bootstrap.bundle.min.js`
+- No fetch/AJAX calls visible
+
+### 5. Page Purposes
+- **Two YEZZI e-liquid product detail pages** (Pineapple 50mg & Pineapple Guava 35mg)
+- Price: **Rs. 1,800.00** each
+- Add-to-cart, variant selection, relevant products display===CHUNK_SEPARATOR===# VAPE CLUSTER - Complete Django Backend
+
+## Project Structure
+
+```
+vape_cluster/
+├── manage.py
+├── .env
+├── .env.example
+├── requirements.txt
+├── README.md
+├── vape_cluster/
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   ├── wsgi.py
+│   └── asgi.py
+├── store/
+│   ├── __init__.py
+│   ├── models.py
+│   ├── views.py
+│   ├── urls.py
+│   ├── forms.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── signals.py
+│   ├── middleware.py
+│   └── context_processors.py
+├── payments/
+│   ├── __init__.py
+│   ├── models.py
+│   ├── views.py
+│   ├── urls.py
+│   ├── payfast.py
+│   └── admin.py
+├── templates/
+│   └── (all HTML files mapped here)
+├── static/
+│   └── assets/
+└── media/
+```
+
+---
+
+## FILE 1: requirements.txt
+
+```txt
+Django==4.2.7
+mysqlclient==2.2.0
+django-environ==0.11.2
+Pillow==10.1.0
+django-crispy-forms==2.1
+crispy-bootstrap5==0.7
+requests==2.31.0
+django-session-timeout==0.1.0
+whitenoise==6.6.0
+gunicorn==21.2.0
+python-dotenv==1.0.0
+hashlib2==1.0.0
+```
+
+---
+
+## FILE 2: .env.example
+
+```env
+# Django Settings
+SECRET_KEY=your-very-secret-key-here-change-this
+DEBUG=True
+ALLOWED_HOSTS=localhost,127.0.0.1
+
+# MySQL Database
+DB_NAME=vape_cluster_db
+DB_USER=root
+DB_PASSWORD=your_mysql_password
+DB_HOST=localhost
+DB_PORT=3306
+
+# PayFast Credentials (Add when ready)
+PAYFAST_MERCHANT_ID=your_merchant_id_here
+PAYFAST_MERCHANT_KEY=your_merchant_key_here
+PAYFAST_PASSPHRASE=your_passphrase_here
+PAYFAST_SANDBOX=True
+
+# Site URLs
+SITE_URL=http://127.0.0.1:8000
+PAYFAST_RETURN_URL=http://127.0.0.1:8000/payments/success/
+PAYFAST_CANCEL_URL=http://127.0.0.1:8000/payments/cancel/
+PAYFAST_NOTIFY_URL=http://127.0.0.1:8000/payments/notify/
+
+# Email Settings (Optional)
+EMAIL_HOST=smtp.gmail.com
+EMAIL_PORT=587
+EMAIL_HOST_USER=vapecluster872@gmail.com
+EMAIL_HOST_PASSWORD=your_email_password
+EMAIL_USE_TLS=True
+```
+
+---
+
+## FILE 3: vape_cluster/settings.py
+
+```python
+"""
+Django Settings for Vape Cluster
+Professional Production-Ready Configuration
+"""
+
+import os
+from pathlib import Path
+import environ
+
+# Base Directory
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+# Environment Variables Setup
+env = environ.Env(
+    DEBUG=(bool, False)
+)
+environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
+
+# Security
+SECRET_KEY = env('SECRET_KEY', default='django-insecure-change-this-in-production')
+DEBUG = env('DEBUG', default=True)
+ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=['localhost', '127.0.0.1'])
+
+# Application Definition
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    
+    # Third Party
+    'crispy_forms',
+    'crispy_bootstrap5',
+    
+    # Our Apps
+    'store',
+    'payments',
+]
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5'
+CRISPY_TEMPLATE_PACK = 'bootstrap5'
+
+MIDDLEWARE = [
+    'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',  # Static files in production
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'store.middleware.CartMiddleware',  # Custom cart middleware
+]
+
+ROOT_URLCONF = 'vape_cluster.urls'
+
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [BASE_DIR / 'templates'],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+                'store.context_processors.cart_context',  # Cart count in navbar
+                'store.context_processors.site_context',   # Site-wide data
+            ],
+        },
+    },
+]
+
+WSGI_APPLICATION = 'vape_cluster.wsgi.application'
+
+# MySQL Database Configuration
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': env('DB_NAME', default='vape_cluster_db'),
+        'USER': env('DB_USER', default='root'),
+        'PASSWORD': env('DB_PASSWORD', default=''),
+        'HOST': env('DB_HOST', default='localhost'),
+        'PORT': env('DB_PORT', default='3306'),
+        'OPTIONS': {
+            'charset': 'utf8mb4',
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+        },
+    }
+}
+
+# Password Validation
+AUTH_PASSWORD_VALIDATORS = [
+    {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator'},
+    {'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator'},
+    {'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator'},
+    {'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator'},
+]
+
+# Internationalization
+LANGUAGE_CODE = 'en-us'
+TIME_ZONE = 'Asia/Karachi'
+USE_I18N = True
+USE_TZ = True
+
+# Static Files
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATICFILES_DIRS = [BASE_DIR / 'static']
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+# Media Files (Product Images etc)
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+
+# Default Primary Key
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Authentication
+LOGIN_URL = '/auth/login/'
+LOGIN_REDIRECT_URL = '/dashboard/'
+LOGOUT_REDIRECT_URL = '/'
+
+# Session Settings
+SESSION_COOKIE_AGE = 86400  # 24 hours
+SESSION_EXPIRE_AT_BROWSER_CLOSE = False
+SESSION_SAVE_EVERY_REQUEST = True
+
+#

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage About Us | Vapier Admin</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/img/web-logo.png">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Rajdhani:wght@600;700&family=Audiowide&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Custom Admin CSS -->
+    <link rel="stylesheet" href="./css/admin-style.css">
+</head>
+<body>
+
+    <div class="admin-wrapper">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <img src="../assets/img/web-logo.png" alt="Vapier Logo">
+            </div>
+            
+            <ul class="sidebar-menu">
+                <li class="menu-label">Main</li>
+                <li class="menu-item">
+                    <a href="index.html" class="menu-link">
+                        <i class="fas fa-th-large"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="orders.html" class="menu-link">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Orders</span>
+                    </a>
+                </li>
+
+                <li class="menu-label">Inventory Management</li>
+                <li class="menu-item">
+                    <a href="manage-eliquids.html" class="menu-link">
+                        <i class="fas fa-tint"></i>
+                        <span>E-Liquids</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="manage-deals.html" class="menu-link">
+                        <i class="fas fa-tags"></i>
+                        <span>Deals</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="manage-oxva.html" class="menu-link">
+                        <i class="fas fa-bolt"></i>
+                        <span>OXVA</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="manage-voopoo.html" class="menu-link">
+                        <i class="fas fa-fire"></i>
+                        <span>Voopoo</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="manage-vaporesso.html" class="menu-link">
+                        <i class="fas fa-vial"></i>
+                        <span>Vaporesso</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="manage-uwell.html" class="menu-link">
+                        <i class="fas fa-atom"></i>
+                        <span>UWELL</span>
+                    </a>
+                </li>
+
+                <li class="menu-label">Content Management</li>
+                <li class="menu-item">
+                    <a href="manage-home.html" class="menu-link">
+                        <i class="fas fa-home"></i>
+                        <span>Home Page</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="about-us.html" class="menu-link active">
+                        <i class="fas fa-info-circle"></i>
+                        <span>About Us</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="contact-us.html" class="menu-link">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contact Us</span>
+                    </a>
+                </li>
+
+                <li class="menu-label">Settings</li>
+                <li class="menu-item">
+                    <a href="add-product.html" class="menu-link">
+                        <i class="fas fa-plus-circle"></i>
+                        <span>Add New Product</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="../index.html" class="menu-link">
+                        <i class="fas fa-external-link-alt"></i>
+                        <span>View Website</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Bar -->
+            <div class="top-bar">
+                <div class="page-title d-flex align-items-center">
+                    <button class="mobile-toggle-btn d-lg-none me-3">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1 class="mb-0">Manage About Us Page</h1>
+                </div>
+                <div class="user-profile">
+                    <div class="user-info">
+                        <span class="user-name">Admin User</span>
+                        <span class="user-role">Super Admin</span>
+                    </div>
+                    <div class="user-avatar">AD</div>
+                </div>
+            </div>
+
+            <!-- Content Management Form -->
+            <div class="table-container">
+                <form id="aboutUsForm">
+                    <!-- Hero Section -->
+                    <div class="mb-5">
+                        <h5 class="section-subtitle">Hero Section</h5>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label text-white-50">Main Title</label>
+                                <input type="text" class="form-control admin-input" value="ABOUT US">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label text-white-50">Subtitle</label>
+                                <input type="text" class="form-control admin-input" value="Premium Pod Systems & Vapes by VAPE CLUSTER">
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="bg-secondary my-4">
+
+                    <!-- Our Story -->
+                    <div class="mb-5">
+                        <h5 class="section-subtitle">Our Story</h5>
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                <label class="form-label text-white-50">Story Image</label>
+                                <div class="image-upload-box text-center">
+                                    <img src="../assets/img/acceerece/Banners/slider-1.png" alt="Current Story" class="img-fluid rounded mb-3" style="max-height: 150px;">
+                                    <button type="button" class="btn-admin btn-primary-admin btn-sm w-100">
+                                        <i class="fas fa-camera"></i> Change Image
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="mb-3">
+                                    <label class="form-label text-white-50">Story Title</label>
+                                    <input type="text" class="form-control admin-input" value="The VAPE CLUSTER Journey">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label text-white-50">Story Paragraph 1</label>
+                                    <textarea class="form-control admin-input" rows="3">Founded in 2021, VAPE CLUSTER was born out of a passion for providing a safer and more enjoyable alternative to traditional smoking. We started with a simple mission: to bring the world's most trusted vaping brands to the fingertips of the Pakistani community.</textarea>
+                                </div>
+                                <div>
+                                    <label class="form-label text-white-50">Story Paragraph 2</label>
+                                    <textarea class="form-control admin-input" rows="3">Over the years, we have grown from a small enthusiast project into a premier destination for vapers of all levels. From beginners looking for their first starter kit to veterans seeking high-end mods and premium e-liquids, our curated selection meets every need with quality and style.</textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="bg-secondary my-4">
+
+                    <!-- Values/Commitment -->
+                    <div class="mb-5">
+                        <h5 class="section-subtitle">Our Commitment (Values)</h5>
+                        <div class="row g-3">
+                            <!-- Value 1 -->
+                            <div class="col-md-4">
+                                <div class="p-3 border border-secondary rounded h-100">
+                                    <label class="form-label text-white-50">Value 1 Title</label>
+                                    <input type="text" class="form-control admin-input mb-2" value="Quality Assurance">
+                                    <label class="form-label text-white-50">Value 1 Description</label>
+                                    <textarea class="form-control admin-input" rows="3">We only stock 100% authentic products from world-renowned brands. Every item in our store undergoes strict quality checks to ensure your safety and satisfaction.</textarea>
+                                </div>
+                            </div>
+                            <!-- Value 2 -->
+                            <div class="col-md-4">
+                                <div class="p-3 border border-secondary rounded h-100">
+                                    <label class="form-label text-white-50">Value 2 Title</label>
+                                    <input type="text" class="form-control admin-input mb-2" value="Expert Advice">
+                                    <label class="form-label text-white-50">Value 2 Description</label>
+                                    <textarea class="form-control admin-input" rows="3">Our team consists of vaping enthusiasts who are ready to guide you. Whether it's choosing the right flavor or troubleshooting a device, we are here for you.</textarea>
+                                </div>
+                            </div>
+                            <!-- Value 3 -->
+                            <div class="col-md-4">
+                                <div class="p-3 border border-secondary rounded h-100">
+                                    <label class="form-label text-white-50">Value 3 Title</label>
+                                    <input type="text" class="form-control admin-input mb-2" value="Fast Delivery">
+                                    <label class="form-label text-white-50">Value 3 Description</label>
+                                    <textarea class="form-control admin-input" rows="3">We understand your excitement. That's why we offer swift and reliable shipping across Pakistan, ensuring your favorite juices and mods reach you on time.</textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="bg-secondary my-4">
+
+                    <!-- Store Info -->
+                    <div class="mb-4">
+                        <h5 class="section-subtitle">Store Information & Contact</h5>
+                        <div class="row g-3">
+                            <div class="col-md-12">
+                                <label class="form-label text-white-50">Full Address</label>
+                                <input type="text" class="form-control admin-input" value="Lahore, Johr town, Punjab, Pakistan 53900 Vape Cluster">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label text-white-50">Phone Number</label>
+                                <input type="text" class="form-control admin-input" value="+92 3200489485">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label text-white-50">Email Address</label>
+                                <input type="email" class="form-control admin-input" value="vapecluster872@gmail.com">
+                            </div>
+                            <div class="col-md-12">
+                                <label class="form-label text-white-50">Google Maps Embed URL</label>
+                                <input type="text" class="form-control admin-input" value="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3402.9812118589048!2d74.2990926!3d31.469703!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39190314e603c21b%3A0x934ad5dd97791b00!2sTobacco%20Town%26%20Vapes%20valley!5e0!3m2!1sen!2s!4v1778189042177!5m2!1sen!2s">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-end mt-4">
+                        <button type="reset" class="btn btn-outline-secondary px-4 py-2 me-2">Cancel Changes</button>
+                        <button type="button" class="btn-admin btn-primary-admin px-5 py-2">Update About Page</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.querySelector('.btn-primary-admin').addEventListener('click', function() {
+            alert('About Us information updated successfully! (Prototype)');
+        });
+    </script>
+</body>
+</html>
+

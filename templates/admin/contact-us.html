@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Contact Us | Vapier Admin</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/img/web-logo.png">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Rajdhani:wght@600;700&family=Audiowide&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Custom Admin CSS -->
+    <link rel="stylesheet" href="./css/admin-style.css">
+</head>
+<body>
+
+    <div class="admin-wrapper">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <img src="../assets/img/web-logo.png" alt="Vapier Logo">
+            </div>
+            
+            <ul class="sidebar-menu">
+                <li class="menu-label">Main</li>
+                <li class="menu-item">
+                    <a href="index.html" class="menu-link">
+                        <i class="fas fa-th-large"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="orders.html" class="menu-link">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Orders</span>
+                    </a>
+                </li>
+
+                <li class="menu-label">Inventory Management</li>
+                <li class="menu-item">
+                    <a href="manage-eliquids.html" class="menu-link">
+                        <i class="fas fa-tint"></i>
+                        <span>E-Liquids</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="manage-deals.html" class="menu-link">
+                        <i class="fas fa-tags"></i>
+                        <span>Deals</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="manage-oxva.html" class="menu-link">
+                        <i class="fas fa-bolt"></i>
+                        <span>OXVA</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="manage-voopoo.html" class="menu-link">
+                        <i class="fas fa-fire"></i>
+                        <span>Voopoo</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="manage-vaporesso.html" class="menu-link">
+                        <i class="fas fa-vial"></i>
+                        <span>Vaporesso</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="manage-uwell.html" class="menu-link">
+                        <i class="fas fa-atom"></i>
+                        <span>UWELL</span>
+                    </a>
+                </li>
+
+                <li class="menu-label">Content Management</li>
+                <li class="menu-item">
+                    <a href="manage-home.html" class="menu-link">
+                        <i class="fas fa-home"></i>
+                        <span>Home Page</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="about-us.html" class="menu-link">
+                        <i class="fas fa-info-circle"></i>
+                        <span>About Us</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="contact-us.html" class="menu-link active">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contact Us</span>
+                    </a>
+                </li>
+
+                <li class="menu-label">Settings</li>
+                <li class="menu-item">
+                    <a href="add-product.html" class="menu-link">
+                        <i class="fas fa-plus-circle"></i>
+                        <span>Add New Product</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="../index.html" class="menu-link">
+                        <i class="fas fa-external-link-alt"></i>
+                        <span>View Website</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Bar -->
+            <div class="top-bar">
+                <div class="page-title d-flex align-items-center">
+                    <button class="mobile-toggle-btn d-lg-none me-3">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1 class="mb-0">Contact Management</h1>
+                </div>
+                <div class="user-profile">
+                    <div class="user-info">
+                        <span class="user-name">Admin User</span>
+                        <span class="user-role">Super Admin</span>
+                    </div>
+                    <div class="user-avatar">AD</div>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Contact Info Management -->
+                <div class="col-lg-6">
+                    <div class="table-container h-100">
+                        <h5 class="section-subtitle">Update Store Information</h5>
+                        <form id="contactInfoForm">
+                            <div class="mb-3">
+                                <label class="form-label text-white-50">Store Location</label>
+                                <textarea class="form-control admin-input" rows="2">Lahore, Johr town, Punjab, Pakistan 53900 Vape Cluster</textarea>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <label class="form-label text-white-50">Phone Main</label>
+                                    <input type="text" class="form-control admin-input" value="+92 3200489485">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label text-white-50">Phone Secondary</label>
+                                    <input type="text" class="form-control admin-input" value="">
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label text-white-50">Support Email</label>
+                                <input type="email" class="form-control admin-input" value="vapecluster872@gmail.com">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label text-white-50">Store Timing</label>
+                                <input type="text" class="form-control admin-input" value="Mon-Sat (11 AM - 10 PM)">
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label text-white-50">Google Maps Embed URL</label>
+                                <input type="text" class="form-control admin-input" value="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3402.9812118589048!2d74.2990926!3d31.469703!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39190314e603c21b%3A0x934ad5dd97791b00!2sTobacco%20Town%26%20Vapes%20valley!5e0!3m2!1sen!2s!4v1778189042177!5m2!1sen!2s">
+                            </div>
+                            <button type="button" class="btn-admin btn-primary-admin w-100">Save Changes</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Contact Messages -->
+                <div class="col-lg-6">
+                    <div class="table-container h-100">
+                        <div class="table-header">
+                            <h5 class="mb-0">Recent Messages</h5>
+                            <span class="badge bg-danger">3 New</span>
+                        </div>
+                        <div class="message-list mt-3">
+                            <div class="message-item">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <h6 class="mb-0 text-white">Zain Ahmed</h6>
+                                    <small class="text-white-50">2 mins ago</small>
+                                </div>
+                                <p class="small text-white-50 mb-2">Subject: Product Inquiry - OXVA Xlim Pro</p>
+                                <p class="small mb-3">Is the Xlim Pro currently in stock in Gold color? I want to buy 2 units.</p>
+                                <div class="text-end">
+                                    <button class="btn btn-sm btn-link text-info p-0 me-3 text-decoration-none"><i class="fas fa-reply me-1"></i> Reply</button>
+                                    <button class="btn btn-sm btn-link text-danger p-0 text-decoration-none"><i class="fas fa-trash me-1"></i> Delete</button>
+                                </div>
+                            </div>
+                            <div class="message-item">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <h6 class="mb-0 text-white">Sara Khan</h6>
+                                    <small class="text-white-50">1 hour ago</small>
+                                </div>
+                                <p class="small text-white-50 mb-2">Subject: Delivery Status</p>
+                                <p class="small mb-3">I haven't received my order #7242 yet. Please update the status.</p>
+                                <div class="text-end">
+                                    <button class="btn btn-sm btn-link text-info p-0 me-3 text-decoration-none"><i class="fas fa-reply me-1"></i> Reply</button>
+                                    <button class="btn btn-sm btn-link text-danger p-0 text-decoration-none"><i class="fas fa-trash me-1"></i> Delete</button>
+                                </div>
+                            </div>
+                            <div class="message-item">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <h6 class="mb-0 text-white">Bilal Siddiqui</h6>
+                                    <small class="text-white-50">Yesterday</small>
+                                </div>
+                                <p class="small text-white-50 mb-2">Subject: E-Juice Recommendation</p>
+                                <p class="small mb-3">Which Tokyo juice is best for tobacco flavor lovers?</p>
+                                <div class="text-end">
+                                    <button class="btn btn-sm btn-link text-info p-0 me-3 text-decoration-none"><i class="fas fa-reply me-1"></i> Reply</button>
+                                    <button class="btn btn-sm btn-link text-danger p-0 text-decoration-none"><i class="fas fa-trash me-1"></i> Delete</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center mt-3">
+                            <a href="#" class="btn btn-link text-white-50">View All Messages</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.querySelector('.btn-primary-admin').addEventListener('click', function() {
+            alert('Contact information updated successfully! (Prototype)');
+        });
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,293 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Product | Vapier Admin</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/img/web-logo.png">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Rajdhani:wght@600;700&family=Audiowide&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Custom Admin CSS -->
+    <link rel="stylesheet" href="css/admin-style.css">
+    <style>
+        .form-label {
+            color: var(--text-muted);
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .form-control-admin {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            color: white;
+            padding: 12px 15px;
+            border-radius: 8px;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+        .form-control-admin:focus {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--accent-red);
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(255, 68, 68, 0.2);
+        }
+        .image-preview-box {
+            width: 100%;
+            height: 200px;
+            border: 2px dashed var(--border-color);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+        .image-preview-box:hover {
+            border-color: var(--accent-red);
+            background: rgba(255, 68, 68, 0.05);
+        }
+        .image-preview-box img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        select.form-control-admin {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='white' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 15px center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="admin-wrapper">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <img src="../assets/img/web-logo.png" alt="Vapier Logo">
+            </div>
+            
+            <ul class="sidebar-menu">
+                <li class="menu-label">Main</li>
+                <li class="menu-item">
+                    <a href="index.html" class="menu-link">
+                        <i class="fas fa-th-large"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="orders.html" class="menu-link">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Orders</span>
+                    </a>
+                </li>
+
+                <li class="menu-label">Inventory Management</li>
+                <li class="menu-item">
+                    <a href="manage-eliquids.html" class="menu-link">
+                        <i class="fas fa-tint"></i>
+                        <span>E-Liquids</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="manage-deals.html" class="menu-link">
+                        <i class="fas fa-tags"></i>
+                        <span>Deals</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="manage-oxva.html" class="menu-link">
+                        <i class="fas fa-bolt"></i>
+                        <span>OXVA</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="manage-voopoo.html" class="menu-link">
+                        <i class="fas fa-fire"></i>
+                        <span>Voopoo</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="manage-vaporesso.html" class="menu-link">
+                        <i class="fas fa-vial"></i>
+                        <span>Vaporesso</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="manage-uwell.html" class="menu-link">
+                        <i class="fas fa-atom"></i>
+                        <span>UWELL</span>
+                    </a>
+                </li>
+
+                <li class="menu-label">Content Management</li>
+                <li class="menu-item">
+                    <a href="manage-home.html" class="menu-link">
+                        <i class="fas fa-home"></i>
+                        <span>Home Page</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="about-us.html" class="menu-link">
+                        <i class="fas fa-info-circle"></i>
+                        <span>About Us</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="contact-us.html" class="menu-link">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contact Us</span>
+                    </a>
+                </li>
+
+                <li class="menu-label">Settings</li>
+                <li class="menu-item">
+                    <a href="add-product.html" class="menu-link">
+                        <i class="fas fa-plus-circle"></i>
+                        <span>Add New Product</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="../index.html" class="menu-link">
+                        <i class="fas fa-external-link-alt"></i>
+                        <span>View Website</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Bar -->
+            <div class="top-bar">
+                <div class="page-title d-flex align-items-center">
+                    <button class="mobile-toggle-btn d-lg-none me-3">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="d-flex align-items-center gap-3">
+                        <a href="javascript:history.back()" class="btn btn-sm btn-link text-white-50 p-0"><i class="fas fa-arrow-left"></i></a>
+                        <h1 class="mb-0">Edit Product</h1>
+                    </div>
+                </div>
+                <div class="user-profile">
+                    <div class="user-avatar">AD</div>
+                </div>
+            </div>
+
+            <!-- Form Section -->
+            <div class="row g-4">
+                <div class="col-lg-8">
+                    <div class="table-container">
+                        <form id="editProductForm">
+                            <div class="row g-3">
+                                <div class="col-md-12 mb-3">
+                                    <label class="form-label">Product Name</label>
+                                    <input type="text" class="form-control-admin" id="editName" value="" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Category / Brand</label>
+                                    <select class="form-control-admin" id="editCategory" required>
+                                        <option value="eliquid" class="text-dark">E-Liquids</option>
+                                        <option value="oxva" selected class="text-dark">OXVA</option>
+                                        <option value="voopoo" class="text-dark">Voopoo</option>
+                                        <option value="vaporesso" class="text-dark">Vaporesso</option>
+                                        <option value="uwell" class="text-dark">UWELL</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Price (RS)</label>
+                                    <input type="text" class="form-control-admin" id="editPrice" value="" required>
+                                </div>
+                                <div class="col-md-12 mb-3">
+                                    <label class="form-label">Product Description</label>
+                                    <textarea class="form-control-admin" rows="5" placeholder="Enter product details..."></textarea>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Stock Quantity</label>
+                                    <input type="number" class="form-control-admin" value="" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">SKU / Model Number</label>
+                                    <input type="text" class="form-control-admin" value="">
+                                </div>
+                            </div>
+                            
+                            <hr style="border-color: var(--border-color); margin: 30px 0;">
+                            
+                            <div class="d-flex justify-content-end gap-3">
+                                <button type="button" class="btn-admin" style="background: rgba(255,255,255,0.05); color: white;" onclick="history.back()">Cancel</button>
+                                <button type="submit" class="btn-admin btn-primary-admin">Next <i class="fas fa-chevron-right ms-1"></i></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="table-container">
+                        <h5 class="mb-4">Product Media</h5>
+                        <div class="image-preview-box mb-3" onclick="document.getElementById('productImage').click()">
+                             <img src="../assets/img/oxva/xlim-pro.png" id="imgPreview" alt="Preview">
+                            <input type="file" id="productImage" style="display: none;" accept="image/*" onchange="previewImage(this)">
+                        </div>
+                        <p class="text-center text-muted small">Click image to change</p>
+                        
+                        <div class="mt-4">
+                            <h5 class="mb-3">Visibility</h5>
+                            <div class="d-flex align-items-center justify-content-between p-2 rounded" style="background: rgba(40, 167, 69, 0.05); border: 1px solid rgba(40, 167, 69, 0.2);">
+                                <span class="text-success small fw-bold">Active on Site</span>
+                                <div class="form-check form-switch mb-0">
+                                    <input class="form-check-input" type="checkbox" checked>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Mock data populating based on URL (Prototype only)
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const pName = urlParams.get('name');
+            const pPrice = urlParams.get('price');
+            const pImg = urlParams.get('img');
+
+            if (pName) {
+                document.getElementById('editName').value = decodeURIComponent(pName);
+                document.querySelector('h1').innerText = 'Edit: ' + decodeURIComponent(pName);
+            }
+            if (pPrice) document.getElementById('editPrice').value = decodeURIComponent(pPrice);
+            if (pImg) document.getElementById('imgPreview').src = decodeURIComponent(pImg);
+        });
+
+        function previewImage(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('imgPreview').src = e.target.result;
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        document.getElementById('editProductForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const pName = document.getElementById('editName').value;
+            // Proceed to Step 2
+            window.location.href = 'manage-product-details.html?name=' + encodeURIComponent(pName);
+        });
+    </script>
+</body>
+</html>
+

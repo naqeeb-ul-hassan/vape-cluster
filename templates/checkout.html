@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="icon" type="icon" href="./assets/img/web-logo.png">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Rajdhani:wght@600;700&family=Audiowide&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+  
+    
+    <link rel="icon" type="icon" href="./assets/img/web-logo.png">
+    <title>Checkout - VAPE CLUSTER</title>
+</head>
+
+
+<body class="checkout-page bg-dark text-white">
+
+
+
+
+
+    <div class="checkout-main-wrapper d-flex flex-column flex-lg-row min-vh-100">
+        
+        <!-- LEFT COLUMN: Forms -->
+        <div class="checkout-left col-lg-7 order-2 order-lg-1 bg-dark text-white">
+
+            <div class="checkout-form-wrapper mx-auto px-3 px-lg-5 pb-5">
+                
+                <div class="mt-4 mb-3">
+                    <a href="index.html" class="text-white text-decoration-none d-inline-flex align-items-center hover-opacity">
+                        <i class="fa-solid fa-arrow-left me-2"></i> Back to Home
+                    </a>
+                </div>
+
+                <!-- Breadcrumbs (Optional but typical) -->
+                <!-- <nav aria-label="breadcrumb" class="mb-4 text-secondary">
+                    <small>Cart > <b>Information</b> > Shipping > Payment</small>
+                </nav> -->
+
+                <!-- Contact Section -->
+                <form id="checkoutForm" onsubmit="saveCheckoutInfo(event)">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h2 class="fs-4 fw-bold mb-0 checkout-title">Contact</h2>
+                    <a href="./login-signup.html" class="text-primary text-decoration-none fs-6">Log in</a>
+                </div>
+                
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="contactInfo" placeholder="Email or Mobile phone number">
+                    <label for="contactInfo" class="checkout-floating-label">Email or Mobile phone number <span class="checkout-info-span" style="color:#cc0000;">*</span></label>
+                </div>
+                
+             
+
+                <!-- Delivery Section -->
+                <h2 class="fs-4 fw-bold mb-3 mt-5 checkout-title">Delivery</h2>
+                
+                <div class="form-floating mb-3">
+                    <select class="form-select" id="countrySelect" aria-label="Country/Region">
+                        <option value="PK" class="checkout-select-option" selected>Pakistan</option>
+                    </select>
+                    <label for="countrySelect" class="checkout-floating-label">Country/Region</label>
+                </div>
+
+                <div class="row g-3 mb-3">
+                    <div class="col-md-6">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="firstName" placeholder="First name" required>
+                            <label for="firstName" class="checkout-floating-label">First name</label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="lastName" placeholder="Last name" required>
+                            <label for="lastName" class="checkout-floating-label">Last name <span class="checkout-info-span" style="color:#cc0000;">*</span></label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="address" placeholder="Address" required>
+                    <label for="address" class="checkout-floating-label">Address <span class="checkout-info-span" style="color:#cc0000;">*</span></label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="apartment" placeholder="Apartment, suite, etc. (optional)">
+                    <label for="apartment" class="checkout-floating-label">Apartment, suite, etc. (optional)</label>
+                </div>
+
+                <div class="row g-3 mb-3">
+                    <div class="col-md-6">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="city" list="pakistan-cities" placeholder="City" required>
+                            <label for="city" class="checkout-floating-label">City <span class="checkout-info-span" style="color:#cc0000;">*</span></label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="postalCode" list="pakistan-postal-codes" placeholder="Postal code (optional)">
+                            <label for="postalCode" class="checkout-floating-label">Postal code (optional)</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-floating mb-3 position-relative">
+                    <input type="tel" class="form-control" id="phone" placeholder="Phone" required maxlength="11">
+                    <label for="phone" class="checkout-floating-label">Phone <span class="checkout-info-span" style="color:#cc0000;">*</span></label>
+                    <i class="fa-regular fa-circle-question position-absolute top-50 end-0 translate-middle-y me-3 text-secondary" title="In case we need to contact you about your order"></i>
+                </div>
+
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="checkbox" value="" id="saveInfo">
+                    <label class="form-check-label text-white-50" for="saveInfo">
+                        Save this information for next time
+                    </label>
+                </div>
+                <div class="form-check mb-5">
+                    <input class="form-check-input" type="checkbox" value="" id="textOffers">
+                    <label class="form-check-label text-white-50" for="textOffers">
+                        Text me with news and offers
+                    </label>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="mt-4 pt-2">
+                    <button type="submit" class="btn btn-primary btn-lg w-100 fw-bold py-3 fs-5" id="proceedToPayBtn">Proceed to Pay</button>
+                </div>
+                </form>
+
+                <!-- Footer Links -->
+                <div class="mt-4 pt-4 border-top d-flex gap-3 text-primary small">
+                    <a href="privacy-policy.html" class="text-decoration-none text-primary checkout-footer-link">Privacy policy</a>
+                    <!-- <a href="#" class="text-decoration-none text-primary checkout-footer-link">Terms of service</a> -->
+                </div>
+
+            </div>
+        </div>
+
+        <!-- RIGHT COLUMN: Summary -->
+        <div class="checkout-right col-lg-5 order-1 order-lg-2 bg-dark border-start border-secondary text-white">
+            <div class="checkout-summary-wrapper mx-auto p-4 p-lg-5 pt-lg-4 mt-lg-4">
+
+                <!-- Header inside summary for mobile -->
+                <div class="d-lg-none d-flex justify-content-between align-items-center mb-4 border-bottom pb-3">
+                    <h2 class="fs-5 fw-bold mb-0 checkout-summary-title">Order summary</h2>
+                    <span class="fw-bold fs-5 checkout-summary-info"></span>
+                </div>
+
+                <!-- Items List Container -->
+                <div id="checkoutItemsContainer">
+                    <!-- Items will be injected here by JS -->
+                </div>
+
+                <hr class="text-secondary opacity-25 my-4 checkout-summary-divider">
+
+                <!-- Discount -->
+                <div class="discount-wrapper d-flex gap-2 mb-4">
+                    <div class="form-floating flex-grow-1">
+                        <input type="text" class="form-control" id="discountCode" placeholder="Discount code or gift card">
+                        <label for="discountCode" class="checkout-summary-info">Discount code or gift card</label>
+                    </div>
+                    <button class="btn btn-secondary px-4 fw-bold" disabled>Apply</button>
+                </div>
+
+                <hr class="text-secondary opacity-25 my-4 checkout-summary-divider">
+
+                <!-- Totals -->
+                <div class="totals-wrapper">
+                    <div class="d-flex justify-content-between mb-2 text-white-50">
+                        <span class="checkout-summary-info">Subtotal</span>
+                        <span class="text-white fw-bold checkout-summary-info" id="checkoutSubtotal"></span>
+                    </div>
+                    <div class="d-flex justify-content-between mb-3 text-white-50">
+                        <span class="checkout-summary-info">Shipping</span>
+                        <span class="text-white checkout-summary-info">Rs. 200</span>
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center mt-4">
+                        <span class="fw-bold fs-5 checkout-summary-info text-white">Total</span>
+                        <div class="total-price">
+                            <span class="text-white-50 small me-2 checkout-summary-info">PKR</span>
+                            <span class="fw-bold fs-3 checkout-summary-info text-white" id="checkoutTotal"></span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Data Lists for Cities and Postal Codes -->
+    <datalist id="pakistan-cities">
+        <option value="Lahore">
+        <option value="Lahore">
+        <option value="Islamabad">
+        <option value="Faisalabad">
+        <option value="Rawalpindi">
+        <option value="Gujranwala">
+        <option value="Peshawar">
+        <option value="Multan">
+        <option value="Hyderabad">
+        <option value="Quetta">
+        <option value="Bahawalpur">
+        <option value="Sargodha">
+        <option value="Sialkot">
+        <option value="Sukkur">
+        <option value="Larkana">
+        <option value="Sheikhupura">
+        <option value="Jhang">
+        <option value="Rahim Yar Khan">
+        <option value="Gujrat">
+        <option value="Mardan">
+        <option value="Kasur">
+        <option value="Dera Ghazi Khan">
+        <option value="Nawabshah">
+        <option value="Sahiwal">
+        <option value="Mirpur Khas">
+        <option value="Okara">
+        <option value="Mandi Bahauddin">
+        <option value="Abbottabad">
+        <option value="Muzaffargarh">
+        <option value="Khanpur">
+        <option value="Jacobabad">
+        <option value="Khairpur">
+        <option value="Khuzdar">
+        <option value="Pakpattan">
+        <option value="Jhelum">
+        <option value="Hub">
+        <option value="Mingora">
+        <option value="Pishin">
+        <option value="Wazirabad">
+        <option value="Nowshera">
+        <option value="Chiaman">
+        <option value="Swabi">
+        <option value="Tando Adam">
+        <option value="Shikarpur">
+        <option value="Kohat">
+        <option value="Dera Ismail Khan">
+        <option value="Muridke">
+        <option value="Gojra">
+        <option value="Tando Allahyar">
+        <option value="Chiniot">
+        <option value="Kot Radha Kishan">
+        <option value="Kamand">
+        <option value="Daska">
+        <option value="Burewala">
+        <option value="Vehari">
+        <option value="Chishtian">
+        <option value="Kamoke">
+        <option value="Hafizabad">
+        <option value="Sadiqabad">
+        <option value="Muzaffarabad">
+        <option value="Kot Abdul Malik">
+        <option value="Samundri">
+        <option value="Tando Muhammad Khan">
+        <option value="Jarawala">
+        <option value="Ahmedpur East">
+        <option value="Dadu">
+        <option value="Bahawalnagar">
+        <option value="Khaipur Mirs">
+        <option value="Lodhran">
+        <option value="Mansehra">
+        <option value="Zhob">
+        <option value="Kandhkot">
+        <option value="Gilgit">
+        <option value="Skardu">
+        <option value="Gwadar">
+        <option value="Pasni">
+        <option value="Jiwani">
+        <option value="Turbat">
+        <option value="Nushki">
+        <option value="Kharan">
+        <option value="Loralai">
+        <option value="Bibi Nani">
+        <option value="Sibi">
+        <option value="Kalat">
+        <option value="Mastung">
+        <option value="Panjgur">
+        <option value="Awaran">
+        <option value="Khar">
+        <option value="Parachinar">
+        <option value="Miranshah">
+        <option value="Wana">
+        <option value="Mandi Bahauddin">
+        <option value="Malakwal">
+        <option value="Phalia">
+        <option value="Dingah">
+        <option value="Lalamusa">
+        <option value="Jalalpur Jattan">
+        <option value="Sarai Alamgir">
+        <option value="Kharian">
+        <option value="Kotli">
+        <option value="Mirpur">
+        <option value="Bhimber">
+        <option value="Rawalakot">
+        <option value="Bagh">
+        <option value="Athmuqam">
+        <option value="Hattian Bala">
+        <option value="Sudhanoti">
+        <option value="Haveli">
+        <option value="Sowari">
+        <option value="Daggar">
+        <option value="Alpuri">
+        <option value="Batagram">
+        <option value="Shangla">
+        <option value="Dasu">
+        <option value="Chilas">
+        <option value="Gahkuch">
+        <option value="Aliabad">
+        <option value="Khaplu">
+        <option value="Shigar">
+        <option value="Rondu">
+        <option value="Gultari">
+    </datalist>
+
+    <datalist id="pakistan-postal-codes">
+        <option value="74000"> <!-- Lahore Central -->
+        <option value="75500"> <!-- Lahore Clifton -->
+        <option value="54000"> <!-- Lahore -->
+        <option value="44000"> <!-- Islamabad -->
+        <option value="46000"> <!-- Rawalpindi -->
+        <option value="38000"> <!-- Faisalabad -->
+        <option value="25000"> <!-- Peshawar -->
+        <option value="87300"> <!-- Quetta -->
+        <option value="60000"> <!-- Multan -->
+        <option value="71000"> <!-- Hyderabad -->
+        <option value="52250"> <!-- Gujranwala -->
+        <option value="51310"> <!-- Sialkot -->
+        <option value="22010"> <!-- Abbottabad -->
+        <option value="63100"> <!-- Bahawalpur -->
+        <option value="40100"> <!-- Sargodha -->
+        <option value="65110"> <!-- Sukkur -->
+        <option value="77070"> <!-- Larkana -->
+        <option value="20050"> <!-- Mardan -->
+        <option value="55050"> <!-- Kasur -->
+        <option value="32200"> <!-- Dera Ghazi Khan -->
+        <option value="67450"> <!-- Nawabshah -->
+        <option value="57000"> <!-- Sahiwal -->
+        <option value="50640"> <!-- Okara -->
+        <option value="19130"> <!-- Mingora -->
+        <option value="64200"> <!-- Rahim Yar Khan -->
+        <option value="50700"> <!-- Jhelum -->
+        <option value="47040"> <!-- Wah Cantt -->
+        <option value="82800"> <!-- Gwadar -->
+    </datalist>
+
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <script>
+        function saveCheckoutInfo(event) {
+            event.preventDefault();
+            const saveInfo = document.getElementById('saveInfo').checked;
+            if (saveInfo) {
+                const formData = {
+                    contactInfo: document.getElementById('contactInfo').value,
+                    firstName: document.getElementById('firstName').value,
+                    lastName: document.getElementById('lastName').value,
+                    address: document.getElementById('address').value,
+                    apartment: document.getElementById('apartment').value,
+                    city: document.getElementById('city').value,
+                    postalCode: document.getElementById('postalCode').value,
+                    phone: document.getElementById('phone').value,
+                    saveInfo: true
+                };
+                localStorage.setItem('checkoutFormData', JSON.stringify(formData));
+            } else {
+                localStorage.removeItem('checkoutFormData');
+            }
+            window.location.href = 'payment.html';
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load saved info if exists
+            const savedData = JSON.parse(localStorage.getItem('checkoutFormData'));
+            if (savedData && savedData.saveInfo) {
+                if(document.getElementById('contactInfo')) document.getElementById('contactInfo').value = savedData.contactInfo || '';
+                if(document.getElementById('firstName')) document.getElementById('firstName').value = savedData.firstName || '';
+                if(document.getElementById('lastName')) document.getElementById('lastName').value = savedData.lastName || '';
+                if(document.getElementById('address')) document.getElementById('address').value = savedData.address || '';
+                if(document.getElementById('apartment')) document.getElementById('apartment').value = savedData.apartment || '';
+                if(document.getElementById('city')) document.getElementById('city').value = savedData.city || '';
+                if(document.getElementById('postalCode')) document.getElementById('postalCode').value = savedData.postalCode || '';
+                if(document.getElementById('phone')) document.getElementById('phone').value = savedData.phone || '';
+                if(document.getElementById('saveInfo')) document.getElementById('saveInfo').checked = true;
+            }
+
+            const checkoutContainer = document.getElementById('checkoutItemsContainer');
+            const subtotalEl = document.getElementById('checkoutSubtotal');
+            const totalEl = document.getElementById('checkoutTotal');
+            
+            // Read items from localStorage
+            const cartItems = JSON.parse(localStorage.getItem('vapeCartItems')) || [];
+
+            if (cartItems.length === 0) {
+                checkoutContainer.innerHTML = '<p class="text-secondary text-center my-4">Your cart is currently empty.</p>';
+                subtotalEl.textContent = 'Rs. 0';
+                totalEl.textContent = '0';
+                document.getElementById('proceedToPayBtn').disabled = true;
+                return;
+            }
+
+            let html = '';
+            let subtotal = 0;
+
+            cartItems.forEach((item) => {
+                const itemTotal = item.price * item.quantity;
+                subtotal += itemTotal;
+
+                // Create correct path to image if it's relative
+                const imgPath = item.image.startsWith('./') ? item.image : item.image;
+
+                html += `
+                <div class="checkout-item d-flex align-items-center mb-4">
+                    <div class="checkout-item-img-wrap position-relative border rounded bg-white me-3" style="width: 14rem ; height: 100px;">
+                        <img src="${imgPath}" alt="${item.name}" class="w-100 h-100 object-fit-contain p-2">
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark text-white px-2 py-1" style="font-size: 11px;">
+                            ${item.quantity}
+                        </span>
+                    </div>
+                    <div class="checkout-item-info flex-grow-1 header-font">
+                        <h6 class="mb-0 fw-bold fs-6">${item.name}</h6>
+                        ${item.color ? `<small class="text-secondary d-block mt-1">${item.color}</small>` : ''}
+                    </div>
+                    <div class="checkout-item-price fw-bold ms-3">
+                       Rs. ${itemTotal.toLocaleString()}
+                    </div>
+                </div>
+                `;
+            });
+
+            checkoutContainer.innerHTML = html;
+            subtotalEl.textContent = 'Rs. ' + subtotal.toLocaleString();
+            
+            const shippingCost = 200;
+            const total = subtotal + shippingCost;
+            totalEl.textContent = total.toLocaleString();
+        });
+    </script>
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="icon" href="./assets/img/web-logo.png">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Rajdhani:wght@600;700&family=Audiowide&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Payment - VAPE CLUSTER</title>
+</head>
+
+<body class="checkout-page">
+
+    <div class="checkout-main-wrapper d-flex flex-column flex-lg-row min-vh-100">
+        
+        <!-- LEFT COLUMN: Payment Area -->
+        <div class="checkout-left col-lg-7 order-2 order-lg-1">
+            <div class="checkout-form-wrapper mx-auto px-3 px-lg-5 pb-5 pt-4">
+                
+                <nav aria-label="breadcrumb" class="mb-4">
+                    <small class="text-secondary">
+                        <a href="checkout.html" class="text-decoration-none text-primary">Information</a> 
+                        <span class="mx-2">/</span> 
+                        <b class="text-white">Payment</b>
+                    </small>
+                </nav>
+
+                <!-- 1. Selection View -->
+                <div id="selectionView" class="selection-view">
+                    <h2 class="fs-5 fw-bold mb-1 checkout-title">Select Payment Method</h2>
+                    <p class="text-secondary small mb-4 checkout-desc-p">All transactions are secure and encrypted.</p>
+
+                    <!-- Shipping Method Summary -->
+                    <div class="checkout-box-select mb-4 p-3 rounded d-flex justify-content-between align-items-center">
+                        <div>
+                            <small class="d-block text-secondary" style="font-size:10px; opacity:0.7; text-transform:uppercase;">Shipping Method</small>
+                            <span class="checkout-info-span">Standard Shipping</span>
+                        </div>
+                        <span class="fw-bold fs-6 checkout-info-span">FREE</span>
+                    </div>
+
+                    <div class="payment-methods-list">
+                        <!-- Credit Card -->
+                        <div class="payment-option-card mb-3 p-3 rounded border d-flex align-items-center gap-3" onclick="selectPayment('card')" style="cursor:pointer;">
+                            <div class="payment-icon-box">
+                                <i class="fas fa-credit-card fs-4 text-primary"></i>
+                            </div>
+                            <div class="flex-grow-1">
+                                <label class="fw-bold m-0 text-white" style="cursor:pointer;">Credit/Debit Card</label>
+                                <div class="small text-secondary">Visa, Mastercard, UnionPay</div>
+                            </div>
+                            <i class="fas fa-chevron-right text-secondary small"></i>
+                        </div>
+
+                      
+
+                        <!-- EasyPaisa -->
+                        <div class="payment-option-card mb-3 p-3 rounded border d-flex align-items-center gap-3" onclick="selectPayment('easypaisa')" style="cursor:pointer;">
+                            <div class="payment-icon-box" style="background: rgba(55,179,74,0.1);">
+                                <i class="fas fa-mobile-screen-button fs-4" style="color:#37b34a;"></i>
+                            </div>
+                            <div class="flex-grow-1">
+                                <label class="fw-bold m-0 text-white" style="cursor:pointer;">EasyPaisa</label>
+                                <div class="small text-secondary">EasyPaisa Mobile Wallet</div>
+                            </div>
+                            <i class="fas fa-chevron-right text-secondary small"></i>
+                        </div>
+
+                        <!-- JazzCash -->
+                        <div class="payment-option-card mb-3 p-3 rounded border d-flex align-items-center gap-3" onclick="selectPayment('jazzcash')" style="cursor:pointer;">
+                            <div class="payment-icon-box" style="background: rgba(255,204,0,0.1);">
+                                <i class="fas fa-mobile-button fs-4" style="color:#ffcc00;"></i>
+                            </div>
+                            <div class="flex-grow-1">
+                                <label class="fw-bold m-0 text-white" style="cursor:pointer;">JazzCash</label>
+                                <div class="small text-secondary">JazzCash Mobile Wallet</div>
+                            </div>
+                            <i class="fas fa-chevron-right text-secondary small"></i>
+                        </div>
+
+                        <!-- COD -->
+                        <div class="payment-option-card mb-3 p-3 rounded border d-flex align-items-center gap-3" onclick="selectPayment('cod')" style="cursor:pointer;">
+                            <div class="payment-icon-box">
+                                <i class="fas fa-money-bill-wave fs-4 text-primary"></i>
+                            </div>
+                            <div class="flex-grow-1">
+                                <label class="fw-bold m-0 text-white" style="cursor:pointer;">Cash on Delivery (COD)</label>
+                                <div class="small text-secondary">Pay at your doorstep</div>
+                            </div>
+                            <i class="fas fa-chevron-right text-secondary small"></i>
+                        </div>
+                    </div>
+
+                    <!-- Billing Address Section (Selection View Only) -->
+                    <!-- <div class="mt-5">
+                        <h2 class="fs-5 fw-bold mb-3 checkout-title">Billing address</h2>
+                        <div class="checkout-radio-group border rounded mb-4">
+                            <div class="p-3 border-bottom">
+                                <div class="form-check m-0 d-flex align-items-center gap-2">
+                                    <input class="form-check-input mt-0 fs-5" type="radio" name="billingAddress" id="sameAddress" checked>
+                                    <label class="form-check-label w-100 m-0" for="sameAddress">Same as shipping address</label>
+                                </div>
+                            </div>
+                        
+                        </div>
+                    </div>
+
+                    <div class="mt-4 pt-2">
+                        <button type="button" class="btn btn-primary btn-lg w-100 fw-bold py-3 fs-5" onclick="completeQuickOrder()">Complete order</button>
+                    </div> -->
+                </div>
+
+                <!-- 2. Detail View -->
+                <div id="detailView" class="detail-view d-none-view">
+                    <div class="payment-step-header">
+                        <div class="back-link" onclick="goBack()">
+                            <i class="fas fa-arrow-left"></i>
+                        </div>
+                        <h6 id="stepTitle" class="view-title">Payment Detail</h6>
+                    </div>
+
+                    <div id="methodDetailContent">
+                        
+                        <!-- Card Form -->
+                        <div id="cardDetails" class="d-none">
+                            <div class="payment-detail-panel p-4">
+                                <div class="d-flex justify-content-between align-items-center mb-4">
+                                    <span class="text-white small fw-bold" style="letter-spacing:1px;">CARD INFORMATION</span>
+                                    <div class="d-flex gap-2 card-brand-icons">
+                                        <i class="fab fa-cc-visa" style="color:#1A1F71;"></i>
+                                        <i class="fab fa-cc-mastercard" style="color:#EB001B;"></i>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="payment-form-label">Card Number</label>
+                                    <input type="text" class="form-control payment-form-input" placeholder="0000 0000 0000 0000">
+                                </div>
+                                <div class="row g-3 mb-3">
+                                    <div class="col-6"><label class="payment-form-label">Expiry</label><input type="text" class="form-control payment-form-input" placeholder="MM/YY"></div>
+                                    <div class="col-6"><label class="payment-form-label">CVV</label><input type="text" class="form-control payment-form-input" placeholder="123"></div>
+                                </div>
+                                <div class="mb-0"><label class="payment-form-label">Name on Card</label><input type="text" class="form-control payment-form-input" placeholder="Full Name"></div>
+                            </div>
+                        </div>
+
+                   
+
+                        <!-- EasyPaisa Form -->
+                        <div id="easypaisaDetails" class="d-none">
+                            <div class="payment-detail-panel p-4">
+                                <h6 class="fw-bold mb-3 small" style="color:#37b34a;">📱 EASYPAISA PAYMENT</h6>
+                                <p class="text-secondary small mb-4">Enter your EasyPaisa mobile number to process the payment.</p>
+                                <div class="mt-2 p-3 rounded" style="background:#111; border:1px solid #2a2a2a;">
+                                    <label class="payment-form-label">Your EasyPaisa Number</label>
+                                    <input type="tel" id="easypaisaNumber" class="form-control payment-form-input" placeholder="03XX-XXXXXXX" maxlength="11" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- JazzCash Form -->
+                        <div id="jazzcashDetails" class="d-none">
+                            <div class="payment-detail-panel p-4">
+                                <h6 class="fw-bold mb-3 small" style="color:#ffcc00;">📱 JAZZCASH PAYMENT</h6>
+                                <p class="text-secondary small mb-4">Enter your JazzCash mobile number to process the payment.</p>
+                                <div class="mt-2 p-3 rounded" style="background:#111; border:1px solid #2a2a2a;">
+                                    <label class="payment-form-label">Your JazzCash Number</label>
+                                    <input type="tel" id="jazzcashNumber" class="form-control payment-form-input" placeholder="03XX-XXXXXXX" maxlength="11" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- COD Form -->
+                        <div id="codDetails" class="d-none">
+                            <div class="payment-detail-panel p-4 text-center">
+                                <i class="fas fa-truck fs-1 text-primary mb-3"></i>
+                                <h6 class="text-white fw-bold">Ready to Order!</h6>
+                                <p class="text-secondary small">You will pay for your order when it is delivered to your doorstep.</p>
+                            </div>
+                        </div>
+
+                        <!-- Integrated Summary Section -->
+                        <div class="integrated-summary">
+                            <div class="summary-row">
+                                <span class="text-secondary">Subtotal</span>
+                                <span class="text-white fw-bold" id="paymentSubtotal">Rs. 0</span>
+                            </div>
+                            <div class="summary-row">
+                                <span class="text-secondary">Shipping</span>
+                                <span class="text-white" id="paymentShipping">Rs. 200</span>
+                            </div>
+                            <div class="total-row">
+                                <span class="text-white fw-bold">Total Amount</span>
+                                <span class="total-price" id="paymentTotal">Rs. 200</span>
+                            </div>
+                            <button class="pay-now-btn" onclick="processPayment()">Pay Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT COLUMN: Desktop Global Summary -->
+        <div class="checkout-right col-lg-5 order-1 order-lg-2 border-start d-none d-lg-block">
+            <div class="checkout-summary-wrapper mx-auto p-4 p-lg-5">
+                <h2 class="fs-5 fw-bold mb-4 checkout-summary-title">Order summary</h2>
+                <div class="d-flex justify-content-between mb-2">
+                    <span class="checkout-summary-desc">Subtotal</span>
+                    <span class="fw-bold checkout-summary-info" id="desktopSubtotal">RS 0</span>
+                </div>
+                <div class="d-flex justify-content-between mb-4">
+                    <span class="checkout-summary-desc">Shipping</span>
+                    <span class="checkout-summary-info" id="desktopShipping">RS 200</span>
+                </div>
+                <hr class="checkout-summary-divider">
+                <div class="d-flex justify-content-between align-items-center mt-3 total-price">
+                    <span class="fs-5 fw-bold checkout-summary-title">Total</span>
+                    <span class="fs-3 fw-bold checkout-summary-info" id="desktopTotal">RS 200</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const methods = ['cod', 'bank', 'easypaisa', 'jazzcash', 'card'];
+        const titles = {
+            'cod': 'Cash on Delivery',
+            'bank': 'Bank Transfer',
+            'easypaisa': 'EasyPaisa',
+            'jazzcash': 'JazzCash',
+            'card': 'Credit/Debit Card'
+        };
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const cartItems = JSON.parse(localStorage.getItem('vapeCartItems')) || [];
+            let subtotal = 0;
+            cartItems.forEach(item => {
+                subtotal += (item.price * item.quantity);
+            });
+
+            const shipping = 200;
+            const total = subtotal + shipping;
+
+            // Update Left Column
+            const pSub = document.getElementById('paymentSubtotal');
+            const pTotal = document.getElementById('paymentTotal');
+            if (pSub) pSub.textContent = 'Rs. ' + subtotal.toLocaleString();
+            if (pTotal) pTotal.textContent = 'Rs. ' + total.toLocaleString();
+
+            // Update Right Column
+            const dSub = document.getElementById('desktopSubtotal');
+            const dTotal = document.getElementById('desktopTotal');
+            if (dSub) dSub.textContent = 'RS ' + subtotal.toLocaleString();
+            if (dTotal) dTotal.textContent = 'RS ' + total.toLocaleString();
+        });
+
+        let currentMethod = '';
+
+        function selectPayment(method) {
+            currentMethod = method;
+            // Switch Views
+            document.getElementById('selectionView').classList.add('d-none-view');
+            document.getElementById('detailView').classList.remove('d-none-view');
+            
+            // Set Title
+            document.getElementById('stepTitle').innerText = titles[method];
+
+            // Show Specific Content
+            methods.forEach(m => {
+                const content = document.getElementById(m + 'Details');
+                if (content) content.classList.add('d-none');
+            });
+            document.getElementById(method + 'Details').classList.remove('d-none');
+
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function goBack() {
+            document.getElementById('detailView').classList.add('d-none-view');
+            document.getElementById('selectionView').classList.remove('d-none-view');
+        }
+
+        function switchBank(bank) {
+            const banks = ['hbl', 'meezan', 'ubl', 'mcb'];
+            banks.forEach(b => {
+                const panel = document.getElementById('panel-' + b);
+                const tab = document.getElementById('tab-' + b);
+                if (panel) panel.classList.add('d-none');
+                if (tab) tab.classList.remove('active');
+            });
+            document.getElementById('panel-' + bank).classList.remove('d-none');
+            document.getElementById('tab-' + bank).classList.add('active');
+        }
+
+        function processPayment() {
+            if (currentMethod === 'easypaisa') {
+                const epNum = document.getElementById('easypaisaNumber').value;
+                if (!epNum || epNum.length < 11) {
+                    alert("Please enter a valid 11-digit EasyPaisa number.");
+                    return;
+                }
+            } else if (currentMethod === 'jazzcash') {
+                const jcNum = document.getElementById('jazzcashNumber').value;
+                if (!jcNum || jcNum.length < 11) {
+                    alert("Please enter a valid 11-digit JazzCash number.");
+                    return;
+                }
+            }
+
+            const btn = event.currentTarget;
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
+            setTimeout(() => {
+                alert("Order successfully placed!");
+                location.href = 'index.html';
+            }, 1000);
+        }
+
+        function completeQuickOrder() {
+            alert("Order completed successfully via selected method!");
+            location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>
+
+
+
+

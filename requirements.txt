@@ -1,0 +1,99 @@
+# requirements.txt
+# Django + MySQL + PayFast Payment Gateway
+# Project: vape_cluster
+
+# ── Core Framework ──────────────────────────────────────────────
+Django==4.2.16
+
+# ── MySQL Database Driver ────────────────────────────────────────
+# mysqlclient==2.2.4          # MySQL C-based driver (recommended for Django)
+PyMySQL==1.1.1              # Pure Python MySQL driver (fallback option)
+
+# ── Django REST Framework (API support) ─────────────────────────
+djangorestframework==3.15.2
+djangorestframework-simplejwt==5.3.1   # JWT auth for API
+django-cors-headers==4.4.0             # Handle CORS for frontend API calls
+
+# ── Authentication & Social Login ───────────────────────────────
+django-allauth==0.63.6      # Google/Facebook OAuth + standard auth
+PyJWT==2.9.0                # JSON Web Tokens
+
+# ── Payment Gateway ──────────────────────────────────────────────
+requests==2.32.3            # HTTP calls to PayFast, EasyPaisa, JazzCash APIs
+cryptography==43.0.1        # Signature verification for PayFast ITN
+
+
+# ── Image Handling ───────────────────────────────────────────────
+Pillow==10.4.0              # Image upload/processing for product images
+
+# ── File & Media Storage ─────────────────────────────────────────
+django-storages==1.14.4     # Cloud storage (S3/GCS) for media files
+boto3==1.35.20              # AWS S3 backend (optional, for production media)
+
+# ── Form Handling & Validation ───────────────────────────────────
+django-crispy-forms==2.3    # Better form rendering
+crispy-bootstrap5==2024.2   # Bootstrap 5 template pack for crispy-forms
+django-phonenumber-field==8.0.0   # Phone number validation (checkout)
+phonenumbers==8.13.45             # Phone number parsing library
+
+# ── Email ────────────────────────────────────────────────────────
+django-anymail==11.1        # Email backend (SendGrid, Mailgun, etc.)
+
+# ── OTP / Verification ───────────────────────────────────────────
+django-otp==1.5.3           # OTP-based two-factor authentication
+pyotp==2.9.0                # TOTP/HOTP generation for email OTP
+
+# ── Caching ──────────────────────────────────────────────────────
+django-redis==5.4.0         # Redis cache backend
+redis==5.0.8                # Redis client
+
+# ── Search ───────────────────────────────────────────────────────
+django-haystack==3.3.0      # Pluggable search for products
+Whoosh==2.7.4               # Search backend (dev) — swap for Elasticsearch in prod
+
+# ── Filtering & Pagination ───────────────────────────────────────
+django-filter==24.3         # Product filtering (category, price, brand)
+
+# ── Slugs & SEO ──────────────────────────────────────────────────
+django-autoslug==1.9.9      # Auto-generate slugs for products/blog posts
+django-meta==2.4.1          # Meta tags for SEO
+
+# ── Admin Enhancements ───────────────────────────────────────────
+django-jazzmin==3.0.1       # Better-looking Django admin panel
+
+# ── Utilities ────────────────────────────────────────────────────
+python-decouple==3.8        # Read .env variables (SECRET_KEY, DB creds, etc.)
+django-extensions==3.2.3    # Extra management commands (shell_plus, etc.)
+shortuuid==1.0.13           # Short unique IDs for orders
+python-slugify==8.0.4       # Slug generation utility
+
+# ── Date & Time ──────────────────────────────────────────────────
+pytz==2024.1                # Timezone support
+
+# ── Security ─────────────────────────────────────────────────────
+django-ratelimit==4.1.0     # Rate limiting for auth/checkout endpoints
+django-csp==3.8             # Content Security Policy headers
+
+# ── Static Files ─────────────────────────────────────────────────
+whitenoise==6.7.0           # Serve static files efficiently in production
+
+# ── Testing ──────────────────────────────────────────────────────
+pytest==8.3.2
+pytest-django==4.9.0
+factory-boy==3.3.1          # Model factories for testing
+faker==28.0.0               # Fake data generation for tests
+
+# ── Development Tools ────────────────────────────────────────────
+django-debug-toolbar==4.4.6  # Debug panel for development
+ipython==8.27.0              # Better interactive shell
+
+# ── Task Queue (for async emails, order processing) ──────────────
+celery==5.4.0               # Async task queue
+django-celery-beat==2.7.0   # Periodic tasks (scheduled jobs)
+django-celery-results==2.5.1 # Store Celery task results in DB
+
+# ── Logging ──────────────────────────────────────────────────────
+sentry-sdk==2.14.0          # Error tracking in production
+
+# ── WSGI Server (Production) ─────────────────────────────────────
+gunicorn==23.0.0            # Production WSGI server

@@ -1,0 +1,366 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home | VAPE CLUSTER{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section id="heroSlider" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators custom-dots">
+        <button type="button" data-bs-target="#heroSlider" data-bs-slide-to="0" class="active" aria-current="true"
+            aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#heroSlider" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#heroSlider" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#heroSlider" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="{% static 'assets/img/acceerece/Banners/slider-1.png' %}" alt="Vape Slide 1">
+            <div class="subtitle-slider"><span>Endless ways to vape</span></div>
+            <h2 class="title-slider"><span>Ursa Quest<br> Multi Kit </span></h2>
+            <div class="description-slider"><span>The fusion of stunning design, the best flavour and power.</span>
+            </div>
+            <a class="button-slider" href="{% url 'core:vape_brand' brand_slug='vaporesso' %}" tabindex="0">SHOP
+                Collection <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'assets/img/acceerece/Banners/slider-2.png' %}" alt="Vape Slide 2">
+            <div class="subtitle-slider"><span>Endless ways to vape</span></div>
+            <h2 class="title-slider"><span>SUMMER SALE <br> 30% OFF </span></h2>
+            <div class="description-slider"><span>The fusion of stunning design, the best flavour and power.</span>
+            </div>
+            <a class="button-slider" href="{% url 'core:eliquid_list' %}" tabindex="0">SHOP Collection <i
+                    class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'assets/img/acceerece/Banners/slider-3.png' %}" alt="Vape Slide 3">
+            <div
+                style="position: absolute; top: 50%; left: 14%; transform: translateY(-50%); z-index: 10; width: 80%; display: flex; flex-direction: column; align-items: flex-start;">
+                <div class="subtitle-slider" style="position: static !important; "><span>Order online and enjoy</span>
+                </div>
+                <h2 class="title-slider" style="position: static !important; max-width: 100%; margin: 10px 0;"><span>NOW
+                        DELIVERING<br> NATIONWIDE</span></h2>
+                <a class="button-slider" style="position: static !important; margin-top: 20px;"
+                    href="{% url 'core:eliquid_list' %}" tabindex="0">SHOP NOW <i class="fas fa-arrow-right"></i></a>
+                <div class="description-slider"
+                    style="position: static !important; max-width: 100%; align-self: flex-end; text-align: right;">
+                    <ul style="list-style: none; padding: 0; margin: 0 0 15px 0; font-weight: 600;">
+                        <li>Cash on delivery<i class="fas fa-check" style="color: #cc0000; margin-left: 8px;"></i></li>
+                        <li>Fast courier delivery<i class="fas fa-check" style="color: #cc0000; margin-left: 8px;"></i>
+                        </li>
+                        <li>Reliable service<i class="fas fa-check" style="color: #cc0000; margin-left: 8px;"></i></li>
+                    </ul>
+                    <div
+                        style="border: 1px solid #cc0000; padding: 8px 12px; background: rgba(0,0,0,0.6); display: inline-block;">
+                        <span style="color: #cc0000; font-weight: bold; font-size: 1.5rem;">WARNING:</span> This product
+                        contains nicotine, <br> which is a highly addictive substance.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'assets/img/acceerece/Banners/slider-4.png' %}" alt="Vape Slide 4">
+            <div
+                style="position: absolute; top: 50%; left: 14%; transform: translateY(-50%); z-index: 10; width: 80%; display: flex; flex-direction: column; align-items: flex-start;">
+                <div class="subtitle-slider" style="position: static !important; max-width: 100%;"><span>Vault
+                        Clearance</span></div>
+                <h2 class="title-slider" style="position: static !important; max-width: 100%; margin: 10px 0;">
+                    <span>SALE</span></h2>
+                <a class="button-slider" style="position: static !important; margin-top: 20px;"
+                    href="{% url 'core:eliquid_list' %}" tabindex="0">SHOP NOW <i class="fas fa-arrow-right"></i></a>
+                <div class="description-slider"
+                    style="position: static !important; max-width: 100%; align-self: flex-end; text-align: right;">
+                    <div style="margin: 0 0 15px 0;"><span>Best of the best for less.</span></div>
+                    <div
+                        style="border: 1px solid #cc0000; padding: 8px 12px; background: rgba(0,0,0,0.6); display: inline-block;">
+                        <span style="color: #cc0000; font-weight: bold; font-size: 1.5rem;">WARNING:</span> This product
+                        contains nicotine, <br> which is a highly addictive substance.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev d-none d-md-flex" type="button" data-bs-target="#heroSlider"
+        data-bs-slide="prev">
+        <i class="fas fa-arrow-left"></i>
+    </button>
+    <button class="carousel-control-next d-none d-md-flex" type="button" data-bs-target="#heroSlider"
+        data-bs-slide="next">
+        <i class="fas fa-arrow-right"></i>
+    </button>
+</section>
+
+<!-- TOP CATEGORIES -->
+<section class="container-fluid px-4 py-5 animate-on-scroll">
+    <div class="row">
+        <div class="col-12">
+            <h2 class="section-title text-center">Top Categories</h2>
+        </div>
+    </div>
+
+    <div class="row g-4 category-row">
+        <!-- Vapes -->
+        <div class="col-6 col-md-4 col-lg-2">
+            <a href="{% url 'core:vape_product_detail' brand_slug='voopoo' product_slug='ARGUS-G3' %}"
+                class="category-item">
+                <div class="category-box">
+                    <img src="{% static 'assets/img/devices/VOOPOO/ARGUS-G3/pearl-white1.png' %}" alt="Argus G3"
+                        class="category-img">
+                </div>
+                <p class="category-label">ARGUS G3</p>
+            </a>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2">
+            <a href="{% url 'core:vape_product_detail' brand_slug='vaporesso' product_slug='X-ROS-4-NANO' %}"
+                class="category-item">
+                <div class="category-box">
+                    <img src="{% static 'assets/img/devices/VAPORESSO/X-ROS-4-NANO/racetrack1.png' %}" alt="XROS 4 NANO"
+                        class="category-img">
+                </div>
+                <p class="category-label">XROS 4 NANO</p>
+            </a>
+        </div>
+
+        <!-- Coils -->
+        <div class="col-6 col-md-4 col-lg-2">
+            <a href="{% url 'core:vape_product_detail' brand_slug='oxva-coil' product_slug='Oxva-oneo' %}"
+                class="category-item">
+                <div class="category-box">
+                    <img src="{% static 'assets/img/acceerece/coils/Oxva/Oxva-oneo/Oxva-oneo-coil.png' %}"
+                        alt="Oxva Oneo Coils" class="category-img">
+                </div>
+                <p class="category-label">OXVA ONEO COILS</p>
+            </a>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2">
+            <a href="{% url 'core:vape_product_detail' brand_slug='vaporesso-coil' product_slug='vaporesso' %}"
+                class="category-item">
+                <div class="category-box">
+                    <img src="{% static 'assets/img/acceerece/coils/vaporesso/vaporesso-devices/vaporesso-devices-coil.webp' %}"
+                        alt="vaporesso Coils" class="category-img">
+                </div>
+                <p class="category-label">VAPORESSO COILS</p>
+            </a>
+        </div>
+
+        <!-- E-Liquids -->
+        <div class="col-6 col-md-4 col-lg-2">
+            <a href="{% url 'core:eliquid_detail' product_slug='Drip-Down-Cola-Ice-1' %}" class="category-item">
+                <div class="category-box">
+                    <img src="{% static 'assets/img/acceerece/E-liquids/Drip-Down/Cola-Ice-1.webp' %}"
+                        alt="Drip Down Cola Ice" class="category-img">
+                </div>
+                <p class="category-label">DRIP DOWN</p>
+            </a>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2">
+            <a href="{% url 'core:eliquid_detail' product_slug='Tokyo-blue-pineapple' %}" class="category-item">
+                <div class="category-box">
+                    <img src="{% static 'assets/img/acceerece/E-liquids/Tokyo/blue-pineapple.webp' %}"
+                        alt="Tokyo Blue Pineapple" class="category-img">
+                </div>
+                <p class="category-label">TOKYO JUICE</p>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Banner-Wrapper -->
+<section class="container-fluid px-4 py-4 animate-on-scroll">
+    <div class="row">
+        <div class="col-12">
+            <div class="row ">
+                <div class="col-md-6 col-12">
+                    <div class="banner-wrapper">
+                        <div class="bwp-image">
+                            <img src="{% static 'assets/img/banner-12-2.jpg' %}" alt="Vape Kit">
+                        </div>
+                        <div class="banner-wrapper-infor">
+                            <h3 class="title-banner">E-LIQUIDS</h3>
+                            <p class="bwp-image-description">OVER 600 FLAVOURS TO CHOOSE FROM </p>
+                            <a class="button-banner" href="{% url 'core:eliquid_list' %}">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12">
+                    <div class="banner-wrapper">
+                        <div class="bwp-image">
+                            <img src="{% static 'assets/img/banner-12-3.jpg' %}" alt="Vape Kit">
+                        </div>
+                        <div class="banner-wrapper-infor">
+                            <h3 class="title-banner">DEALS</h3>
+                            <p class="bwp-image-description">Compact, stylish, high-performance vapes.</p>
+                            <a class="button-banner" href="{% url 'core:deals' %}">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- hero content -->
+<section class="container-fluid px-4 py-4 animate-on-scroll">
+    <div class="row">
+        <div class="col-12">
+            <div class="hero-banner">
+                <div class="overlay">
+                    <div class="hero-content">
+                        <h1>FIND YOUR E LIQUID FLAVOUR</h1>
+                        <a href="{% url 'core:eliquid_list' %}" class="shop-btn ">SHOP NOW</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- latest products -->
+<div class="product-section-wrapper animate-on-scroll">
+    <div class="tabs-nav mt-5">
+        <button class="tab-link active" onclick="switchTab(event, 'latest')">LATEST PRODUCTS</button>
+        <button class="tab-link" onclick="switchTab(event, 'top-rating')">TOP RATING</button>
+        <button class="tab-link" onclick="switchTab(event, 'featured')">FEATURED</button>
+    </div>
+
+    <div id="latest" class="product-grid tab-content active mt-5">
+        {% for product in latest_products %}
+        <div class="product-item" data-name="{{ product.name }}">
+            <div class="product-img-box">
+                {% if product.is_new_arrival %}<span class="badge red">Hot</span>{% endif %}
+                <a href="{{ product.get_absolute_url }}">
+                    <img src="{{ product.thumbnail.url }}" alt="{{ product.name }}"
+                        data-hover="{{ product.hover_thumbnail.url|default:product.thumbnail.url }}">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Details" onclick="window.location.href='{{ product.get_absolute_url }}'"><i
+                            class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> {{ product.brand.name }}</span>
+                <h3 class="title"><a href="{{ product.get_absolute_url }}" class="text-decoration-none text-dark">{{
+                        product.name }}</a></h3>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span class="review-count">({{ product.review_count|default:0 }} reviews)</span>
+                </div>
+                <div class="price">
+                    {% if product.sale_price %}
+                    <span class="old">Rs.{{ product.price }}</span> RS {{ product.sale_price }}
+                    {% else %}
+                    RS {{ product.price }}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+        <!-- Fallback static data if context is empty for testing -->
+        {% if not latest_products %}
+        <div class="product-item" data-name="ARGUS G3">
+            <div class="product-img-box">
+                <span class="badge red">Hot</span>
+                <a href="{% url 'core:vape_product_detail' brand_slug='voopoo' product_slug='ARGUS-G3' %}">
+                    <img src="{% static 'assets/img/devices/VOOPOO/ARGUS-G3/pearl-white1.png' %}" alt="Argus G3"
+                        data-hover="{% static 'assets/img/devices/VOOPOO/ARGUS-G3/pearl-white2.webp' %}">
+                </a>
+                <div class="action-icons">
+                    <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                    <button title="Product Details"
+                        onclick="window.location.href=`{% url 'core:vape_product_detail' brand_slug='voopoo' product_slug='ARGUS-G3' %}`">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="brand"><span class="brand-by">BY</span> VOOPOO</span>
+                <h3 class="title"><a
+                        href="{% url 'core:vape_product_detail' brand_slug='voopoo' product_slug='ARGUS-G3' %}"
+                        class="text-decoration-none text-dark">ARGUS G3</a></h3>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span class="review-count">(3.5 reviews)</span>
+                </div>
+                <div class="price"><span class="old">Rs.6,800.00</span> RS 5,800.00</div>
+            </div>
+        </div>
+        <!-- ... other static fallbacks can go here ... -->
+        {% endif %}
+    </div>
+
+    <div id="top-rating" class="product-grid tab-content mt-5">
+        <!-- Content similar to latest but filtered by rating -->
+    </div>
+
+    <div id="featured" class="product-grid tab-content mt-5">
+        <!-- Content similar to latest but filtered by featured -->
+    </div>
+</div>
+
+<!-- brands-section -->
+<section class="brands-section py-2 animate-on-scroll">
+    <div class="container-fluid">
+        <div class="row mb-4">
+            <div class="col-12 text-center">
+                <h2 class="brands-title">FROM THE BEST BRANDS</h2>
+            </div>
+        </div>
+
+        <div class="row g-0 border-start border-top mx-3">
+            <div class="col-6 col-md-4 col-lg-3 brand-item">
+                <a href="{% url 'core:vape_brand' brand_slug='voopoo' %}">
+                    <img src="{% static 'assets/img/brand-1.png' %}" alt="VOOPOO" class="img-fluid brand-img">
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 brand-item">
+                <a href="{% url 'core:vape_brand' brand_slug='oxva' %}">
+                    <img src="{% static 'assets/img/brand-2.png' %}" alt="OXVA" class="img-fluid brand-img">
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 brand-item">
+                <a href="{% url 'core:vape_brand' brand_slug='uwell' %}">
+                    <img src="{% static 'assets/img/brand-3.png' %}" alt="UWELL" class="img-fluid brand-img">
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 brand-item">
+                <a href="{% url 'core:vape_brand' brand_slug='vaporesso' %}">
+                    <img src="{% static 'assets/img/brand-4.png' %}" alt="VAPORESSO" class="img-fluid brand-img">
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    function switchTab(evt, tabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tab-content");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].classList.remove("active");
+        }
+        tablinks = document.getElementsByClassName("tab-link");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].classList.remove("active");
+        }
+        document.getElementById(tabName).classList.add("active");
+        evt.currentTarget.classList.add("active");
+    }
+</script>
+{% endblock %}

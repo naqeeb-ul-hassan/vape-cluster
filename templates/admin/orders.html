@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Orders | Vapier Admin</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/img/web-logo.png">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Rajdhani:wght@600;700&family=Audiowide&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Custom Admin CSS -->
+    <link rel="stylesheet" href="css/admin-style.css">
+</head>
+<body>
+
+    <div class="admin-wrapper">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <img src="../assets/img/web-logo.png" alt="Vapier Logo">
+            </div>
+            
+            <ul class="sidebar-menu">
+                <li class="menu-label">Main</li>
+                <li class="menu-item">
+                    <a href="index.html" class="menu-link">
+                        <i class="fas fa-th-large"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="orders.html" class="menu-link active">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Orders</span>
+                    </a>
+                </li>
+
+                <li class="menu-label">Inventory Management</li>
+                <li class="menu-item">
+                    <a href="manage-eliquids.html" class="menu-link">
+                        <i class="fas fa-tint"></i>
+                        <span>E-Liquids</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="manage-deals.html" class="menu-link">
+                        <i class="fas fa-tags"></i>
+                        <span>Deals</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="manage-oxva.html" class="menu-link">
+                        <i class="fas fa-bolt"></i>
+                        <span>OXVA</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="manage-voopoo.html" class="menu-link">
+                        <i class="fas fa-fire"></i>
+                        <span>Voopoo</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="manage-vaporesso.html" class="menu-link">
+                        <i class="fas fa-vial"></i>
+                        <span>Vaporesso</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="manage-uwell.html" class="menu-link">
+                        <i class="fas fa-atom"></i>
+                        <span>UWELL</span>
+                    </a>
+                </li>
+
+                <li class="menu-label">Content Management</li>
+                <li class="menu-item">
+                    <a href="manage-home.html" class="menu-link">
+                        <i class="fas fa-home"></i>
+                        <span>Home Page</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="about-us.html" class="menu-link">
+                        <i class="fas fa-info-circle"></i>
+                        <span>About Us</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="contact-us.html" class="menu-link">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contact Us</span>
+                    </a>
+                </li>
+
+                <li class="menu-label">Settings</li>
+                <li class="menu-item">
+                    <a href="add-product.html" class="menu-link">
+                        <i class="fas fa-plus-circle"></i>
+                        <span>Add New Product</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="../index.html" class="menu-link">
+                        <i class="fas fa-external-link-alt"></i>
+                        <span>View Website</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Bar -->
+            <div class="top-bar">
+                <div class="page-title d-flex align-items-center">
+                    <button class="mobile-toggle-btn d-lg-none me-3">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1 class="mb-0">Manage Orders</h1>
+                </div>
+                <div class="user-profile">
+                    <div class="user-avatar">AD</div>
+                </div>
+            </div>
+
+            <!-- Orders Table -->
+            <div class="table-container">
+                <div class="table-header">
+                    <h5 class="mb-0">All Customer Orders</h5>
+                    <div class="d-flex gap-2">
+                        <select class="form-control-custom" style="background: rgba(255,255,255,0.05); border: 1px solid var(--border-color); color: white; padding: 5px 10px; border-radius: 5px; font-size: 13px;">
+                            <option>Filter by Status</option>
+                            <option>Pending</option>
+                            <option>Completed</option>
+                            <option>Cancelled</option>
+                        </select>
+                    </div>
+                </div>
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Date</th>
+                            <th>Customer Name</th>
+                            <th>Shipping Address</th>
+                            <th>Items Count</th>
+                            <th>Total Price</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-white">#ORD-8451</td>
+                            <td>May 09, 2026</td>
+                            <td class="text-white">Ali Khan</td>
+                            <td>DHA Phase 5, Lahore</td>
+                            <td>2</td>
+                            <td class="text-white">RS 12,500.00</td>
+                            <td><span class="status-badge status-completed">Completed</span></td>
+                            <td>
+                                <button class="btn-admin btn-sm" style="background: rgba(255,255,255,0.1); color: white;" title="View Details"><i class="fas fa-eye"></i></button>
+                                <button class="btn-admin btn-sm" style="background: rgba(40, 167, 69, 0.1); color: #28a745;" title="Mark as Completed"><i class="fas fa-check"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-white">#ORD-8452</td>
+                            <td>May 09, 2026</td>
+                            <td class="text-white">Ahmed Raza</td>
+                            <td>Clifton Block 4, Karachi</td>
+                            <td>1</td>
+                            <td class="text-white">RS 5,800.00</td>
+                            <td><span class="status-badge status-pending">Pending</span></td>
+                            <td>
+                                <button class="btn-admin btn-sm" style="background: rgba(255,255,255,0.1); color: white;" title="View Details"><i class="fas fa-eye"></i></button>
+                                <button class="btn-admin btn-sm" style="background: rgba(40, 167, 69, 0.1); color: #28a745;" title="Mark as Completed"><i class="fas fa-check"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-white">#ORD-8453</td>
+                            <td>May 08, 2026</td>
+                            <td class="text-white">Hassan Tariq</td>
+                            <td>F-8/4, Islamabad</td>
+                            <td>4</td>
+                            <td class="text-white">RS 22,400.00</td>
+                            <td><span class="status-badge status-completed">Completed</span></td>
+                            <td>
+                                <button class="btn-admin btn-sm" style="background: rgba(255,255,255,0.1); color: white;" title="View Details"><i class="fas fa-eye"></i></button>
+                                <button class="btn-admin btn-sm" style="background: rgba(40, 167, 69, 0.1); color: #28a745;" title="Mark as Completed"><i class="fas fa-check"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-white">#ORD-8454</td>
+                            <td>May 08, 2026</td>
+                            <td class="text-white">Zainab Bibi</td>
+                            <td>Gulshan-e-Iqbal, Karachi</td>
+                            <td>3</td>
+                            <td class="text-white">RS 8,900.00</td>
+                            <td><span class="status-badge status-cancelled">Cancelled</span></td>
+                            <td>
+                                <button class="btn-admin btn-sm" style="background: rgba(255,255,255,0.1); color: white;" title="View Details"><i class="fas fa-eye"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-white">#ORD-8455</td>
+                            <td>May 07, 2026</td>
+                            <td class="text-white">Omer Farooq</td>
+                            <td>Johar Town, Lahore</td>
+                            <td>1</td>
+                            <td class="text-white">RS 4,900.00</td>
+                            <td><span class="status-badge status-pending">Pending</span></td>
+                            <td>
+                                <button class="btn-admin btn-sm" style="background: rgba(255,255,255,0.1); color: white;" title="View Details"><i class="fas fa-eye"></i></button>
+                                <button class="btn-admin btn-sm" style="background: rgba(40, 167, 69, 0.1); color: #28a745;" title="Mark as Completed"><i class="fas fa-check"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="js/admin-main.js"></script>
+</body>
+</html>
+

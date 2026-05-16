@@ -1,0 +1,1651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Home Page | Vapier Admin</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/img/web-logo.png">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Rajdhani:wght@600;700&family=Audiowide&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Custom Admin CSS -->
+    <link rel="stylesheet" href="css/admin-style.css">
+</head>
+<body>
+
+    <div class="admin-wrapper">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <img src="../assets/img/web-logo.png" alt="Vapier Logo">
+            </div>
+            
+            <ul class="sidebar-menu">
+                <li class="menu-label">Main</li>
+                <li class="menu-item">
+                    <a href="index.html" class="menu-link">
+                        <i class="fas fa-th-large"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="orders.html" class="menu-link">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Orders</span>
+                    </a>
+                </li>
+
+                <li class="menu-label">Inventory Management</li>
+                <li class="menu-item">
+                    <a href="manage-eliquids.html" class="menu-link">
+                        <i class="fas fa-tint"></i>
+                        <span>E-Liquids</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="manage-deals.html" class="menu-link">
+                        <i class="fas fa-tags"></i>
+                        <span>Deals</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="manage-oxva.html" class="menu-link">
+                        <i class="fas fa-bolt"></i>
+                        <span>OXVA</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="manage-voopoo.html" class="menu-link">
+                        <i class="fas fa-fire"></i>
+                        <span>Voopoo</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="manage-vaporesso.html" class="menu-link">
+                        <i class="fas fa-vial"></i>
+                        <span>Vaporesso</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="manage-uwell.html" class="menu-link">
+                        <i class="fas fa-atom"></i>
+                        <span>UWELL</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="manage-coils.html" class="menu-link">
+                        <i class="fas fa-sync-alt"></i>
+                        <span>Coils</span>
+                    </a>
+                </li>
+
+                <li class="menu-label">Content Management</li>
+                <li class="menu-item">
+                    <a href="manage-home.html" class="menu-link active">
+                        <i class="fas fa-home"></i>
+                        <span>Home Page</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="about-us.html" class="menu-link">
+                        <i class="fas fa-info-circle"></i>
+                        <span>About Us</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="contact-us.html" class="menu-link">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contact Us</span>
+                    </a>
+                </li>
+
+                <li class="menu-label">Settings</li>
+                <li class="menu-item">
+                    <a href="add-product.html" class="menu-link">
+                        <i class="fas fa-plus-circle"></i>
+                        <span>Add New Product</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="../index.html" class="menu-link">
+                        <i class="fas fa-external-link-alt"></i>
+                        <span>View Website</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Bar -->
+            <div class="top-bar">
+                <div class="page-title d-flex align-items-center">
+                    <button class="mobile-toggle-btn d-lg-none me-3">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1 class="mb-0">Manage Home Page</h1>
+                </div>
+                <div class="user-profile">
+                    <button class="btn-admin btn-primary-admin me-3" onclick="alert('All changes saved successfully!')">
+                        <i class="fas fa-save"></i> Save All Changes
+                    </button>
+                    <div class="user-avatar">AD</div>
+                </div>
+            </div>
+
+               <!-- Global Store & Shipping Settings -->
+            <div class="table-container mb-4">
+                <div class="table-header">
+                    <h5 class="mb-0"><i class="fas fa-cog me-2"></i> Global Store & Shipping Settings</h5>
+                </div>
+                <div class="p-4">
+                    <div class="row g-3">
+                        <div class="col-md-4">
+                            <label class="form-label text-white-50">Standard Shipping Charges (RS)</label>
+                            <input type="number" class="form-control admin-input" value="200" placeholder="e.g. 200">
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label text-white-50">Free Shipping Threshold (RS)</label>
+                            <input type="number" class="form-control admin-input" value="5000" placeholder="e.g. 5000">
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label text-white-50">Announcement Bar Text</label>
+                            <input type="text" class="form-control admin-input" value="FREE SHIPPING ON ORDERS OVER RS 5000" placeholder="Top bar text">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+         
+
+            <!-- Navbar Management -->
+            <div class="table-container mb-4">
+                <div class="table-header">
+                    <h5 class="mb-0">Navbar Management</h5>
+                </div>
+                <div class="p-4">
+                    <h6 class="section-subtitle">Logo & Action Buttons</h6>
+                    <div class="row g-3 mb-4">
+                        <div class="col-md-4">
+                            <label class="form-label text-white-50">Website Logo</label>
+                            <div class="d-flex align-items-center gap-3">
+                                <img src="../assets/img/web-logo.png" alt="" style="width: 60px; height: 60px; object-fit: contain; background: #fff; border-radius: 4px; padding: 2px;">
+                                <input type="file" class="form-control admin-input">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label text-white-50">Logo Link</label>
+                            <input type="text" class="form-control admin-input" value="./index.html" placeholder="URL">
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label text-white-50">Login Button Link</label>
+                            <input type="text" class="form-control admin-input" value="./login-signup.html" placeholder="URL">
+                        </div>
+                    </div>
+
+                    <hr class="bg-secondary my-4">
+
+                    <h6 class="section-subtitle">Main Navigation Links</h6>
+                    <div class="row g-3 mb-4">
+                        <div class="col-md-2">
+                            <label class="form-label text-white-50" style="font-size: 11px;">Link 1</label>
+                            <input type="text" class="form-control admin-input mb-2" value="Home">
+                            <input type="text" class="form-control admin-input" value="./index.html" placeholder="URL" style="font-size: 12px;">
+                        </div>
+                        <div class="col-md-2">
+                            <label class="form-label text-white-50" style="font-size: 11px;">Link 2</label>
+                            <input type="text" class="form-control admin-input mb-2" value="E-Liquids">
+                            <input type="text" class="form-control admin-input" value="./E-Liquids.html" placeholder="URL" style="font-size: 12px;">
+                        </div>
+                        <div class="col-md-2">
+                            <label class="form-label text-white-50" style="font-size: 11px;">Link 3</label>
+                            <input type="text" class="form-control admin-input mb-2" value="Coils">
+                            <input type="text" class="form-control admin-input" value="./coils.html" placeholder="URL" style="font-size: 12px;">
+                        </div>
+                        <div class="col-md-2">
+                            <label class="form-label text-white-50" style="font-size: 11px;">Link 4</label>
+                            <input type="text" class="form-control admin-input mb-2" value="About Us">
+                            <input type="text" class="form-control admin-input" value="./about.html" placeholder="URL" style="font-size: 12px;">
+                        </div>
+                        <div class="col-md-2">
+                            <label class="form-label text-white-50" style="font-size: 11px;">Link 5</label>
+                            <input type="text" class="form-control admin-input mb-2" value="Contact">
+                            <input type="text" class="form-control admin-input" value="./contact.html" placeholder="URL" style="font-size: 12px;">
+                        </div>
+                    </div>
+
+                    <hr class="bg-secondary my-4">
+
+                    <h6 class="section-subtitle">Collections Dropdown (Vapes)</h6>
+                    <div class="row g-3 mb-4">
+                        <div class="col-md-3">
+                            <label class="form-label text-white-50" style="font-size: 11px;">Brand 1</label>
+                            <input type="text" class="form-control admin-input mb-2" value="VOOPOO">
+                            <input type="text" class="form-control admin-input" value="./voopoo.html" placeholder="URL" style="font-size: 12px;">
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label text-white-50" style="font-size: 11px;">Brand 2</label>
+                            <input type="text" class="form-control admin-input mb-2" value="VAPORESSO">
+                            <input type="text" class="form-control admin-input" value="./vaporesso.html" placeholder="URL" style="font-size: 12px;">
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label text-white-50" style="font-size: 11px;">Brand 3</label>
+                            <input type="text" class="form-control admin-input mb-2" value="UWELL">
+                            <input type="text" class="form-control admin-input" value="./UWELL.html" placeholder="URL" style="font-size: 12px;">
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label text-white-50" style="font-size: 11px;">Brand 4</label>
+                            <input type="text" class="form-control admin-input mb-2" value="OXVA">
+                            <input type="text" class="form-control admin-input" value="./OXVA.html" placeholder="URL" style="font-size: 12px;">
+                        </div>
+                    </div>
+
+                    <h6 class="section-subtitle">Collections Dropdown (Disposable Vape)</h6>
+                    <div class="row g-3 mb-4">
+                        <div class="col-md-6">
+                            <label class="form-label text-white-50" style="font-size: 11px;">Status/Text</label>
+                            <input type="text" class="form-control admin-input" value="COMING SOON">
+                        </div>
+                    </div>
+
+                    <hr class="bg-secondary my-4">
+
+                    <h6 class="section-subtitle">Trending Searches (Search Overlay)</h6>
+                    <div class="row g-3">
+                        <div class="col-md-3">
+                            <label class="form-label text-white-50" style="font-size: 11px;">Trending 1</label>
+                            <input type="text" class="form-control admin-input" value="Argus G3">
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label text-white-50" style="font-size: 11px;">Trending 2</label>
+                            <input type="text" class="form-control admin-input" value="XROS 4">
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label text-white-50" style="font-size: 11px;">Trending 3</label>
+                            <input type="text" class="form-control admin-input" value="Tokyo E-Juice">
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label text-white-50" style="font-size: 11px;">Trending 4</label>
+                            <input type="text" class="form-control admin-input" value="OXVA Oneo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+         
+
+            <!-- Hero Slider Management -->
+            <div class="table-container mb-4">
+                <div class="table-header">
+                    <h5 class="mb-0">Hero Slider (Main Banner)</h5>
+                    <button class="btn-admin btn-sm btn-primary-admin"><i class="fas fa-plus"></i> Add Slide</button>
+                </div>
+                <div class="p-4">
+                    <div class="row g-4">
+                        <!-- Slide 1 -->
+                        <div class="col-md-6 col-xl-4">
+                            <div class="p-4 border border-secondary rounded position-relative">
+                                <h6 class="text-white mb-3">Slide 1</h6>
+                                <div class="mb-3">
+                                    <label class="form-label text-white-50">Background Image</label>
+                                    <img src="../assets/img/acceerece/Banners/slider-1.png" alt="" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px;" class="mb-2">
+                                    <input type="file" class="form-control admin-input mb-2">
+                                    <input type="text" class="form-control admin-input" value="../assets/img/acceerece/Banners/slider-1.png">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label text-white-50">Subtitle</label>
+                                    <input type="text" class="form-control admin-input" value="Endless ways to vape">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label text-white-50">Main Title</label>
+                                    <textarea class="form-control admin-input" rows="2">Ursa Quest Multi Kit</textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label text-white-50">Button Link</label>
+                                    <input type="text" class="form-control admin-input" value="./VAPORESSO.html">
+                                </div>
+                                <button class="btn-admin btn-sm position-absolute top-0 end-0 mt-2 me-2" style="background: rgba(220, 53, 69, 0.1); color: #dc3545;"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="col-md-6 col-xl-4">
+                            <div class="p-4 border border-secondary rounded position-relative">
+                                <h6 class="text-white mb-3">Slide 2</h6>
+                                <div class="mb-3">
+                                    <label class="form-label text-white-50">Background Image</label>
+                                    <img src="../assets/img/acceerece/Banners/slider-2.png" alt="" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px;" class="mb-2">
+                                    <input type="file" class="form-control admin-input mb-2">
+                                    <input type="text" class="form-control admin-input" value="../assets/img/acceerece/Banners/slider-2.png">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label text-white-50">Subtitle</label>
+                                    <input type="text" class="form-control admin-input" value="Endless ways to vape">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label text-white-50">Main Title</label>
+                                    <textarea class="form-control admin-input" rows="2">SUMMER SALE - 30% OFF</textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label text-white-50">Button Link</label>
+                                    <input type="text" class="form-control admin-input" value="./E-Liquids.html">
+                                </div>
+                                <button class="btn-admin btn-sm position-absolute top-0 end-0 mt-2 me-2" style="background: rgba(220, 53, 69, 0.1); color: #dc3545;"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="col-md-6 col-xl-4">
+                            <div class="p-4 border border-secondary rounded position-relative">
+                                <h6 class="text-white mb-3">Slide 3</h6>
+                                <div class="mb-3">
+                                    <label class="form-label text-white-50">Background Image</label>
+                                    <img src="../assets/img/acceerece/Banners/slider-3.png" alt="" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px;" class="mb-2">
+                                    <input type="file" class="form-control admin-input mb-2">
+                                    <input type="text" class="form-control admin-input" value="../assets/img/acceerece/Banners/slider-3.png">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label text-white-50">Subtitle</label>
+                                    <input type="text" class="form-control admin-input" value="Order online and enjoy">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label text-white-50">Main Title</label>
+                                    <textarea class="form-control admin-input" rows="2">NOW DELIVERING NATIONWIDE</textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label text-white-50">Button Link</label>
+                                    <input type="text" class="form-control admin-input" value="./E-Liquids.html">
+                                </div>
+                                <button class="btn-admin btn-sm position-absolute top-0 end-0 mt-2 me-2" style="background: rgba(220, 53, 69, 0.1); color: #dc3545;"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        <!-- Slide 4 -->
+                        <div class="col-md-6 col-xl-4">
+                            <div class="p-4 border border-secondary rounded position-relative">
+                                <h6 class="text-white mb-3">Slide 4</h6>
+                                <div class="mb-3">
+                                    <label class="form-label text-white-50">Background Image</label>
+                                    <img src="../assets/img/acceerece/Banners/slider-4.png" alt="" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px;" class="mb-2">
+                                    <input type="file" class="form-control admin-input mb-2">
+                                    <input type="text" class="form-control admin-input" value="../assets/img/acceerece/Banners/slider-4.png">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label text-white-50">Subtitle</label>
+                                    <input type="text" class="form-control admin-input" value="Vault Clearance">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label text-white-50">Main Title</label>
+                                    <textarea class="form-control admin-input" rows="2">SALE</textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label text-white-50">Button Link</label>
+                                    <input type="text" class="form-control admin-input" value="./E-Liquids.html">
+                                </div>
+                                <button class="btn-admin btn-sm position-absolute top-0 end-0 mt-2 me-2" style="background: rgba(220, 53, 69, 0.1); color: #dc3545;"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Top Categories (Circles) -->
+            <div class="table-container mb-4">
+                <div class="table-header">
+                    <h5 class="mb-0">Top Categories Grid</h5>
+                </div>
+                <div class="p-4">
+                    <div class="row g-3">
+                        <!-- Category 1 -->
+                        <div class="col-md-4 col-xl-2 text-center">
+                            <div class="p-3 border border-secondary rounded">
+                                <img src="../assets/img/devices/VOOPOO/ARGUS-G3/pearl-white1.png" alt="" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;" class="mb-2">
+                                <input type="file" class="form-control admin-input mb-2" style="font-size: 11px;">
+                                <input type="text" class="form-control admin-input mb-2" value="ARGUS G3">
+                                <input type="text" class="form-control admin-input" value="./E-Liquids.html" style="font-size: 11px;">
+                            </div>
+                        </div>
+                        <!-- Category 2 -->
+                        <div class="col-md-4 col-xl-2 text-center">
+                            <div class="p-3 border border-secondary rounded">
+                                <img src="../assets/img/devices/VAPORESSO/X-ROS-4-NANO/racetrack1.png" alt="" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;" class="mb-2">
+                                <input type="file" class="form-control admin-input mb-2" style="font-size: 11px;">
+                                <input type="text" class="form-control admin-input mb-2" value="XROS 4 NANO">
+                                <input type="text" class="form-control admin-input" value="./vaporesso.html" style="font-size: 11px;">
+                            </div>
+                        </div>
+                        <!-- Category 3 -->
+                        <div class="col-md-4 col-xl-2 text-center">
+                            <div class="p-3 border border-secondary rounded">
+                                <img src="../assets/img/acceerece/coils/Oxva/Oxva-oneo/Oxva-oneo-coil.png" alt="" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;" class="mb-2">
+                                <input type="file" class="form-control admin-input mb-2" style="font-size: 11px;">
+                                <input type="text" class="form-control admin-input mb-2" value="ONEO COILS">
+                                <input type="text" class="form-control admin-input" value="#" style="font-size: 11px;">
+                            </div>
+                        </div>
+                        <!-- Category 4 -->
+                        <div class="col-md-4 col-xl-2 text-center">
+                            <div class="p-3 border border-secondary rounded">
+                                <img src="../assets/img/acceerece/coils/vaporesso/vaporesso-devices/vaporesso-devices-coil.webp" alt="" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;" class="mb-2">
+                                <input type="file" class="form-control admin-input mb-2" style="font-size: 11px;">
+                                <input type="text" class="form-control admin-input mb-2" value="VAPORESSO COILS">
+                                <input type="text" class="form-control admin-input" value="#" style="font-size: 11px;">
+                            </div>
+                        </div>
+                        <!-- Category 5 -->
+                        <div class="col-md-4 col-xl-2 text-center">
+                            <div class="p-3 border border-secondary rounded">
+                                <img src="../assets/img/acceerece/E-liquids/Drip-Down/Cola-Ice-1.webp" alt="" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;" class="mb-2">
+                                <input type="file" class="form-control admin-input mb-2" style="font-size: 11px;">
+                                <input type="text" class="form-control admin-input mb-2" value="DRIP DOWN">
+                                <input type="text" class="form-control admin-input" value="#" style="font-size: 11px;">
+                            </div>
+                        </div>
+                        <!-- Category 6 -->
+                        <div class="col-md-4 col-xl-2 text-center">
+                            <div class="p-3 border border-secondary rounded">
+                                <img src="../assets/img/acceerece/E-liquids/Tokyo/blue-pineapple.webp" alt="" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;" class="mb-2">
+                                <input type="file" class="form-control admin-input mb-2" style="font-size: 11px;">
+                                <input type="text" class="form-control admin-input mb-2" value="TOKYO JUICE">
+                                <input type="text" class="form-control admin-input" value="./OXVA.html" style="font-size: 11px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Promotion Section 1 (2-Column Banner) -->
+            <div class="row g-4 mb-4">
+                <div class="col-md-6">
+                    <div class="table-container h-100">
+                        <div class="table-header">
+                            <h5 class="mb-0">Left Promo Banner</h5>
+                        </div>
+                        <div class="p-4">
+                            <div class="mb-3">
+                                <label class="form-label text-white-50">Banner Image</label>
+                                <img src="../assets/img/banner-12-2.jpg" alt="" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px;" class="mb-2">
+                                <input type="file" class="form-control admin-input mb-2">
+                                <input type="text" class="form-control admin-input" value="../assets/img/banner-12-2.jpg">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label text-white-50">Title</label>
+                                <input type="text" class="form-control admin-input" value="E-LIQUIDS">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label text-white-50">Description</label>
+                                <input type="text" class="form-control admin-input" value="OVER 600 FLAVOURS TO CHOOSE FROM">
+                            </div>
+                            <div class="mb-0">
+                                <label class="form-label text-white-50">Button Link</label>
+                                <input type="text" class="form-control admin-input" value="./E-Liquids.html">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="table-container h-100">
+                        <div class="table-header">
+                            <h5 class="mb-0">Right Promo Banner</h5>
+                        </div>
+                        <div class="p-4">
+                            <div class="mb-3">
+                                <label class="form-label text-white-50">Banner Image</label>
+                                <img src="../assets/img/banner-12-3.jpg" alt="" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px;" class="mb-2">
+                                <input type="file" class="form-control admin-input mb-2">
+                                <input type="text" class="form-control admin-input" value="../assets/img/banner-12-3.jpg">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label text-white-50">Title</label>
+                                <input type="text" class="form-control admin-input" value="DEALS">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label text-white-50">Description</label>
+                                <input type="text" class="form-control admin-input" value="Compact, stylish, high-performance vapes.">
+                            </div>
+                            <div class="mb-0">
+                                <label class="form-label text-white-50">Button Link</label>
+                                <input type="text" class="form-control admin-input" value="./deals.html">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Full Width Hero Section -->
+            <div class="table-container mb-4">
+                <div class="table-header">
+                    <h5 class="mb-0">Middle Hero Section (Full Width)</h5>
+                </div>
+                <div class="p-4">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label class="form-label text-white-50">Background Image</label>
+                            <img src="../assets/img/E LIQUID FLAVOUR.png" alt="" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px;" class="mb-2">
+                            <input type="file" class="form-control admin-input mb-2">
+                            <input type="text" class="form-control admin-input" value="../assets/img/E LIQUID FLAVOUR.png">
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label text-white-50">Hero Heading</label>
+                            <input type="text" class="form-control admin-input" value="FIND YOUR E LIQUID FLAVOUR">
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label text-white-50">Button Text & Link</label>
+                            <div class="d-flex gap-2">
+                                <input type="text" class="form-control admin-input" value="SHOP NOW">
+                                <input type="text" class="form-control admin-input" value="./E-Liquids.html">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Tabs Section -->
+            <div class="table-container mb-4">
+                <div class="table-header">
+                    <h5 class="mb-0">Product Tabs Grid</h5>
+                </div>
+                <div class="p-4">
+                    <!-- Tab 1: LATEST PRODUCTS -->
+                    <div class="mb-5 border-bottom border-secondary pb-4">
+                        <div class="d-flex flex-wrap justify-content-between align-items-center mb-3">
+                            <div class="d-flex gap-3 align-items-center mb-2 mb-md-0">
+                                <h6 class="text-white mb-0">Tab 1:</h6>
+                                <input type="text" class="form-control admin-input form-control-sm" value="LATEST PRODUCTS" style="width: 200px;">
+                                <input type="text" class="form-control admin-input form-control-sm" value="latest" style="width: 150px;" placeholder="Tab ID">
+                            </div>
+                            <button class="btn-admin btn-sm btn-primary-admin"><i class="fas fa-plus"></i> Add Product</button>
+                        </div>
+                        <div class="row g-3">
+                            <!-- Product 1 -->
+                            <div class="col-md-6 col-xl-3">
+                                <div class="p-3 border border-secondary rounded position-relative h-100">
+                                    <button class="btn-admin btn-sm position-absolute top-0 end-0 mt-2 me-2" style="background: rgba(220, 53, 69, 0.1); color: #dc3545; z-index: 10;"><i class="fas fa-trash"></i></button>
+                                    <div class="text-center mb-3">
+                                        <img src="../assets/img/devices/VOOPOO/ARGUS-G3/pearl-white1.png" alt="" style="width: 100%; height: 120px; object-fit: contain; background: rgba(255,255,255,0.05); border-radius: 8px;" class="p-2">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Product Image</label>
+                                        <input type="file" class="form-control admin-input" style="font-size: 11px;">
+                                        <input type="text" class="form-control admin-input mt-1" value="../assets/img/devices/VOOPOO/ARGUS-G3/pearl-white1.png" style="font-size: 11px;">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Product Name</label>
+                                        <input type="text" class="form-control admin-input" value="ARGUS G3" placeholder="Product Name">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Brand</label>
+                                        <input type="text" class="form-control admin-input" value="VOOPOO" placeholder="Brand">
+                                    </div>
+                                    <div class="row g-2 mb-2">
+                                        <div class="col-6">
+                                            <label class="form-label text-white-50" style="font-size: 11px;">Current Price</label>
+                                            <input type="text" class="form-control admin-input" value="RS 5,800.00" placeholder="Price">
+                                        </div>
+                                        <div class="col-6">
+                                            <label class="form-label text-white-50" style="font-size: 11px;">Old Price</label>
+                                            <input type="text" class="form-control admin-input" value="Rs.6,800.00" placeholder="Old Price">
+                                        </div>
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Product Link</label>
+                                        <input type="text" class="form-control admin-input" value="./vape-products/voopoo/ARGUS-G3-data.html" placeholder="Link" style="font-size: 11px;">
+                                    </div>
+                                    <div>
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Badge</label>
+                                        <select class="form-control admin-input" style="font-size: 12px;">
+                                            <option value="Hot" selected>Badge: Hot</option>
+                                            <option value="New">Badge: New</option>
+                                            <option value="Sale">Badge: Sale</option>
+                                            <option value="Featured">Badge: Featured</option>
+                                            <option value="None">No Badge</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Product 2 -->
+                            <div class="col-md-6 col-xl-3">
+                                <div class="p-3 border border-secondary rounded position-relative h-100">
+                                    <button class="btn-admin btn-sm position-absolute top-0 end-0 mt-2 me-2" style="background: rgba(220, 53, 69, 0.1); color: #dc3545; z-index: 10;"><i class="fas fa-trash"></i></button>
+                                    <div class="text-center mb-3">
+                                        <img src="../assets/img/devices/VAPORESSO/X-ROS-4-NANO/racetrack1.png" alt="" style="width: 100%; height: 120px; object-fit: contain; background: rgba(255,255,255,0.05); border-radius: 8px;" class="p-2">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Product Image</label>
+                                        <input type="file" class="form-control admin-input" style="font-size: 11px;">
+                                        <input type="text" class="form-control admin-input mt-1" value="../assets/img/devices/VAPORESSO/X-ROS-4-NANO/racetrack1.png" style="font-size: 11px;">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Product Name</label>
+                                        <input type="text" class="form-control admin-input" value="X ROS 4 NANO" placeholder="Product Name">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Brand</label>
+                                        <input type="text" class="form-control admin-input" value="VAPORESSO" placeholder="Brand">
+                                    </div>
+                                    <div class="row g-2 mb-2">
+                                        <div class="col-6">
+                                            <label class="form-label text-white-50" style="font-size: 11px;">Current Price</label>
+                                            <input type="text" class="form-control admin-input" value="RS 6,100.00" placeholder="Price">
+                                        </div>
+                                        <div class="col-6">
+                                            <label class="form-label text-white-50" style="font-size: 11px;">Old Price</label>
+                                            <input type="text" class="form-control admin-input" value="Rs.7,200.00" placeholder="Old Price">
+                                        </div>
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Product Link</label>
+                                        <input type="text" class="form-control admin-input" value="./vape-products/vaporesso/X-ROS-4-NANO-data.html" placeholder="Link" style="font-size: 11px;">
+                                    </div>
+                                    <div>
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Badge</label>
+                                        <select class="form-control admin-input" style="font-size: 12px;">
+                                            <option value="Hot" selected>Badge: Hot</option>
+                                            <option value="New">Badge: New</option>
+                                            <option value="Sale">Badge: Sale</option>
+                                            <option value="Featured">Badge: Featured</option>
+                                            <option value="None">No Badge</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Product 3 -->
+                            <div class="col-md-6 col-xl-3">
+                                <div class="p-3 border border-secondary rounded position-relative h-100">
+                                    <button class="btn-admin btn-sm position-absolute top-0 end-0 mt-2 me-2" style="background: rgba(220, 53, 69, 0.1); color: #dc3545; z-index: 10;"><i class="fas fa-trash"></i></button>
+                                    <div class="text-center mb-3">
+                                        <img src="../assets/img/devices/UWELL/G3-PRO/Emerald-Green1.png" alt="" style="width: 100%; height: 120px; object-fit: contain; background: rgba(255,255,255,0.05); border-radius: 8px;" class="p-2">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Product Image</label>
+                                        <input type="file" class="form-control admin-input" style="font-size: 11px;">
+                                        <input type="text" class="form-control admin-input mt-1" value="../assets/img/devices/UWELL/G3-PRO/Emerald-Green1.png" style="font-size: 11px;">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Product Name</label>
+                                        <input type="text" class="form-control admin-input" value="G3 PRO" placeholder="Product Name">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Brand</label>
+                                        <input type="text" class="form-control admin-input" value="UWELL" placeholder="Brand">
+                                    </div>
+                                    <div class="row g-2 mb-2">
+                                        <div class="col-6">
+                                            <label class="form-label text-white-50" style="font-size: 11px;">Current Price</label>
+                                            <input type="text" class="form-control admin-input" value="RS 6,300.00" placeholder="Price">
+                                        </div>
+                                        <div class="col-6">
+                                            <label class="form-label text-white-50" style="font-size: 11px;">Old Price</label>
+                                            <input type="text" class="form-control admin-input" value="Rs.7,500.00" placeholder="Old Price">
+                                        </div>
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Product Link</label>
+                                        <input type="text" class="form-control admin-input" value="./vape-products/uwell/G3-PRO-data.html" placeholder="Link" style="font-size: 11px;">
+                                    </div>
+                                    <div>
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Badge</label>
+                                        <select class="form-control admin-input" style="font-size: 12px;">
+                                            <option value="Hot" selected>Badge: Hot</option>
+                                            <option value="New">Badge: New</option>
+                                            <option value="Sale">Badge: Sale</option>
+                                            <option value="Featured">Badge: Featured</option>
+                                            <option value="None">No Badge</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Product 4 -->
+                            <div class="col-md-6 col-xl-3">
+                                <div class="p-3 border border-secondary rounded position-relative h-100">
+                                    <button class="btn-admin btn-sm position-absolute top-0 end-0 mt-2 me-2" style="background: rgba(220, 53, 69, 0.1); color: #dc3545; z-index: 10;"><i class="fas fa-trash"></i></button>
+                                    <div class="text-center mb-3">
+                                        <img src="../assets/img/devices/OXVA/OXVA-ONEO/midnight-blue1.png" alt="" style="width: 100%; height: 120px; object-fit: contain; background: rgba(255,255,255,0.05); border-radius: 8px;" class="p-2">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Product Image</label>
+                                        <input type="file" class="form-control admin-input" style="font-size: 11px;">
+                                        <input type="text" class="form-control admin-input mt-1" value="../assets/img/devices/OXVA/OXVA-ONEO/midnight-blue1.png" style="font-size: 11px;">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Product Name</label>
+                                        <input type="text" class="form-control admin-input" value="OXVA ONEO" placeholder="Product Name">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Brand</label>
+                                        <input type="text" class="form-control admin-input" value="OXVA" placeholder="Brand">
+                                    </div>
+                                    <div class="row g-2 mb-2">
+                                        <div class="col-6">
+                                            <label class="form-label text-white-50" style="font-size: 11px;">Current Price</label>
+                                            <input type="text" class="form-control admin-input" value="RS 6,800.00" placeholder="Price">
+                                        </div>
+                                        <div class="col-6">
+                                            <label class="form-label text-white-50" style="font-size: 11px;">Old Price</label>
+                                            <input type="text" class="form-control admin-input" value="Rs.7,800.00" placeholder="Old Price">
+                                        </div>
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Product Link</label>
+                                        <input type="text" class="form-control admin-input" value="./vape-products/oxva/OXVA-ONEO-data.html" placeholder="Link" style="font-size: 11px;">
+                                    </div>
+                                    <div>
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Badge</label>
+                                        <select class="form-control admin-input" style="font-size: 12px;">
+                                            <option value="Hot" selected>Badge: Hot</option>
+                                            <option value="New">Badge: New</option>
+                                            <option value="Sale">Badge: Sale</option>
+                                            <option value="Featured">Badge: Featured</option>
+                                            <option value="None">No Badge</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Product 5 -->
+                            <div class="col-md-6 col-xl-3">
+                                <div class="p-3 border border-secondary rounded position-relative h-100">
+                                    <button class="btn-admin btn-sm position-absolute top-0 end-0 mt-2 me-2" style="background: rgba(220, 53, 69, 0.1); color: #dc3545; z-index: 10;"><i class="fas fa-trash"></i></button>
+                                    <div class="text-center mb-3">
+                                        <img src="../assets/img/devices/VOOPOO/V-MATE-PRO/mint-blue1.png" alt="" style="width: 100%; height: 120px; object-fit: contain; background: rgba(255,255,255,0.05); border-radius: 8px;" class="p-2">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Product Image</label>
+                                        <input type="file" class="form-control admin-input" style="font-size: 11px;">
+                                        <input type="text" class="form-control admin-input mt-1" value="../assets/img/devices/VOOPOO/V-MATE-PRO/mint-blue1.png" style="font-size: 11px;">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Product Name</label>
+                                        <input type="text" class="form-control admin-input" value="V MATE PRO" placeholder="Product Name">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Brand</label>
+                                        <input type="text" class="form-control admin-input" value="VOOPOO" placeholder="Brand">
+                                    </div>
+                                    <div class="row g-2 mb-2">
+                                        <div class="col-6">
+                                            <label class="form-label text-white-50" style="font-size: 11px;">Current Price</label>
+                                            <input type="text" class="form-control admin-input" value="RS 4,900.00" placeholder="Price">
+                                        </div>
+                                        <div class="col-6">
+                                            <label class="form-label text-white-50" style="font-size: 11px;">Old Price</label>
+                                            <input type="text" class="form-control admin-input" value="Rs.6,990.00" placeholder="Old Price">
+                                        </div>
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Product Link</label>
+                                        <input type="text" class="form-control admin-input" value="./vape-products/voopoo/V-MATE-PRO-data.html" placeholder="Link" style="font-size: 11px;">
+                                    </div>
+                                    <div>
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Badge</label>
+                                        <select class="form-control admin-input" style="font-size: 12px;">
+                                            <option value="Hot" selected>Badge: Hot</option>
+                                            <option value="New">Badge: New</option>
+                                            <option value="Sale">Badge: Sale</option>
+                                            <option value="Featured">Badge: Featured</option>
+                                            <option value="None">No Badge</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Product 6 -->
+                            <div class="col-md-6 col-xl-3">
+                                <div class="p-3 border border-secondary rounded position-relative h-100">
+                                    <button class="btn-admin btn-sm position-absolute top-0 end-0 mt-2 me-2" style="background: rgba(220, 53, 69, 0.1); color: #dc3545; z-index: 10;"><i class="fas fa-trash"></i></button>
+                                    <div class="text-center mb-3">
+                                        <img src="../assets/img/devices/VAPORESSO/X-ROS-5-NANO/orange-leatherette1.png" alt="" style="width: 100%; height: 120px; object-fit: contain; background: rgba(255,255,255,0.05); border-radius: 8px;" class="p-2">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Product Image</label>
+                                        <input type="file" class="form-control admin-input" style="font-size: 11px;">
+                                        <input type="text" class="form-control admin-input mt-1" value="../assets/img/devices/VAPORESSO/X-ROS-5-NANO/orange-leatherette1.png" style="font-size: 11px;">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Product Name</label>
+                                        <input type="text" class="form-control admin-input" value="X ROS 5 NANO" placeholder="Product Name">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Brand</label>
+                                        <input type="text" class="form-control admin-input" value="VAPORESSO" placeholder="Brand">
+                                    </div>
+                                    <div class="row g-2 mb-2">
+                                        <div class="col-6">
+                                            <label class="form-label text-white-50" style="font-size: 11px;">Current Price</label>
+                                            <input type="text" class="form-control admin-input" value="RS 8,890.00" placeholder="Price">
+                                        </div>
+                                        <div class="col-6">
+                                            <label class="form-label text-white-50" style="font-size: 11px;">Old Price</label>
+                                            <input type="text" class="form-control admin-input" value="Rs.9,990.00" placeholder="Old Price">
+                                        </div>
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Product Link</label>
+                                        <input type="text" class="form-control admin-input" value="./vape-products/vaporesso/X-ROS-5-NANO-data.html" placeholder="Link" style="font-size: 11px;">
+                                    </div>
+                                    <div>
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Badge</label>
+                                        <select class="form-control admin-input" style="font-size: 12px;">
+                                            <option value="Hot" selected>Badge: Hot</option>
+                                            <option value="New">Badge: New</option>
+                                            <option value="Sale">Badge: Sale</option>
+                                            <option value="Featured">Badge: Featured</option>
+                                            <option value="None">No Badge</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Product 7 -->
+                            <div class="col-md-6 col-xl-3">
+                                <div class="p-3 border border-secondary rounded position-relative h-100">
+                                    <button class="btn-admin btn-sm position-absolute top-0 end-0 mt-2 me-2" style="background: rgba(220, 53, 69, 0.1); color: #dc3545; z-index: 10;"><i class="fas fa-trash"></i></button>
+                                    <div class="text-center mb-3">
+                                        <img src="../assets/img/devices/UWELL/G4-PRO-KOKO/glass-blue1.png" alt="" style="width: 100%; height: 120px; object-fit: contain; background: rgba(255,255,255,0.05); border-radius: 8px;" class="p-2">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Product Image</label>
+                                        <input type="file" class="form-control admin-input" style="font-size: 11px;">
+                                        <input type="text" class="form-control admin-input mt-1" value="../assets/img/devices/UWELL/G4-PRO-KOKO/glass-blue1.png" style="font-size: 11px;">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Product Name</label>
+                                        <input type="text" class="form-control admin-input" value="G4 PRO KOKO" placeholder="Product Name">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Brand</label>
+                                        <input type="text" class="form-control admin-input" value="UWELL" placeholder="Brand">
+                                    </div>
+                                    <div class="row g-2 mb-2">
+                                        <div class="col-6">
+                                            <label class="form-label text-white-50" style="font-size: 11px;">Current Price</label>
+                                            <input type="text" class="form-control admin-input" value="RS 7,400.00" placeholder="Price">
+                                        </div>
+                                        <div class="col-6">
+                                            <label class="form-label text-white-50" style="font-size: 11px;">Old Price</label>
+                                            <input type="text" class="form-control admin-input" value="Rs.8,500.00" placeholder="Old Price">
+                                        </div>
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Product Link</label>
+                                        <input type="text" class="form-control admin-input" value="./vape-products/uwell/G4-PRO-KOKO-data.html" placeholder="Link" style="font-size: 11px;">
+                                    </div>
+                                    <div>
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Badge</label>
+                                        <select class="form-control admin-input" style="font-size: 12px;">
+                                            <option value="Hot" selected>Badge: Hot</option>
+                                            <option value="New">Badge: New</option>
+                                            <option value="Sale">Badge: Sale</option>
+                                            <option value="Featured">Badge: Featured</option>
+                                            <option value="None">No Badge</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Product 8 -->
+                            <div class="col-md-6 col-xl-3">
+                                <div class="p-3 border border-secondary rounded position-relative h-100">
+                                    <button class="btn-admin btn-sm position-absolute top-0 end-0 mt-2 me-2" style="background: rgba(220, 53, 69, 0.1); color: #dc3545; z-index: 10;"><i class="fas fa-trash"></i></button>
+                                    <div class="text-center mb-3">
+                                        <img src="../assets/img/devices/OXVA/OXVA-XLIM-3-ULTRA/ultra-carbon1.png" alt="" style="width: 100%; height: 120px; object-fit: contain; background: rgba(255,255,255,0.05); border-radius: 8px;" class="p-2">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Product Image</label>
+                                        <input type="file" class="form-control admin-input" style="font-size: 11px;">
+                                        <input type="text" class="form-control admin-input mt-1" value="../assets/img/devices/OXVA/OXVA-XLIM-3-ULTRA/ultra-carbon1.png" style="font-size: 11px;">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Product Name</label>
+                                        <input type="text" class="form-control admin-input" value="OXVA XLIM 3 ULTRA" placeholder="Product Name">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Brand</label>
+                                        <input type="text" class="form-control admin-input" value="OXVA" placeholder="Brand">
+                                    </div>
+                                    <div class="row g-2 mb-2">
+                                        <div class="col-6">
+                                            <label class="form-label text-white-50" style="font-size: 11px;">Current Price</label>
+                                            <input type="text" class="form-control admin-input" value="RS 8,000.00" placeholder="Price">
+                                        </div>
+                                        <div class="col-6">
+                                            <label class="form-label text-white-50" style="font-size: 11px;">Old Price</label>
+                                            <input type="text" class="form-control admin-input" value="Rs.9,200.00" placeholder="Old Price">
+                                        </div>
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Product Link</label>
+                                        <input type="text" class="form-control admin-input" value="./vape-products/oxva/OXVA-XLIM-3-ULTRA-data.html" placeholder="Link" style="font-size: 11px;">
+                                    </div>
+                                    <div>
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Badge</label>
+                                        <select class="form-control admin-input" style="font-size: 12px;">
+                                            <option value="Hot" selected>Badge: Hot</option>
+                                            <option value="New">Badge: New</option>
+                                            <option value="Sale">Badge: Sale</option>
+                                            <option value="Featured">Badge: Featured</option>
+                                            <option value="None">No Badge</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab 2: TOP RATING -->
+                    <div class="mb-5 border-bottom border-secondary pb-4">
+                        <div class="d-flex flex-wrap justify-content-between align-items-center mb-3">
+                            <div class="d-flex gap-3 align-items-center mb-2 mb-md-0">
+                                <h6 class="text-white mb-0">Tab 2:</h6>
+                                <input type="text" class="form-control admin-input form-control-sm" value="TOP RATING" style="width: 200px;">
+                                <input type="text" class="form-control admin-input form-control-sm" value="top-rating" style="width: 150px;" placeholder="Tab ID">
+                            </div>
+                            <button class="btn-admin btn-sm btn-primary-admin"><i class="fas fa-plus"></i> Add Product</button>
+                        </div>
+                        <div class="row g-3">
+                            <!-- Product 1 -->
+                            <div class="col-md-6 col-xl-3">
+                                <div class="p-3 border border-secondary rounded position-relative h-100">
+                                    <button class="btn-admin btn-sm position-absolute top-0 end-0 mt-2 me-2" style="background: rgba(220, 53, 69, 0.1); color: #dc3545; z-index: 10;"><i class="fas fa-trash"></i></button>
+                                    <div class="text-center mb-3">
+                                        <img src="../assets/img/devices/VOOPOO/ARGUS-G2-MINI/midnight-black1.png" alt="" style="width: 100%; height: 120px; object-fit: contain; background: rgba(255,255,255,0.05); border-radius: 8px;" class="p-2">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Product Image</label>
+                                        <input type="file" class="form-control admin-input" style="font-size: 11px;">
+                                        <input type="text" class="form-control admin-input mt-1" value="../assets/img/devices/VOOPOO/ARGUS-G2-MINI/midnight-black1.png" style="font-size: 11px;">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Product Name</label>
+                                        <input type="text" class="form-control admin-input" value="ARGUS G2 MINI" placeholder="Product Name">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Brand</label>
+                                        <input type="text" class="form-control admin-input" value="VOOPOO" placeholder="Brand">
+                                    </div>
+                                    <div class="row g-2 mb-2">
+                                        <div class="col-6">
+                                            <label class="form-label text-white-50" style="font-size: 11px;">Current Price</label>
+                                            <input type="text" class="form-control admin-input" value="RS 3,300.00" placeholder="Price">
+                                        </div>
+                                        <div class="col-6">
+                                            <label class="form-label text-white-50" style="font-size: 11px;">Old Price</label>
+                                            <input type="text" class="form-control admin-input" value="Rs.4,200.00" placeholder="Old Price">
+                                        </div>
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Product Link</label>
+                                        <input type="text" class="form-control admin-input" value="./vape-products/voopoo/Argus-G2-Mini-data.html" placeholder="Link" style="font-size: 11px;">
+                                    </div>
+                                    <div>
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Badge</label>
+                                        <select class="form-control admin-input" style="font-size: 12px;">
+                                            <option value="Hot" selected>Badge: Hot</option>
+                                            <option value="New">Badge: New</option>
+                                            <option value="Sale">Badge: Sale</option>
+                                            <option value="Featured">Badge: Featured</option>
+                                            <option value="None">No Badge</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Product 2 -->
+                            <div class="col-md-6 col-xl-3">
+                                <div class="p-3 border border-secondary rounded position-relative h-100">
+                                    <button class="btn-admin btn-sm position-absolute top-0 end-0 mt-2 me-2" style="background: rgba(220, 53, 69, 0.1); color: #dc3545; z-index: 10;"><i class="fas fa-trash"></i></button>
+                                    <div class="text-center mb-3">
+                                        <img src="../assets/img/devices/UWELL/G3-PRO-KOKO/space-gray1.png" alt="" style="width: 100%; height: 120px; object-fit: contain; background: rgba(255,255,255,0.05); border-radius: 8px;" class="p-2">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Product Image</label>
+                                        <input type="file" class="form-control admin-input" style="font-size: 11px;">
+                                        <input type="text" class="form-control admin-input mt-1" value="../assets/img/devices/UWELL/G3-PRO-KOKO/space-gray1.png" style="font-size: 11px;">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Product Name</label>
+                                        <input type="text" class="form-control admin-input" value="G3 PRO KOKO" placeholder="Product Name">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Brand</label>
+                                        <input type="text" class="form-control admin-input" value="UWELL" placeholder="Brand">
+                                    </div>
+                                    <div class="row g-2 mb-2">
+                                        <div class="col-6">
+                                            <label class="form-label text-white-50" style="font-size: 11px;">Current Price</label>
+                                            <input type="text" class="form-control admin-input" value="RS 6,300.00" placeholder="Price">
+                                        </div>
+                                        <div class="col-6">
+                                            <label class="form-label text-white-50" style="font-size: 11px;">Old Price</label>
+                                            <input type="text" class="form-control admin-input" value="Rs.7,400.00" placeholder="Old Price">
+                                        </div>
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Product Link</label>
+                                        <input type="text" class="form-control admin-input" value="./vape-products/uwell/G3-PRO-KOKO-data.html" placeholder="Link" style="font-size: 11px;">
+                                    </div>
+                                    <div>
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Badge</label>
+                                        <select class="form-control admin-input" style="font-size: 12px;">
+                                            <option value="Hot" selected>Badge: Hot</option>
+                                            <option value="New">Badge: New</option>
+                                            <option value="Sale">Badge: Sale</option>
+                                            <option value="Featured">Badge: Featured</option>
+                                            <option value="None">No Badge</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Product 3 -->
+                            <div class="col-md-6 col-xl-3">
+                                <div class="p-3 border border-secondary rounded position-relative h-100">
+                                    <button class="btn-admin btn-sm position-absolute top-0 end-0 mt-2 me-2" style="background: rgba(220, 53, 69, 0.1); color: #dc3545; z-index: 10;"><i class="fas fa-trash"></i></button>
+                                    <div class="text-center mb-3">
+                                        <img src="../assets/img/acceerece/coils/Oxva/Oxva-oneo/Oxva-oneo-coil.png" alt="" style="width: 100%; height: 120px; object-fit: contain; background: rgba(255,255,255,0.05); border-radius: 8px;" class="p-2">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Product Image</label>
+                                        <input type="file" class="form-control admin-input" style="font-size: 11px;">
+                                        <input type="text" class="form-control admin-input mt-1" value="../assets/img/acceerece/coils/Oxva/Oxva-oneo/Oxva-oneo-coil.png" style="font-size: 11px;">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Product Name</label>
+                                        <input type="text" class="form-control admin-input" value="OXVA ONEO COILS" placeholder="Product Name">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Brand</label>
+                                        <input type="text" class="form-control admin-input" value="OXVA" placeholder="Brand">
+                                    </div>
+                                    <div class="row g-2 mb-2">
+                                        <div class="col-6">
+                                            <label class="form-label text-white-50" style="font-size: 11px;">Current Price</label>
+                                            <input type="text" class="form-control admin-input" value="RS 1,000.00" placeholder="Price">
+                                        </div>
+                                        <div class="col-6">
+                                            <label class="form-label text-white-50" style="font-size: 11px;">Old Price</label>
+                                            <input type="text" class="form-control admin-input" value="Rs.1,200.00" placeholder="Old Price">
+                                        </div>
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Product Link</label>
+                                        <input type="text" class="form-control admin-input" value="./vape-products/oxva-coil/Oxva-oneo-data.html" placeholder="Link" style="font-size: 11px;">
+                                    </div>
+                                    <div>
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Badge</label>
+                                        <select class="form-control admin-input" style="font-size: 12px;">
+                                            <option value="Hot" selected>Badge: Hot</option>
+                                            <option value="New">Badge: New</option>
+                                            <option value="Sale">Badge: Sale</option>
+                                            <option value="Featured">Badge: Featured</option>
+                                            <option value="None">No Badge</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Product 4 -->
+                            <div class="col-md-6 col-xl-3">
+                                <div class="p-3 border border-secondary rounded position-relative h-100">
+                                    <button class="btn-admin btn-sm position-absolute top-0 end-0 mt-2 me-2" style="background: rgba(220, 53, 69, 0.1); color: #dc3545; z-index: 10;"><i class="fas fa-trash"></i></button>
+                                    <div class="text-center mb-3">
+                                        <img src="../assets/img/acceerece/coils/vaporesso/vaporesso-devices/vaporesso-devices-coil.webp" alt="" style="width: 100%; height: 120px; object-fit: contain; background: rgba(255,255,255,0.05); border-radius: 8px;" class="p-2">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Product Image</label>
+                                        <input type="file" class="form-control admin-input" style="font-size: 11px;">
+                                        <input type="text" class="form-control admin-input mt-1" value="../assets/img/acceerece/coils/vaporesso/vaporesso-devices/vaporesso-devices-coil.webp" style="font-size: 11px;">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Product Name</label>
+                                        <input type="text" class="form-control admin-input" value="VAPORESSO COILS" placeholder="Product Name">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Brand</label>
+                                        <input type="text" class="form-control admin-input" value="VAPORESSO" placeholder="Brand">
+                                    </div>
+                                    <div class="row g-2 mb-2">
+                                        <div class="col-6">
+                                            <label class="form-label text-white-50" style="font-size: 11px;">Current Price</label>
+                                            <input type="text" class="form-control admin-input" value="RS 1,000.00" placeholder="Price">
+                                        </div>
+                                        <div class="col-6">
+                                            <label class="form-label text-white-50" style="font-size: 11px;">Old Price</label>
+                                            <input type="text" class="form-control admin-input" value="Rs.1,200.00" placeholder="Old Price">
+                                        </div>
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Product Link</label>
+                                        <input type="text" class="form-control admin-input" value="./vape-products/vaporesso-coil/vaporesso-data.html" placeholder="Link" style="font-size: 11px;">
+                                    </div>
+                                    <div>
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Badge</label>
+                                        <select class="form-control admin-input" style="font-size: 12px;">
+                                            <option value="Hot" selected>Badge: Hot</option>
+                                            <option value="New">Badge: New</option>
+                                            <option value="Sale">Badge: Sale</option>
+                                            <option value="Featured">Badge: Featured</option>
+                                            <option value="None">No Badge</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Product 5 -->
+                            <div class="col-md-6 col-xl-3">
+                                <div class="p-3 border border-secondary rounded position-relative h-100">
+                                    <button class="btn-admin btn-sm position-absolute top-0 end-0 mt-2 me-2" style="background: rgba(220, 53, 69, 0.1); color: #dc3545; z-index: 10;"><i class="fas fa-trash"></i></button>
+                                    <div class="text-center mb-3">
+                                        <img src="../assets/img/acceerece/E-liquids/Tokyo/blue-pineapple.webp" alt="" style="width: 100%; height: 120px; object-fit: contain; background: rgba(255,255,255,0.05); border-radius: 8px;" class="p-2">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Product Image</label>
+                                        <input type="file" class="form-control admin-input" style="font-size: 11px;">
+                                        <input type="text" class="form-control admin-input mt-1" value="../assets/img/acceerece/E-liquids/Tokyo/blue-pineapple.webp" style="font-size: 11px;">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Product Name</label>
+                                        <input type="text" class="form-control admin-input" value="TOKYO BLUE PINEAPPLE" placeholder="Product Name">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Brand</label>
+                                        <input type="text" class="form-control admin-input" value="TOKYO" placeholder="Brand">
+                                    </div>
+                                    <div class="row g-2 mb-2">
+                                        <div class="col-6">
+                                            <label class="form-label text-white-50" style="font-size: 11px;">Current Price</label>
+                                            <input type="text" class="form-control admin-input" value="RS 2,800.00" placeholder="Price">
+                                        </div>
+                                        <div class="col-6">
+                                            <label class="form-label text-white-50" style="font-size: 11px;">Old Price</label>
+                                            <input type="text" class="form-control admin-input" value="Rs.3,499.00" placeholder="Old Price">
+                                        </div>
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Product Link</label>
+                                        <input type="text" class="form-control admin-input" value="./E-liquids-products/Tokyo-blue-pineapple-data.html" placeholder="Link" style="font-size: 11px;">
+                                    </div>
+                                    <div>
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Badge</label>
+                                        <select class="form-control admin-input" style="font-size: 12px;">
+                                            <option value="Hot" selected>Badge: Hot</option>
+                                            <option value="New">Badge: New</option>
+                                            <option value="Sale">Badge: Sale</option>
+                                            <option value="Featured">Badge: Featured</option>
+                                            <option value="None">No Badge</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab 3: FEATURED -->
+                    <div class="mb-5 border-bottom border-secondary pb-4">
+                        <div class="d-flex flex-wrap justify-content-between align-items-center mb-3">
+                            <div class="d-flex gap-3 align-items-center mb-2 mb-md-0">
+                                <h6 class="text-white mb-0">Tab 3:</h6>
+                                <input type="text" class="form-control admin-input form-control-sm" value="FEATURED" style="width: 200px;">
+                                <input type="text" class="form-control admin-input form-control-sm" value="featured" style="width: 150px;" placeholder="Tab ID">
+                            </div>
+                            <button class="btn-admin btn-sm btn-primary-admin"><i class="fas fa-plus"></i> Add Product</button>
+                        </div>
+                        <div class="row g-3">
+                            <!-- Product 1 -->
+                            <div class="col-md-6 col-xl-3">
+                                <div class="p-3 border border-secondary rounded position-relative h-100">
+                                    <button class="btn-admin btn-sm position-absolute top-0 end-0 mt-2 me-2" style="background: rgba(220, 53, 69, 0.1); color: #dc3545; z-index: 10;"><i class="fas fa-trash"></i></button>
+                                    <div class="text-center mb-3">
+                                        <img src="../assets/img/devices/OXVA/OXVA-NEXLIM-GO/black-warrior1.jpg" alt="" style="width: 100%; height: 120px; object-fit: contain; background: rgba(255,255,255,0.05); border-radius: 8px;" class="p-2">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Product Image</label>
+                                        <input type="file" class="form-control admin-input" style="font-size: 11px;">
+                                        <input type="text" class="form-control admin-input mt-1" value="../assets/img/devices/OXVA/OXVA-NEXLIM-GO/black-warrior1.jpg" style="font-size: 11px;">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Product Name</label>
+                                        <input type="text" class="form-control admin-input" value="OXVA NEXLIM GO" placeholder="Product Name">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Brand</label>
+                                        <input type="text" class="form-control admin-input" value="OXVA" placeholder="Brand">
+                                    </div>
+                                    <div class="row g-2 mb-2">
+                                        <div class="col-6">
+                                            <label class="form-label text-white-50" style="font-size: 11px;">Current Price</label>
+                                            <input type="text" class="form-control admin-input" value="RS 5,200.00" placeholder="Price">
+                                        </div>
+                                        <div class="col-6">
+                                            <label class="form-label text-white-50" style="font-size: 11px;">Old Price</label>
+                                            <input type="text" class="form-control admin-input" value="Rs.6,000.00" placeholder="Old Price">
+                                        </div>
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Product Link</label>
+                                        <input type="text" class="form-control admin-input" value="./vape-products/oxva/OXVA-NEXLIM-GO-data.html" placeholder="Link" style="font-size: 11px;">
+                                    </div>
+                                    <div>
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Badge</label>
+                                        <select class="form-control admin-input" style="font-size: 12px;">
+                                            <option value="Hot">Badge: Hot</option>
+                                            <option value="New">Badge: New</option>
+                                            <option value="Sale">Badge: Sale</option>
+                                            <option value="Featured" selected>Badge: Featured</option>
+                                            <option value="None">No Badge</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Product 2 -->
+                            <div class="col-md-6 col-xl-3">
+                                <div class="p-3 border border-secondary rounded position-relative h-100">
+                                    <button class="btn-admin btn-sm position-absolute top-0 end-0 mt-2 me-2" style="background: rgba(220, 53, 69, 0.1); color: #dc3545; z-index: 10;"><i class="fas fa-trash"></i></button>
+                                    <div class="text-center mb-3">
+                                        <img src="../assets/img/devices/VAPORESSO/X-ROS-5-NANO/orange-leatherette1.png" alt="" style="width: 100%; height: 120px; object-fit: contain; background: rgba(255,255,255,0.05); border-radius: 8px;" class="p-2">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Product Image</label>
+                                        <input type="file" class="form-control admin-input" style="font-size: 11px;">
+                                        <input type="text" class="form-control admin-input mt-1" value="../assets/img/devices/VAPORESSO/X-ROS-5-NANO/orange-leatherette1.png" style="font-size: 11px;">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Product Name</label>
+                                        <input type="text" class="form-control admin-input" value="XROS 5 NANO" placeholder="Product Name">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Brand</label>
+                                        <input type="text" class="form-control admin-input" value="VAPORESSO" placeholder="Brand">
+                                    </div>
+                                    <div class="row g-2 mb-2">
+                                        <div class="col-6">
+                                            <label class="form-label text-white-50" style="font-size: 11px;">Current Price</label>
+                                            <input type="text" class="form-control admin-input" value="RS 8,890.00" placeholder="Price">
+                                        </div>
+                                        <div class="col-6">
+                                            <label class="form-label text-white-50" style="font-size: 11px;">Old Price</label>
+                                            <input type="text" class="form-control admin-input" value="Rs.9,990.00" placeholder="Old Price">
+                                        </div>
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Product Link</label>
+                                        <input type="text" class="form-control admin-input" value="./vape-products/vaporesso/X-ROS-5-NANO-data.html" placeholder="Link" style="font-size: 11px;">
+                                    </div>
+                                    <div>
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Badge</label>
+                                        <select class="form-control admin-input" style="font-size: 12px;">
+                                            <option value="Hot">Badge: Hot</option>
+                                            <option value="New">Badge: New</option>
+                                            <option value="Sale">Badge: Sale</option>
+                                            <option value="Featured" selected>Badge: Featured</option>
+                                            <option value="None">No Badge</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Product 3 -->
+                            <div class="col-md-6 col-xl-3">
+                                <div class="p-3 border border-secondary rounded position-relative h-100">
+                                    <button class="btn-admin btn-sm position-absolute top-0 end-0 mt-2 me-2" style="background: rgba(220, 53, 69, 0.1); color: #dc3545; z-index: 10;"><i class="fas fa-trash"></i></button>
+                                    <div class="text-center mb-3">
+                                        <img src="../assets/img/acceerece/coils/Oxva/Oxva-coil/oxva-coils.webp" alt="" style="width: 100%; height: 120px; object-fit: contain; background: rgba(255,255,255,0.05); border-radius: 8px;" class="p-2">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Product Image</label>
+                                        <input type="file" class="form-control admin-input" style="font-size: 11px;">
+                                        <input type="text" class="form-control admin-input mt-1" value="../assets/img/acceerece/coils/Oxva/Oxva-coil/oxva-coils.webp" style="font-size: 11px;">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Product Name</label>
+                                        <input type="text" class="form-control admin-input" value="XLIM V3 PODS" placeholder="Product Name">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Brand</label>
+                                        <input type="text" class="form-control admin-input" value="OXVA" placeholder="Brand">
+                                    </div>
+                                    <div class="row g-2 mb-2">
+                                        <div class="col-6">
+                                            <label class="form-label text-white-50" style="font-size: 11px;">Current Price</label>
+                                            <input type="text" class="form-control admin-input" value="RS 1,000.00" placeholder="Price">
+                                        </div>
+                                        <div class="col-6">
+                                            <label class="form-label text-white-50" style="font-size: 11px;">Old Price</label>
+                                            <input type="text" class="form-control admin-input" value="Rs.1,200.00" placeholder="Old Price">
+                                        </div>
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Product Link</label>
+                                        <input type="text" class="form-control admin-input" value="./vape-products/oxva-coil/Oxva-data.html" placeholder="Link" style="font-size: 11px;">
+                                    </div>
+                                    <div>
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Badge</label>
+                                        <select class="form-control admin-input" style="font-size: 12px;">
+                                            <option value="Hot">Badge: Hot</option>
+                                            <option value="New">Badge: New</option>
+                                            <option value="Sale">Badge: Sale</option>
+                                            <option value="Featured" selected>Badge: Featured</option>
+                                            <option value="None">No Badge</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Product 4 -->
+                            <div class="col-md-6 col-xl-3">
+                                <div class="p-3 border border-secondary rounded position-relative h-100">
+                                    <button class="btn-admin btn-sm position-absolute top-0 end-0 mt-2 me-2" style="background: rgba(220, 53, 69, 0.1); color: #dc3545; z-index: 10;"><i class="fas fa-trash"></i></button>
+                                    <div class="text-center mb-3">
+                                        <img src="../assets/img/acceerece/coils/Voopoo/argus-pot-coil/voopoo-argus-coil.jpg" alt="" style="width: 100%; height: 120px; object-fit: contain; background: rgba(255,255,255,0.05); border-radius: 8px;" class="p-2">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Product Image</label>
+                                        <input type="file" class="form-control admin-input" style="font-size: 11px;">
+                                        <input type="text" class="form-control admin-input mt-1" value="../assets/img/acceerece/coils/Voopoo/argus-pot-coil/voopoo-argus-coil.jpg" style="font-size: 11px;">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Product Name</label>
+                                        <input type="text" class="form-control admin-input" value="VOOPOO ARGUS COIL" placeholder="Product Name">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Brand</label>
+                                        <input type="text" class="form-control admin-input" value="VOOPOO" placeholder="Brand">
+                                    </div>
+                                    <div class="row g-2 mb-2">
+                                        <div class="col-6">
+                                            <label class="form-label text-white-50" style="font-size: 11px;">Current Price</label>
+                                            <input type="text" class="form-control admin-input" value="RS 1,000.00" placeholder="Price">
+                                        </div>
+                                        <div class="col-6">
+                                            <label class="form-label text-white-50" style="font-size: 11px;">Old Price</label>
+                                            <input type="text" class="form-control admin-input" value="Rs.1,300.00" placeholder="Old Price">
+                                        </div>
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Product Link</label>
+                                        <input type="text" class="form-control admin-input" value="./vape-products/Voopoo-coil/Voopoo-data.html" placeholder="Link" style="font-size: 11px;">
+                                    </div>
+                                    <div>
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Badge</label>
+                                        <select class="form-control admin-input" style="font-size: 12px;">
+                                            <option value="Hot">Badge: Hot</option>
+                                            <option value="New">Badge: New</option>
+                                            <option value="Sale">Badge: Sale</option>
+                                            <option value="Featured" selected>Badge: Featured</option>
+                                            <option value="None">No Badge</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Product 5 -->
+                            <div class="col-md-6 col-xl-3">
+                                <div class="p-3 border border-secondary rounded position-relative h-100">
+                                    <button class="btn-admin btn-sm position-absolute top-0 end-0 mt-2 me-2" style="background: rgba(220, 53, 69, 0.1); color: #dc3545; z-index: 10;"><i class="fas fa-trash"></i></button>
+                                    <div class="text-center mb-3">
+                                        <img src="../assets/img/acceerece/E-liquids/Tokyo/blue-pineapple.webp" alt="" style="width: 100%; height: 120px; object-fit: contain; background: rgba(255,255,255,0.05); border-radius: 8px;" class="p-2">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Product Image</label>
+                                        <input type="file" class="form-control admin-input" style="font-size: 11px;">
+                                        <input type="text" class="form-control admin-input mt-1" value="../assets/img/acceerece/E-liquids/Tokyo/blue-pineapple.webp" style="font-size: 11px;">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Product Name</label>
+                                        <input type="text" class="form-control admin-input" value="TOKYO BLUE PINEAPPLE" placeholder="Product Name">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Brand</label>
+                                        <input type="text" class="form-control admin-input" value="TOKYO" placeholder="Brand">
+                                    </div>
+                                    <div class="row g-2 mb-2">
+                                        <div class="col-6">
+                                            <label class="form-label text-white-50" style="font-size: 11px;">Current Price</label>
+                                            <input type="text" class="form-control admin-input" value="RS 2,800.00" placeholder="Price">
+                                        </div>
+                                        <div class="col-6">
+                                            <label class="form-label text-white-50" style="font-size: 11px;">Old Price</label>
+                                            <input type="text" class="form-control admin-input" value="Rs.3,500.00" placeholder="Old Price">
+                                        </div>
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Product Link</label>
+                                        <input type="text" class="form-control admin-input" value="./E-liquids-products/Tokyo-blue-pineapple-data.html" placeholder="Link" style="font-size: 11px;">
+                                    </div>
+                                    <div>
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Badge</label>
+                                        <select class="form-control admin-input" style="font-size: 12px;">
+                                            <option value="Hot">Badge: Hot</option>
+                                            <option value="New">Badge: New</option>
+                                            <option value="Sale">Badge: Sale</option>
+                                            <option value="Featured" selected>Badge: Featured</option>
+                                            <option value="None">No Badge</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Product 6 -->
+                            <div class="col-md-6 col-xl-3">
+                                <div class="p-3 border border-secondary rounded position-relative h-100">
+                                    <button class="btn-admin btn-sm position-absolute top-0 end-0 mt-2 me-2" style="background: rgba(220, 53, 69, 0.1); color: #dc3545; z-index: 10;"><i class="fas fa-trash"></i></button>
+                                    <div class="text-center mb-3">
+                                        <img src="../assets/img/acceerece/E-liquids/Drip-Down/Cola-Ice-1.webp" alt="" style="width: 100%; height: 120px; object-fit: contain; background: rgba(255,255,255,0.05); border-radius: 8px;" class="p-2">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Product Image</label>
+                                        <input type="file" class="form-control admin-input" style="font-size: 11px;">
+                                        <input type="text" class="form-control admin-input mt-1" value="../assets/img/acceerece/E-liquids/Drip-Down/Cola-Ice-1.webp" style="font-size: 11px;">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Product Name</label>
+                                        <input type="text" class="form-control admin-input" value="DRIP DOWN COLA ICE" placeholder="Product Name">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Brand</label>
+                                        <input type="text" class="form-control admin-input" value="DRIP-DOWN" placeholder="Brand">
+                                    </div>
+                                    <div class="row g-2 mb-2">
+                                        <div class="col-6">
+                                            <label class="form-label text-white-50" style="font-size: 11px;">Current Price</label>
+                                            <input type="text" class="form-control admin-input" value="RS 3,499.00" placeholder="Price">
+                                        </div>
+                                        <div class="col-6">
+                                            <label class="form-label text-white-50" style="font-size: 11px;">Old Price</label>
+                                            <input type="text" class="form-control admin-input" value="Rs.5,000.00" placeholder="Old Price">
+                                        </div>
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Product Link</label>
+                                        <input type="text" class="form-control admin-input" value="./E-liquids-products/Drip-Down-Cola-Ice-1-data..html" placeholder="Link" style="font-size: 11px;">
+                                    </div>
+                                    <div>
+                                        <label class="form-label text-white-50" style="font-size: 11px;">Badge</label>
+                                        <select class="form-control admin-input" style="font-size: 12px;">
+                                            <option value="Hot">Badge: Hot</option>
+                                            <option value="New">Badge: New</option>
+                                            <option value="Sale">Badge: Sale</option>
+                                            <option value="Featured" selected>Badge: Featured</option>
+                                            <option value="None">No Badge</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Banner Section 2 (3-Banner Grid) -->
+            <div class="table-container mb-4">
+                <div class="table-header">
+                    <h5 class="mb-0">Bottom Banner Grid (3 Banners)</h5>
+                </div>
+                <div class="p-4">
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="p-3 border border-secondary rounded">
+                                <h6 class="text-white mb-3">Large Banner (Left)</h6>
+                                <div class="mb-3">
+                                    <label class="form-label text-white-50">Background Image</label>
+                                    <img src="../assets/img/banner-12-4.jpg" alt="" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px;" class="mb-2">
+                                    <input type="file" class="form-control admin-input mb-2">
+                                    <input type="text" class="form-control admin-input" value="../assets/img/banner-12-4.jpg">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label text-white-50">Title</label>
+                                    <input type="text" class="form-control admin-input" value="THE BEST E-LIQUID BUNDLES">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label text-white-50">Description</label>
+                                    <input type="text" class="form-control admin-input" value="E-LIQUID BUNDLES THAT ARE PERFECT FOR STARTER">
+                                </div>
+                                <div class="mb-0">
+                                    <label class="form-label text-white-50">Button Link</label>
+                                    <input type="text" class="form-control admin-input" value="./E-Liquids.html">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="p-3 border border-secondary rounded">
+                                <h6 class="text-white mb-3">Small Banner 1 (Right Top)</h6>
+                                <div class="mb-3">
+                                    <label class="form-label text-white-50">Background Image</label>
+                                    <img src="../assets/img/banner-12-5.jpg" alt="" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px;" class="mb-2">
+                                    <input type="file" class="form-control admin-input mb-2">
+                                    <input type="text" class="form-control admin-input" value="../assets/img/banner-12-5.jpg">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label text-white-50">Title</label>
+                                    <input type="text" class="form-control admin-input" value="NEW TO VAPING?">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label text-white-50">Description</label>
+                                    <input type="text" class="form-control admin-input" value="EVERYTHING YOU NEED TO MAKE THE SWITCH">
+                                </div>
+                                <div class="mb-0">
+                                    <label class="form-label text-white-50">Button Link</label>
+                                    <input type="text" class="form-control admin-input" value="./voopoo.html">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="p-3 border border-secondary rounded">
+                                <h6 class="text-white mb-3">Small Banner 2 (Right Bottom)</h6>
+                                <div class="mb-3">
+                                    <label class="form-label text-white-50">Background Image</label>
+                                    <img src="../assets/img/banner-12-6.jpg" alt="" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px;" class="mb-2">
+                                    <input type="file" class="form-control admin-input mb-2">
+                                    <input type="text" class="form-control admin-input" value="../assets/img/banner-12-6.jpg">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label text-white-50">Title</label>
+                                    <input type="text" class="form-control admin-input" value="DEVICES">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label text-white-50">Description</label>
+                                    <input type="text" class="form-control admin-input" value="THE MOST SOUGHT-AFTER HARDWARE">
+                                </div>
+                                <div class="mb-0">
+                                    <label class="form-label text-white-50">Button Link</label>
+                                    <input type="text" class="form-control admin-input" value="./vaporesso.html">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Brand Logos Section -->
+            <div class="table-container mb-4">
+                <div class="table-header">
+                    <h5 class="mb-0">From The Best Brands Bar</h5>
+                </div>
+                <div class="p-4">
+                    <div class="row g-3 align-items-center">
+                        <div class="col-6 col-md-3 text-center">
+                            <div class="p-2 border border-secondary rounded">
+                                <img src="../assets/img/brand-1.png" alt="" style="height: 30px;" class="mb-2">
+                                <input type="file" class="form-control admin-input mb-2" style="font-size: 10px;">
+                                <input type="text" class="form-control admin-input" value="./voopoo.html" placeholder="Button Link" style="font-size: 10px;">
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3 text-center">
+                            <div class="p-2 border border-secondary rounded">
+                                <img src="../assets/img/brand-2.png" alt="" style="height: 30px;" class="mb-2">
+                                <input type="file" class="form-control admin-input mb-2" style="font-size: 10px;">
+                                <input type="text" class="form-control admin-input" value="./OXVA.html" placeholder="Button Link" style="font-size: 10px;">
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3 text-center">
+                            <div class="p-2 border border-secondary rounded">
+                                <img src="../assets/img/brand-3.png" alt="" style="height: 30px;" class="mb-2">
+                                <input type="file" class="form-control admin-input mb-2" style="font-size: 10px;">
+                                <input type="text" class="form-control admin-input" value="./UWELL.html" placeholder="Button Link" style="font-size: 10px;">
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3 text-center">
+                            <div class="p-2 border border-secondary rounded">
+                                <img src="../assets/img/brand-4.png" alt="" style="height: 30px;" class="mb-2">
+                                <input type="file" class="form-control admin-input mb-2" style="font-size: 10px;">
+                                <input type="text" class="form-control admin-input" value="./vaporesso.html" placeholder="Button Link" style="font-size: 10px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Settings -->
+            <div class="table-container mb-5">
+                <div class="table-header">
+                    <h5 class="mb-0">Footer Settings</h5>
+                </div>
+                <div class="p-4">
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <h6 class="text-white mb-3">Company Info (Column 1)</h6>
+                            <div class="mb-3">
+                                <label class="form-label text-white-50">Footer Logo</label>
+                                <img src="../assets/img/web-logo.png" alt="" style="height: 40px;" class="mb-2 d-block bg-dark p-2 rounded">
+                                <input type="file" class="form-control admin-input mb-2">
+                                <input type="text" class="form-control admin-input" value="index.html" placeholder="Logo Link">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label text-white-50">About Text</label>
+                                <textarea class="form-control admin-input" rows="3">Since 2024, VAPE CLUSTER has been the premier online vape shop in Pakistan, offering premium vaping hardware, e-liquids, and accessories.</textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h6 class="text-white mb-3">Customer Care (Column 4)</h6>
+                            <div class="mb-3">
+                                <label class="form-label text-white-50">Phone Number</label>
+                                <input type="text" class="form-control admin-input" value="+92 3200489485">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label text-white-50">Email Address</label>
+                                <input type="text" class="form-control admin-input" value="vapecluster872@gmail.com">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row g-4 mt-2">
+                        <div class="col-md-6">
+                            <h6 class="text-white mb-3">Social Media Links</h6>
+                            <div class="input-group mb-2">
+                                <span class="input-group-text bg-dark border-secondary text-white"><i class="fab fa-facebook-f"></i></span>
+                                <input type="text" class="form-control admin-input" value="https://facebook.com/vapecluster">
+                            </div>
+                            <div class="input-group mb-2">
+                                <span class="input-group-text bg-dark border-secondary text-white"><i class="fab fa-instagram"></i></span>
+                                <input type="text" class="form-control admin-input" value="https://instagram.com/vapecluster">
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-text bg-dark border-secondary text-white"><i class="fab fa-twitter"></i></span>
+                                <input type="text" class="form-control admin-input" value="https://twitter.com/vapecluster">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h6 class="text-white mb-3">Copyright Text</h6>
+                            <div class="mb-3">
+                                <input type="text" class="form-control admin-input" value="© 2026 VAPE CLUSTER | ALL RIGHTS RESERVED.">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="js/admin-main.js"></script>
+</body>
+</html>
+

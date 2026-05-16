@@ -1,0 +1,669 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Coils | Vapier Admin</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/img/web-logo.png">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Rajdhani:wght@600;700&family=Audiowide&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Custom Admin CSS -->
+    <link rel="stylesheet" href="css/admin-style.css">
+</head>
+<body>
+
+    <div class="admin-wrapper">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <img src="../assets/img/web-logo.png" alt="Vapier Logo">
+            </div>
+            
+            <ul class="sidebar-menu">
+                <li class="menu-label">Main</li>
+                <li class="menu-item">
+                    <a href="index.html" class="menu-link">
+                        <i class="fas fa-th-large"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="orders.html" class="menu-link">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Orders</span>
+                    </a>
+                </li>
+
+                <li class="menu-label">Inventory Management</li>
+                <li class="menu-item">
+                    <a href="manage-eliquids.html" class="menu-link">
+                        <i class="fas fa-tint"></i>
+                        <span>E-Liquids</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="manage-deals.html" class="menu-link">
+                        <i class="fas fa-tags"></i>
+                        <span>Deals</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="manage-oxva.html" class="menu-link">
+                        <i class="fas fa-bolt"></i>
+                        <span>OXVA</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="manage-voopoo.html" class="menu-link">
+                        <i class="fas fa-fire"></i>
+                        <span>Voopoo</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="manage-vaporesso.html" class="menu-link">
+                        <i class="fas fa-vial"></i>
+                        <span>Vaporesso</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="manage-uwell.html" class="menu-link">
+                        <i class="fas fa-atom"></i>
+                        <span>UWELL</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="manage-coils.html" class="menu-link active">
+                        <i class="fas fa-sync-alt"></i>
+                        <span>Coils</span>
+                    </a>
+                </li>
+
+                <li class="menu-label">Content Management</li>
+                <li class="menu-item">
+                    <a href="manage-home.html" class="menu-link">
+                        <i class="fas fa-home"></i>
+                        <span>Home Page</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="about-us.html" class="menu-link">
+                        <i class="fas fa-info-circle"></i>
+                        <span>About Us</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="contact-us.html" class="menu-link">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contact Us</span>
+                    </a>
+                </li>
+
+                <li class="menu-label">Settings</li>
+                <li class="menu-item">
+                    <a href="add-product.html" class="menu-link">
+                        <i class="fas fa-plus-circle"></i>
+                        <span>Add New Product</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="../index.html" class="menu-link">
+                        <i class="fas fa-external-link-alt"></i>
+                        <span>View Website</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Bar -->
+            <div class="top-bar">
+                <div class="page-title d-flex align-items-center">
+                    <button class="mobile-toggle-btn d-lg-none me-3">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1 class="mb-0">Manage Coils</h1>
+                </div>
+                <div class="user-profile">
+                    <a href="add-product.html" class="btn-admin btn-primary-admin me-3">
+                        <i class="fas fa-plus"></i> Add Coil
+                    </a>
+                    <div class="user-avatar">AD</div>
+                </div>
+            </div>
+
+            <!-- Products List -->
+            <div class="table-container">
+                <div class="table-header">
+                    <h5 class="mb-0">Coil Inventory</h5>
+                    <div class="search-box">
+                        <input type="text" class="form-control-custom" placeholder="Search Coils..." style="background: rgba(255,255,255,0.05); border: 1px solid var(--border-color); color: white; padding: 5px 15px; border-radius: 5px; font-size: 13px;">
+                    </div>
+                </div>
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Image</th>
+                            <th>Model</th>
+                            <th>Brand</th>
+                            <th>Resistance</th>
+                            <th>Price</th>
+                            <th>Stock Status</th>
+                            <th>Quantity</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-primary="../assets/img/acceerece/coils/Oxva/Oxva-coil/oxva-coils.webp"
+                            data-hover="../assets/img/acceerece/coils/Oxva/Oxva-coil/oxva-coils.webp"
+                            data-frontend-title="OXVA Replacement Unicoils At Best Price In Pakistan"
+                            data-rating="4.8"
+                            data-reviews="45"
+                            data-description="The OXVA Unicoil system is designed for the ultimate flavor and longevity. Compatible with various OXVA devices."
+                            data-specs="Resistance: 0.2Î©, 0.3Î©, 0.5Î©, 1.0Î©; Pack: 5 Pieces; Type: Mesh/Regular"
+                            data-features="Advanced Flavor Reproduction; Long Lifespan; Leak-proof Design; Multi-resistance options"
+                            data-box="5 x OXVA Replacement Coils"
+                            data-why="Versatile for MTL/DTL; Pure flavor; Reliable performance">
+                            <td><img src="../assets/img/acceerece/coils/oxva/oxva-xlim-v3-pods.webp" alt="" style="width: 40px; height: 40px; object-fit: contain;"></td>
+                            <td>XLIM V3 POD</td>
+                            <td>OXVA</td>
+                            <td>0.6Î©/0.8Î©/1.2Î©</td>
+                            <td>RS 800.00</td>
+                            <td><span class="text-success">In Stock</span></td>
+                            <td>50</td>
+                            <td>
+                                <button class="btn-admin btn-sm edit-product-btn" style="background: rgba(0, 123, 255, 0.1); color: #007bff;"><i class="fas fa-edit"></i></button>
+                                <button class="btn-admin btn-sm" style="background: rgba(220, 53, 69, 0.1); color: #dc3545;"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr data-primary="../assets/img/acceerece/coils/Uwell/uwell-caliburn/uwell-caliburn-coil.webp"
+                            data-hover="../assets/img/acceerece/coils/Uwell/uwell-caliburn/uwell-caliburn-coil.webp"
+                            data-frontend-title="Uwell Caliburn Replacement Coils At Best Price In Pakistan"
+                            data-rating="4.9"
+                            data-reviews="60"
+                            data-description="Original Uwell Caliburn replacement coils, featuring the Pro-FOCS flavor technology for the best MTL experience."
+                            data-specs="Resistance: 1.2Î©, 1.4Î©; Pack: 4 Pieces; Type: Regular"
+                            data-features="Pro-FOCS Flavor Tech; Long Lasting; Easy Installation; Top-tier MTL flavor"
+                            data-box="4 x Uwell Caliburn Coils"
+                            data-why="Industry standard for MTL; Authentic Uwell product; Smooth draw">
+                            <td><img src="../assets/img/acceerece/coils/Uwell/uwell-caliburn/uwell-caliburn-coil.webp" alt="" style="width: 40px; height: 40px; object-fit: contain;"></td>
+                            <td>CALIBURN COIL</td>
+                            <td>UWELL</td>
+                            <td>1.2Î©/1.4Î©</td>
+                            <td>RS 750.00</td>
+                            <td><span class="text-success">In Stock (30)</span></td>
+                            <td>30</td>
+                            <td>
+                                <button class="btn-admin btn-sm edit-product-btn" style="background: rgba(0, 123, 255, 0.1); color: #007bff;"><i class="fas fa-edit"></i></button>
+                                <button class="btn-admin btn-sm" style="background: rgba(220, 53, 69, 0.1); color: #dc3545;"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr data-primary="../assets/img/acceerece/coils/Voopoo/argus-pot-coil/voopoo-argus-coil.jpg"
+                            data-hover="../assets/img/acceerece/coils/Voopoo/argus-pot-coil/voopoo-argus-coil.jpg"
+                            data-frontend-title="Voopoo PnP Replacement Coils At Best Price In Pakistan"
+                            data-rating="4.7"
+                            data-reviews="120"
+                            data-description="Voopoo PnP coils are incredibly versatile, offering options for both mesh and regular coils to suit any vaping style."
+                            data-specs="Resistance: VM1/VM3/VM5/VM6/R1/R2; Pack: 5 Pieces; Type: Various"
+                            data-features="Plug-n-Play Design; Wide range of resistances; Mesh & Regular options; Massive clouds/Flavor"
+                            data-box="5 x Voopoo PnP Coils"
+                            data-why="Most versatile coil series; Reliable performance; Great cloud production">
+                            <td><img src="../assets/img/acceerece/coils/Voopoo/argus-pot-coil/voopoo-argus-coil.jpg" alt="" style="width: 40px; height: 40px; object-fit: contain;"></td>
+                            <td>PNP COIL</td>
+                            <td>VOOPOO</td>
+                            <td>VM1/VM6/R2</td>
+                            <td>RS 850.00</td>
+                            <td><span class="text-success">In Stock (80)</span></td>
+                            <td>80</td>
+                            <td>
+                                <button class="btn-admin btn-sm edit-product-btn" style="background: rgba(0, 123, 255, 0.1); color: #007bff;"><i class="fas fa-edit"></i></button>
+                                <button class="btn-admin btn-sm" style="background: rgba(220, 53, 69, 0.1); color: #dc3545;"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr data-primary="../assets/img/acceerece/coils/vaporesso/vaporesso-devices/vaporesso-devices-coil.webp"
+                            data-hover="../assets/img/acceerece/coils/vaporesso/vaporesso-devices/vaporesso-devices-coil.webp"
+                            data-frontend-title="Vaporesso GTX Replacement Coils At Best Price In Pakistan"
+                            data-rating="4.8"
+                            data-reviews="85"
+                            data-description="Vaporesso GTX coils are engineered for deep, rich flavor and large clouds using the latest wicking technology."
+                            data-specs="Resistance: 0.2Î©, 0.3Î©, 0.6Î©, 0.8Î©, 1.2Î©; Pack: 5 Pieces; Type: Mesh"
+                            data-features="New Wicking Material; Better Airflow; Consistent Heat Distribution; Leak-resistant"
+                            data-box="5 x Vaporesso GTX Coils"
+                            data-why="High-end flavor quality; Smooth vapor; Compatible with many kits">
+                            <td><img src="../assets/img/acceerece/coils/vaporesso/vaporesso-devices/vaporesso-devices-coil.webp" alt="" style="width: 40px; height: 40px; object-fit: contain;"></td>
+                            <td>GTX MESH COIL</td>
+                            <td>VAPORESSO</td>
+                            <td>0.2Î©/0.6Î©/1.2Î©</td>
+                            <td>RS 750.00</td>
+                            <td><span class="text-success">In Stock</span></td>
+                            <td>85</td>
+                            <td>
+                                <button class="btn-admin btn-sm edit-product-btn" style="background: rgba(0, 123, 255, 0.1); color: #007bff;"><i class="fas fa-edit"></i></button>
+                                <button class="btn-admin btn-sm" style="background: rgba(220, 53, 69, 0.1); color: #dc3545;"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <!-- Edit Product Modal -->
+    <div class="modal fade" id="editProductModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content" style="background: #1a1a1a; color: white; border: 1px solid #333;">
+                <div class="modal-header" style="border-bottom: 1px solid #333;">
+                    <h5 class="modal-title">Edit Coil Details</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="editProductForm">
+                        <!-- Step 1: Basic Inventory Info -->
+                        <div id="step1">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label">Model Name</label>
+                                    <input type="text" class="form-control" id="editModel" style="background: #2a2a2a; border: 1px solid #444; color: white;">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Brand</label>
+                                    <input type="text" class="form-control" id="editSeries" style="background: #2a2a2a; border: 1px solid #444; color: white;">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Price</label>
+                                    <input type="text" class="form-control" id="editPrice" style="background: #2a2a2a; border: 1px solid #444; color: white;">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Stock Status</label>
+                                    <select class="form-select" id="editStock" style="background: #2a2a2a; border: 1px solid #444; color: white;">
+                                        <option value="In Stock">In Stock</option>
+                                        <option value="Out of Stock">Out of Stock</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-12" id="quantityContainer">
+                                    <label class="form-label">Quantity</label>
+                                    <input type="number" class="form-control" id="editQuantity" style="background: #2a2a2a; border: 1px solid #444; color: white;" min="0">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Product Image (Main)</label>
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="image-preview-container" onclick="document.getElementById('editImageFile').click();" style="cursor: pointer; width: 80px; height: 80px; border: 1px dashed #444; display: flex; align-items: center; justify-content: center; border-radius: 5px; overflow: hidden; background: #2a2a2a;">
+                                            <img id="mainPreview" src="" alt="" style="width: 100%; height: 100%; object-fit: contain; display: none;">
+                                            <i class="fas fa-plus text-white-50" id="mainPlusIcon"></i>
+                                        </div>
+                                        <input type="file" class="form-control" id="editImageFile" accept="image/*" style="background: #2a2a2a; border: 1px solid #444; color: white;">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Product Image (Hover)</label>
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="image-preview-container" onclick="document.getElementById('editHoverImageFile').click();" style="cursor: pointer; width: 80px; height: 80px; border: 1px dashed #444; display: flex; align-items: center; justify-content: center; border-radius: 5px; overflow: hidden; background: #2a2a2a;">
+                                            <img id="hoverPreview" src="" alt="" style="width: 100%; height: 100%; object-fit: contain; display: none;">
+                                            <i class="fas fa-plus text-white-50" id="hoverPlusIcon"></i>
+                                        </div>
+                                        <input type="file" class="form-control" id="editHoverImageFile" accept="image/*" style="background: #2a2a2a; border: 1px solid #444; color: white;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Frontend Product Details -->
+                        <div id="step2" style="display: none;">
+                            <div class="row g-3">
+                                <div class="col-md-12">
+                                    <label class="form-label">Frontend Page Title</label>
+                                    <input type="text" class="form-control" id="editFrontendTitle" style="background: #2a2a2a; border: 1px solid #444; color: white;">
+                                </div>
+                                <div class="col-md-12">
+                                    <label class="form-label">Color Variant Management</label>
+                                    <div class="d-flex gap-2 align-items-center mb-2">
+                                        <select class="form-select" id="editVariantDropdown" style="background: #2a2a2a; border: 1px solid #444; color: white;">
+                                            <option value="default">Default Variant</option>
+                                        </select>
+                                        <button type="button" class="btn btn-sm btn-primary" id="addVariantBtn" style="background: var(--accent-red); border: none; padding: 0.5rem 1rem;" title="Add Variant"><i class="fas fa-plus"></i></button>
+                                        <button type="button" class="btn btn-sm btn-danger" id="removeVariantBtn" style="background: #dc3545; border: none; padding: 0.5rem 1rem;" title="Remove Variant"><i class="fas fa-trash"></i></button>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Frontend Primary Image</label>
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="image-preview-container" onclick="document.getElementById('editFrontendImageFile').click();" style="cursor: pointer; width: 80px; height: 80px; border: 1px dashed #444; display: flex; align-items: center; justify-content: center; border-radius: 5px; overflow: hidden; background: #2a2a2a;">
+                                            <img id="frontendPreview" src="" alt="" style="width: 100%; height: 100%; object-fit: contain; display: none;">
+                                            <i class="fas fa-image text-white-50" id="frontendPlusIcon"></i>
+                                        </div>
+                                        <input type="file" class="form-control" id="editFrontendImageFile" accept="image/*" style="background: #2a2a2a; border: 1px solid #444; color: white;">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Frontend Hover Image</label>
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="image-preview-container" onclick="document.getElementById('editFrontendHoverImageFile').click();" style="cursor: pointer; width: 80px; height: 80px; border: 1px dashed #444; display: flex; align-items: center; justify-content: center; border-radius: 5px; overflow: hidden; background: #2a2a2a;">
+                                            <img id="frontendHoverPreview" src="" alt="" style="width: 100%; height: 100%; object-fit: contain; display: none;">
+                                            <i class="fas fa-image text-white-50" id="frontendHoverPlusIcon"></i>
+                                        </div>
+                                        <input type="file" class="form-control" id="editFrontendHoverImageFile" accept="image/*" style="background: #2a2a2a; border: 1px solid #444; color: white;">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Rating (1-5)</label>
+                                    <input type="number" class="form-control" id="editRating" step="0.1" min="0" max="5" style="background: #2a2a2a; border: 1px solid #444; color: white;">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Review Count</label>
+                                    <input type="number" class="form-control" id="editReviewCount" style="background: #2a2a2a; border: 1px solid #444; color: white;">
+                                </div>
+                                <div class="col-md-12">
+                                    <label class="form-label">Product Description</label>
+                                    <textarea class="form-control" id="editDescription" rows="4" style="background: #2a2a2a; border: 1px solid #444; color: white;"></textarea>
+                                </div>
+                                <div class="col-md-12">
+                                    <label class="form-label">Technical Specs (e.g. Battery: 1800mAh; Power: 40W)</label>
+                                    <textarea class="form-control" id="editSpecs" rows="3" style="background: #2a2a2a; border: 1px solid #444; color: white;"></textarea>
+                                </div>
+                                <div class="col-md-12">
+                                    <label class="form-label">Key Features (One per line)</label>
+                                    <textarea class="form-control" id="editFeatures" rows="4" style="background: #2a2a2a; border: 1px solid #444; color: white;"></textarea>
+                                </div>
+                                <div class="col-md-12">
+                                    <label class="form-label">What's in the Box (One per line)</label>
+                                    <textarea class="form-control" id="editBoxContents" rows="3" style="background: #2a2a2a; border: 1px solid #444; color: white;"></textarea>
+                                </div>
+                                <div class="col-md-12">
+                                    <label class="form-label">Why You'll Love It (One per line)</label>
+                                    <textarea class="form-control" id="editWhyLove" rows="3" style="background: #2a2a2a; border: 1px solid #444; color: white;"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 text-end mt-4">
+                            <button type="button" class="btn btn-secondary me-2" id="backBtn" style="display: none;">Back</button>
+                            <button type="button" class="btn btn-secondary me-2" data-bs-dismiss="modal" id="cancelBtn">Cancel</button>
+                            <button type="button" class="btn btn-primary" id="nextBtn" style="background: var(--accent-red); border: none;">Next</button>
+                            <button type="submit" class="btn btn-success" id="saveBtn" style="display: none;">Save All Changes</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="js/admin-main.js"></script>
+    <script src="js/admin-variant-manager.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const editModal = new bootstrap.Modal(document.getElementById('editProductModal'));
+            const editForm = document.getElementById('editProductForm');
+            let currentEditingRow = null;
+
+            // Handle Edit Button Click
+            document.querySelectorAll('.edit-product-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    currentEditingRow = this.closest('tr');
+                    
+                    // Get current values
+                    const model = currentEditingRow.cells[1].innerText;
+                    const series = currentEditingRow.cells[2].innerText;
+                    const price = currentEditingRow.cells[4].innerText;
+                    const stock = currentEditingRow.cells[5].innerText.trim();
+                    const quantity = currentEditingRow.cells[6].innerText.trim();
+
+                    // Populate Modal
+                    document.getElementById('editModel').value = model;
+                    document.getElementById('editSeries').value = series;
+                    document.getElementById('editPrice').value = price;
+                    document.getElementById('editStock').value = stock.includes('Out of Stock') ? 'Out of Stock' : 'In Stock';
+                    document.getElementById('editQuantity').value = quantity;
+
+                    // Populate Step 2 Data
+                    document.getElementById('editFrontendTitle').value = currentEditingRow.getAttribute('data-frontend-title') || '';
+                    document.getElementById('editRating').value = currentEditingRow.getAttribute('data-rating') || '4.8';
+                    document.getElementById('editReviewCount').value = currentEditingRow.getAttribute('data-reviews') || '12';
+                    document.getElementById('editDescription').value = currentEditingRow.getAttribute('data-description') || '';
+                    document.getElementById('editSpecs').value = currentEditingRow.getAttribute('data-specs') || '';
+                    document.getElementById('editFeatures').value = currentEditingRow.getAttribute('data-features') || '';
+                    document.getElementById('editBoxContents').value = currentEditingRow.getAttribute('data-box') || '';
+                    document.getElementById('editWhyLove').value = currentEditingRow.getAttribute('data-why') || '';
+                    
+                    // Toggle quantity field visibility based on stock status
+                    document.getElementById('quantityContainer').style.display = (document.getElementById('editStock').value === 'In Stock') ? 'block' : 'none';
+
+                    // Populate Image Previews
+                    const mainImgSrc = currentEditingRow.cells[0].querySelector('img').src;
+                    const hoverImgSrc = currentEditingRow.getAttribute('data-hover');
+                    
+                    const mainPreview = document.getElementById('mainPreview');
+                    const mainIcon = document.getElementById('mainPlusIcon');
+                    if (mainImgSrc) {
+                        mainPreview.src = mainImgSrc;
+                        mainPreview.style.display = 'block';
+                        mainIcon.style.display = 'none';
+                    }
+
+                    const hoverPreview = document.getElementById('hoverPreview');
+                    const hoverIcon = document.getElementById('hoverPlusIcon');
+                    if (hoverImgSrc) {
+                        hoverPreview.src = hoverImgSrc;
+                        hoverPreview.style.display = 'block';
+                        hoverIcon.style.display = 'none';
+                        
+                        // Sync to Frontend Previews in Step 2
+                        document.getElementById('frontendHoverPreview').src = hoverImgSrc;
+                        document.getElementById('frontendHoverPreview').style.display = 'block';
+                        document.getElementById('frontendHoverPlusIcon').style.display = 'none';
+                    } else {
+                        hoverPreview.style.display = 'none';
+                        hoverIcon.style.display = 'block';
+                        document.getElementById('frontendHoverPreview').style.display = 'none';
+                        document.getElementById('frontendHoverPlusIcon').style.display = 'block';
+                    }
+
+                    if (mainImgSrc) {
+                        document.getElementById('frontendPreview').src = mainImgSrc;
+                        document.getElementById('frontendPreview').style.display = 'block';
+                        document.getElementById('frontendPlusIcon').style.display = 'none';
+                    }
+
+                    // Reset steps
+                    document.getElementById('step1').style.display = 'block';
+                    document.getElementById('step2').style.display = 'none';
+                    document.getElementById('nextBtn').style.display = 'inline-block';
+                    document.getElementById('saveBtn').style.display = 'none';
+                    document.getElementById('backBtn').style.display = 'none';
+                    document.getElementById('cancelBtn').style.display = 'inline-block';
+
+                    editModal.show();
+                });
+            });
+
+            document.getElementById('editImageFile').addEventListener('change', function() {
+                const file = this.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        document.getElementById('mainPreview').src = e.target.result;
+                        document.getElementById('mainPreview').style.display = 'block';
+                        document.getElementById('mainPlusIcon').style.display = 'none';
+                        
+                        // Sync to Step 2
+                        document.getElementById('frontendPreview').src = e.target.result;
+                        document.getElementById('frontendPreview').style.display = 'block';
+                        document.getElementById('frontendPlusIcon').style.display = 'none';
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+
+            document.getElementById('editFrontendImageFile').addEventListener('change', function() {
+                const file = this.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        document.getElementById('frontendPreview').src = e.target.result;
+                        document.getElementById('frontendPreview').style.display = 'block';
+                        document.getElementById('frontendPlusIcon').style.display = 'none';
+                        
+                        // Sync to Step 1
+                        document.getElementById('mainPreview').src = e.target.result;
+                        document.getElementById('mainPreview').style.display = 'block';
+                        document.getElementById('mainPlusIcon').style.display = 'none';
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+
+            document.getElementById('editHoverImageFile').addEventListener('change', function() {
+                const file = this.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        document.getElementById('hoverPreview').src = e.target.result;
+                        document.getElementById('hoverPreview').style.display = 'block';
+                        document.getElementById('hoverPlusIcon').style.display = 'none';
+                        
+                        // Sync to Step 2
+                        document.getElementById('frontendHoverPreview').src = e.target.result;
+                        document.getElementById('frontendHoverPreview').style.display = 'block';
+                        document.getElementById('frontendHoverPlusIcon').style.display = 'none';
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+
+            document.getElementById('editFrontendHoverImageFile').addEventListener('change', function() {
+                const file = this.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        document.getElementById('frontendHoverPreview').src = e.target.result;
+                        document.getElementById('frontendHoverPreview').style.display = 'block';
+                        document.getElementById('frontendHoverPlusIcon').style.display = 'none';
+                        
+                        // Sync to Step 1
+                        document.getElementById('hoverPreview').src = e.target.result;
+                        document.getElementById('hoverPreview').style.display = 'block';
+                        document.getElementById('hoverPlusIcon').style.display = 'none';
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+
+            // Handle Step Switching
+            document.getElementById('nextBtn').addEventListener('click', function() {
+                document.getElementById('step1').style.display = 'none';
+                document.getElementById('step2').style.display = 'block';
+                document.getElementById('nextBtn').style.display = 'none';
+                document.getElementById('saveBtn').style.display = 'inline-block';
+                document.getElementById('backBtn').style.display = 'inline-block';
+                document.getElementById('cancelBtn').style.display = 'none';
+            });
+
+            document.getElementById('backBtn').addEventListener('click', function() {
+                document.getElementById('step1').style.display = 'block';
+                document.getElementById('step2').style.display = 'none';
+                document.getElementById('nextBtn').style.display = 'inline-block';
+                document.getElementById('saveBtn').style.display = 'none';
+                document.getElementById('backBtn').style.display = 'none';
+                document.getElementById('cancelBtn').style.display = 'inline-block';
+            });
+
+            // Handle Stock Status Change in Modal
+            document.getElementById('editStock').addEventListener('change', function() {
+                document.getElementById('quantityContainer').style.display = (this.value === 'In Stock') ? 'block' : 'none';
+            });
+
+            // Handle Form Submission
+            editForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                if (currentEditingRow) {
+                    currentEditingRow.cells[1].innerText = document.getElementById('editModel').value;
+                    currentEditingRow.cells[2].innerText = document.getElementById('editSeries').value;
+                    currentEditingRow.cells[4].innerText = document.getElementById('editPrice').value;
+                    
+                    const newStock = document.getElementById('editStock').value;
+                    const newQuantity = document.getElementById('editQuantity').value;
+                    
+                    currentEditingRow.cells[5].innerHTML = `<span class="${newStock === 'Out of Stock' ? 'text-danger' : 'text-success'}">${newStock}</span>`;
+                    currentEditingRow.cells[6].innerText = newQuantity;
+
+                    // Update Step 2 Data Attributes
+                    currentEditingRow.setAttribute('data-frontend-title', document.getElementById('editFrontendTitle').value);
+                    currentEditingRow.setAttribute('data-rating', document.getElementById('editRating').value);
+                    currentEditingRow.setAttribute('data-reviews', document.getElementById('editReviewCount').value);
+                    currentEditingRow.setAttribute('data-description', document.getElementById('editDescription').value);
+                    currentEditingRow.setAttribute('data-specs', document.getElementById('editSpecs').value);
+                    currentEditingRow.setAttribute('data-features', document.getElementById('editFeatures').value);
+                    currentEditingRow.setAttribute('data-box', document.getElementById('editBoxContents').value);
+                    currentEditingRow.setAttribute('data-why', document.getElementById('editWhyLove').value);
+
+                    // Handle Image File Updates
+                    const imageFile = document.getElementById('editImageFile').files[0] || document.getElementById('editFrontendImageFile').files[0];
+                    const hoverFile = document.getElementById('editHoverImageFile').files[0] || document.getElementById('editFrontendHoverImageFile').files[0];
+                    const targetImg = currentEditingRow.cells[0].querySelector('img');
+
+                    if (imageFile) {
+                        const reader = new FileReader();
+                        reader.onload = function(e) {
+                            targetImg.src = e.target.result;
+                            currentEditingRow.setAttribute('data-primary', e.target.result);
+                        };
+                        reader.readAsDataURL(imageFile);
+                    }
+
+                    if (hoverFile) {
+                        const reader = new FileReader();
+                        reader.onload = function(e) {
+                            currentEditingRow.setAttribute('data-hover', e.target.result);
+                            setupHoverEffect(targetImg);
+                        };
+                        reader.readAsDataURL(hoverFile);
+                    }
+
+                    editModal.hide();
+                    alert('Coil updated successfully!');
+                }
+            });
+
+            // Initialize hover effects for existing images
+            function setupHoverEffect(img) {
+                if (!img.getAttribute('data-primary')) {
+                    img.setAttribute('data-primary', img.src);
+                }
+                
+                if (!img.getAttribute('data-hover')) {
+                    const row = img.closest('tr');
+                    if (row && row.getAttribute('data-hover')) {
+                        img.setAttribute('data-hover', row.getAttribute('data-hover'));
+                    }
+                }
+                
+                img.onmouseenter = function() {
+                    const hoverSrc = this.getAttribute('data-hover');
+                    if (hoverSrc) this.src = hoverSrc;
+                };
+                img.onmouseleave = function() {
+                    this.src = this.getAttribute('data-primary');
+                };
+                img.onclick = function() {
+                    const row = this.closest('tr');
+                    const editBtn = row.querySelector('.edit-product-btn');
+                    if (editBtn) editBtn.click();
+                };
+                img.style.transition = "0.3s all ease";
+                img.style.cursor = "pointer";
+                img.title = "Click to edit product images";
+            }
+
+            document.querySelectorAll('.admin-table img').forEach(setupHoverEffect);
+        });
+    </script>
+</body>
+</html>
+
+

@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="icon" type="icon" href="./assets/img/web-logo.png">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Rajdhani:wght@600;700&family=Audiowide&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    
+    <link rel="icon" type="icon" href="./assets/img/web-logo.png">
+    <title>OXVA Products - VAPE CLUSTER</title>
+
+</head>
+
+<body>
+
+
+ 
+
+<!-- navbar section -->
+                          <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="./index.html"><img src="./assets/img/web-logo.png" alt=""></a>
+            <div class="mobile-nav-actions d-lg-none ms-auto">
+                <a href="javascript:void(0)" class="nav-icon-link search-trigger" title="Search"><i class="fas fa-search"></i></a>
+                <a href="javascript:void(0)" class="nav-icon-link cart-trigger" title="Shopping Bag"><i class="fa-solid fa-cart-shopping"></i><span class="badge-count">0</span></a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+                    <li class="nav-item dropdown-custom">
+                        <a class="nav-link dropdown-toggle-custom active" href="#">Collections <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+                        <div class="dropdown-menu-custom">
+                              <div class="dropdown-category" data-target="vapes-sub">
+                                <span class="dropdown-category-title">Vapes <i class="fas fa-chevron-right sub-arrow"></i></span>
+                                <ul class="sub-menu" id="vapes-sub">
+                                    <li><a href="./voopoo.html" >VOOPOO</a></li>
+                                    <li><a href="./vaporesso.html" >VAPORESSO</a></li>
+                                    <li><a href="./UWELL.html" >UWELL</a></li>
+                                    <li><a href="./OXVA.html" >OXVA</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown-category" data-target="disposable-sub">
+                                <span class="dropdown-category-title">Disposable Vape <i class="fas fa-chevron-right sub-arrow"></i></span>
+                                <ul class="sub-menu" id="disposable-sub">
+                                    <li class="text-center text-white py-2">COMING SOON</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="./E-Liquids.html" >E-Liquids</a></li>
+                     <li class="nav-item"><a class="nav-link" href="./coils.html" >Coils</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./about.html" >About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./contact.html" >Contact</a></li>
+                </ul>
+                  <div class="d-flex gap-4 align-items-center justify-content-center mt-3 mt-lg-0">
+                    <a href="javascript:void(0)" class="nav-icon-link search-trigger" id="searchIcon" title="Search" ><i class="fas fa-search"></i></a>
+                    <a href="javascript:void(0)" class="nav-icon-link cart-trigger" id="cartIcon" title="Shopping Bag" ><i class="fa-solid fa-cart-shopping"></i><span class="badge-count">0</span></a>
+                    <a href="./login-signup.html" class="nav-icon-link" id="userIcon" title="Login" target="_blank"><i class="fas fa-user"></i></a>
+                </div>
+            </div>
+            <div class="navbar-search-overlay" id="navbarSearch">
+                <div class="search-input-wrapper">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="Search for products, brands..." autocomplete="off">
+                    <button type="button" id="closeSearch" title="Close Search"><i class="fas fa-times"></i></button>
+                </div>
+                <div class="search-dropdown" id="searchDropdown">
+                    <div class="search-popular-queries" id="popularQueries">
+                        <h3>Trending Searches</h3>
+                        <div class="popular-tags">
+                            <a href="#" class="popular-tag">Argus G3</a>
+                            <a href="#" class="popular-tag">XROS 4</a>
+                            <a href="#" class="popular-tag">Tokyo E-Juice</a>
+                            <a href="#" class="popular-tag">OXVA Oneo</a>
+                        </div>
+                    </div>
+                    <div class="search-results-grid" id="searchResults"></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+     <!-- Cart Sidebar Overlay -->
+    <div class="cart-sidebar-overlay" id="cartOverlay"></div>
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button type="button" id="closeCartBtn"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-body" id="cartItemsContainer">
+            <div class="empty-cart-msg">
+                <i class="fas fa-shopping-cart"></i>
+                <p>Your cart is currently empty.</p>
+                <a href="#" class="btn-shop-cart" id="continueShoppingBtn">Return to Shop</a>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Subtotal:</span>
+                <span id="cartSubtotal">RS 0.00</span>
+            </div>
+            <p class="tax-note">Taxes and shipping calculated at checkout</p>
+            <a href="./checkout.html" class="checkout-btn">Check Out</a>
+        </div>
+    </div>
+   
+
+    <!-- Page Header -->
+      <section class="page-hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1 class="page-hero-title">OXVA COLLECTIONS</h1>
+                    <p class="page-hero-subtitle">Premium Pod Systems & Vapes by OXVA</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+
+    <!-- Product Listing Section -->
+    <div class="container-fluid px-4 py-5">
+        <div class="row">
+            <!-- Sidebar / Filter -->
+            <aside class="col-lg-3 mb-5">
+                <div class="filter-sidebar p-4 shadow-sm border">
+                    <h5 class="filter-title mb-4">Filter Products</h5>
+
+                    <!-- Search Bar -->
+                    <div class="filter-group mb-4">
+                        <label class="filter-label">Search</label>
+                        <div class="search-input-wrapper">
+                            <input type="text" id="productSearch" class="form-control filter-input"
+                                placeholder="Search products...">
+                            <i class="fas fa-search search-icon"></i>
+                        </div>
+                    </div>
+
+                    <!-- Price Range -->
+                    <div class="filter-group mb-4">
+                        <label class="filter-label">Price Range (PKR)</label>
+                        <div class="price-range-wrapper">
+                            <input type="range" id="priceRange" class="form-range custom-range" min="0" max="50000"
+                                step="100" value="10000">
+                            <div class="d-flex justify-content-between mt-2">
+                                <span class="price-val">PKR 0</span>
+                                <span class="price-val" id="currentPrice">PKR 50,000</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button id="clearFilters" class="btn btn-outline-dark w-100 mt-3 btn-sm">Clear All Filters</button>
+                </div>
+            </aside>
+
+            <!-- Product Grid -->
+            <main class="col-lg-9">
+                <div class="product-grid" id="OXVAProductGrid">
+                    <!-- Product 1:OXVA NEXLIM GO -->
+                    <div class="product-item" data-price="5200" data-name="OXVA NEXLIM GO">
+                        <div class="product-img-box">
+                            <span class="badge red">HOT</span>
+                            <a href="./vape-products/oxva/OXVA-NEXLIM-GO-data.html">
+                                <img src="./assets/img/devices/OXVA/OXVA-NEXLIM-GO/silky-coffee1.png"
+                                    alt="OXVA NEXLIM GO" data-hover="./assets/img/devices/OXVA/OXVA-NEXLIM-GO/silky-coffee2.png">
+                            </a>
+                            <div class="action-icons">
+                                <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                                <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                                <button title="Product Detail" onclick="location.href='./vape-products/oxva/OXVA-NEXLIM-GO-data.html'"><i
+                                        class="fa-solid fa-cart-shopping"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="brand">OXVA</span>
+                            <h3 class="title"><a href="./vape-products/oxva/OXVA-NEXLIM-GO-data.html" class="text-decoration-none text-dark">OXVA
+                                    NEXLIM GO</a></h3>
+                            <div class="rating">????? <span class="review-count">(12 reviews)</span></div>
+                            <div class="price"><span class="old">Rs.6,000.00</span> RS 5,200.00</div>
+                        </div>
+                    </div>
+
+                    <!-- Product 2: OXVA ONEO -->
+                    <div class="product-item" data-price="5800" data-name="OXVA ONEO">
+                        <div class="product-img-box">
+                            <span class="badge red">-10%</span>
+                            <a href="./vape-products/oxva/OXVA-ONEO-data.html">
+                                <img src="./assets/img/devices/OXVA/OXVA-ONEO/midnight-blue1.png" alt="OXVA ONEO"
+                                    data-hover="./assets/img/devices/OXVA/OXVA-ONEO/midnight-blue2.png">
+                            </a>
+                            <div class="action-icons">
+
+                                <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                                <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                                <button title="Product Detail" onclick="location.href='./vape-products/oxva/OXVA-ONEO-data.html'"><i
+                                        class="fa-solid fa-cart-shopping"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="brand">OXVA</span>
+                            <h3 class="title"><a href="./vape-products/oxva/OXVA-ONEO-data.html" class="text-decoration-none text-dark">OXVA
+                                    ONEO</a></h3>
+                            <div class="rating">????? <span class="review-count">(8 reviews)</span></div>
+                            <div class="price"><span class="old">Rs.7,000.00</span> RS 5,800.00</div>
+                        </div>
+                    </div>
+
+                    <!-- Product 3:OXVA XLIM 3 ULTRA-->
+                    <div class="product-item" data-price="8000" data-name="OXVA XLIM 3 ULTRA">
+                        <div class="product-img-box">
+                            <span class="badge red">NEW</span>
+                            <a href="./vape-products/oxva/OXVA-XLIM-3-ULTRA-data.html">
+                                <img src="./assets/img/devices/OXVA/OXVA-XLIM-3-ULTRA/ultra-carbon1.png"
+                                    alt="OXVA XLIM 3 ULTRA" data-hover="./assets/img/devices/OXVA/OXVA-XLIM-3-ULTRA/ultra-carbon2.png">
+                            </a>
+                            <div class="action-icons">
+
+                                <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                                <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                                <button title="Product Detail" onclick="location.href='./vape-products/oxva/OXVA-XLIM-3-ULTRA-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="brand">OXVA</span>
+                            <h3 class="title"><a href="./vape-products/oxva/OXVA-XLIM-3-ULTRA-data.html" class="text-decoration-none text-dark">OXVA XLIM 3 ULTRA</a></h3>
+                            <div class="rating">????? <span class="review-count">(15 reviews)</span></div>
+                            <div class="price"><span class="old">Rs.9,200.00</span>  RS 8,000.00</div>
+                        </div>
+                    </div>
+
+                    <!-- Product 4: XLIM GO-->
+                    <div class="product-item" data-price="3700" data-name="XLIM GO">
+                        <div class="product-img-box">
+                            <span class="badge red">NEW</span>
+                            <a href="./vape-products/oxva/XLIM-GO-data.html">
+                                <img src="./assets/img/devices/OXVA/XLIM-GO/graffiti-blue1.png" alt="XLIM GO"
+                                    data-hover="./assets/img/devices/OXVA/XLIM-GO/graffiti-blue2.webp">
+                            </a>
+                            <div class="action-icons">
+
+                                <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                                <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                                <button title="Product Detail" onclick="location.href='./vape-products/oxva/XLIM-GO-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="brand">OXVA</span>
+                            <h3 class="title"><a href="./vape-products/oxva/XLIM-GO-data.html" class="text-decoration-none text-dark">XLIM GO</a></h3>
+                            <div class="rating">????? <span class="review-count">(22 reviews)</span></div>
+                            <div class="price"><span class="old">Rs.4,500.00</span> RS 3,700.00</div>
+                        </div>
+                    </div>
+
+                    <!-- Product 5: XLIM GO 2-->
+                    <div class="product-item" data-price="4300" data-name="XLIM GO 2">
+                        <div class="product-img-box">
+                            <span class="badge red">FEATURED</span>
+                            <a href="./vape-products/oxva/XLIM-GO-2-data.html">
+                                <img src="./assets/img/devices/OXVA/XLIM-GO-2/black-shadow1.png"
+                                    alt="XLIM GO 2"
+                                    data-hover="./assets/img/devices/OXVA/XLIM-GO-2/black-shadow2.png">
+                            </a>
+                            <div class="action-icons">
+
+                                <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                                <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                                <button title="Product Detail" onclick="location.href='./vape-products/oxva/XLIM-GO-2-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="brand">OXVA</span>
+                            <h3 class="title"><a href="./vape-products/oxva/XLIM-GO-2-data.html" class="text-decoration-none text-dark">XLIM GO 2</a></h3>
+                            <div class="rating">????? <span class="review-count">(10 reviews)</span></div>
+                            <div class="price"><span class="old">Rs.5,000.00</span> RS 4,300.00</div>
+                        </div>
+                    </div>
+                    <!-- Product 6: XLIM PRO -->
+                    <div class="product-item" data-price="5300" data-name="XLIM PRO">
+                        <div class="product-img-box">
+                            <span class="badge red">FEATURED</span>
+                            <a href="./vape-products/oxva/XLIM-PRO-data.html">
+                                <img src="./assets/img/devices/OXVA/XLIM-PRO/gleamy-red1.png"
+                                    alt="XLIM PRO"
+                                    data-hover="./assets/img/devices/OXVA/XLIM-PRO/gleamy-red2.webp">
+                            </a>
+                            <div class="action-icons">
+
+                                <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                                <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                                <button title="Product Detail" onclick="location.href='./vape-products/oxva/XLIM-PRO-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="brand">OXVA</span>
+                            <h3 class="title"><a href="./vape-products/oxva/XLIM-PRO-data.html" class="text-decoration-none text-dark">XLIM PRO</a></h3>
+                            <div class="rating">????? <span class="review-count">(10 reviews)</span></div>
+                            <div class="price"><span class="old">Rs.6,200.00</span> RS 5,300.00</div>
+                        </div>
+                    </div>
+                    <!-- Product 7: XLIM PRO 2-->
+                    <div class="product-item" data-price="6500" data-name="XLIM PRO 2">
+                        <div class="product-img-box">
+                            <span class="badge red">FEATURED</span>
+                            <a href="./vape-products/oxva/XLIM-PRO-2-data.html">
+                                <img src="./assets/img/devices/OXVA/XLIM-PRO-2/green-python1.png" alt="XLIM PRO 2"
+                                    data-hover="./assets/img/devices/OXVA/XLIM-PRO-2/green-python2.png">
+                            </a>
+                            <div class="action-icons">
+
+                                <button title="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+                                <button title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                                <button title="Product Detail" onclick="location.href='./vape-products/oxva/XLIM-PRO-2-data.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="brand">OXVA</span>
+                            <h3 class="title"><a href="./vape-products/oxva/XLIM-PRO-2-data.html" class="text-decoration-none text-dark">XLIM PRO 2</a></h3>
+                            <div class="rating">????? <span class="review-count">(10 reviews)</span></div>
+                            <div class="price"><span class="old">Rs.7,500.00</span> RS 6,500.00</div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <!-- No Results Message -->
+                <div id="noResults" class="text-center py-5 mt-5" style="display: none;">
+                    <i class="fas fa-search fa-3x text-muted mb-3"></i>
+                    <h4>No products found</h4>
+                    <p class="text-muted">Try adjusting your filters or search terms.</p>
+                </div>
+            </main>
+        </div>
+    </div>
+
+
+        <!-- footer -->
+    <footer class="footer-section pt-5">
+        <div class="container footer-top">
+            <div class="row">
+                <!-- Column 1: Brand & About -->
+                <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
+                    <div class="footer-logo-box"><a class="footer-navbar-brand" href="./index.html"><img src="./assets/img/web-logo.png" alt=""></a></div>
+                    <p class="footer-about-text">
+                        Discover the ultimate vaping experience with VAPE CLUSTER. We provide premium devices, 
+                        expertly crafted e-liquids, and high-performance coils for enthusiasts and beginners alike.
+                    </p>
+                                        <div class="footer-social-icons">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="col-lg-2 col-md-6 mb-5 mb-lg-0">
+                    <h4 class="footer-heading">Shop Info</h4>
+                    <ul class="footer-links">
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./about.html">About Our Story</a></li>
+                        <li><a href="./contact.html">Contact Support</a></li>
+                        <li><a href="./privacy-policy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Collections -->
+                <div class="col-lg-2 col-md-6 mb-5 mb-lg-0">
+                    <h4 class="footer-heading">Collections</h4>
+                    <ul class="footer-links">
+                        <li><a href="./E-Liquids.html">E-Liquids</a></li>
+                        <li><a href="./coils.html">Premium Coils</a></li>
+                        <li><a href="./OXVA.html">OXVA Series</a></li>
+                        <li><a href="./vaporesso.html">Vaporesso</a></li>
+                        <li><a href="./UWELL.html">Uwell Kits</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Newsletter -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="newsletter-form-container">
+                        <h4 class="newsletter-title">Stay Updated</h4>
+                        <p class="newsletter-desc">Subscribe to get notified about new arrivals and exclusive discounts.</p>
+                        <form action="#" class="newsletter-input-wrap">
+                            <input type="email" placeholder="Your email address" required>
+                            <button type="submit">Subscribe</button>
+                        </form>
+                        <div class="mt-4">
+                            <h6 class="text-white-50 small text-uppercase mb-2">Customer Care</h6>
+                            <ul class="footer-contact-info">
+                                <li><i class="fa-solid fa-phone"></i> +92 3200489485</li>
+                                <li><i class="fa-solid fa-envelope"></i> vapecluster872@gmail.com</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+                <div class="footer-bottom mt-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12 text-center">
+                        <p class="copyright-text">� 2026 VAPE CLUSTER | ALL RIGHTS RESERVED.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+
+    <!-- Filtering Script for this page -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const searchInput = document.getElementById('productSearch');
+            const priceRange = document.getElementById('priceRange');
+            const currentPriceText = document.getElementById('currentPrice');
+            const clearBtn = document.getElementById('clearFilters');
+            const products = document.querySelectorAll('.product-item');
+            const noResults = document.getElementById('noResults');
+
+            function filterProducts() {
+                const searchTerm = searchInput.value.toLowerCase();
+                const maxPrice = parseInt(priceRange.value);
+                let visibleCount = 0;
+
+                products.forEach(product => {
+                    const name = product.dataset.name.toLowerCase();
+                    const price = parseInt(product.dataset.price);
+
+                    const matchesSearch = name.includes(searchTerm);
+                    const matchesPrice = price <= maxPrice;
+
+                    if (matchesSearch && matchesPrice) {
+                        product.style.display = '';
+                        visibleCount++;
+                    } else {
+                        product.style.display = 'none';
+                    }
+                });
+
+                noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+            }
+
+            searchInput.addEventListener('input', filterProducts);
+            priceRange.addEventListener('input', () => {
+                currentPriceText.textContent = `PKR ${parseInt(priceRange.value).toLocaleString()}`;
+                filterProducts();
+            });
+
+            clearBtn.addEventListener('click', () => {
+                searchInput.value = '';
+                priceRange.value = 50000;
+                currentPriceText.textContent = `PKR 50,000`;
+                filterProducts();
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

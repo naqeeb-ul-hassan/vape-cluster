@@ -1,0 +1,163 @@
+{% extends 'admin/base_admin.html' %}
+{% load static %}
+
+{% block title %}Dashboard | Vapier Admin{% endblock %}
+{% block page_title %}Dashboard Overview{% endblock %}
+
+{% block admin_content %}
+<!-- Stats Grid -->
+<div class="stats-grid">
+    <div class="stat-card">
+        <div class="stat-icon">
+            <i class="fas fa-dollar-sign"></i>
+        </div>
+        <div class="stat-details">
+            <p>Total Sales</p>
+            <h3>RS {{ total_sales|default:"450,000" }}</h3>
+            <span style="color: #28a745; font-size: 12px; font-weight: 600;"><i class="fas fa-arrow-up"></i> +15% this
+                month</span>
+        </div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-icon">
+            <i class="fas fa-shopping-bag"></i>
+        </div>
+        <div class="stat-details">
+            <p>Total Orders</p>
+            <h3>{{ total_orders|default:"1,245" }}</h3>
+            <span style="color: #28a745; font-size: 12px; font-weight: 600;"><i class="fas fa-arrow-up"></i> +8% this
+                month</span>
+        </div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-icon">
+            <i class="fas fa-users"></i>
+        </div>
+        <div class="stat-details">
+            <p>Total Customers</p>
+            <h3>{{ total_customers|default:"892" }}</h3>
+            <span style="color: #28a745; font-size: 12px; font-weight: 600;"><i class="fas fa-arrow-up"></i> +12% this
+                month</span>
+        </div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-icon">
+            <i class="fas fa-box"></i>
+        </div>
+        <div class="stat-details">
+            <p>Active Products</p>
+            <h3>{{ total_products|default:"156" }}</h3>
+            <span style="color: #ffc107; font-size: 12px; font-weight: 600;"><i class="fas fa-minus"></i> 0% this
+                month</span>
+        </div>
+    </div>
+</div>
+
+<!-- Revenue Chart -->
+<div class="table-container mb-4">
+    <div class="table-header">
+        <h5 class="mb-0">Revenue Overview</h5>
+    </div>
+    <div style="position: relative; height: 300px; width: 100%;">
+        <canvas id="revenueChart"></canvas>
+    </div>
+</div>
+
+<!-- Charts & Recent Activity -->
+<div class="row g-4">
+    <div class="col-lg-8">
+        <div class="table-container h-100">
+            <div class="table-header">
+                <h5 class="mb-0">Recent Orders</h5>
+                <a href="{% url 'core:admin_orders' %}" class="btn-admin btn-primary-admin">View All</a>
+            </div>
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Customer</th>
+                        <th>Product</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for order in recent_orders %}
+                    <tr>
+                        <td>#{{ order.order_number }}</td>
+                        <td>{{ order.user.get_full_name }}</td>
+                        <td>{{ order.items.first.product.name }}</td>
+                        <td>RS {{ order.total_amount }}</td>
+                        <td><span class="status-badge status-{{ order.status|lower }}">{{ order.status }}</span></td>
+                    </tr>
+                    {% empty %}
+                    <tr>
+                        <td>#ORD-1001</td>
+                        <td>Ali Khan</td>
+                        <td>XROS 4 NANO</td>
+                        <td>RS 8,890</td>
+                        <td><span class="status-badge status-completed">Completed</span></td>
+                    </tr>
+                    <tr>
+                        <td>#ORD-1002</td>
+                        <td>Sara Ahmed</td>
+                        <td>OXVA NEXLIM GO</td>
+                        <td>RS 5,200</td>
+                        <td><span class="status-badge status-pending">Pending</span></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="table-container h-100 p-4">
+            <h5 class="mb-4">Popular Brands</h5>
+            {% for brand in popular_brands %}
+            <div class="brand-stat mb-3">
+                <div class="d-flex justify-content-between mb-1">
+                    <span class="small font-weight-bold">{{ brand.name }}</span>
+                    <span class="small text-muted">{{ brand.percentage }}%</span>
+                </div>
+                <div class="progress bg-dark" style="height: 6px;">
+                    <div class="progress-bar" style="width: {{ brand.percentage }}%; background-color: #cc0000;"></div>
+                </div>
+            </div>
+            {% empty %}
+            <div class="brand-stat mb-3">
+                <div class="d-flex justify-content-between mb-1">
+                    <span class="small font-weight-bold">VOOPOO</span>
+                    <span class="small text-muted">45%</span>
+                </div>
+                <div class="progress bg-dark" style="height: 6px;">
+                    <div class="progress-bar" style="width: 45%; background-color: #cc0000;"></div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    // Placeholder for revenue chart initialization
+    const ctx = document.getElementById('revenueChart').getContext('2d');
+    new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+            datasets: [{
+                label: 'Revenue',
+                data: [12000, 19000, 3000, 5000, 2000, 30000],
+                borderColor: '#cc0000',
+                tension: 0.1
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false
+        }
+    });
+</script>
+{% endblock %}
