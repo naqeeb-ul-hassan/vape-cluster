@@ -16,7 +16,7 @@ pip install -r requirements.txt
 Humne `.env` file banayi hai jisme saari sensitive details hain. Aap isme apne MySQL credentials aur PayFast keys add kar sakte hain.
 - `DB_NAME`: vape_cluster_db
 - `DB_USER`: root (ya jo aapka user ho)
-- `DB_PASSWORD`: naqeeb512 (aapka password)
+- `DB_PASSWORD`: (aapka password)
 
 ### 3. Database Connection
 MySQL database create karein:
